@@ -39,3 +39,13 @@ https://www.youtube.com/watch?v=fHht-KX-Qvg
 라그나로크
 https://www.youtube.com/watch?v=I3lK9QR6RV0
 
+
+## 11/3
+ -> 기획 완료
+
+우리 캐릭터는 어떤 것을 쓸 것인지?
+적 캐릭터는 어떤 것을 쓸 것인지?
+어떤 스킬을 구현할 것인지? (리소스 정해놓기)
+
+
+그 전에 서칭을 해보고 서로 공유하기.
