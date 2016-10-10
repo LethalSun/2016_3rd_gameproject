@@ -30,6 +30,12 @@ https://goo.gl/VLXST9
 
 ## Data Link :
 
+서바이벌 프로젝트 -> 던전 모드
 https://www.youtube.com/watch?v=dhK7Yv9JKgs
 
+트리 오브 세이비어 -> 보스전에 참고
+https://www.youtube.com/watch?v=fHht-KX-Qvg
+
+라그나로크
+https://www.youtube.com/watch?v=I3lK9QR6RV0
 
