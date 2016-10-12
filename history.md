@@ -26,7 +26,7 @@ https://goo.gl/VLXST9
 
 배경 : https://github.com/PongKak/Background
 
-씬관리 : https://github.com/highfence/GameProject_Prototype
+씬관리 / 사운드 : https://github.com/highfence/GameProject_Prototype
 
 ## Data Link :
 
