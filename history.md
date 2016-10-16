@@ -28,6 +28,8 @@ https://goo.gl/VLXST9
 
 씬관리 / 사운드 : https://github.com/highfence/GameProject_Prototype
 
+조이스틱 : https://github.com/highfence/JoyStick_Prototype
+
 ## Data Link :
 
 서바이벌 프로젝트 -> 던전 모드
