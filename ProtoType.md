@@ -8,3 +8,4 @@
 ##이근원
 * 조이스틱 : https://github.com/highfence/JoyStick_Prototype
 * 씬관리 / 사운드 : https://github.com/highfence/GameProject_Prototype
+* 워닝 무시 : https://github.com/highfence/CocosPragmaWarning
