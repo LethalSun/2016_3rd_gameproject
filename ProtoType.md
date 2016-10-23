@@ -1,6 +1,6 @@
 
 ##배경
-* 고금성 : https://github.com/PongKak/Background
+* 고금성 : https://github.com/PongKak/Background_prototype
 
 ##이동
 * 김현우 : https://github.com/LethalSun/2016_3rd_gameproject_prototype_moving
