@@ -11,8 +11,6 @@ https://www.gamedevmarket.net/asset/cartoon-forest-background-2-6105/
 
 https://www.assetstore.unity3d.com/kr/#!/content/47763
 
-https://www.gamedevmarket.net/asset/terrain-top-down-tileset-1487/
-
 https://www.assetstore.unity3d.com/kr/#!/content/52633
 
 
