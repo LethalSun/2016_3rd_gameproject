@@ -4,6 +4,8 @@
 *.pdb
 *.db
 *.user
+*.obj
 **/IDCA/proj.win32/Debug.win32/
 **/IDCA/proj.win32/.vs/
 **/IDCA/cocos2d/cocos/2d/Debug.win32/
+**/IDCA/cocos2d/external/
