@@ -2,7 +2,6 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 
-
 Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
