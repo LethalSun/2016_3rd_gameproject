@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>WalkingFront01.png</key>
+            <key>ChocoAttackLeftBack01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -13,15 +13,32 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,93}</string>
+                <string>{26,46}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,93}</string>
+                <string>{26,46}</string>
                 <key>textureRect</key>
-                <string>{{395,384},{45,93}}</string>
+                <string>{{302,35},{26,46}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront02.png</key>
+            <key>ChocoAttackLeftBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.55102,0.435897}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,39}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,39}</string>
+                <key>textureRect</key>
+                <string>{{103,1},{49,39}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackLeftBack03.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -30,15 +47,66 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{46,93}</string>
+                <string>{46,35}</string>
                 <key>spriteSourceSize</key>
-                <string>{46,93}</string>
+                <string>{46,35}</string>
                 <key>textureRect</key>
-                <string>{{347,385},{46,93}}</string>
+                <string>{{205,1},{46,35}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront03.png</key>
+            <key>ChocoAttackLeftFront01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.333333,0.444444}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{27,45}</string>
+                <key>spriteSourceSize</key>
+                <string>{27,45}</string>
+                <key>textureRect</key>
+                <string>{{175,42},{27,45}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackLeftFront02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.489796,0.404762}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,42}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,42}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{49,42}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackLeftFront03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.489796,0.404762}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,42}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,42}</string>
+                <key>textureRect</key>
+                <string>{{1,45},{49,42}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackRightBack01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -47,15 +115,49 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,94}</string>
+                <string>{26,46}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,94}</string>
+                <string>{26,46}</string>
                 <key>textureRect</key>
-                <string>{{259,98},{45,94}}</string>
+                <string>{{330,35},{26,46}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront04.png</key>
+            <key>ChocoAttackRightBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.44898,0.435897}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,39}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,39}</string>
+                <key>textureRect</key>
+                <string>{{154,1},{49,39}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackRightBack03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.478261,0.485714}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,35}</string>
+                <key>spriteSourceSize</key>
+                <string>{46,35}</string>
+                <key>textureRect</key>
+                <string>{{253,1},{46,35}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoAttackRightFront01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -64,15 +166,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,95}</string>
+                <string>{27,45}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,95}</string>
+                <string>{27,45}</string>
                 <key>textureRect</key>
-                <string>{{178,198},{45,95}}</string>
+                <string>{{583,1},{27,45}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront05.png</key>
+            <key>ChocoAttackRightFront02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -81,15 +183,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,93}</string>
+                <string>{49,42}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,93}</string>
+                <string>{49,42}</string>
                 <key>textureRect</key>
-                <string>{{396,97},{45,93}}</string>
+                <string>{{52,1},{49,42}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront06.png</key>
+            <key>ChocoAttackRightFront03.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -98,15 +200,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{46,93}</string>
+                <string>{49,42}</string>
                 <key>spriteSourceSize</key>
-                <string>{46,93}</string>
+                <string>{49,42}</string>
                 <key>textureRect</key>
-                <string>{{375,289},{46,93}}</string>
+                <string>{{52,45},{49,42}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront07.png</key>
+            <key>ChocoDefeatLeftBack01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -115,117 +217,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,94}</string>
+                <string>{36,38}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,94}</string>
+                <string>{36,38}</string>
                 <key>textureRect</key>
-                <string>{{277,1},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,95}</string>
-                <key>textureRect</key>
-                <string>{{212,99},{45,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{167,1},{32,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{201,1},{32,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.604651,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{43,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{43,91}</string>
-                <key>textureRect</key>
-                <string>{{443,96},{43,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.540541,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,91}</string>
-                <key>textureRect</key>
-                <string>{{483,189},{37,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,91}</string>
-                <key>textureRect</key>
-                <string>{{305,482},{29,91}}</string>
+                <string>{{83,89},{36,38}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingLeft06.png</key>
+            <key>ChocoDefeatLeftBack02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -234,474 +234,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{29,89}</string>
+                <string>{39,29}</string>
                 <key>spriteSourceSize</key>
-                <string>{29,89}</string>
+                <string>{39,29}</string>
                 <key>textureRect</key>
-                <string>{{496,1},{29,89}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.571429,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,91}</string>
-                <key>textureRect</key>
-                <string>{{442,381},{42,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.540541,0.494624}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,93}</string>
-                <key>textureRect</key>
-                <string>{{412,1},{37,93}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{88,405},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1,307},{44,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{132,200},{44,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{46,92}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{423,287},{46,92}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{267,194},{44,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{324,1},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{305,386},{40,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{261,389},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.513514,0.494845}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,97}</string>
-                <key>textureRect</key>
-                <string>{{127,101},{37,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,98}</string>
-                <key>textureRect</key>
-                <string>{{90,305},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.538462,0.494845}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{39,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{39,97}</string>
-                <key>textureRect</key>
-                <string>{{86,101},{39,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{235,1},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.540541,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,94}</string>
-                <key>textureRect</key>
-                <string>{{357,193},{37,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{172,396},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.577778,0.489362}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,94}</string>
-                <key>textureRect</key>
-                <string>{{214,392},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.571429,0.489362}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,94}</string>
-                <key>textureRect</key>
-                <string>{{289,290},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRIghtFront01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{45,205},{44,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.505556}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{132,298},{32,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{166,298},{32,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.372093,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{43,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{43,91}</string>
-                <key>textureRect</key>
-                <string>{{451,1},{43,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.418919,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,91}</string>
-                <key>textureRect</key>
-                <string>{{488,94},{37,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.448276,0.505495}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,91}</string>
-                <key>textureRect</key>
-                <string>{{398,479},{29,91}}</string>
+                <string>{{204,48},{39,29}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingRight06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.448276,0.494382}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,89}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,89}</string>
-                <key>textureRect</key>
-                <string>{{486,379},{29,89}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.380952,0.505495}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,91}</string>
-                <key>textureRect</key>
-                <string>{{471,286},{42,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.405405,0.505376}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,93}</string>
-                <key>textureRect</key>
-                <string>{{396,192},{37,93}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront02.png</key>
+            <key>ChocoDefeatLeftFront01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -710,15 +251,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{44,96}</string>
+                <string>{39,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{39,36}</string>
                 <key>textureRect</key>
-                <string>{{166,100},{44,96}}</string>
+                <string>{{1,89},{39,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront03.png</key>
+            <key>ChocoDefeatLeftFront02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -727,15 +268,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{46,92}</string>
+                <string>{35,31}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{35,31}</string>
                 <key>textureRect</key>
-                <string>{{435,192},{46,92}}</string>
+                <string>{{462,34},{35,31}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront04.png</key>
+            <key>ChocoDefeatRightBack01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -744,15 +285,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{44,94}</string>
+                <string>{36,38}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{36,38}</string>
                 <key>textureRect</key>
-                <string>{{306,97},{44,94}}</string>
+                <string>{{123,89},{36,38}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>WalkingRightFront05.png</key>
+            <key>ChocoDefeatRightBack02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -761,15 +302,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{42,94}</string>
+                <string>{39,29}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{39,29}</string>
                 <key>textureRect</key>
-                <string>{{313,193},{42,94}}</string>
+                <string>{{421,34},{39,29}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront06.png</key>
+            <key>ChocoDefeatRightFront01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -778,15 +319,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{40,94}</string>
+                <string>{39,36}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{39,36}</string>
                 <key>textureRect</key>
-                <string>{{333,289},{40,94}}</string>
+                <string>{{42,89},{39,36}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront07.png</key>
+            <key>ChocoDefeatRightFront02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -795,15 +336,83 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{42,94}</string>
+                <string>{35,31}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{35,31}</string>
                 <key>textureRect</key>
-                <string>{{352,97},{42,94}}</string>
+                <string>{{499,34},{35,31}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront08.png</key>
+            <key>ChocoMoveLeftBack01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.548387,0.255814}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{31,43}</string>
+                <key>spriteSourceSize</key>
+                <string>{31,43}</string>
+                <key>textureRect</key>
+                <string>{{493,1},{31,43}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoMoveLeftBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.53125,0.255814}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,43}</string>
+                <key>spriteSourceSize</key>
+                <string>{32,43}</string>
+                <key>textureRect</key>
+                <string>{{538,1},{32,43}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoMoveLeftBack03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.551724,0.238095}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,42}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,42}</string>
+                <key>textureRect</key>
+                <string>{{255,83},{29,42}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoMoveLeftBack04.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.483871,0.304348}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{31,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{31,46}</string>
+                <key>textureRect</key>
+                <string>{{397,1},{31,46}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoMoveLeftFront01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -812,15 +421,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{40,98}</string>
+                <string>{30,41}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{30,41}</string>
                 <key>textureRect</key>
-                <string>{{130,405},{40,98}}</string>
+                <string>{{317,83},{30,41}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightUp01.png</key>
+            <key>ChocoMoveLeftFront02.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -829,32 +438,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{37,97}</string>
+                <string>{29,41}</string>
                 <key>spriteSourceSize</key>
-                <string>{37,97}</string>
+                <string>{29,41}</string>
                 <key>textureRect</key>
-                <string>{{128,1},{37,97}}</string>
+                <string>{{349,83},{29,41}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightUp02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.475,0.510204}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,98}</string>
-                <key>textureRect</key>
-                <string>{{86,1},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp03.png</key>
+            <key>ChocoMoveLeftFront03.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -863,134 +455,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{39,97}</string>
+                <string>{32,46}</string>
                 <key>spriteSourceSize</key>
-                <string>{39,97}</string>
+                <string>{32,46}</string>
                 <key>textureRect</key>
-                <string>{{91,200},{39,97}}</string>
+                <string>{{301,1},{32,46}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>WalkingRightUp04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{200,295},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{225,196},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.444444,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,94}</string>
-                <key>textureRect</key>
-                <string>{{242,293},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.452381,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,94}</string>
-                <key>textureRect</key>
-                <string>{{368,1},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.52381,0.510204}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,98}</string>
-                <key>textureRect</key>
-                <string>{{1,407},{42,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.512195,0.515152}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{41,99}</string>
-                <key>spriteSourceSize</key>
-                <string>{41,99}</string>
-                <key>textureRect</key>
-                <string>{{43,104},{41,99}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.525,0.505051}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,99}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,99}</string>
-                <key>textureRect</key>
-                <string>{{44,1},{40,99}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp04.png</key>
+            <key>ChocoMoveLeftFront04.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -999,66 +472,15 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{41,98}</string>
+                <string>{34,45}</string>
                 <key>spriteSourceSize</key>
-                <string>{41,98}</string>
+                <string>{34,45}</string>
                 <key>textureRect</key>
-                <string>{{45,407},{41,98}}</string>
+                <string>{{103,42},{34,45}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.505051}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,99}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,99}</string>
-                <key>textureRect</key>
-                <string>{{1,206},{42,99}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.512195,0.514851}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{41,101}</string>
-                <key>spriteSourceSize</key>
-                <string>{41,101}</string>
-                <key>textureRect</key>
-                <string>{{1,1},{41,101}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.51}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,100}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,100}</string>
-                <key>textureRect</key>
-                <string>{{1,104},{40,100}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp08.png</key>
+            <key>ChocoMoveRightBack01.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1067,13 +489,336 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{41,98}</string>
+                <string>{31,43}</string>
                 <key>spriteSourceSize</key>
-                <string>{41,98}</string>
+                <string>{31,43}</string>
                 <key>textureRect</key>
-                <string>{{47,305},{41,98}}</string>
+                <string>{{269,38},{31,43}}</string>
                 <key>textureRotated</key>
                 <false/>
+            </dict>
+            <key>ChocoMoveRightBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,43}</string>
+                <key>spriteSourceSize</key>
+                <string>{32,43}</string>
+                <key>textureRect</key>
+                <string>{{235,38},{32,43}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoMoveRightBack03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,42}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,42}</string>
+                <key>textureRect</key>
+                <string>{{286,83},{29,42}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoMoveRightBack04.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{31,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{31,46}</string>
+                <key>textureRect</key>
+                <string>{{445,1},{31,46}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoMoveRightFront01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{30,41}</string>
+                <key>spriteSourceSize</key>
+                <string>{30,41}</string>
+                <key>textureRect</key>
+                <string>{{358,35},{30,41}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoMoveRightFront02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,41}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,41}</string>
+                <key>textureRect</key>
+                <string>{{390,35},{29,41}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoMoveRightFront03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{32,46}</string>
+                <key>textureRect</key>
+                <string>{{349,1},{32,46}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoMoveRightFront04.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{34,45}</string>
+                <key>spriteSourceSize</key>
+                <string>{34,45}</string>
+                <key>textureRect</key>
+                <string>{{139,42},{34,45}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoStandingLeftBack01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{26,34}</string>
+                <key>spriteSourceSize</key>
+                <string>{26,34}</string>
+                <key>textureRect</key>
+                <string>{{459,67},{26,34}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingLeftBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.435484,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{31,33}</string>
+                <key>spriteSourceSize</key>
+                <string>{31,33}</string>
+                <key>textureRect</key>
+                <string>{{573,48},{31,33}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingLeftBack03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{26,34}</string>
+                <key>spriteSourceSize</key>
+                <string>{26,34}</string>
+                <key>textureRect</key>
+                <string>{{495,67},{26,34}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingLeftFront01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.551724,0.388889}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,36}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,36}</string>
+                <key>textureRect</key>
+                <string>{{163,89},{29,36}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoStandingLeftFront02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.484848,0.4}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{33,35}</string>
+                <key>spriteSourceSize</key>
+                <string>{33,35}</string>
+                <key>textureRect</key>
+                <string>{{380,78},{33,35}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoStandingLeftFront03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.571429,0.388889}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{28,36}</string>
+                <key>spriteSourceSize</key>
+                <string>{28,36}</string>
+                <key>textureRect</key>
+                <string>{{225,89},{28,36}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoStandingRightBack01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.423077,0.441176}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{26,34}</string>
+                <key>spriteSourceSize</key>
+                <string>{26,34}</string>
+                <key>textureRect</key>
+                <string>{{531,70},{26,34}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingRightBack02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.516129,0.454545}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{31,33}</string>
+                <key>spriteSourceSize</key>
+                <string>{31,33}</string>
+                <key>textureRect</key>
+                <string>{{567,81},{31,33}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingRightBack03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.423077,0.441176}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{26,34}</string>
+                <key>spriteSourceSize</key>
+                <string>{26,34}</string>
+                <key>textureRect</key>
+                <string>{{415,95},{26,34}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingRightFront01.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,36}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,36}</string>
+                <key>textureRect</key>
+                <string>{{194,89},{29,36}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>ChocoStandingRightFront02.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.560606,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{33,35}</string>
+                <key>spriteSourceSize</key>
+                <string>{33,35}</string>
+                <key>textureRect</key>
+                <string>{{536,35},{33,35}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>ChocoStandingRightFront03.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{28,36}</string>
+                <key>spriteSourceSize</key>
+                <string>{28,36}</string>
+                <key>textureRect</key>
+                <string>{{421,65},{28,36}}</string>
+                <key>textureRotated</key>
+                <true/>
             </dict>
         </dict>
         <key>metadata</key>
@@ -1085,13 +830,13 @@
             <key>premultiplyAlpha</key>
             <false/>
             <key>realTextureFileName</key>
-            <string>Walking.png</string>
+            <string>Choco.png</string>
             <key>size</key>
-            <string>{526,512}</string>
+            <string>{611,126}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b03096236265fdf80f05def955de3e1b:874f091daf9a6c597b20fc850fcc0010:55f5950589498f27f3de6bfa4383b875$</string>
+            <string>$TexturePacker:SmartUpdate:e4f41c93be630289cef4693df81e26d1:9d4095d90dd53618f098af1283aaac29:69bf693c0c7efd6b1206ccf15305ccd6$</string>
             <key>textureFileName</key>
-            <string>Walking.png</string>
+            <string>Choco.png</string>
         </dict>
     </dict>
 </plist>
