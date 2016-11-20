@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
+#include "Player.h"
 
 Scene* HelloWorld::createScene()
 {
@@ -71,8 +72,20 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+
+	player = Player::create();
+	addChild(player);
+
+	scheduleUpdate();
     
     return true;
+}
+
+void HelloWorld::update(float dt)
+{
+	player->m_Manager.Update();
+	player->StickMove(dt);
+
 }
 
 
