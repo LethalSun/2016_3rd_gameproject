@@ -36,13 +36,13 @@ void Player::MapKeySetting(const unsigned int padId)
 }
 
 
-void Player::StickMove()
+void Player::StickMove(float dt)
 {
 	if (m_pMap->GetBool(LeftStickX) || m_pMap->GetBool(LeftStickY))
 	{
 		float x = m_pMap->GetFloat(LeftStickX);
 		float y = m_pMap->GetFloat(LeftStickY);
-		auto move = MoveBy::create(0, Vec2(x * MOVE_SPEED, y * MOVE_SPEED));
+		auto move = MoveBy::create(0, Vec2(x * MOVE_SPEED * dt, y * MOVE_SPEED * dt));
 		m_pCharacter->runAction(move);
 	}
 }

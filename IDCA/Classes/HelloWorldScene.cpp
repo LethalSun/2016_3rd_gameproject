@@ -84,7 +84,7 @@ bool HelloWorld::init()
 void HelloWorld::update(float dt)
 {
 	player->m_Manager.Update();
-	player->StickMove();
+	player->StickMove(dt);
 
 }
 

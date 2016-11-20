@@ -14,9 +14,9 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
+	Player *player;
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
-	Player *player;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
