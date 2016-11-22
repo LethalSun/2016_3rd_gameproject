@@ -150,6 +150,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Character.cpp" />
     <ClCompile Include="..\Classes\CharacterManager.cpp" />
     <ClCompile Include="..\Classes\CharacterScene.cpp" />
+    <ClCompile Include="..\Classes\config.cpp" />
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -170,6 +171,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Character.h" />
     <ClInclude Include="..\Classes\CharacterManager.h" />
     <ClInclude Include="..\Classes\CharacterScene.h" />
+    <ClInclude Include="..\Classes\config.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\GetSpriteFrame.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
