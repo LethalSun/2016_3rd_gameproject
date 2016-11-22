@@ -10,6 +10,12 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{5ea0d377-f624-4816-9724-037a82b62dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{77d462eb-ebea-411f-94b1-8084a8fd12e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,6 +27,7 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="..\Classes\EnemyState_Attack.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -46,6 +53,36 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\EnemyState_Approach.cpp">
+=======
+    <ClCompile Include="..\Classes\pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\config.cpp">
+>>>>>>> Stashed changes
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,6 +96,7 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>src</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="..\Classes\EnemyState_Approach.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -87,6 +125,39 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\EnemyState.h">
+=======
+    <ClInclude Include="..\Classes\pch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Approach.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Attack.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Return.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Search.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Define.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\config.h">
+>>>>>>> Stashed changes
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

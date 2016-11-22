@@ -14,7 +14,7 @@ public:
 
 	/* JoyStick Setting */
 	void					MapKeySetting(const unsigned int);
-	void					StickMove(float dt);
+	void					StickMove(const float deltaTime);
 	InputManager			m_Manager;
 	InputMap			   *m_pMap;
 

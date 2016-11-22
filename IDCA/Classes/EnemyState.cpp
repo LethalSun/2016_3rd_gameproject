@@ -2,7 +2,7 @@
 #include "EnemyState.h"
 
 // 플레이어가 enemy의 Chasing_Range 안에 있다면 true를 반환하는 함수.
-bool EnemyState::isPlayerInChasingRange(float chasingRange, float distance)
+bool EnemyState::isPlayerInChasingRange(const float chasingRange, const float distance)
 {
 	if (distance < chasingRange)
 	{
@@ -13,7 +13,7 @@ bool EnemyState::isPlayerInChasingRange(float chasingRange, float distance)
 }
 
 // 플레이어가 enemy의 Attack_Range안에 있다면 true를 반환하는 함수.
-bool EnemyState::isPlayerInAttackRange(float attackRange, float distance)
+bool EnemyState::isPlayerInAttackRange(const float attackRange, const float distance)
 {
 	if (distance < attackRange)
 	{
@@ -24,7 +24,7 @@ bool EnemyState::isPlayerInAttackRange(float attackRange, float distance)
 }
 
 // 플레이어가 enemy의 SEARCHING_RANGE안에 있다면 true를 반환하는 함수.
-bool EnemyState::isPlayerInSearchRange(float searchRange, float distance)
+bool EnemyState::isPlayerInSearchRange(const float searchRange, const float distance)
 {
 	if (distance < searchRange)
 	{

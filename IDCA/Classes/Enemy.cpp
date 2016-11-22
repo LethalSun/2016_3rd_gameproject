@@ -13,17 +13,17 @@ bool Enemy::init()
 	return true;
 }
 
-void Enemy::update(float dt)
+void Enemy::update(const float deltaTime)
 {
-	m_pState->runState(this, dt);
+	m_pState->runState(this, deltaTime);
 	return;
 }
 
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
 {
-	float x = getPlayerPosition().x - m_pSprite->getPosition().x;
-	float y = getPlayerPosition().y - m_pSprite->getPosition().y;
+	auto x = getPlayerPosition().x - m_pSprite->getPosition().x;
+	auto y = getPlayerPosition().y - m_pSprite->getPosition().y;
 
 	setDistanceFromPlayer(abs(sqrt(x * x + y * y)));
 
@@ -33,9 +33,9 @@ void Enemy::CalDistanceFromPlayer()
 // Enemy와 Origin의 거리를 구하여 m_DistanceFromOrigin에 세팅.
 void Enemy::CalDistanceFromOrigin()
 {
-	Point originPoint = getOrigin();
-	float x = originPoint.x - m_pSprite->getPosition().x;
-	float y = originPoint.y - m_pSprite->getPosition().y;
+	auto originPoint = getOrigin();
+	auto x = originPoint.x - m_pSprite->getPosition().x;
+	auto y = originPoint.y - m_pSprite->getPosition().y;
 
 	setDistanceFromOrigin(abs(sqrt(x * x + y * y)));
 
@@ -43,28 +43,17 @@ void Enemy::CalDistanceFromOrigin()
 }
 
 
-//
-//void Enemy::SetSpriteToAttack()
-//{
-//	return;
-//}
-//
-//void Enemy::SetSpriteToCommon()
-//{
-//	return;
-//}
-
 
 // Delta 값을 받아 스프라이트를 움직이는 함수.
-void Enemy::move(float dt)
+void Enemy::move(const float deltaTime)
 {
-	float dtX = getUnitVec().x * getMoveSpeed() * dt;
-	float dtY = getUnitVec().y * getMoveSpeed() * dt;
+	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;
+	auto deltaY = getUnitVec().y * getMoveSpeed() * deltaTime;
 
 	auto currentX = m_pSprite->getPositionX();
 	auto currentY = m_pSprite->getPositionY();
 
-	m_pSprite->setPosition(currentX + dtX, currentY + dtY);
+	m_pSprite->setPosition(currentX + deltaX, currentY + deltaY);
 	return;
 }
 
@@ -76,13 +65,13 @@ void Enemy::CalUnitVecToOrigin()
 		return;
 	}
 
-	float distanceFromOrigin = getDistanceFromOrigin();
-	Vec2 origin = getOrigin();
+	auto distanceFromOrigin = getDistanceFromOrigin();
+	auto origin = getOrigin();
 
-	float x = origin.x - m_pSprite->getPosition().x;
-	float y = origin.y - m_pSprite->getPosition().y;
+	auto deltaX = origin.x - m_pSprite->getPosition().x;
+	auto deltaY = origin.y - m_pSprite->getPosition().y;
 
-	Vec2 unitVecToOrigin(x / distanceFromOrigin, y / distanceFromOrigin);
+	Vec2 unitVecToOrigin(deltaX / distanceFromOrigin, deltaY / distanceFromOrigin);
 	setUnitVec(unitVecToOrigin);
 	return;
 }
@@ -94,12 +83,12 @@ void Enemy::CalUnitVecToPlayer()
 	{
 		return;
 	}
-	float distanceFromPlayer = getDistanceFromPlayer();
+	auto distanceFromPlayer = getDistanceFromPlayer();
 
-	float x = getPlayerPosition().x - m_pSprite->getPosition().x;
-	float y = getPlayerPosition().y - m_pSprite->getPosition().y;
+	auto deltaX = getPlayerPosition().x - m_pSprite->getPosition().x;
+	auto deltaY = getPlayerPosition().y - m_pSprite->getPosition().y;
 
-	Vec2 unitVecToPlayer(x / distanceFromPlayer, y / distanceFromPlayer);
+	Vec2 unitVecToPlayer(deltaX / distanceFromPlayer, deltaY / distanceFromPlayer);
 	setUnitVec(unitVecToPlayer);
 	return;
 }

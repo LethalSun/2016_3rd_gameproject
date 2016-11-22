@@ -1,4 +1,5 @@
 #pragma once
+#include "cocos2d.h"
 
 enum Button
 {
@@ -6,5 +7,7 @@ enum Button
 	LeftStickY
 };
 
+const char PLAYER_SPRITE[] = "WalkingFront01.png";
+const char PLAYER_PLIST[] = "Walking.plist";
 
-const float MOVE_SPEED = 40.f;
+const float MOVE_SPEED = 400.f;
