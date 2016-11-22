@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Player.h"
+#include "config.h"
 
 
 bool Player::init()
@@ -9,12 +10,15 @@ bool Player::init()
 		return false;
 	}
 
+	m_pConfig = Config::create();
+
 	Point WIN_SIZE(1024.f, 768.f);
 	Point POS_INIT(300.f, 300.f);
+	setMoveSpeed(m_pConfig->getPlayerMoveSpeed());
 
 	// Sprite ¼¼ÆÃ
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(PLAYER_PLIST);
-	m_pCharacter = Sprite::createWithSpriteFrameName(PLAYER_SPRITE);
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(m_pConfig->getPlayerPlist());
+	m_pCharacter = Sprite::createWithSpriteFrameName(m_pConfig->getPlayerInitialSprite());
 	m_pCharacter->setPosition(POS_INIT);
 	
 	addChild(m_pCharacter);
@@ -45,7 +49,7 @@ void Player::StickMove(float dt)
 	{
 		auto x = m_pMap->GetFloat(LeftStickX);
 		auto y = m_pMap->GetFloat(LeftStickY);
-		auto move = MoveBy::create(0, Vec2(x * MOVE_SPEED * dt, y * MOVE_SPEED * dt));
+		auto move = MoveBy::create(0, Vec2(x * getMoveSpeed() * dt, y * getMoveSpeed() * dt));
 		m_pCharacter->runAction(move);
 	}
 }

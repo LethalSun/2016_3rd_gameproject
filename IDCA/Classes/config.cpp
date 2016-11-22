@@ -1,11 +1,17 @@
 #include "pch.h"
 #include "config.h"
 
-void Config::init()
+bool Config::init()
 {
+	if (!Component::init())
+	{
+		return false;
+	}
+
 	setPlayerPlist("Warrior.plist");
 	setPlayerInitialSprite("WalkingFront01.png");
 	setPlayerMoveSpeed(400.f);
+	return true;
 }
 
 void Config::setPlayerPlist(char* src)
@@ -30,3 +36,8 @@ char* Config::getPlayerInitialSprite()
 {
 	return m_pPlayerInitialSprite;
 }
+
+// json 파일로부터 데이터를 읽어오는 함수.
+//bool Config::ReadFromFile()
+//{
+//}

@@ -1,5 +1,6 @@
 #pragma once
 
+class Config;
 using namespace gainput;
 
 // Gainput 라이브러리 동작을 알아보기 위하여 생성한 임시 Player 클래스.
@@ -27,8 +28,9 @@ public:
 
 	/* Member Variables */
 	Sprite				   *m_pCharacter;
+	Config				   *m_pConfig;
 
-	
+	CC_SYNTHESIZE(float, m_MoveSpeed, MoveSpeed);
 
 };
 

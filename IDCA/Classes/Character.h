@@ -2,7 +2,7 @@
 /*
 CLASS			: Character
 Author			: 김현우
-역할				: Playable Character와 Enemy Character의 추상클래스.
+역할			: Playable Character와 Enemy Character의 추상클래스.
 최종 수정일자	:
 최종 수정자		:
 최종 수정사유	:
