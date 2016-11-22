@@ -12,13 +12,12 @@ Comment			:
 #pragma once
 
 #pragma once
+class MakeAnimation;
 class Character :public Sprite
 {
 public:
-	Character();
-	virtual ~Character();
-	virtual bool init() = 0;
-	virtual void update(float dT) = 0;
+	static Character *create(const char const* filename, const char const* extention);
+	void initOptions(const char const* filename, const char const* extention);
 
 	void SetInput(int inputFromScene);
 	//입력에 따라서 현재의 상태를 파악한다.
@@ -29,6 +28,8 @@ public:
 	void Move(float dt);
 	//정지모션을 스프라이트를 상속받은 이클래스에 넣어준다.
 	void Stop(float dt);
+	//매프레임마다 이스프라이트에 관련한 것들을 갱신한다. 상태 파악->모션
+	void update(float dt);
 	//스프라이트 캐쉬에 이미지를 올린다.
 	void AddSpriteFramesWithFile(const char * filename);
 	void AttackOff();
@@ -71,4 +72,9 @@ private:
 	int m_CurDirection;
 	int m_BeforeDirection;
 	int m_UnitVector[2];
+	//애니메이션을 만들어주는 멤버
+	MakeAnimation *m_pMakeAnimation;
+
+	Character();
+	~Character();
 };

@@ -149,10 +149,12 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\Character.cpp" />
     <ClCompile Include="..\Classes\CharacterManager.cpp" />
+    <ClCompile Include="..\Classes\CharacterScene.cpp" />
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\Classes\KeyboardLayer.cpp" />
     <ClCompile Include="..\Classes\MakeAnimation.cpp" />
     <ClCompile Include="..\Classes\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -166,8 +168,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\Character.h" />
     <ClInclude Include="..\Classes\CharacterManager.h" />
+    <ClInclude Include="..\Classes\CharacterScene.h" />
     <ClInclude Include="..\Classes\GetSpriteFrame.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\KeyboardLayer.h" />
     <ClInclude Include="..\Classes\MakeAnimation.h" />
     <ClInclude Include="..\Classes\pch.h" />
     <ClInclude Include="..\Classes\TemporaryDefine.h" />

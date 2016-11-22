@@ -3,6 +3,7 @@ class Character;
 
 class CharacterManager :public Node
 {
+public:
 	virtual bool init();
 
 	CREATE_FUNC(CharacterManager);

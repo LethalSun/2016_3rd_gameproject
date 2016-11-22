@@ -2,8 +2,8 @@
 class MakeAnimation :public Node
 {
 public:
-	CREATE_FUNC(MakeAnimation);
-	virtual bool init();
+	static MakeAnimation* create(const char *fileName, const char *fileNameExtention);
+	virtual bool init(const char *fileName, const char *fileNameExtention);
 
 	//이동 애니메이션을 만들어 만든다.
 	Animate* AnimationMove(int direction);
