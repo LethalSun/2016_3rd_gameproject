@@ -19,11 +19,11 @@ void EnemyState_Approach::startState(Enemy* enemy)
 	CCLOG("start_Approaching!");
 }
 
-void EnemyState_Approach::runState(Enemy* enemy, float dt)
+void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 {
-	float distanceFromPlayer = enemy->getDistanceFromPlayer();
-	float attackRange = enemy->getAttackRange();
-	float chaseRange = enemy->getChasingRange();
+	auto distanceFromPlayer = enemy->getDistanceFromPlayer();
+	auto attackRange = enemy->getAttackRange();
+	auto chaseRange = enemy->getChasingRange();
 
 	if (isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
@@ -36,7 +36,7 @@ void EnemyState_Approach::runState(Enemy* enemy, float dt)
 	else
 	{
 		enemy->CalUnitVecToPlayer();
-		enemy->move(dt);
+		enemy->move(deltaTime);
 	}
 
 	return;

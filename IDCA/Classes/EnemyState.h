@@ -17,7 +17,7 @@ public:
 
 
 	/* Calculate Functions */
-	bool	   	 isPlayerInChasingRange(float, float);
-	bool	     isPlayerInAttackRange(float, float);
-	bool		 isPlayerInSearchRange(float, float);
+	bool	   	 isPlayerInChasingRange(const float, const float);
+	bool	     isPlayerInAttackRange(const float, const float);
+	bool		 isPlayerInSearchRange(const float, const float);
 };

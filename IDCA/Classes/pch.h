@@ -9,5 +9,5 @@
 // Cocos2d-x Library
 #include "cocos2d.h"
 #pragma warning(pop)
-#include "ConstValue.h"
+#include "Define.h"
 USING_NS_CC;

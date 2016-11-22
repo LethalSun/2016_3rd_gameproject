@@ -6,7 +6,7 @@ class Enemy : public Sprite
 {
 public:
 	virtual bool      init();
-	virtual void      update(float dt) override;
+	virtual void      update(float deltaTime) override;
 
 	/* State */
 	template<typename T_STATE>
@@ -31,12 +31,12 @@ public:
 
 
 	/* Member Function */
-	        void	 move(float dt);
+	        void	 move(const float deltaTime);
 	        void	 CalUnitVecToPlayer();
 	        void	 CalUnitVecToOrigin();
 	        void	 CalDistanceFromPlayer();
 	        void	 CalDistanceFromOrigin();
-			void     HitedMove(float dt);
+			void     HitedMove(const float deltaTime);
 	virtual void	 SetSpriteToAttack() = 0;
 	virtual void	 SetSpriteToCommon() = 0;
 
