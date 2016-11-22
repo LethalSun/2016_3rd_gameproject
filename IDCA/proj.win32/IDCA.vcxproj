@@ -160,6 +160,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\Classes\Player.cpp" />
+    <ClCompile Include="..\Classes\Stage1.cpp" />
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -177,6 +178,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\MakeAnimation.h" />
     <ClInclude Include="..\Classes\pch.h" />
     <ClInclude Include="..\Classes\Player.h" />
+    <ClInclude Include="..\Classes\Stage1.h" />
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

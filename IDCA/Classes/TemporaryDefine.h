@@ -47,4 +47,20 @@ namespace TEMP_DEFINE
 	extern const char*ARCH_BISHOP_FILE_NAME;
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;
 	extern const char *PLIST_FILE_NAME;
+
+
+
+	const int TAG_MOVE_SPEED = 3;
+	const int MAP_MOVE_SPEED = 3;
+
+	extern const char* MAPNAME_1;
+	extern const char* TILELAYER_1;
+	extern const char* TILELAYER_2;
+	extern const char* TILELAYER_3;
+	extern const char* TILELAYER_4;
+	extern const char* TILELAYER_5;
+	extern const char* OBJECTLAYER_1;
+	extern const char* START_OBJECT;
+	extern const int TAG_MOVE_SPEED;
+	extern const int MAP_MOVE_SPEED;
 }

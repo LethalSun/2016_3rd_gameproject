@@ -3,6 +3,8 @@
 #include "SimpleAudioEngine.h"
 #include "Player.h"
 #include "CharacterScene.h"
+#include "createMap.h"
+#include "Stage1.h"
 
 Scene* HelloWorld::createScene()
 {
@@ -54,6 +56,32 @@ bool HelloWorld::init()
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
 
+
+	//// 추가 메뉴
+
+	auto closeItem2 = MenuItemImage::create(
+		"CloseNormal.png",
+		"CloseSelected.png",
+		CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+
+	closeItem2->setPosition(Vec2(origin.x + visibleSize.width - closeItem2->getContentSize().width / 2,
+		origin.y + closeItem2->getContentSize().height / 2));
+
+	// add change scene
+	auto changeScene2 = MenuItemImage::create("TempResourceHW/next.png", "TempResourceHW/nextC.png", CC_CALLBACK_1(HelloWorld::menuNextCallback2, this));
+	changeScene2->setPosition(Vec2(origin.x + changeScene2->getContentSize().width / 2,
+		origin.y + changeScene2->getContentSize().height / 2));
+	// create menu, it's an autorelease object
+	auto menu2 = Menu::create(closeItem2, changeScene2, NULL);
+	menu2->setPosition(Vec2(500,500));
+	this->addChild(menu2, 1);
+
+
+	///
+
+
+	
+
 	/////////////////////////////
 	// 3. add your codes below...
 
@@ -83,6 +111,10 @@ bool HelloWorld::init()
 
 	scheduleUpdate();
 
+
+	
+
+
 	return true;
 }
 
@@ -110,5 +142,12 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 void HelloWorld::menuNextCallback(cocos2d::Ref * pSender)
 {
 	auto pScene = CharacterScene::createScene();
+	Director::getInstance()->pushScene(pScene);
+}
+
+
+void HelloWorld::menuNextCallback2(cocos2d::Ref * pSender)
+{
+	auto pScene = Stage1::createScene();
 	Director::getInstance()->pushScene(pScene);
 }
