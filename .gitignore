@@ -7,12 +7,6 @@
 *.obj
 *.ipch
 *.opendb
-<<<<<<< HEAD
-**/IDCA/proj.win32/Debug.win32/
-**/IDCA/proj.win32/.vs/
-**/IDCA/cocos2d/cocos/2d/Debug.win32/
-**/IDCA/cocos2d/external/
-=======
 /IDCA/proj.win32/Debug.win32/
 /IDCA/proj.win32/.vs/
 /IDCA/cocos2d/cocos/2d/Debug.win32/
@@ -20,4 +14,3 @@
 /IDCA/cocos2d/external/Box2D/proj.win32/Debug.win32/
 /IDCA/cocos2d/external/bullet/proj.win32/Debug.win32/
 /IDCA/cocos2d/external/recast/proj.win32/Debug.win32/
->>>>>>> 0c400b7fe5fecd5b1cb2eb721282e7467ffaeabd
