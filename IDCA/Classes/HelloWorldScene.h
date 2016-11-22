@@ -6,17 +6,16 @@ class Player;
 class HelloWorld : public cocos2d::Layer
 {
 public:
-    static cocos2d::Scene* createScene();
+	static cocos2d::Scene* createScene();
 
-    virtual bool init();
+	virtual bool init();
 	virtual void update(float dt);
-    
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
+	// a selector callback
+	void menuCloseCallback(cocos2d::Ref* pSender);
 	Player *player;
-    // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+	void menuNextCallback(cocos2d::Ref* pSender);
+	// implement the "static create()" method manually
+	CREATE_FUNC(HelloWorld);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
