@@ -57,6 +57,7 @@ void Character::initOptions(const char const* filename, const char const* extent
 //키보드 입력비트 플래그를 액션부분과,움직임부분으로 나누고 방향을 설정해 준다. 정지시에 사용할 이전 방향에 대한 처리도 같이함.
 void Character::SetInput(int inputFromScene)
 {
+	//인풋을 받아와서 액션과 움직임으로 분해한다.
 	m_Input = inputFromScene;
 	m_ActionInput = m_Input & TEMP_DEFINE::ACTIONS::GET_ACTION_BIT;
 	m_MoveInput = m_Input & TEMP_DEFINE::ACTIONS::GET_DIRECTION_BIT;
@@ -134,6 +135,7 @@ void Character::Attack(float dt)
 	{
 		return;
 	}
+
 	stopAllActions();
 	auto animate = m_pMakeAnimation->AnimationAttack(m_CurDirection);
 	auto attackOn = CallFunc::create(CC_CALLBACK_0(Character::AttackOn, this));

@@ -27,29 +27,38 @@ bool CharacterScene::init()
 	//캐릭터 애드차일드
 	m_pCharacter = Character::create(TEMP_DEFINE::ARCH_BISHOP_FILE_NAME, TEMP_DEFINE::SPRITE_FRAME_FILE_EXTENTION);
 	m_pCharacter->setPosition(Vec2(100, 100));
+
 	addChild(m_pCharacter);
 	//이성경 애드차일드
 	m_pMonster = Sprite::create("TempResourceHW/lSG.png");
 	m_pMonster->setPosition(Vec2(900, 600));
+
 	auto action1 = MoveTo::create(20, Vec2(100, 600));
 	auto action2 = MoveTo::create(20, Vec2(900, 600));
 	auto seq = Sequence::create(action1, action2, nullptr);
 	auto repeat = RepeatForever::create(seq);
+
 	m_pMonster->runAction(repeat);
+
 	addChild(m_pMonster);
 	//몬스터1 애드차일드
 	m_pMonster1 = Sprite::create("TempResourceHW/monster.png");
 	m_pMonster1->setPosition(Vec2(900, 100));
+
 	auto action3 = MoveTo::create(8, Vec2(500, 100));
 	auto action4 = MoveTo::create(8, Vec2(900, 100));
 	auto seq1 = Sequence::create(action3, action4, nullptr);
 	auto repeat1 = RepeatForever::create(seq1);
+
 	m_pMonster1->runAction(repeat1);
+
 	addChild(m_pMonster1);
 	//이벤트 리스너
 	auto eventListener = EventListenerKeyboard::create();
+
 	eventListener->onKeyPressed = CC_CALLBACK_2(CharacterScene::onKeyPressed, this);
 	eventListener->onKeyReleased = CC_CALLBACK_2(CharacterScene::onKeyReleased, this);
+
 	this->_eventDispatcher->addEventListenerWithSceneGraphPriority(eventListener, this);
 	//씬전환
 	auto origin = Director::getInstance()->getVisibleOrigin();
