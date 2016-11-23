@@ -69,3 +69,104 @@
 
  몹2-1 배치는 어떻게 할 것인지?<br>
  - Choco 두 마리랑 늑대 한 마리가 있는데, 삼각형으로 젠을 시킬거다. 늑대가 뒤에 있는 삼각형으로 젠을 시킨다.  돌 위에 있는 친구들만, 배치를 위아래로 하도록.<br>
+ 
+ 
+ 
+ 
+ <br>
+ ## 16.11.23
+ 
+ ![Alt text](/IDCA/Resources/Data/GameStructure.png?raw=true "Optional Title")
+ 
+ <br>
+
+
+
+
+
+Input 을 따로 떼어 놓는다 <br>
+
+InputLayer ->  <br>
+
+
+SceneUpdate (  <br>
+
+    InputLayer -> 입력 값을 받는다.  (싱글톤) <br>
+
+    Manager -> ChangeState		 <br>
+
+    Player -> Move ( <br>
+
+		if (is지형과의 충돌) <br>
+
+    
+    .... <br>
+
+    .... <br>
+
+) <br>
+
+
+플레이어는 PlayerState를 가지고 있는다. CharacterManager는 Player의 state가 어떻게 되야하는지를 계산하여 Player의 State를 바꿔준다. <br>
+
+PlayerState : IDLE, WALKING, ATTACKING; <br>
+
+
+
+
+CollideManager 모든 객체 ( Player, Enemy, 투사체 )를 포인터로 들고 있는다. <br>
+
+-> 충돌판정이 나면, 투사체는 죽고, 해당하는 매니저에게  <br>
+
+
+
+
+방향키 <br>
+Q, W, E -> 공격, 스킬1, 스킬 2 <br>
+ESC -> 메뉴 <br>
+
+
+조이패드<br>
+스틱 입력 -> 방향<br>
+A, B, X  -> 공격, 스킬 1, 스킬 2<br>
+START -> 메뉴<br>
+
+
+byte 배열 -> idx는 enum으로.<br>
+
+old byte배열<br>
+cur byte배열<br>
+-> 상태 byte배열.<br>
+
+
+Move -> 캐릭터가 소유<br>
+맵 관리자에게 현재 위치를 주고<br>
+갈 수 있다면 이동.<br>
+아니라면 스킵.<br>
+
+
+//Player info<br>
+Hp<br>
+MaxHp<br>
+Mp<br>
+MaxMp<br>
+이동속도<br>
+공격/ 방어력<br>
+
+충돌 태그<br>
+피격 범위 계산 _> Collide에서 읽을 수 있게.<br>
+
+
+상태 이상은 -> 따로 빼서 함수로 처리.<br>
+이상상태 업데이트를 하나 준비해서, 이상상태일때만 업데이트.<br>
+
+
+SkillBase <br>
+{
+    virtual Action;
+    ...
+}<br>
+
+플레이어는 함수 포인터 슬롯을 가지고 있어서 넣었다 뺐다만 할 수 있도록.<br>
+
+
