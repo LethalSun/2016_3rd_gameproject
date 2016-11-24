@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="InputLayer">
+      <UniqueIdentifier>{dab152e0-97fe-4440-a863-27c8e64f3407}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\config.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\InputLayer.cpp">
+      <Filter>InputLayer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\config.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\InputLayer.h">
+      <Filter>InputLayer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
