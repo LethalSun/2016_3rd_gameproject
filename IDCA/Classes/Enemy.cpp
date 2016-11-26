@@ -3,7 +3,7 @@
 #include "math.h"
 
 
-bool Enemy::init(ENEMY::ENEMY_TYPE enemyType, Vec2 initPosition)
+bool Enemy::init(Vec2 initPosition)
 {
 	if (!Sprite::init())
 	{
