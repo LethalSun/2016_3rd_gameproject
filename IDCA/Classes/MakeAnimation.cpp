@@ -38,9 +38,6 @@ Animate* MakeAnimation::AnimationMove(int direction)
 	for (int i = imageStartNumber; i < imageStartNumber + 10; i++)
 	{
 		sprintf(m_Buffer, "%smove%d%s", m_FrameName, i, m_FileNameExtention);
-		char buffer[256];
-		sprintf(buffer, "inputKeyboard: %s", m_Buffer);
-		cocos2d::log(buffer);
 		auto frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_Buffer);
 		if (frame == nullptr)
 		{
@@ -81,9 +78,6 @@ Animate* MakeAnimation::AnimationAttack(int direction)
 	for (int i = imageStartNumber; i < imageStartNumber + 10; i++)
 	{
 		sprintf(m_Buffer, "%shit%d%s", m_FrameName, i, m_FileNameExtention);
-		char buffer[256];
-		sprintf(buffer, "inputKeyboard: %s", m_Buffer);
-		cocos2d::log(buffer);
 		auto frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_Buffer);
 		if (frame == nullptr)
 		{
