@@ -76,7 +76,7 @@
  <br>
  ## 16.11.23
  
- ![Alt text](/IDCA/Resources/Data/GameStructure.png?raw=true "Optional Title")
+ ![Alt text](/IDCA/Resources/Data/PngForGithub/GameStructure.png?raw=true "GameStructure")
  
  <br>
 
