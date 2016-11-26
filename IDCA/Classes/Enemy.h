@@ -2,10 +2,29 @@
 
 #include "EnemyState.h"
 
+#define CREATE_FUNC_ENEMY(__TYPE__, __POS__) \
+static __TYPE__* create(ENEMY::ENEMY_TYPE enemyType, Vec2 initPosition) \
+{ \
+    __TYPE__ *pRet = new(std::nothrow) __TYPE__(); \
+    if (pRet && pRet->init(enemyType, initPosition)) \
+    { \
+        pRet->autorelease(); \
+		pRet->scheduleUpdate();\
+        return pRet; \
+    } \
+    else \
+    { \
+        delete pRet; \
+        pRet = nullptr; \
+        return nullptr; \
+    } \
+}
+
+
 class Enemy : public Sprite
 {
 public:
-	virtual bool      init();
+	virtual bool      init(ENEMY::ENEMY_TYPE, Vec2);
 	virtual void      update(float deltaTime) override;
 
 	/* State */
@@ -37,9 +56,19 @@ public:
 	        void	 CalDistanceFromPlayer();
 	        void	 CalDistanceFromOrigin();
 			void     HitedMove(const float deltaTime);
-	virtual void	 SetSpriteToAttack() = 0;
-	virtual void	 SetSpriteToCommon() = 0;
 
+	/* Create Function Re-define */
+	static Enemy* create(ENEMY::ENEMY_TYPE enemyType, Vec2 initPosition) {
+		auto p = new Enemy();
+		if (p->init(enemyType, initPosition)) {
+			p->autorelease();
+			return p;
+		}
+		else {
+			delete p;
+			return nullptr;
+		}
+	}
 
 	Sprite*           m_pSprite;
 };

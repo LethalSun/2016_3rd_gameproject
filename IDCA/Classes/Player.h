@@ -11,6 +11,7 @@ public:
 	CREATE_FUNC(Player);
 
 	virtual bool			init();
+	virtual void			update(const float deltaTime);
 
 
 	/* JoyStick Setting */
@@ -18,6 +19,7 @@ public:
 	void					StickMove(const float deltaTime);
 	InputManager			m_Manager;
 	InputMap			   *m_pMap;
+
 
 
 	/* Animation */
