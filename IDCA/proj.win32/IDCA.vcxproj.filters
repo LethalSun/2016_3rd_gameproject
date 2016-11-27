@@ -10,9 +10,6 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\IniReader.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
@@ -91,6 +88,9 @@
     <ClCompile Include="..\Classes\TestKW.cpp">
       <Filter>KW_Lee\Config</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\IniReader.cpp">
+      <Filter>KW_Lee\Config</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\pch.h">
@@ -100,9 +100,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\IniReader.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
@@ -184,6 +181,9 @@
       <Filter>HW_Kim</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TestKw.h">
+      <Filter>KW_Lee\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IniReader.h">
       <Filter>KW_Lee\Config</Filter>
     </ClInclude>
   </ItemGroup>
