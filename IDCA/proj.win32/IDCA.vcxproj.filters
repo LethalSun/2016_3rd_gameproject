@@ -91,6 +91,9 @@
     <ClCompile Include="..\Classes\IniReader.cpp">
       <Filter>KW_Lee\Config</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\Classes\CreateMap.cpp">
+      <Filter>GS_Go</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\pch.h">
@@ -185,6 +188,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\IniReader.h">
       <Filter>KW_Lee\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\Classes\CreateMap.h">
+      <Filter>GS_Go</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
