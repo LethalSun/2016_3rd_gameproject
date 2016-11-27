@@ -15,6 +15,8 @@
     </Filter>
     <Filter Include="Enemy">
       <UniqueIdentifier>{c03213ad-e4f3-47f0-a12e-eaca417636b0}</UniqueIdentifier>
+    <Filter Include="AnimationMaker">
+      <UniqueIdentifier>{e39789b0-331d-4599-ad7c-5d4b4a8b40fa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,31 +29,25 @@
     <ClCompile Include="..\Classes\pch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Character.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TemporaryDefine.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MakeAnimation.cpp">
+    <ClCompile Include="..\Classes\InputLayer.cpp">
+      <Filter>InputLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnimationMaker.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CharacterManager.cpp">
+    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\Classes\PlayerCharacterManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\CharacterScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Player.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\config.cpp">
+    <ClCompile Include="..\Classes\StageOne.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\InputLayer.cpp">
@@ -95,34 +91,28 @@
     <ClInclude Include="..\Classes\pch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Character.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\GetSpriteFrame.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TemporaryDefine.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MakeAnimation.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CharacterManager.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CharacterScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Player.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Define.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\config.h">
+    <ClInclude Include="..\Classes\InputLayer.h">
+      <Filter>InputLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnimationMaker.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacterManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StageOne.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\InputLayer.h">

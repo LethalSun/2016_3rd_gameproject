@@ -1,6 +1,17 @@
 #pragma once
 #include "cocos2d.h"
 
+<<<<<<< HEAD
+//HW
+enum STATE
+{
+	STOP = 0,
+	ATTACK = 1,
+	MOVE = 2,
+	SKILL = 3
+};
+//HW
+=======
  // Json 파일로 변환전까지 임시로 쓰는 Define.h
 
 namespace STATIC
@@ -11,6 +22,7 @@ namespace STATIC
 	const float ORIGIN_RANGE = 50.f;
 }
 
+>>>>>>> 9c3f0cee7cca36f48baeb82077bed40ff02cbc82
 enum Button
 {
 	LeftStickX,
@@ -19,6 +31,10 @@ enum Button
 
 const char PLAYER_SPRITE[] = "WalkingFront01.png";
 const char PLAYER_PLIST[] = "Warrior.plist";
+<<<<<<< HEAD
+const int MAX_FRAME_NUM = 10;
+const float ANIMATION_SPEED = 0.1f;
+=======
 
 
 
@@ -47,3 +63,4 @@ namespace ENEMY
 		const float HITTED_SPEED = 6000.f;
 	}
 }
+>>>>>>> 9c3f0cee7cca36f48baeb82077bed40ff02cbc82

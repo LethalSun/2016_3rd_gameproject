@@ -9,8 +9,9 @@ public:
 	enum ARRAY_INDEX
 	{
 
-		// UnitVec은 키보드와 조이스틱 공용으로 관리
+		// UnitVec은 키보드와 조이스틱 공용으로 관리 (-1, 0, 1)
 		unitVecX, unitVecY,
+		unitVecXStatus, unitVecYStatus,
 
 		// Keyborad Input idx
 		keyQ, keyW, keyE, keyESC,
@@ -27,6 +28,7 @@ public:
 		NONE, START, HOLD, END
 	};
 
+
 	// JoyStick Mapping을 위한 값.
 	const int JoyStickX = 0;
 	const int JoyStickY = 1;
@@ -38,8 +40,9 @@ public:
 
 
 	/* Delivery Data Structure & Functions */
-	static byte				m_CurrentInputArray[idxNum];
-	static byte				m_OldInputArray[idxNum];
+	byte					m_CurrentInputArray[idxNum];
+	byte					m_OldInputArray[idxNum];
+	
 	static byte				m_InputArray[idxNum];
 	
 	void					DefineWhatIsInputValue();

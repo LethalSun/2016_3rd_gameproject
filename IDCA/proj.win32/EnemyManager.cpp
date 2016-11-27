@@ -23,6 +23,7 @@ void EnemyManager::deleteInstance()
 	return;
 }
 
+
 // 초기화 함수.
 EnemyManager::EnemyManager()
 {
