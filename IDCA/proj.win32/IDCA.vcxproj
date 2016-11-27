@@ -149,7 +149,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\AnimationMaker.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp" />
-    <ClCompile Include="..\Classes\InputLayer.cpp" />
     <ClCompile Include="..\Classes\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
@@ -166,7 +165,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\GetSpriteFrame.h" />
-    <ClInclude Include="..\Classes\InputLayer.h" />
     <ClInclude Include="..\Classes\pch.h" />
     <ClInclude Include="..\Classes\PlayerCharacter.h" />
     <ClInclude Include="..\Classes\PlayerCharacterManager.h" />

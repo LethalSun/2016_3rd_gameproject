@@ -2,10 +2,11 @@
 
 #include "EnemyState.h"
 
+
 class Enemy : public Sprite
 {
 public:
-	virtual bool      init();
+	virtual bool      init(Vec2);
 	virtual void      update(float deltaTime) override;
 
 	/* State */
@@ -37,9 +38,19 @@ public:
 	        void	 CalDistanceFromPlayer();
 	        void	 CalDistanceFromOrigin();
 			void     HitedMove(const float deltaTime);
-	virtual void	 SetSpriteToAttack() = 0;
-	virtual void	 SetSpriteToCommon() = 0;
 
+	/* Create Function Re-define */
+	static Enemy* create(Vec2 initPosition) {
+		auto p = new Enemy();
+		if (p->init(initPosition)) {
+			p->autorelease();
+			return p;
+		}
+		else {
+			delete p;
+			return nullptr;
+		}
+	}
 
 	Sprite*           m_pSprite;
 };

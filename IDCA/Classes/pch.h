@@ -8,6 +8,10 @@
 
 // Cocos2d-x Library
 #include "cocos2d.h"
+
 #pragma warning(pop)
+
 #include "Define.h"
+#include <vector>
+
 USING_NS_CC;
