@@ -2,6 +2,8 @@
 
 #include "EnemyState.h"
 
+class MakeAnimation;
+
 
 class Enemy : public Sprite
 {
@@ -32,12 +34,12 @@ public:
 
 
 	/* Member Function */
-	        void	 move(const float deltaTime);
-	        void	 CalUnitVecToPlayer();
-	        void	 CalUnitVecToOrigin();
-	        void	 CalDistanceFromPlayer();
-	        void	 CalDistanceFromOrigin();
-			void     HitedMove(const float deltaTime);
+	void				 move(const float deltaTime);
+	void				 CalUnitVecToPlayer();
+	void				 CalUnitVecToOrigin();
+	void				 CalDistanceFromPlayer();
+	void				 CalDistanceFromOrigin();
+	void				 HitedMove(const float deltaTime);
 
 	/* Create Function Re-define */
 	static Enemy* create(Vec2 initPosition) {
@@ -53,6 +55,7 @@ public:
 	}
 
 	Sprite*           m_pSprite;
+	MakeAnimation*	  m_pMakeAnimation;
 };
 
 

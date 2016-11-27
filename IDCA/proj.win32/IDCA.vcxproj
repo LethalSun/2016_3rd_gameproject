@@ -151,6 +151,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\CharacterManager.cpp" />
     <ClCompile Include="..\Classes\CharacterScene.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
+    <ClCompile Include="..\Classes\Enemy.cpp" />
+    <ClCompile Include="..\Classes\EnemyState.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
+    <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -162,6 +170,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     </ClCompile>
     <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
     </ClCompile>
@@ -173,6 +182,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\CharacterScene.h" />
     <ClInclude Include="..\Classes\config.h" />
     <ClInclude Include="..\Classes\Define.h" />
+    <ClInclude Include="..\Classes\Enemy.h" />
+    <ClInclude Include="..\Classes\EnemyState.h" />
+    <ClInclude Include="..\Classes\EnemyState_Approach.h" />
+    <ClInclude Include="..\Classes\EnemyState_Attack.h" />
+    <ClInclude Include="..\Classes\EnemyState_Return.h" />
+    <ClInclude Include="..\Classes\EnemyState_Search.h" />
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
+    <ClInclude Include="..\Classes\Enemy_Choco.h" />
     <ClInclude Include="..\Classes\GetSpriteFrame.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\InputLayer.h" />
@@ -180,6 +197,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\pch.h" />
     <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
+    <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

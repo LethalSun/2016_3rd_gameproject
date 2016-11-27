@@ -12,6 +12,7 @@ Character::~Character()
 {
 	delete m_pMakeAnimation;
 }
+
 Character * Character::create(const char const* filename, const char const* extention)
 {
 	auto pSprite = new Character();
@@ -30,6 +31,7 @@ Character * Character::create(const char const* filename, const char const* exte
 
 	return pSprite;
 }
+
 void Character::initOptions(const char const* filename, const char const* extention)
 {
 	this->scheduleUpdate();
@@ -54,6 +56,7 @@ void Character::initOptions(const char const* filename, const char const* extent
 	//체력 초기화
 	m_CurHP = TEMP_DEFINE::MAX_HP;
 }
+
 //키보드 입력비트 플래그를 액션부분과,움직임부분으로 나누고 방향을 설정해 준다. 정지시에 사용할 이전 방향에 대한 처리도 같이함.
 void Character::SetInput(int inputFromScene)
 {

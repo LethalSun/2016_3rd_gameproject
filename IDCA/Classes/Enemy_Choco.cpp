@@ -8,8 +8,6 @@ bool Enemy_Choco::init(Vec2 initPosition)
 {
 	if (!Enemy::init(initPosition))
 	{
-		setOrigin(Vec2(STATIC::visibleSize.width * initPosition.x,
-			STATIC::visibleSize.height * initPosition.y));
 
 		return false;
 	}
@@ -21,6 +19,9 @@ bool Enemy_Choco::init(Vec2 initPosition)
 	setMoveSpeed		(MOVE_SPEED);
 	setIsAttackedOnce	(false); 
 	setIsHited			(false);
+
+	setOrigin(Vec2(STATIC::visibleSize.width * initPosition.x,
+		STATIC::visibleSize.height * initPosition.y));
 
 	// Sprite »ý¼º
 	m_pSprite = Sprite::create(CHOCO_SPRITE);

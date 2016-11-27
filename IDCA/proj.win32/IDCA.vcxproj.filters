@@ -13,6 +13,9 @@
     <Filter Include="InputLayer">
       <UniqueIdentifier>{dab152e0-97fe-4440-a863-27c8e64f3407}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{c03213ad-e4f3-47f0-a12e-eaca417636b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +56,33 @@
     </ClCompile>
     <ClCompile Include="..\Classes\InputLayer.cpp">
       <Filter>InputLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy_Choco.cpp">
+      <Filter>Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +127,33 @@
     </ClInclude>
     <ClInclude Include="..\Classes\InputLayer.h">
       <Filter>InputLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Approach.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Attack.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Return.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Search.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy_Choco.h">
+      <Filter>Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
