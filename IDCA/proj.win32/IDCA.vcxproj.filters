@@ -85,9 +85,6 @@
     <ClCompile Include="..\Classes\PlayerCharacter.cpp">
       <Filter>HW_Kim\PlayerCharacter</Filter>
     </ClCompile>
-    <ClCompile Include="test11.cpp">
-      <Filter>HW_Kim</Filter>
-	</ClCompile>
     <ClCompile Include="..\Classes\TestKW.cpp">
       <Filter>KW_Lee\Config</Filter>
     </ClCompile>
@@ -183,9 +180,6 @@
     <ClInclude Include="..\Classes\PlayerCharacter.h">
       <Filter>HW_Kim\PlayerCharacter</Filter>
     </ClInclude>
-    <ClInclude Include="test11.h">
-      <Filter>HW_Kim</Filter>
-	 </ClInclude>
     <ClInclude Include="..\Classes\TestKw.h">
       <Filter>KW_Lee\Config</Filter>
     </ClInclude>
