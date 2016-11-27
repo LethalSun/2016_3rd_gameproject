@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>4</int>
         <key>texturePackerVersion</key>
-        <string>4.3.0</string>
+        <string>4.3.1</string>
         <key>fileName</key>
-        <string>C:/Users/kwen won Lee/Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/AfterPacker/Choco.tps</string>
+        <string>C:/Users/kwen won Lee/Desktop/Project/2016_3rd_gameproject/IDCA/Resources/AfterPacker/Choco.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -108,7 +108,7 @@
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
-            <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
+            <enum type="AlgorithmSettings::SizeConstraints">WordAligned</enum>
             <key>forceSquared</key>
             <false/>
             <key>maxRects</key>
@@ -148,6 +148,10 @@
         <key>dataFileNames</key>
         <map type="GFileNameMap">
             <key>data</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>Choco.plist</filename>
+            </struct>
             <key>header</key>
             <key>source</key>
             <struct type="DataFile">
@@ -199,11 +203,11 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../Monster/ChocoAttackLeftBack01.psd</key>
-            <key type="filename">../Monster/ChocoAttackRightBack01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA0.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA70.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.461538,0.695652</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -213,10 +217,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackLeftBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA1.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA71.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.55102,0.564103</point_f>
+                <point_f>0.632653,0.871795</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -226,50 +231,25 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackLeftBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA10.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA20.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.5,0.652174</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>12,9,23,18</rect>
+                <rect>7,12,13,23</rect>
                 <key>scale9Paddings</key>
-                <rect>12,9,23,18</rect>
+                <rect>7,12,13,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackLeftFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA11.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA21.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.333333,0.555556</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,11,14,23</rect>
-                <key>scale9Paddings</key>
-                <rect>7,11,14,23</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoAttackLeftFront02.psd</key>
-            <key type="filename">../Monster/ChocoAttackLeftFront03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.489796,0.595238</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,11,25,21</rect>
-                <key>scale9Paddings</key>
-                <rect>12,11,25,21</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoAttackRightBack02.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.44898,0.564103</point_f>
+                <point_f>0.367347,0.794872</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -279,10 +259,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackRightBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA12.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA22.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.478261,0.514286</point_f>
+                <point_f>0.391304,0.8</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -292,10 +273,24 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackRightFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA2.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA72.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.608696,0.771429</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,9,23,18</rect>
+                <key>scale9Paddings</key>
+                <rect>12,9,23,18</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA30.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.666667,0.488889</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -305,8 +300,14 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoAttackRightFront02.psd</key>
-            <key type="filename">../Monster/ChocoAttackRightFront03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA31.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA32.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA41.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA42.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA51.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA52.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA61.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA62.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -319,66 +320,44 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoDefeatLeftBack01.psd</key>
-            <key type="filename">../Monster/ChocoDefeatRightBack01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA40.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.62963,0.488889</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>9,10,18,19</rect>
+                <rect>7,11,14,23</rect>
                 <key>scale9Paddings</key>
-                <rect>9,10,18,19</rect>
+                <rect>7,11,14,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoDefeatLeftBack02.psd</key>
-            <key type="filename">../Monster/ChocoDefeatRightBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA50.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA60.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.333333,0.466667</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>10,7,20,15</rect>
+                <rect>7,11,14,23</rect>
                 <key>scale9Paddings</key>
-                <rect>10,7,20,15</rect>
+                <rect>7,11,14,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoDefeatLeftFront01.psd</key>
-            <key type="filename">../Monster/ChocoDefeatRightFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM0.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM1.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM10.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM11.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM20.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM21.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM70.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM71.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,9,20,18</rect>
-                <key>scale9Paddings</key>
-                <rect>10,9,20,18</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoDefeatLeftFront02.psd</key>
-            <key type="filename">../Monster/ChocoDefeatRightFront02.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,8,18,16</rect>
-                <key>scale9Paddings</key>
-                <rect>9,8,18,16</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoMoveLeftBack01.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.548387,0.744186</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -388,23 +367,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveLeftBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM12.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM2.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM22.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM72.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.53125,0.744186</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,11,16,22</rect>
-                <key>scale9Paddings</key>
-                <rect>8,11,16,22</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoMoveLeftBack03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.551724,0.761905</point_f>
+                <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -414,10 +383,17 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveLeftBack04.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM13.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM23.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM3.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM32.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM42.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM52.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM62.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM73.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.483871,0.695652</point_f>
+                <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -427,8 +403,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveLeftFront01.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM30.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM40.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM50.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM60.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -441,8 +419,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveLeftFront02.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightFront02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM31.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM41.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM51.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM61.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -455,23 +435,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveLeftFront03.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightBack04.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightFront03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,12,16,23</rect>
-                <key>scale9Paddings</key>
-                <rect>8,12,16,23</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoMoveLeftFront04.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightFront04.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM33.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM43.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM53.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM63.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -484,35 +451,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoMoveRightBack01.psd</key>
-            <key type="filename">../Monster/ChocoMoveRightBack02.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,11,16,22</rect>
-                <key>scale9Paddings</key>
-                <rect>8,11,16,22</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoMoveRightBack03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,11,15,21</rect>
-                <key>scale9Paddings</key>
-                <rect>7,11,15,21</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoStandingLeftBack01.psd</key>
-            <key type="filename">../Monster/ChocoStandingLeftBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS0.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS70.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -525,10 +465,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingLeftBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS1.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS71.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.435484,0.5</point_f>
+                <point_f>0.419355,0.515152</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -538,10 +479,67 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingLeftFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS10.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS20.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.551724,0.611111</point_f>
+                <point_f>0.423077,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9Paddings</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS11.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS21.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,8,16,17</rect>
+                <key>scale9Paddings</key>
+                <rect>8,8,16,17</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS12.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS22.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.384615,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9Paddings</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS2.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS72.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.538462,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9Paddings</key>
+                <rect>7,9,13,17</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS30.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS40.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.413793,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -551,10 +549,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingLeftFront02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS31.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS41.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS51.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS61.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.484848,0.6</point_f>
+                <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -564,10 +565,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingLeftFront03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS32.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS42.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.571429,0.611111</point_f>
+                <point_f>0.392857,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -577,37 +579,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingRightBack01.psd</key>
-            <key type="filename">../Monster/ChocoStandingRightBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS50.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS60.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.423077,0.558824</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,9,13,17</rect>
-                <key>scale9Paddings</key>
-                <rect>7,9,13,17</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoStandingRightBack02.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.516129,0.545455</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,8,16,17</rect>
-                <key>scale9Paddings</key>
-                <rect>8,8,16,17</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoStandingRightFront01.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.586207,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -617,23 +593,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Monster/ChocoStandingRightFront02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS52.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS62.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.560606,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>8,9,17,18</rect>
-                <key>scale9Paddings</key>
-                <rect>8,9,17,18</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Monster/ChocoStandingRightFront03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.607143,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -646,54 +610,86 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../Monster/ChocoStandingLeftFront01.psd</filename>
-            <filename>../Monster/ChocoStandingLeftFront02.psd</filename>
-            <filename>../Monster/ChocoStandingLeftFront03.psd</filename>
-            <filename>../Monster/ChocoStandingRightBack01.psd</filename>
-            <filename>../Monster/ChocoStandingRightBack02.psd</filename>
-            <filename>../Monster/ChocoStandingRightBack03.psd</filename>
-            <filename>../Monster/ChocoStandingRightFront01.psd</filename>
-            <filename>../Monster/ChocoStandingRightFront02.psd</filename>
-            <filename>../Monster/ChocoStandingRightFront03.psd</filename>
-            <filename>../Monster/ChocoStandingLeftBack01.psd</filename>
-            <filename>../Monster/ChocoStandingLeftBack02.psd</filename>
-            <filename>../Monster/ChocoStandingLeftBack03.psd</filename>
-            <filename>../Monster/ChocoMoveLeftFront04.psd</filename>
-            <filename>../Monster/ChocoMoveRightBack01.psd</filename>
-            <filename>../Monster/ChocoMoveRightBack02.psd</filename>
-            <filename>../Monster/ChocoMoveRightBack03.psd</filename>
-            <filename>../Monster/ChocoMoveRightBack04.psd</filename>
-            <filename>../Monster/ChocoMoveRightFront01.psd</filename>
-            <filename>../Monster/ChocoMoveRightFront02.psd</filename>
-            <filename>../Monster/ChocoMoveRightFront03.psd</filename>
-            <filename>../Monster/ChocoMoveRightFront04.psd</filename>
-            <filename>../Monster/ChocoMoveLeftBack01.psd</filename>
-            <filename>../Monster/ChocoMoveLeftBack02.psd</filename>
-            <filename>../Monster/ChocoMoveLeftBack03.psd</filename>
-            <filename>../Monster/ChocoMoveLeftBack04.psd</filename>
-            <filename>../Monster/ChocoMoveLeftFront01.psd</filename>
-            <filename>../Monster/ChocoMoveLeftFront02.psd</filename>
-            <filename>../Monster/ChocoMoveLeftFront03.psd</filename>
-            <filename>../Monster/ChocoAttackRightBack01.psd</filename>
-            <filename>../Monster/ChocoAttackRightBack02.psd</filename>
-            <filename>../Monster/ChocoAttackRightBack03.psd</filename>
-            <filename>../Monster/ChocoAttackRightFront01.psd</filename>
-            <filename>../Monster/ChocoAttackRightFront02.psd</filename>
-            <filename>../Monster/ChocoAttackRightFront03.psd</filename>
-            <filename>../Monster/ChocoAttackLeftBack01.psd</filename>
-            <filename>../Monster/ChocoAttackLeftBack02.psd</filename>
-            <filename>../Monster/ChocoAttackLeftBack03.psd</filename>
-            <filename>../Monster/ChocoAttackLeftFront01.psd</filename>
-            <filename>../Monster/ChocoAttackLeftFront02.psd</filename>
-            <filename>../Monster/ChocoAttackLeftFront03.psd</filename>
-            <filename>../Monster/ChocoDefeatLeftBack01.psd</filename>
-            <filename>../Monster/ChocoDefeatLeftBack02.psd</filename>
-            <filename>../Monster/ChocoDefeatLeftFront01.psd</filename>
-            <filename>../Monster/ChocoDefeatLeftFront02.psd</filename>
-            <filename>../Monster/ChocoDefeatRightBack01.psd</filename>
-            <filename>../Monster/ChocoDefeatRightBack02.psd</filename>
-            <filename>../Monster/ChocoDefeatRightFront01.psd</filename>
-            <filename>../Monster/ChocoDefeatRightFront02.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA70.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA71.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA72.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA0.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA1.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA2.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA10.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA11.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA12.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA20.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA21.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA22.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA30.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA31.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA32.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA40.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA41.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA42.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA50.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA51.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA52.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA60.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA61.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA62.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS32.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS40.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS41.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS42.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS50.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS51.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS52.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS60.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS61.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS62.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS70.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS71.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS72.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM0.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM1.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM2.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM3.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM10.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM11.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM12.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM13.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM20.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM21.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM22.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM23.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM30.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM31.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM32.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM33.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM40.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM41.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM42.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM43.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM50.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM51.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM52.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM53.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM60.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM61.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM62.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM63.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM70.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM71.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM72.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM73.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS0.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS1.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS2.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS10.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS11.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS12.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS20.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS21.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS22.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS30.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoS31.psd</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
