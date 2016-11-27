@@ -76,9 +76,6 @@
     <ClCompile Include="..\Classes\Player.cpp">
       <Filter>Old</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
-      <Filter>HW_Kim</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\PlayerCharacterManager.cpp">
       <Filter>HW_Kim</Filter>
     </ClCompile>
@@ -89,6 +86,12 @@
       <Filter>KW_Lee</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TestHw.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
+      <Filter>HW_Kim\PlayerCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="test11.cpp">
       <Filter>HW_Kim</Filter>
     </ClCompile>
   </ItemGroup>
@@ -171,9 +174,6 @@
     <ClInclude Include="..\Classes\Player.h">
       <Filter>Old</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\PlayerCharacter.h">
-      <Filter>HW_Kim</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\PlayerCharacterManager.h">
       <Filter>HW_Kim</Filter>
     </ClInclude>
@@ -184,6 +184,12 @@
       <Filter>KW_Lee</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TestHw.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacter.h">
+      <Filter>HW_Kim\PlayerCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="test11.h">
       <Filter>HW_Kim</Filter>
     </ClInclude>
   </ItemGroup>
@@ -223,6 +229,9 @@
     </Filter>
     <Filter Include="GS_Go">
       <UniqueIdentifier>{1d4e7424-5483-4651-80fc-a2c50425c2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HW_Kim\PlayerCharacter">
+      <UniqueIdentifier>{2d9e6d51-c559-4c8a-9fe6-285653d584b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
