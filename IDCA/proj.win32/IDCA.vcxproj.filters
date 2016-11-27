@@ -1,154 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="win32">
-      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="resource">
-      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="InputLayer">
-      <UniqueIdentifier>{dab152e0-97fe-4440-a863-27c8e64f3407}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Enemy">
-      <UniqueIdentifier>{c03213ad-e4f3-47f0-a12e-eaca417636b0}</UniqueIdentifier>
-    <Filter Include="AnimationMaker">
-      <UniqueIdentifier>{e39789b0-331d-4599-ad7c-5d4b4a8b40fa}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>win32</Filter>
+    <ClCompile Include="..\Classes\InputLayer.cpp">
+      <Filter>InputLayer</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\pch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GetSpriteFrame.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TemporaryDefine.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\InputLayer.cpp">
-      <Filter>InputLayer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AnimationMaker.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PlayerCharacterManager.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\StageOne.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\InputLayer.cpp">
-      <Filter>InputLayer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Enemy.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyManager.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState_Approach.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState_Attack.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState_Return.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState_Search.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Enemy_Choco.cpp">
-      <Filter>Enemy</Filter>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
-      <Filter>win32</Filter>
+    <ClInclude Include="..\Classes\InputLayer.h">
+      <Filter>InputLayer</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
+    <ClInclude Include="main.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\pch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GetSpriteFrame.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TemporaryDefine.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Define.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\InputLayer.h">
-      <Filter>InputLayer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AnimationMaker.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PlayerCharacter.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PlayerCharacterManager.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\StageOne.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\InputLayer.h">
-      <Filter>InputLayer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Enemy.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyManager.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState_Approach.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState_Attack.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState_Return.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState_Search.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\EnemyState_Waiting.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Enemy_Choco.h">
-      <Filter>Enemy</Filter>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="game.rc">
-      <Filter>resource</Filter>
-    </ResourceCompile>
+    <Filter Include="Character">
+      <UniqueIdentifier>{7d317c63-4b85-4507-884f-7d6dfd9df33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{cdcf0fc1-ff25-4506-a24d-7f6518668e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InputLayer">
+      <UniqueIdentifier>{fc963f9c-835a-4f00-a17d-1b92e9121c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{b25bbef6-0647-466f-9bd2-9d64e20060d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
