@@ -3,16 +3,16 @@
 
 AnimationMaker * AnimationMaker::create(const char * fileName, const char * fileExtention)
 {
-	auto maker = new(std::nothrow)AnimationMaker();
-	if (maker && maker->init(fileName, fileExtention))
+	auto pMaker = new(std::nothrow)AnimationMaker();
+	if (pMaker && pMaker->init(fileName, fileExtention))
 	{
-		maker->autorelease();
-		return maker;
+		pMaker->autorelease();
+		return pMaker;
 	}
 	else
 	{
-		delete maker;
-		maker = nullptr;
+		delete pMaker;
+		pMaker = nullptr;
 		return nullptr;
 	}
 }
