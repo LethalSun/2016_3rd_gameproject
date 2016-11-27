@@ -27,31 +27,10 @@
     <ClCompile Include="..\Classes\pch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Character.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\GetSpriteFrame.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TemporaryDefine.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\MakeAnimation.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\CharacterManager.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\CharacterScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Player.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\config.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\InputLayer.cpp">
@@ -80,34 +59,13 @@
     <ClInclude Include="..\Classes\pch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Character.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\GetSpriteFrame.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TemporaryDefine.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MakeAnimation.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CharacterManager.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CharacterScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Player.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Define.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\config.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\InputLayer.h">

@@ -12,6 +12,7 @@ Character::~Character()
 {
 	delete m_pMakeAnimation;
 }
+
 Character * Character::create(const char const* filename, const char const* extention)
 {
 	auto pSprite = new Character();
@@ -30,6 +31,7 @@ Character * Character::create(const char const* filename, const char const* exte
 
 	return pSprite;
 }
+
 void Character::initOptions(const char const* filename, const char const* extention)
 {
 	this->scheduleUpdate();
@@ -54,6 +56,7 @@ void Character::initOptions(const char const* filename, const char const* extent
 	//체력 초기화
 	m_CurHP = TEMP_DEFINE::MAX_HP;
 }
+
 //키보드 입력비트 플래그를 액션부분과,움직임부분으로 나누고 방향을 설정해 준다. 정지시에 사용할 이전 방향에 대한 처리도 같이함.
 void Character::SetInput(int inputFromScene)
 {
@@ -102,6 +105,7 @@ void Character::SetInput(int inputFromScene)
 		m_UnitVector[0] = 0;
 	}
 }
+
 //입력에 따라서 현재의 상태를 파악한다.
 void Character::CheckCharacterState()
 {
@@ -128,6 +132,7 @@ void Character::CheckCharacterState()
 		return;
 	}
 }
+
 //공격모션을 스프라이트를 상속받은 이클래스에 넣어준다.
 void Character::Attack(float dt)
 {
@@ -143,6 +148,7 @@ void Character::Attack(float dt)
 	auto sequence = Sequence::create(attackOn, animate, attackOff, NULL);
 	runAction(sequence);
 }
+
 //이동모션을 스프라이트를 상속받은 이클래스에 넣어준다.
 void Character::Move(float dt)
 {
@@ -159,6 +165,7 @@ void Character::Move(float dt)
 	cocos2d::log("걷기시작");
 	runAction(sequence);
 }
+
 //정지모션을 스프라이트를 상속받은 이클래스에 넣어준다.
 void Character::Stop(float dt)
 {
@@ -169,6 +176,7 @@ void Character::Stop(float dt)
 	auto sequence = Sequence::create(stopOn, animate, stopOff, NULL);
 	runAction(sequence);
 }
+
 //매프레임마다 이스프라이트에 관련한 것들을 갱신한다. 상태 파악->모션
 void Character::update(float dt)
 {
@@ -199,6 +207,7 @@ void Character::update(float dt)
 	}
 	MakeHpBar();
 }
+
 //스프라이트 캐쉬에 이미지를 올린다.
 void Character::AddSpriteFramesWithFile(const char * filename)
 {

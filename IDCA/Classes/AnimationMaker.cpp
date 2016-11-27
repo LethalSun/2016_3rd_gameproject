@@ -45,7 +45,7 @@ bool AnimationMaker::AddAnimation(int directionNum)
 
 		if (frame == nullptr)
 		{
-			return false;
+			break;
 		}
 
 		animationFrame.pushBack(frame);
@@ -58,6 +58,8 @@ bool AnimationMaker::AddAnimation(int directionNum)
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
 
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
+
+	runAction(sequence);
 }
 
 int AnimationMaker::IsAnimationContinued()
