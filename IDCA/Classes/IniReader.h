@@ -12,9 +12,6 @@
 */
 
 
-
-// .ini 파일로부터 정보를 읽어들이는 클래스 IniReader.
-
 class IniReader
 {
 public :

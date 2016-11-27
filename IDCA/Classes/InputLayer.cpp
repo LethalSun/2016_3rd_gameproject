@@ -63,6 +63,15 @@ void InputLayer::update(const float deltaTime)
 	UnitVec에 대해서 :
 		Current값을 집어넣음.
 
+	UnitVecStatus에 대해서 :		
+		UnitVecX, Y 각각에 대하여,
+		old(0) -> cur(0) : NONE
+		old(0) -> cur(-1, 1) : START
+		old(-1, 1) -> cur(0) : END
+		old(-1 / 1) -> cur(-1 / 1) : HOLD (같은 방향일 경우)
+		old(-1 / 1) -> cur(1 / -1) : START (다른 방향일 경우)
+		
+
 	Key에 대해서 :
 		Cur(END)일 경우 : END
 		Cur(START)일 경우 : START
@@ -78,6 +87,38 @@ void InputLayer::DefineWhatIsInputValue()
 	for (int i = unitVecX; i <= unitVecY; ++i)
 	{
 		m_InputArray[i] = m_CurrentInputArray[i];
+	}
+
+	// UnitVecStatus 처리
+	for (int i = unitVecXStatus; i <= unitVecYStatus; ++i)
+	{
+		if (m_OldInputArray[i] == 0)
+		{
+			if (m_CurrentInputArray[i] == 0)
+			{
+				m_InputArray[i] = NONE;
+			}
+			else
+			{
+				m_InputArray[i] = START;
+			}
+		}
+
+		else
+		{
+			if (m_CurrentInputArray[i] == 0)
+			{
+				m_InputArray[i] = NONE;
+			}
+			else if (m_CurrentInputArray[i] == m_OldInputArray[i])
+			{
+				m_InputArray[i] = HOLD;
+			}
+			else
+			{
+				m_InputArray[i] = START;
+			}
+		}
 	}
 
 	// Key State 처리.

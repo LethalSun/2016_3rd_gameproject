@@ -40,10 +40,10 @@ public:
 
 
 	/* Delivery Data Structure & Functions */
-	byte					m_CurrentInputArray[idxNum];
-	byte					m_OldInputArray[idxNum];
+	int 					m_CurrentInputArray[idxNum];
+	int 					m_OldInputArray[idxNum];
 	
-	static byte				m_InputArray[idxNum];
+	static int				m_InputArray[idxNum];
 	
 	void					DefineWhatIsInputValue();
 	
