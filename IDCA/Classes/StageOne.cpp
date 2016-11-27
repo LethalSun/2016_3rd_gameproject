@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "InputLayer.h"
 #include "StageOne.h"
 
 Scene * StageOne::createScene()

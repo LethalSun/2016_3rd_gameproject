@@ -70,7 +70,6 @@ void InputLayer::update(const float deltaTime)
 		old(-1, 1) -> cur(0) : END
 		old(-1 / 1) -> cur(-1 / 1) : HOLD (같은 방향일 경우)
 		old(-1 / 1) -> cur(1 / -1) : START (다른 방향일 경우)
-		
 
 	Key에 대해서 :
 		Cur(END)일 경우 : END

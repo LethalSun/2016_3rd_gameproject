@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\Classes\InputLayer.cpp">
-      <Filter>InputLayer</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\pch.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -16,14 +10,89 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\IniReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Character.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CharacterManager.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CharacterScene.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\InputLayer.cpp">
+      <Filter>KW_Lee\InputLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\config.cpp">
+      <Filter>KW_Lee\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Enemy_Choco.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyManager.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GetSpriteFrame.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnimationMaker.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\KeyboardLayer.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MakeAnimation.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>Old</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerCharacterManager.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TemporaryDefine.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TestKW.cpp">
+      <Filter>KW_Lee</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TestHw.cpp">
+      <Filter>HW_Kim</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\InputLayer.h">
-      <Filter>InputLayer</Filter>
-    </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\pch.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -33,6 +102,90 @@
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\IniReader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Character.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CharacterManager.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CharacterScene.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\InputLayer.h">
+      <Filter>KW_Lee\InputLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\config.h">
+      <Filter>KW_Lee\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Define.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Enemy_Choco.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyManager.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Approach.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Attack.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Return.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Search.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h">
+      <Filter>KW_Lee\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GetSpriteFrame.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnimationMaker.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\KeyboardLayer.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MakeAnimation.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>Old</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacter.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacterManager.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TemporaryDefine.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TestKw.h">
+      <Filter>KW_Lee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TestHw.h">
+      <Filter>HW_Kim</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Character">
@@ -41,11 +194,40 @@
     <Filter Include="Enemy">
       <UniqueIdentifier>{cdcf0fc1-ff25-4506-a24d-7f6518668e2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="InputLayer">
-      <UniqueIdentifier>{fc963f9c-835a-4f00-a17d-1b92e9121c7a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{b25bbef6-0647-466f-9bd2-9d64e20060d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{25bb6864-1679-45df-978e-07185ec78f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{a5390d17-5196-493d-96f3-8e894473d586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Old">
+      <UniqueIdentifier>{79751592-075f-4a5b-acb5-fb59bf3c9a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KW_Lee">
+      <UniqueIdentifier>{34e9eb72-b346-4f20-97c9-99e529a8e6b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KW_Lee\InputLayer">
+      <UniqueIdentifier>{fc963f9c-835a-4f00-a17d-1b92e9121c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KW_Lee\Config">
+      <UniqueIdentifier>{d5ee7a66-b270-4702-9472-09e6896d48c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KW_Lee\Enemy">
+      <UniqueIdentifier>{bd465e2d-4a98-4cf8-882f-f254a58e4d9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HW_Kim">
+      <UniqueIdentifier>{77def3ce-5dd4-4e90-ad9e-1e520fdc6815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GS_Go">
+      <UniqueIdentifier>{1d4e7424-5483-4651-80fc-a2c50425c2f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #pragma once
 class InputLayer;
-class StageOne :public Layer
+class StageOne : public Layer
 {
 public:
 	static Scene* createScene();
