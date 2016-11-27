@@ -128,19 +128,19 @@ void InputLayer::DefineWhatIsInputValue()
 
 		if (m_CurrentInputArray[i] == END)
 		{
-			m_InputArray[i] == END;
+			m_InputArray[i] = END;
 		}
 		else if (m_CurrentInputArray[i] == START)
 		{
-			m_InputArray[i] == START;
+			m_InputArray[i] = START;
 		}
 		else if ((m_CurrentInputArray[i] == NONE) && (m_OldInputArray[i] == START))
 		{
-			m_InputArray[i] == HOLD;
+			m_InputArray[i] = HOLD;
 		}
 		else
 		{
-			m_InputArray[i] == NONE;
+			m_InputArray[i] = NONE;
 		}
 	}
 }

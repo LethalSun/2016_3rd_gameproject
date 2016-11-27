@@ -16,8 +16,8 @@ class MakeAnimation;
 class Character :public Sprite
 {
 public:
-	static Character *create(const char const* filename, const char const* extention);
-	void initOptions(const char const* filename, const char const* extention);
+	static Character *create(const char* const filename, const char* const extention);
+	void initOptions(const char* const filename, const char* const extention);
 
 	void SetInput(int inputFromScene);
 	//입력에 따라서 현재의 상태를 파악한다.

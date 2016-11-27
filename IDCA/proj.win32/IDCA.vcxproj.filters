@@ -79,14 +79,8 @@
     <ClCompile Include="..\Classes\TemporaryDefine.cpp">
       <Filter>HW_Kim</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\TestHw.cpp">
-      <Filter>HW_Kim</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\PlayerCharacter.cpp">
       <Filter>HW_Kim\PlayerCharacter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TestKW.cpp">
-      <Filter>KW_Lee\Config</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\IniReader.cpp">
       <Filter>KW_Lee\Config</Filter>
@@ -177,14 +171,8 @@
     <ClInclude Include="..\Classes\TemporaryDefine.h">
       <Filter>HW_Kim</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\TestHw.h">
-      <Filter>HW_Kim</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\PlayerCharacter.h">
       <Filter>HW_Kim\PlayerCharacter</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TestKw.h">
-      <Filter>KW_Lee\Config</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\IniReader.h">
       <Filter>KW_Lee\Config</Filter>

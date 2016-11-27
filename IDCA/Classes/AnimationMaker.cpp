@@ -30,6 +30,9 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	m_ActionName[STATE::ATTACK] = 'A';
 	m_ActionName[STATE::MOVE] = 'M';
 	m_ActionName[STATE::SKILL] = 'K';
+
+	//임시
+	return true;
 }
 
 bool AnimationMaker::AddAnimation(int directionNum)
@@ -60,11 +63,13 @@ bool AnimationMaker::AddAnimation(int directionNum)
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
 
 	runAction(sequence);
+	//임시
+	return true;
 }
 
 int AnimationMaker::IsAnimationContinued()
 {
-	if (m_IsAnimationOn = true)
+	if (m_IsAnimationOn == true)
 	{
 		return m_State;
 	}

@@ -18,7 +18,7 @@
 void EnemyState_Attack::startState(Enemy* enemy)
 {
 	CCLOG("Start Attack!");
-	enemy->SetSpriteToAttack();
+	//enemy->SetSpriteToAttack();
 }
 
 void EnemyState_Attack::runState(Enemy* enemy, float dt)
@@ -45,5 +45,5 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 void EnemyState_Attack::endState(Enemy* enemy)
 {
 	CCLOG("End Attack!");
-	enemy->SetSpriteToCommon();
+	//enemy->SetSpriteToCommon();
 }
