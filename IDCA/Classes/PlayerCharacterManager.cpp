@@ -27,6 +27,10 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 	}
 
 	m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
+	addChild(m_pCharacter);
+
+	m_State = STATE::STOP;
+	m_direction = DIRECTION::BOTTOM;
 }
 
 PlayerCharacter* PlayerCharacterManager::GetCharacter()
@@ -77,7 +81,7 @@ void PlayerCharacterManager::SetPlayerCharacterState()
 	m_pCharacter->SetState(m_State);
 }
 
-void PlayerCharacterManager::SetPlayerCharacterDirection()
+void PlayerCharacterManager::CalculatePlayerCharacterDirection()
 {
 	if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 0 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == 1)
 	{
@@ -113,10 +117,16 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 	}
 }
 
+void PlayerCharacterManager::SetPlayerCharacterDirection()
+{
+	m_pCharacter->SetDirection(m_direction);
+}
+
 void PlayerCharacterManager::update(float dt)
 {
 	CalculatePlayerCharacterState();
 	SetPlayerCharacterState();
+	CalculatePlayerCharacterDirection();
 	SetPlayerCharacterDirection();
 	m_pCharacter->update(dt);
 }

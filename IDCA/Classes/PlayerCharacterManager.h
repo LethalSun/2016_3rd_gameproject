@@ -36,11 +36,11 @@ private:
 	//그래서 캐릭터의 상태를 설정해준다.
 	void SetPlayerCharacterState();
 
+	//캐릭터의 방향을 인풋으로 부터 계산한다.
+	void CalculatePlayerCharacterDirection();
+
 	//캐릭터의 방향을 설정해 준다
 	void SetPlayerCharacterDirection();
-
-	//스테이트변수
-	int PlayerCharacterState;
 
 	//캐릭터의 포인터
 	PlayerCharacter* m_pCharacter;

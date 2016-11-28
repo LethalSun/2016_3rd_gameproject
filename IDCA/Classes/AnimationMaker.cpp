@@ -30,6 +30,12 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	m_ActionName[STATE::ATTACK] = 'A';
 	m_ActionName[STATE::MOVE] = 'M';
 	m_ActionName[STATE::SKILL] = 'K';
+
+	m_IsAnimationOn = false;
+	m_State = STATE::STOP;
+
+	m_pAnimation = nullptr;
+	m_pAnimate = nullptr;
 }
 
 bool AnimationMaker::AddAnimation(int directionNum)

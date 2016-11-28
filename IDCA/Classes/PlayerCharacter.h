@@ -32,6 +32,24 @@ public:
 
 	void SetSP(int sp);
 
+	//업데이트 함수
+	void update(float dt);
+
+	//공격
+	void Attack();
+
+	//이동
+	void Move();
+
+	//정지
+	void stop();
+
+	//스킬
+	void skill();
+
+	//공격이 끝났는지 확인하는 함수
+	void CheckStopState();
+
 	PlayerCharacter();
 	~PlayerCharacter();
 
@@ -58,4 +76,11 @@ private:
 
 	//애니메이션을 만들고 관리하는 변수
 	AnimationMaker* m_pAnimationMaker;
+
+	//애니메이션을 계속해줘야 하는지 확인하는 함수
+	bool IsAttackContinued();
+	bool IsMoveContinued();
+
+	//이전 프레임의 상태와 방향을 저장하는 함수
+	void SaveBeforeStateAndDirection();
 };

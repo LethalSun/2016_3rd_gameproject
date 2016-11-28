@@ -47,6 +47,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_pAnimationMaker = AnimationMaker::create(fileName, fileExtention);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(m_Direction);
+
+	addChild(m_pAnimationMaker);
 }
 
 int PlayerCharacter::GetState()
@@ -56,7 +58,6 @@ int PlayerCharacter::GetState()
 
 void PlayerCharacter::SetState(int state)
 {
-	m_BeforeState = m_State;
 	m_State = state;
 }
 
@@ -67,7 +68,6 @@ int PlayerCharacter::GetDirection()
 
 void PlayerCharacter::SetDirection(int direction)
 {
-	m_BeforeDirection = m_Direction;
 	m_Direction = direction;
 }
 
@@ -96,10 +96,114 @@ void PlayerCharacter::SetSP(int sp)
 	m_SP = sp;
 }
 
+void PlayerCharacter::update(float dt)
+{
+	if (m_State == STATE::ATTACK)
+	{
+		Attack();
+	}
+	else if (m_State == STATE::MOVE)
+	{
+		Move();
+	}
+	else if (m_State == STATE::STOP)
+	{
+		stop();
+	}
+	else if (m_State == STATE::SKILL)
+	{
+		skill();
+	}
+	CheckStopState();
+	SaveBeforeStateAndDirection();
+}
+
+void PlayerCharacter::Attack()
+{
+	if (IsAttackContinued())
+	{
+		return;
+	}
+
+	m_pAnimationMaker->SetAnimationAttack();
+	m_pAnimationMaker->AddAnimation(m_Direction);
+}
+
+void PlayerCharacter::Move()
+{
+	if (IsMoveContinued())
+	{
+		return;
+	}
+
+	m_pAnimationMaker->stopAllActions();
+	m_pAnimationMaker->SetAnimationMove();
+	m_pAnimationMaker->AddAnimation(m_Direction);
+}
+
+void PlayerCharacter::stop()
+{
+	m_pAnimationMaker->stopAllActions();
+	m_pAnimationMaker->SetAnimationStop();
+	m_pAnimationMaker->AddAnimation(m_Direction);
+}
+
+void PlayerCharacter::skill()
+{
+	return;
+}
+
+void PlayerCharacter::CheckStopState()
+{
+	if (m_pAnimationMaker->IsAnimationContinued == -1)
+	{
+		if (m_State == STATE::ATTACK)
+		{
+			m_State = STATE::STOP;
+		}
+		else if (m_State == STATE::MOVE)
+		{
+			m_State = STATE::STOP;
+		}
+	}
+}
+
 PlayerCharacter::PlayerCharacter()
 {
 }
 
 PlayerCharacter::~PlayerCharacter()
 {
+}
+
+bool PlayerCharacter::IsAttackContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued == STATE::MOVE
+		&& m_BeforeDirection == m_Direction
+		&& m_BeforeState == m_State)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool PlayerCharacter::IsMoveContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued == STATE::ATTACK)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+void PlayerCharacter::SaveBeforeStateAndDirection()
+{
+	m_BeforeState = m_State;
+	m_BeforeDirection = m_Direction;
 }
