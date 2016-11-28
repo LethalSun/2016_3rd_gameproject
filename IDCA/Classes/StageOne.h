@@ -2,7 +2,6 @@
 class InputLayer;
 class CreateMap;
 
-
 class StageOne : public Layer
 {
 public:
@@ -12,11 +11,10 @@ public:
 
 	void update(float delta);
 
-	StageOne();
-	~StageOne();
+	StageOne() = default;
+	~StageOne() = default;
 
 private:
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
-	
 };

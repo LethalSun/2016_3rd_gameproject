@@ -4,8 +4,6 @@
 #include "CreateMap.h"
 #include "TemporaryDefine.h"
 
-
-
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -49,11 +47,7 @@ bool StageOne::init()
 	return true;
 }
 
-
-	
-}
 void StageOne::update(float delta)
 {
 	//InputLayer::update();
-
 }
