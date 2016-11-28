@@ -1,6 +1,7 @@
 #pragma once
 class InputLayer;
 class CreateMap;
+class PlayerCharacterManager;
 
 class StageOne : public Layer
 {
@@ -17,4 +18,5 @@ public:
 private:
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
+	PlayerCharacterManager* m_pPlayerCharacterManager;
 };
