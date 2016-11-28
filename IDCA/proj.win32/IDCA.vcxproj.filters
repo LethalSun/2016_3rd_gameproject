@@ -85,7 +85,7 @@
     <ClCompile Include="..\Classes\IniReader.cpp">
       <Filter>KW_Lee\Config</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\Classes\CreateMap.cpp">
+    <ClCompile Include="..\Classes\CreateMap.cpp">
       <Filter>GS_Go</Filter>
     </ClCompile>
   </ItemGroup>
@@ -177,7 +177,7 @@
     <ClInclude Include="..\Classes\IniReader.h">
       <Filter>KW_Lee\Config</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\Classes\CreateMap.h">
+    <ClInclude Include="..\Classes\CreateMap.h">
       <Filter>GS_Go</Filter>
     </ClInclude>
   </ItemGroup>

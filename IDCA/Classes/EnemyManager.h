@@ -9,6 +9,8 @@ public :
 	static EnemyManager* getInstance();
 	void deleteInstance();
 
+	EnemyManager();
+
 	/* Member Variable */
 	std::vector<Enemy*>		m_pEnemyVector;
 	

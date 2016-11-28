@@ -35,6 +35,11 @@ bool Player::init()
 	return true;
 }
 
+void Player::update(const float deltaTime)
+{
+
+}
+
 
 void Player::MapKeySetting(const unsigned int padId)
 {

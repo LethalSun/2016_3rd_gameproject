@@ -13,7 +13,7 @@ Character::~Character()
 	delete m_pMakeAnimation;
 }
 
-Character * Character::create(const char const* filename, const char const* extention)
+Character * Character::create(const char* const filename, const char* const extention)
 {
 	auto pSprite = new Character();
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_FILE_NAME);

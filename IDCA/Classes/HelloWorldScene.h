@@ -14,6 +14,7 @@ public:
 	void menuCloseCallback(cocos2d::Ref* pSender);
 	Player *player;
 	void menuNextCallback(cocos2d::Ref* pSender);
+	void menuStage1(cocos2d::Ref * pSender);
 	// implement the "static create()" method manually
 	CREATE_FUNC(HelloWorld);
 };

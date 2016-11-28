@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "InputLayer.h"
 #include "StageOne.h"
+#include "CreateMap.h"
+#include "TemporaryDefine.h"
+
+
 
 Scene * StageOne::createScene()
 {
@@ -33,12 +37,17 @@ bool StageOne::init()
 	{
 		return false;
 	}
-}
+	auto cm = CreateMap::create();
+	//m_pMap = TMXTiledMap::create(TEMP_DEFINE::MAP_NAME1);
+	m_pMap = cm->loadMap(TEMP_DEFINE::MAP_NAME1);
 
-StageOne::StageOne()
-{
-}
+	addChild(m_pMap);
 
-StageOne::~StageOne()
+
+	
+}
+void StageOne::update(float delta)
 {
+	//InputLayer::update();
+
 }

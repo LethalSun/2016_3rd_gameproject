@@ -1,6 +1,8 @@
 #pragma once
 class Character;
 class CharacterManager;
+
+
 class CharacterScene :public Layer
 {
 private:
