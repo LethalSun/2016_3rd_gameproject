@@ -37,11 +37,17 @@ bool StageOne::init()
 	{
 		return false;
 	}
+
 	auto cm = CreateMap::create();
 	//m_pMap = TMXTiledMap::create(TEMP_DEFINE::MAP_NAME1);
 	m_pMap = cm->loadMap(TEMP_DEFINE::MAP_NAME1);
 
 	addChild(m_pMap);
+
+	m_InputLayer = InputLayer::create();
+
+	return true;
+}
 
 
 	

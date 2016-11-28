@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.3.1</string>
         <key>fileName</key>
-        <string>C:/Users/kwen won Lee/Desktop/Project/2016_3rd_gameproject/IDCA/Resources/AfterPacker/Walking.tps</string>
+        <string>C:/Users/kwen won Lee/Desktop/Project/2016_3rd_gameproject/IDCA/Resources/AfterPacker/Warrior.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>cocos2d-x</string>
         <key>textureFileName</key>
-        <filename>../Warrior.png</filename>
+        <filename></filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -108,7 +108,7 @@
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
-            <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
+            <enum type="AlgorithmSettings::SizeConstraints">WordAligned</enum>
             <key>forceSquared</key>
             <false/>
             <key>maxRects</key>
@@ -150,7 +150,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../Warrior.plist</filename>
+                <filename>Warrior.plist</filename>
             </struct>
             <key>header</key>
             <key>source</key>
@@ -203,7 +203,8 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../Attack/AttackLeftBack01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA0.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA70.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.629032,0.488636</point_f>
@@ -216,7 +217,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackLeftBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA1.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA71.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.606061,0.494253</point_f>
@@ -229,192 +231,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackLeftBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA10.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA20.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.545455,0.505882</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>14,21,28,43</rect>
-                <key>scale9Paddings</key>
-                <rect>14,21,28,43</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftBack04.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.54386,0.505882</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>14,21,29,43</rect>
-                <key>scale9Paddings</key>
-                <rect>14,21,29,43</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftBack05.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.490741,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,22,54,43</rect>
-                <key>scale9Paddings</key>
-                <rect>27,22,54,43</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftBack06.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.712963,0.516854</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>27,22,54,45</rect>
-                <key>scale9Paddings</key>
-                <rect>27,22,54,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftBack07.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.522388,0.511111</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>17,23,34,45</rect>
-                <key>scale9Paddings</key>
-                <rect>17,23,34,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftBack08.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.306122,0.516854</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,22,25,45</rect>
-                <key>scale9Paddings</key>
-                <rect>12,22,25,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront01.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.590164,0.494382</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>15,22,31,45</rect>
-                <key>scale9Paddings</key>
-                <rect>15,22,31,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront02.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.518519,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>14,23,27,45</rect>
-                <key>scale9Paddings</key>
-                <rect>14,23,27,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront03.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.643836,0.505747</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>20,22,39,44</rect>
-                <key>scale9Paddings</key>
-                <rect>20,22,39,44</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront04.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.619718,0.477778</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>18,23,36,45</rect>
-                <key>scale9Paddings</key>
-                <rect>18,23,36,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront05.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.490741,0.494624</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>18,23,35,47</rect>
-                <key>scale9Paddings</key>
-                <rect>18,23,35,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront06.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.362319,0.51</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>28,25,55,50</rect>
-                <key>scale9Paddings</key>
-                <rect>28,25,55,50</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront07.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.52,0.514563</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>17,25,35,50</rect>
-                <key>scale9Paddings</key>
-                <rect>17,25,35,50</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackLeftFront08.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.489796,0.468085</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>13,26,25,52</rect>
-                <key>scale9Paddings</key>
-                <rect>13,26,25,52</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackRightBack01.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.354839,0.477273</point_f>
+                <point_f>0.370968,0.488636</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -424,10 +245,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA11.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA21.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.378788,0.482759</point_f>
+                <point_f>0.393939,0.494253</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -437,10 +259,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA12.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA22.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.436364,0.494118</point_f>
+                <point_f>0.454545,0.505882</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -450,10 +273,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack04.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA13.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA23.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.438596,0.494118</point_f>
+                <point_f>0.45614,0.505882</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -463,10 +287,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack05.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA14.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA24.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.509259,0.523256</point_f>
+                <point_f>0.481481,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -476,7 +301,60 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack06.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA15.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.277778,0.522472</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,22,54,45</rect>
+                <key>scale9Paddings</key>
+                <rect>27,22,54,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA16.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.455224,0.533333</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9Paddings</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA17.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.673469,0.52809</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9Paddings</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA2.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA72.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.527273,0.505882</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>14,21,28,43</rect>
+                <key>scale9Paddings</key>
+                <rect>14,21,28,43</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA25.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.277778,0.516854</point_f>
@@ -489,10 +367,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack07.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA26.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.462687,0.511111</point_f>
+                <point_f>0.462687,0.522222</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -502,10 +380,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightBack08.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA27.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.653061,0.505618</point_f>
+                <point_f>0.673469,0.516854</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -515,7 +393,22 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront01.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA3.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA73.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.526316,0.505882</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>14,21,29,43</rect>
+                <key>scale9Paddings</key>
+                <rect>14,21,29,43</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA30.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA40.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.409836,0.505618</point_f>
@@ -528,10 +421,11 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront02.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA31.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA41.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.481481,0.5</point_f>
+                <point_f>0.462963,0.477778</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -541,23 +435,25 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront03.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA32.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA42.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.333333,0.505747</point_f>
+                <point_f>0.342466,0.494253</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>20,22,39,44</rect>
+                <rect>18,22,37,44</rect>
                 <key>scale9Paddings</key>
-                <rect>20,22,39,44</rect>
+                <rect>18,22,37,44</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront04.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA33.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA43.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.380282,0.466667</point_f>
+                <point_f>0.366197,0.477778</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -567,49 +463,40 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront05.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA34.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA44.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA64.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.490741,0.483871</point_f>
+                <point_f>0.5,0.473118</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>18,23,35,47</rect>
+                <rect>27,23,54,47</rect>
                 <key>scale9Paddings</key>
-                <rect>18,23,35,47</rect>
+                <rect>27,23,54,47</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront06.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA35.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA45.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.608696,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>28,25,55,50</rect>
-                <key>scale9Paddings</key>
-                <rect>28,25,55,50</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Attack/AttackRightFront07.psd</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.46,0.514563</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
                 <rect>17,25,35,50</rect>
                 <key>scale9Paddings</key>
                 <rect>17,25,35,50</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Attack/AttackRightFront08.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA36.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA46.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.489796,0.457447</point_f>
+                <point_f>0.46,0.533981</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -619,175 +506,241 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingFront01.png</key>
-            <key type="filename">../Character/WalkingFront05.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA37.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA47.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>11,23,23,47</rect>
+                <rect>12,24,25,47</rect>
                 <key>scale9Paddings</key>
-                <rect>11,23,23,47</rect>
+                <rect>12,24,25,47</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingFront02.png</key>
-            <key type="filename">../Character/WalkingFront06.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA4.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA74.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.509259,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,22,54,43</rect>
+                <key>scale9Paddings</key>
+                <rect>27,22,54,43</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA5.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA75.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.712963,0.52809</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,22,54,45</rect>
+                <key>scale9Paddings</key>
+                <rect>27,22,54,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA50.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA60.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.590164,0.505618</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>15,22,31,45</rect>
+                <key>scale9Paddings</key>
+                <rect>15,22,31,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA51.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA61.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>12,23,23,47</rect>
+                <rect>14,23,27,45</rect>
                 <key>scale9Paddings</key>
-                <rect>12,23,23,47</rect>
+                <rect>14,23,27,45</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingFront03.png</key>
-            <key type="filename">../Character/WalkingFront07.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA52.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA62.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.643836,0.517241</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>18,22,37,44</rect>
+                <key>scale9Paddings</key>
+                <rect>18,22,37,44</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA53.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA63.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.619718,0.488889</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>18,23,36,45</rect>
+                <key>scale9Paddings</key>
+                <rect>18,23,36,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA54.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.478495</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>27,23,54,47</rect>
+                <key>scale9Paddings</key>
+                <rect>27,23,54,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA55.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA65.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.376812,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>17,25,35,50</rect>
+                <key>scale9Paddings</key>
+                <rect>17,25,35,50</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA56.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA66.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.52,0.514563</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>13,26,25,52</rect>
+                <key>scale9Paddings</key>
+                <rect>13,26,25,52</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA57.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA67.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.489796,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,24,25,47</rect>
+                <key>scale9Paddings</key>
+                <rect>12,24,25,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA6.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.514925,0.533333</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9Paddings</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA7.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.295918,0.533708</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9Paddings</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA76.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.507463,0.533333</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9Paddings</key>
+                <rect>17,23,34,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA77.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.306122,0.539326</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9Paddings</key>
+                <rect>12,22,25,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM0.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>11,24,23,47</rect>
+                <rect>11,25,21,49</rect>
                 <key>scale9Paddings</key>
-                <rect>11,24,23,47</rect>
+                <rect>11,25,21,49</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingFront04.png</key>
-            <key type="filename">../Character/WalkingFront08.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>11,24,23,48</rect>
+                <rect>10,25,21,50</rect>
                 <key>scale9Paddings</key>
-                <rect>11,24,23,48</rect>
+                <rect>10,25,21,50</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingLeft01.png</key>
-            <key type="filename">../Character/WalkingLeft02.png</key>
-            <key type="filename">../Character/WalkingLeftFront01.png</key>
-            <key type="filename">../Character/WalkingLeftFront02.png</key>
-            <key type="filename">../Character/WalkingLeftFront03.png</key>
-            <key type="filename">../Character/WalkingLeftFront04.png</key>
-            <key type="filename">../Character/WalkingLeftFront05.png</key>
-            <key type="filename">../Character/WalkingLeftFront06.png</key>
-            <key type="filename">../Character/WalkingLeftFront07.png</key>
-            <key type="filename">../Character/WalkingLeftFront08.png</key>
-            <key type="filename">../Character/WalkingRIghtFront01.png</key>
-            <key type="filename">../Character/WalkingRight02.png</key>
-            <key type="filename">../Character/WalkingRightFront02.png</key>
-            <key type="filename">../Character/WalkingRightFront03.png</key>
-            <key type="filename">../Character/WalkingRightFront04.png</key>
-            <key type="filename">../Character/WalkingRightFront05.png</key>
-            <key type="filename">../Character/WalkingRightFront06.png</key>
-            <key type="filename">../Character/WalkingRightFront07.png</key>
-            <key type="filename">../Character/WalkingRightFront08.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM10.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>20,45,40,90</rect>
-                <key>scale9Paddings</key>
-                <rect>20,45,40,90</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft03.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.604651,0.505495</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,23,22,46</rect>
-                <key>scale9Paddings</key>
-                <rect>11,23,22,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft04.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.540541,0.505495</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,23,19,46</rect>
-                <key>scale9Paddings</key>
-                <rect>9,23,19,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft05.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,23,15,46</rect>
-                <key>scale9Paddings</key>
-                <rect>7,23,15,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft06.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,22,15,45</rect>
-                <key>scale9Paddings</key>
-                <rect>7,22,15,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft07.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.571429,0.505495</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,23,21,46</rect>
-                <key>scale9Paddings</key>
-                <rect>11,23,21,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeft08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.540541,0.505376</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,23,19,47</rect>
-                <key>scale9Paddings</key>
-                <rect>9,23,19,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeftUp01.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.513514,0.505155</point_f>
+                <point_f>0.378378,0.453608</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -797,89 +750,276 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingLeftUp02.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM11.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.35,0.44898</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,25,20,49</rect>
+                <key>scale9Paddings</key>
+                <rect>10,25,20,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM12.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.358974,0.453608</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,24,20,49</rect>
+                <key>scale9Paddings</key>
+                <rect>10,24,20,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM13.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM15.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.325,0.463158</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,24,20,48</rect>
+                <key>scale9Paddings</key>
+                <rect>10,24,20,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM14.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.351351,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,24,19,47</rect>
+                <key>scale9Paddings</key>
+                <rect>9,24,19,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM16.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.311111,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM17.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.309524,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,21,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,21,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,25,20,50</rect>
+                <key>scale9Paddings</key>
+                <rect>10,25,20,50</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM20.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5625,0.488889</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM21.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM30.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5625,0.494444</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM22.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM62.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,23,22,46</rect>
+                <key>scale9Paddings</key>
+                <rect>11,23,22,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM23.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.567568,0.494505</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,23,19,46</rect>
+                <key>scale9Paddings</key>
+                <rect>9,23,19,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM24.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.655172,0.494505</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,23,15,46</rect>
+                <key>scale9Paddings</key>
+                <rect>7,23,15,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM25.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.655172,0.505618</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,22,15,45</rect>
+                <key>scale9Paddings</key>
+                <rect>7,22,15,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM26.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,23,21,46</rect>
+                <key>scale9Paddings</key>
+                <rect>11,23,21,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM27.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.567568,0.494624</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,23,19,47</rect>
+                <key>scale9Paddings</key>
+                <rect>9,23,19,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM3.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM7.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,25,21,49</rect>
+                <key>scale9Paddings</key>
+                <rect>10,25,21,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM31.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM33.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5625,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM32.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.55,0.511111</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM34.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM36.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5625,0.505556</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM35.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.55,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>10,25,20,49</rect>
+                <rect>20,45,40,90</rect>
                 <key>scale9Paddings</key>
-                <rect>10,25,20,49</rect>
+                <rect>20,45,40,90</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingLeftUp03.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM37.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.538462,0.505155</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,24,20,49</rect>
-                <key>scale9Paddings</key>
-                <rect>10,24,20,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeftUp04.png</key>
-            <key type="filename">../Character/WalkingLeftUp06.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.55,0.515789</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,24,20,48</rect>
-                <key>scale9Paddings</key>
-                <rect>10,24,20,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeftUp05.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.540541,0.521277</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,24,19,47</rect>
-                <key>scale9Paddings</key>
-                <rect>9,24,19,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeftUp07.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.577778,0.510638</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,24,23,47</rect>
-                <key>scale9Paddings</key>
-                <rect>11,24,23,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingLeftUp08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.571429,0.510638</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,24,21,47</rect>
-                <key>scale9Paddings</key>
-                <rect>11,24,21,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight01.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.494444</point_f>
+                <point_f>0.55,0.494444</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -889,220 +1029,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingRight03.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.372093,0.505495</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,23,22,46</rect>
-                <key>scale9Paddings</key>
-                <rect>11,23,22,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight04.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.418919,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,23,19,46</rect>
-                <key>scale9Paddings</key>
-                <rect>9,23,19,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight05.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.448276,0.494505</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,23,15,46</rect>
-                <key>scale9Paddings</key>
-                <rect>7,23,15,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight06.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.448276,0.505618</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>7,22,15,45</rect>
-                <key>scale9Paddings</key>
-                <rect>7,22,15,45</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight07.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.380952,0.494505</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,23,21,46</rect>
-                <key>scale9Paddings</key>
-                <rect>11,23,21,46</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRight08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.405405,0.494624</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,23,19,47</rect>
-                <key>scale9Paddings</key>
-                <rect>9,23,19,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp01.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>9,24,19,49</rect>
-                <key>scale9Paddings</key>
-                <rect>9,24,19,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp02.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.475,0.489796</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,25,20,49</rect>
-                <key>scale9Paddings</key>
-                <rect>10,25,20,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp03.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,24,20,49</rect>
-                <key>scale9Paddings</key>
-                <rect>10,24,20,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp04.png</key>
-            <key type="filename">../Character/WalkingRightUp06.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.515789</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,24,20,48</rect>
-                <key>scale9Paddings</key>
-                <rect>10,24,20,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp07.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.444444,0.521277</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,24,23,47</rect>
-                <key>scale9Paddings</key>
-                <rect>11,24,23,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingRightUp08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.452381,0.521277</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,24,21,47</rect>
-                <key>scale9Paddings</key>
-                <rect>11,24,21,47</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingUp01.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.52381,0.489796</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,25,21,49</rect>
-                <key>scale9Paddings</key>
-                <rect>11,25,21,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingUp02.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.512195,0.484848</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,25,21,50</rect>
-                <key>scale9Paddings</key>
-                <rect>10,25,21,50</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingUp03.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.525,0.494949</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,25,20,50</rect>
-                <key>scale9Paddings</key>
-                <rect>10,25,20,50</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingUp04.png</key>
-            <key type="filename">../Character/WalkingUp08.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>10,25,21,49</rect>
-                <key>scale9Paddings</key>
-                <rect>10,25,21,49</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../Character/WalkingUp05.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.494949</point_f>
+                <point_f>0.47619,0.494949</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1112,10 +1042,66 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingUp06.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM40.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM44.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.512195,0.485149</point_f>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,23,23,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,23,23,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM41.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM45.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,23,23,47</rect>
+                <key>scale9Paddings</key>
+                <rect>12,23,23,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM42.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM46.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM43.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM47.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,23,48</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,23,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM5.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.487805,0.485149</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1125,117 +1111,353 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../Character/WalkingUp07.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM50.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM51.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM52.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM53.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM54.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM55.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM56.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM57.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.49</point_f>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.475,0.49</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
                 <rect>10,25,20,50</rect>
                 <key>scale9Paddings</key>
                 <rect>10,25,20,50</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM60.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.4375,0.488889</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM61.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.425,0.494444</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9Paddings</key>
+                <rect>20,45,40,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM63.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.405405,0.494505</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,23,19,46</rect>
+                <key>scale9Paddings</key>
+                <rect>9,23,19,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM64.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.310345,0.494505</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,23,15,46</rect>
+                <key>scale9Paddings</key>
+                <rect>7,23,15,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM65.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.310345,0.505618</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,22,15,45</rect>
+                <key>scale9Paddings</key>
+                <rect>7,22,15,45</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM66.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.47619,0.494505</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,23,21,46</rect>
+                <key>scale9Paddings</key>
+                <rect>11,23,21,46</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM67.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.405405,0.483871</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,23,19,47</rect>
+                <key>scale9Paddings</key>
+                <rect>9,23,19,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM70.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.648649,0.453608</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,24,19,49</rect>
+                <key>scale9Paddings</key>
+                <rect>9,24,19,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM71.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.675,0.44898</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,25,20,49</rect>
+                <key>scale9Paddings</key>
+                <rect>10,25,20,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM72.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.666667,0.453608</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,24,20,49</rect>
+                <key>scale9Paddings</key>
+                <rect>10,24,20,49</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM73.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM75.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.675,0.463158</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,24,20,48</rect>
+                <key>scale9Paddings</key>
+                <rect>10,24,20,48</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM74.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.648649,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,24,19,47</rect>
+                <key>scale9Paddings</key>
+                <rect>9,24,19,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM76.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.688889,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,23,47</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM77.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.690476,0.468085</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,24,21,47</rect>
+                <key>scale9Paddings</key>
+                <rect>11,24,21,47</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../Character/WalkingFront08.png</filename>
-            <filename>../Character/WalkingFront01.png</filename>
-            <filename>../Character/WalkingFront02.png</filename>
-            <filename>../Character/WalkingFront03.png</filename>
-            <filename>../Character/WalkingFront04.png</filename>
-            <filename>../Character/WalkingFront05.png</filename>
-            <filename>../Character/WalkingFront06.png</filename>
-            <filename>../Character/WalkingFront07.png</filename>
-            <filename>../Character/WalkingLeftUp01.png</filename>
-            <filename>../Character/WalkingLeftUp02.png</filename>
-            <filename>../Character/WalkingLeftUp03.png</filename>
-            <filename>../Character/WalkingLeftUp04.png</filename>
-            <filename>../Character/WalkingLeftUp05.png</filename>
-            <filename>../Character/WalkingLeftUp07.png</filename>
-            <filename>../Character/WalkingLeftUp08.png</filename>
-            <filename>../Character/WalkingLeft01.png</filename>
-            <filename>../Character/WalkingLeft02.png</filename>
-            <filename>../Character/WalkingLeft03.png</filename>
-            <filename>../Character/WalkingLeft04.png</filename>
-            <filename>../Character/WalkingLeft05.png</filename>
-            <filename>../Character/WalkingLeft06.png</filename>
-            <filename>../Character/WalkingLeft07.png</filename>
-            <filename>../Character/WalkingLeft08.png</filename>
-            <filename>../Character/WalkingUp01.png</filename>
-            <filename>../Character/WalkingUp02.png</filename>
-            <filename>../Character/WalkingUp03.png</filename>
-            <filename>../Character/WalkingUp04.png</filename>
-            <filename>../Character/WalkingUp05.png</filename>
-            <filename>../Character/WalkingUp06.png</filename>
-            <filename>../Character/WalkingUp07.png</filename>
-            <filename>../Character/WalkingUp08.png</filename>
-            <filename>../Character/WalkingRightUp01.png</filename>
-            <filename>../Character/WalkingRightUp02.png</filename>
-            <filename>../Character/WalkingRightUp03.png</filename>
-            <filename>../Character/WalkingRightUp04.png</filename>
-            <filename>../Character/WalkingRightUp06.png</filename>
-            <filename>../Character/WalkingRightUp07.png</filename>
-            <filename>../Character/WalkingRightUp08.png</filename>
-            <filename>../Character/WalkingRight01.png</filename>
-            <filename>../Character/WalkingRight02.png</filename>
-            <filename>../Character/WalkingRight03.png</filename>
-            <filename>../Character/WalkingRight04.png</filename>
-            <filename>../Character/WalkingRight05.png</filename>
-            <filename>../Character/WalkingRight06.png</filename>
-            <filename>../Character/WalkingRight07.png</filename>
-            <filename>../Character/WalkingRight08.png</filename>
-            <filename>../Character/WalkingLeftUp06.png</filename>
-            <filename>../Character/WalkingLeftFront01.png</filename>
-            <filename>../Character/WalkingLeftFront02.png</filename>
-            <filename>../Character/WalkingLeftFront03.png</filename>
-            <filename>../Character/WalkingLeftFront04.png</filename>
-            <filename>../Character/WalkingLeftFront05.png</filename>
-            <filename>../Character/WalkingLeftFront06.png</filename>
-            <filename>../Character/WalkingLeftFront07.png</filename>
-            <filename>../Character/WalkingLeftFront08.png</filename>
-            <filename>../Character/WalkingRightFront03.png</filename>
-            <filename>../Character/WalkingRightFront04.png</filename>
-            <filename>../Character/WalkingRightFront05.png</filename>
-            <filename>../Character/WalkingRightFront06.png</filename>
-            <filename>../Character/WalkingRightFront07.png</filename>
-            <filename>../Character/WalkingRightFront08.png</filename>
-            <filename>../Character/WalkingRIghtFront01.png</filename>
-            <filename>../Character/WalkingRightFront02.png</filename>
-            <filename>../Attack/AttackLeftFront01.psd</filename>
-            <filename>../Attack/AttackLeftFront02.psd</filename>
-            <filename>../Attack/AttackLeftFront03.psd</filename>
-            <filename>../Attack/AttackLeftFront04.psd</filename>
-            <filename>../Attack/AttackLeftFront05.psd</filename>
-            <filename>../Attack/AttackLeftFront06.psd</filename>
-            <filename>../Attack/AttackLeftFront07.psd</filename>
-            <filename>../Attack/AttackLeftFront08.psd</filename>
-            <filename>../Attack/AttackRightFront04.psd</filename>
-            <filename>../Attack/AttackRightFront05.psd</filename>
-            <filename>../Attack/AttackRightFront06.psd</filename>
-            <filename>../Attack/AttackRightFront07.psd</filename>
-            <filename>../Attack/AttackRightFront08.psd</filename>
-            <filename>../Attack/AttackRightFront01.psd</filename>
-            <filename>../Attack/AttackRightFront02.psd</filename>
-            <filename>../Attack/AttackRightFront03.psd</filename>
-            <filename>../Attack/AttackLeftBack01.psd</filename>
-            <filename>../Attack/AttackLeftBack02.psd</filename>
-            <filename>../Attack/AttackLeftBack03.psd</filename>
-            <filename>../Attack/AttackLeftBack04.psd</filename>
-            <filename>../Attack/AttackLeftBack05.psd</filename>
-            <filename>../Attack/AttackLeftBack06.psd</filename>
-            <filename>../Attack/AttackLeftBack07.psd</filename>
-            <filename>../Attack/AttackLeftBack08.psd</filename>
-            <filename>../Attack/AttackRightBack01.psd</filename>
-            <filename>../Attack/AttackRightBack02.psd</filename>
-            <filename>../Attack/AttackRightBack03.psd</filename>
-            <filename>../Attack/AttackRightBack04.psd</filename>
-            <filename>../Attack/AttackRightBack05.psd</filename>
-            <filename>../Attack/AttackRightBack06.psd</filename>
-            <filename>../Attack/AttackRightBack07.psd</filename>
-            <filename>../Attack/AttackRightBack08.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA42.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA43.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA44.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA45.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA46.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA47.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA50.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA51.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA52.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA53.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA54.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA55.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA56.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA57.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA60.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA61.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA62.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA63.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA64.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA65.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA66.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA67.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA70.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA71.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA72.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA73.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA74.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA75.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA76.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA77.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA0.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA1.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA2.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA3.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA4.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA5.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA6.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA7.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA10.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA11.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA12.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA13.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA14.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA15.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA16.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA17.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA20.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA21.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA22.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA23.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA24.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA25.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA26.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA27.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA30.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA31.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA32.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA33.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA34.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA35.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA36.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA37.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA40.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Attack/WarriorA41.psd</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM41.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM42.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM43.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM44.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM45.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM46.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM47.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM50.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM51.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM52.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM53.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM54.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM55.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM56.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM57.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM60.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM61.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM62.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM63.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM64.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM65.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM66.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM67.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM70.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM71.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM72.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM73.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM75.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM76.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM77.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM0.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM1.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM2.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM3.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM4.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM5.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM6.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM7.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM10.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM11.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM12.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM13.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM14.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM15.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM16.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM17.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM20.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM21.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM22.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM23.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM24.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM25.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM26.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM27.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM30.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM31.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM32.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM33.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM34.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM35.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM36.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM37.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM40.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Character/WarriorM74.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
