@@ -1,6 +1,7 @@
 #pragma once
 #include "cocos2d.h"
 
+//HW
 enum STATE
 {
 	STOP = 0,
@@ -8,7 +9,23 @@ enum STATE
 	MOVE = 2,
 	SKILL = 3
 };
- // Json 파일로 변환전까지 임시로 쓰는 Define.h
+
+enum DIRECTION
+{
+	TOP,
+	TOP_RIGHT,
+	RIGHT,
+	BOTTOM_RIGHT,
+	BOTTOM,
+	BOTTOM_LEFT,
+	LEFT,
+	TOP_LEFT,
+};
+
+const int MAX_HP = 10;
+const int MAX_SP = 10;
+//HW
+// Json 파일로 변환전까지 임시로 쓰는 Define.h
 
 namespace STATIC
 {
@@ -28,7 +45,6 @@ const char PLAYER_SPRITE[] = "WalkingFront01.png";
 const char PLAYER_PLIST[] = "Warrior.plist";
 const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
-
 
 namespace ENEMY
 {

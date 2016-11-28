@@ -177,7 +177,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\PlayerCharacterManager.cpp" />
     <ClCompile Include="..\Classes\StageOne.cpp" />
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
-    <ClCompile Include="..\Classes\TestHw.cpp" />
     <ClCompile Include="..\Classes\TestKW.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -213,7 +212,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\PlayerCharacterManager.h" />
     <ClInclude Include="..\Classes\StageOne.h" />
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
-    <ClInclude Include="..\Classes\TestHw.h" />
     <ClInclude Include="..\Classes\TestKw.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

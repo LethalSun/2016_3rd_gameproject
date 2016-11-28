@@ -3,16 +3,16 @@
 
 AnimationMaker * AnimationMaker::create(const char * fileName, const char * fileExtention)
 {
-	auto maker = new(std::nothrow)AnimationMaker();
-	if (maker && maker->init(fileName, fileExtention))
+	auto pMaker = new(std::nothrow)AnimationMaker();
+	if (pMaker && pMaker->init(fileName, fileExtention))
 	{
-		maker->autorelease();
-		return maker;
+		pMaker->autorelease();
+		return pMaker;
 	}
 	else
 	{
-		delete maker;
-		maker = nullptr;
+		delete pMaker;
+		pMaker = nullptr;
 		return nullptr;
 	}
 }
@@ -30,6 +30,12 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	m_ActionName[STATE::ATTACK] = 'A';
 	m_ActionName[STATE::MOVE] = 'M';
 	m_ActionName[STATE::SKILL] = 'K';
+
+	m_IsAnimationOn = false;
+	m_State = STATE::STOP;
+
+	m_pAnimation = nullptr;
+	m_pAnimate = nullptr;
 }
 
 bool AnimationMaker::AddAnimation(int directionNum)
