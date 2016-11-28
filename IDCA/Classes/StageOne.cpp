@@ -33,6 +33,10 @@ bool StageOne::init()
 	{
 		return false;
 	}
+
+	m_InputLayer = InputLayer::create();
+
+	return true;
 }
 
 StageOne::StageOne()
