@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "InputLayer.h"
 
+// TODO :: 다른 애들이 볼 필요 없으면 cpp로 가야한다. cpp의 맨 위로 넣자.
+// JoyStick Mapping을 위한 값.
+const int JoyStickX = 0;
+const int JoyStickY = 1;
+
 bool InputLayer::init()
 {
 	if (!Layer::init())
@@ -10,16 +15,15 @@ bool InputLayer::init()
 
 	Vec2 WIN_SIZE(1024, 768);
 	
-
+	// TODO :: MEMSET 사용해서 초기화.
 	// Array 세팅.
-	for (int i = unitVecX; i < idxNum; ++i)
-	{
-		m_CurrentInputArray[i] = NONE;
-		m_OldInputArray[i] = NONE;
-		m_InputArray[i] = NONE;
-	}
+	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
+	(int)memset(m_OldInputArray, NONE, stateIdxNum);
+	(int)memset(m_InputArray, NONE, stateIdxNum);
+	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
 
 	// JoyStick 세팅
+	// TODO :: Map 할당 해제해주기.
 	m_pMap = new gainput::InputMap(m_Manager);
 
 	m_Manager.SetDisplaySize(WIN_SIZE.x, WIN_SIZE.y);
@@ -53,6 +57,11 @@ void InputLayer::update(const float deltaTime)
 {
 	DetectJoyStickInput();
 	DefineWhatIsInputValue();
+}
+
+int * InputLayer::GetInputArray()
+{
+	return nullptr;
 }
 
 
@@ -121,7 +130,7 @@ void InputLayer::DefineWhatIsInputValue()
 	}
 
 	// Key State 처리.
-	for (int i = keyQ; i < idxNum; ++i)
+	for (int i = keyQ; i < stateIdxNum; ++i)
 	{
 		CCAssert(((m_CurrentInputArray[i] == HOLD) || (m_OldInputArray[i] == HOLD)),
 				"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
@@ -200,6 +209,21 @@ void InputLayer::ConvertJoyStickToUnitVec(float x, float y)
 	}
 
 	return;
+}
+
+/*
+	GetInputArray / GetInputUnitVec
+	private 멤버 Get함수.
+*/
+
+int* InputLayer::GetInputArray()
+{
+	return m_InputArray;
+}
+
+int* InputLayer::GetInputUnitVec()
+{
+	return m_InputUnitVec;
 }
 
 

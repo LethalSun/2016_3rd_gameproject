@@ -18,10 +18,10 @@ public :
 
 	IniReader(char* m_Filename);
 
-	int ReadInteger(char* Section, char* Key, int IntDefaultValue);
-	float ReadFloat(char* Section, char* Key, float FloatDefaultValue);
-	bool ReadBoolean(char* Section, char* Key, bool BoolDefaultValue);
-	char* ReadString(char* Section, char* Key, const char* StringDefaultValue);
+	int ReadInteger(const char* section, const char* Key, const int IntDefaultValue);
+	float ReadFloat(const char* section, const char* Key, const float FloatDefaultValue);
+	bool ReadBoolean(const char* section, const char* Key, const bool BoolDefaultValue);
+	char* ReadString(const char* section, const char* Key, const char* StringDefaultValue);
 
 
 private :

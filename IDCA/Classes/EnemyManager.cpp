@@ -18,12 +18,14 @@ EnemyManager* EnemyManager::getInstance()
 // 싱글톤을 지워주는 함수.
 void EnemyManager::deleteInstance()
 {
+	// TODO :: LOG를 사용하여 진짜 호출하는지 안하는지 확인해주기.
 	delete _instance;
 	_instance = nullptr;
 	return;
 }
 
-// 초기화 함수.
+// TODO :: 생성자는 맨 위로 옮기기.
+// 초기화 함수. 
 EnemyManager::EnemyManager()
 {
 	m_pEnemyVector.reserve(ENEMY::ENEMY_MAX_NUM);

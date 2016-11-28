@@ -32,8 +32,9 @@ float IniReader::ReadFloat(char* Section, char* Key, float FloatDefaultValue)
 }
 
 
-bool IniReader::ReadBoolean(char* Section, char* Key, bool BoolDefaultValue)
+bool IniReader::ReadBoolean(const char* section, const char* key, const bool boolDefaultValue)
 {
+	// TODO :: 변수 초기화
 	char Result[255];
 	char Default[255];
 	bool BoolResult;
@@ -46,11 +47,14 @@ bool IniReader::ReadBoolean(char* Section, char* Key, bool BoolDefaultValue)
 }
 
 
-char* IniReader::ReadString(char* Section, char* Key, const char* StringDefaultValue)
+char* IniReader::ReadString(const char* section, const char* key, const char* stringDefaultValue)
 {
+	// TODO :: 인자로 받아서 CHAR를 넘겨주거나, 반환값을 stl::String을 사용하던가.
+	// Memory Leak 문제.
+
 	char* Result = new char[255];
 	memset(Result, 0x00, 255);
-	GetPrivateProfileString(Section, Key,
-		StringDefaultValue, Result, 255, m_Filename);
+	GetPrivateProfileString(section, key,
+		stringDefaultValue, Result, 255, m_Filename);
 	return Result;
 }
