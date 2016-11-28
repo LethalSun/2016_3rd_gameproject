@@ -10,7 +10,7 @@ bool InputLayer::init()
 
 	Vec2 WIN_SIZE(1024, 768);
 	
-
+	// TODO :: MEMSET 사용해서 초기화.
 	// Array 세팅.
 	for (int i = unitVecX; i < idxNum; ++i)
 	{
@@ -20,6 +20,7 @@ bool InputLayer::init()
 	}
 
 	// JoyStick 세팅
+	// TODO :: Map 할당 해제해주기.
 	m_pMap = new gainput::InputMap(m_Manager);
 
 	m_Manager.SetDisplaySize(WIN_SIZE.x, WIN_SIZE.y);
