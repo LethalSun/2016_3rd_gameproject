@@ -81,12 +81,18 @@
     </ClCompile>
     <ClCompile Include="..\Classes\PlayerCharacter.cpp">
       <Filter>HW_Kim\PlayerCharacter</Filter>
+	</ClCompile>
+    <ClCompile Include="..\Classes\TestKW.cpp">
+      <Filter>KW_Lee\Config</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\IniReader.cpp">
       <Filter>KW_Lee\Config</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\CreateMap.cpp">
       <Filter>GS_Go</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlayerCharacter.cpp">
+      <Filter>HW_Kim</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,12 +179,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PlayerCharacter.h">
       <Filter>HW_Kim\PlayerCharacter</Filter>
+	</ClCompile>
+    <ClInclude Include="..\Classes\TestKw.h">
+      <Filter>KW_Lee\Config</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\IniReader.h">
       <Filter>KW_Lee\Config</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CreateMap.h">
       <Filter>GS_Go</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlayerCharacter.h">
+      <Filter>HW_Kim</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -217,9 +229,6 @@
     </Filter>
     <Filter Include="GS_Go">
       <UniqueIdentifier>{1d4e7424-5483-4651-80fc-a2c50425c2f7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="HW_Kim\PlayerCharacter">
-      <UniqueIdentifier>{2d9e6d51-c559-4c8a-9fe6-285653d584b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
