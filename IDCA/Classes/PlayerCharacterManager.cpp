@@ -39,10 +39,14 @@ PlayerCharacter* PlayerCharacterManager::GetCharacter()
 }
 
 
-void PlayerCharacterManager::GetInput()
+void PlayerCharacterManager::GetInput(int* input)
 {
-	auto m_Input = InputLayer::create();
-	m_pInput = m_Input->m_InputArray;
+	m_pInput = input;
+}
+
+void PlayerCharacterManager::GetUnitVac(int * input)
+{
+	m_pUnitVec = input;
 }
 
 
@@ -87,35 +91,35 @@ void PlayerCharacterManager::SetPlayerCharacterState()
 
 void PlayerCharacterManager::CalculatePlayerCharacterDirection()
 {
-	if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 0 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == 1)
+	if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == 0 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == 1)
 	{
 		m_direction = DIRECTION::TOP;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == 1)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == 1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == 1)
 	{
 		m_direction = DIRECTION::TOP_RIGHT;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == 0)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == 1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == 0)
 	{
 		m_direction = DIRECTION::RIGHT;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == -1)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == 1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == -1)
 	{
 		m_direction = DIRECTION::BOTTOM_RIGHT;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == 0 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == -1)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == 0 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == -1)
 	{
 		m_direction = DIRECTION::BOTTOM;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == -1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == -1)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == -1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == -1)
 	{
 		m_direction = DIRECTION::BOTTOM_LEFT;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == -1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == 0)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == -1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == 0)
 	{
 		m_direction = DIRECTION::LEFT;
 	}
-	else if (m_pInput[InputLayer::ARRAY_INDEX::unitVecX] == -1 && m_pInput[InputLayer::ARRAY_INDEX::unitVecY] == -1)
+	else if (m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecX] == -1 && m_pUnitVec[InputLayer::UNIT_VEC_INDEX::unitVecY] == -1)
 	{
 		m_direction = DIRECTION::TOP_LEFT;
 	}

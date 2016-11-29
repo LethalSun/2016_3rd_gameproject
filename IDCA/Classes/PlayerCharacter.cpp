@@ -168,7 +168,6 @@ void PlayerCharacter::CheckStopState()
 	}
 }
 
-
 PlayerCharacter::PlayerCharacter()
 {
 }

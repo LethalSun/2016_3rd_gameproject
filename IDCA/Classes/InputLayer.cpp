@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "InputLayer.h"
 
+// TODO :: 다른 애들이 볼 필요 없으면 cpp로 가야한다. cpp의 맨 위로 넣자.
+// JoyStick Mapping을 위한 값.
+const int JoyStickX = 0;
+const int JoyStickY = 1;
+
 bool InputLayer::init()
 {
 	if (!Layer::init())
@@ -9,23 +14,21 @@ bool InputLayer::init()
 	}
 
 	Vec2 WIN_SIZE(1024, 768);
-	
 
+	// TODO :: MEMSET 사용해서 초기화.
 	// Array 세팅.
-	for (int i = unitVecX; i < idxNum; ++i)
-	{
-		m_CurrentInputArray[i] = NONE;
-		m_OldInputArray[i] = NONE;
-		m_InputArray[i] = NONE;
-	}
+	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
+	(int)memset(m_OldInputArray, NONE, stateIdxNum);
+	(int)memset(m_InputArray, NONE, stateIdxNum);
+	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
 
 	// JoyStick 세팅
+	// TODO :: Map 할당 해제해주기.
 	m_pMap = new gainput::InputMap(m_Manager);
 
 	m_Manager.SetDisplaySize(WIN_SIZE.x, WIN_SIZE.y);
 	const gainput::DeviceId padId = m_Manager.CreateDevice<gainput::InputDevicePad>();
 	MapKeySetting(padId);
-
 
 	// Keyboard 인풋을 받을 Listener 세팅.
 	auto eventListener = EventListenerKeyboard::create();
@@ -38,7 +41,6 @@ bool InputLayer::init()
 
 	return true;
 }
-
 
 /*
 	Update
@@ -55,7 +57,6 @@ void InputLayer::update(const float deltaTime)
 	DefineWhatIsInputValue();
 }
 
-
 /*
 	DefineWhatIsInputValue
 	CurrentInputArray와 OldInputArray를 비교하여 InputValue를 채워넣어주는 함수.
@@ -63,7 +64,7 @@ void InputLayer::update(const float deltaTime)
 	UnitVec에 대해서 :
 		Current값을 집어넣음.
 
-	UnitVecStatus에 대해서 :		
+	UnitVecStatus에 대해서 :
 		UnitVecX, Y 각각에 대하여,
 		old(0) -> cur(0) : NONE
 		old(0) -> cur(-1, 1) : START
@@ -121,10 +122,10 @@ void InputLayer::DefineWhatIsInputValue()
 	}
 
 	// Key State 처리.
-	for (int i = keyQ; i < idxNum; ++i)
+	for (int i = keyQ; i < stateIdxNum; ++i)
 	{
 		CCAssert(((m_CurrentInputArray[i] == HOLD) || (m_OldInputArray[i] == HOLD)),
-				"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
+			"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
 
 		if (m_CurrentInputArray[i] == END)
 		{
@@ -145,8 +146,7 @@ void InputLayer::DefineWhatIsInputValue()
 	}
 }
 
-
-/* 
+/*
 	JoyStick에서 받을 인풋을 맵에 세팅해 놓는 함수.
 	Init에서 생성한 deviceId를 인자로 받는다. 이 경우에는 padId.
 	m_pMap->get함수에서 첫 번째 인자를 호출하면 인풋이 있는지 없는지를 받을 수 있다.
@@ -166,8 +166,6 @@ void InputLayer::MapKeySetting(const unsigned int padId)
 
 	return;
 }
-
-
 
 /*
 	Update 함수 안에서 JoyStick의 x, y값을 인자로 받아서 들어온다.
@@ -202,6 +200,20 @@ void InputLayer::ConvertJoyStickToUnitVec(float x, float y)
 	return;
 }
 
+/*
+	GetInputArray / GetInputUnitVec
+	private 멤버 Get함수.
+*/
+
+int* InputLayer::GetInputArray()
+{
+	return m_InputArray;
+}
+
+int* InputLayer::GetInputUnitVec()
+{
+	return m_InputUnitVec;
+}
 
 /*
 	Update()에서 JoyStick인풋을 감지하고 그에 맞는 처리를 해주는 함수.
@@ -223,7 +235,6 @@ void InputLayer::DetectJoyStickInput()
 	return;
 }
 
-
 /*
 	DetectJoyStickInput에서 호출되어 버튼이 눌리고 떼는 것을 감지하는 함수.
 	감지가 되면 CurrentInputArray와 OldInputArray의 값을 바꾸어 준다.
@@ -242,7 +253,7 @@ void InputLayer::CheckBoolIsNew()
 		m_OldInputArray[joyB] = m_CurrentInputArray[joyB];
 		m_CurrentInputArray[joyB] = START;
 	}
-	
+
 	if (m_pMap->GetBoolIsNew(joyX))
 	{
 		m_OldInputArray[joyX] = m_CurrentInputArray[joyX];
@@ -283,10 +294,9 @@ void InputLayer::CheckBoolIsDown()
 		m_OldInputArray[joyStart] = m_CurrentInputArray[joyStart];
 		m_CurrentInputArray[joyStart] = END;
 	}
-	
+
 	return;
 }
-
 
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.
@@ -295,7 +305,6 @@ void InputLayer::CheckBoolIsDown()
 
 void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 {
-
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
@@ -317,7 +326,6 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
 		m_CurrentInputArray[unitVecX] = -1;
 	}
-
 
 	// 버튼 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
@@ -367,7 +375,6 @@ void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
 		m_CurrentInputArray[unitVecX] = 0;
 	}
-
 
 	// 버튼 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q)

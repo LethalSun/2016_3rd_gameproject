@@ -1,7 +1,7 @@
 #pragma once
 class InputLayer;
 class CreateMap;
-
+class PlayerCharacterManager;
 
 class StageOne : public Layer
 {
@@ -12,13 +12,18 @@ public:
 
 	void update(float delta);
 
+	StageOne() = default;
+	~StageOne() = default;
 
 private:
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
+
 	std::vector<TMXLayer*> m_pBackground;
 	
 	Size m_mapSize;
 	Size m_winSize;
 	Size m_tileSize;
+
+	PlayerCharacterManager* m_pPlayerCharacterManager;
 };

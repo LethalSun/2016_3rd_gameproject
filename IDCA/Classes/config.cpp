@@ -9,7 +9,7 @@ bool Config::init()
 	}
 
 	setPlayerPlist("Warrior.plist");
-	setPlayerInitialSprite("WalkingFront01.png");
+	setPlayerInitialSprite("WarriorA13.psd");
 	setPlayerMoveSpeed(400.f);
 	return true;
 }
@@ -24,7 +24,6 @@ char* Config::getPlayerPlist()
 {
 	return m_pPlayerPlist;
 }
-
 
 void Config::setPlayerInitialSprite(char* src)
 {

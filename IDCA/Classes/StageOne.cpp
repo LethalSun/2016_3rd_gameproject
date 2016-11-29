@@ -3,8 +3,7 @@
 #include "StageOne.h"
 #include "CreateMap.h"
 #include "TemporaryDefine.h"
-
-
+#include "PlayerCharacterManager.h"
 
 Scene * StageOne::createScene()
 {
@@ -55,11 +54,14 @@ bool StageOne::init()
 	addChild(m_pMap);
 
 	m_InputLayer = InputLayer::create();
+
+	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
+
 	return true;
 }
 
-
 void StageOne::update(float delta)
 {
-	Vec2 unitVec = (m_InputLayer->m_Input[0], m_InputLayer->m_InputArray[1]);
+	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 }
