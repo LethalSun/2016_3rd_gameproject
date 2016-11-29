@@ -1,9 +1,13 @@
 #include "pch.h"
 #include "InputLayer.h"
 #include "StageOne.h"
-#include "CreateMap.h"
+#include "ManageMap.h"
+#include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+
+#include "Character.h"
+#include "CharacterManager.h"
 
 Scene * StageOne::createScene()
 {
@@ -38,24 +42,47 @@ bool StageOne::init()
 	}
 	
 
-	//
-	auto map = CreateMap::create();
-	m_pMap = map->loadMap(TEMP_DEFINE::MAP_NAME1);
-	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER1));
-	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER2));
-	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER3));
-	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER4));
-	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER5));
+	//맵 정보 등록
+	m_pManageMap = ManageMap::create();
+	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
 
 	m_mapSize = m_pMap->getMapSize();
 	m_winSize = Director::getInstance()->getWinSize();
 	m_tileSize = m_pMap->getTileSize();
+	m_background = Vec2(0, 0);
 
 	addChild(m_pMap);
+	//이동 관리 등록
+	m_pManageMove = ManageMove::create();
+
+
 
 	m_InputLayer = InputLayer::create();
 
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
+
+
+
+	/////////////임시 캐릭터///////////////////
+
+	//캐릭터 애드차일드
+	m_keyboardInput = 0;
+	m_pCharacterManager = CharacterManager::create();
+	addChild(m_pCharacterManager);
+	m_pCharacter = Character::create(TEMP_DEFINE::ARCH_BISHOP_FILE_NAME, TEMP_DEFINE::SPRITE_FRAME_FILE_EXTENTION);
+	m_pCharacter->setPosition(Vec2(100, 400));
+
+	addChild(m_pCharacter);
+
+
+
+	/////////////////////////////////////////
+
+
+	scheduleUpdate();
+
+
+
 
 	return true;
 }
@@ -64,4 +91,12 @@ void StageOne::update(float delta)
 {
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+
+
+	/////////////임시 캐릭터/////
+	auto unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
+	m_pCharacter->SetInput(m_keyboardInput);
+	m_pCharacterManager->GetCharacterInfo(m_pCharacter);
+
+	m_pManageMove->update(m_pCharacter->getPosition(), m_background, unitVec, m_pMap);
 }

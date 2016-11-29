@@ -32,6 +32,7 @@ namespace TEMP_DEFINE
 		ATTACK = 16,
 		GET_ACTION_BIT = 240
 	};
+
 	const int MAX_HP = 5;
 	const int BOX_TAG_MONSTER = 2;
 	const int BOX_TAG_CHARACTER = 1;
@@ -44,6 +45,9 @@ namespace TEMP_DEFINE
 	const float HIT_ANIMATION_SPEED = 0.03f;
 	const int ATTACK_RANGE_X = 37;
 	const int ATTACK_RANGE_Y = 47;
+	const int MAP_MOVE_SPEED = 3;
+	const int CHACRACTER_MOVE_SPEED = 3;
+
 	extern const char*ARCH_BISHOP_FILE_NAME;
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;
 	extern const char *PLIST_FILE_NAME;
@@ -54,6 +58,7 @@ namespace TEMP_DEFINE
 	extern const char*TILELAYER3;
 	extern const char*TILELAYER4;
 	extern const char*TILELAYER5;
+	extern const char*OBJECTLAYER;
 
 
 }
