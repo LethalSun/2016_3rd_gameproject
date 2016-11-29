@@ -12,11 +12,13 @@ public:
 
 	void update(float delta);
 
-	StageOne();
-	~StageOne();
 
 private:
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
+	std::vector<TMXLayer*> m_pBackground;
 	
+	Size m_mapSize;
+	Size m_winSize;
+	Size m_tileSize;
 };

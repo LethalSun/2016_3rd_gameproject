@@ -43,7 +43,7 @@ public:
 	int 					m_CurrentInputArray[idxNum];
 	int 					m_OldInputArray[idxNum];
 	
-	int					m_InputArray[idxNum];
+	int						m_InputArray[idxNum];
 	
 	void					DefineWhatIsInputValue();
 	

@@ -47,6 +47,13 @@ namespace TEMP_DEFINE
 	extern const char*ARCH_BISHOP_FILE_NAME;
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;
 	extern const char *PLIST_FILE_NAME;
+
 	extern const char*MAP_NAME1;
+	extern const char*TILELAYER1;
+	extern const char*TILELAYER2;
+	extern const char*TILELAYER3;
+	extern const char*TILELAYER4;
+	extern const char*TILELAYER5;
+
 
 }

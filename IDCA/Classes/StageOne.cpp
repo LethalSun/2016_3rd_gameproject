@@ -37,23 +37,29 @@ bool StageOne::init()
 	{
 		return false;
 	}
+	
 
-	auto cm = CreateMap::create();
-	//m_pMap = TMXTiledMap::create(TEMP_DEFINE::MAP_NAME1);
-	m_pMap = cm->loadMap(TEMP_DEFINE::MAP_NAME1);
+	//
+	auto map = CreateMap::create();
+	m_pMap = map->loadMap(TEMP_DEFINE::MAP_NAME1);
+	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER1));
+	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER2));
+	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER3));
+	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER4));
+	m_pBackground.push_back(m_pMap->layerNamed(TEMP_DEFINE::TILELAYER5));
+
+	m_mapSize = m_pMap->getMapSize();
+	m_winSize = Director::getInstance()->getWinSize();
+	m_tileSize = m_pMap->getTileSize();
 
 	addChild(m_pMap);
 
 	m_InputLayer = InputLayer::create();
-
 	return true;
 }
 
 
-	
-}
 void StageOne::update(float delta)
 {
-	//InputLayer::update();
-
+	Vec2 unitVec = (m_InputLayer->m_Input[0], m_InputLayer->m_InputArray[1]);
 }

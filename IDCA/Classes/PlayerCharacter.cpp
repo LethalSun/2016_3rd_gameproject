@@ -155,7 +155,7 @@ void PlayerCharacter::skill()
 
 void PlayerCharacter::CheckStopState()
 {
-	if (m_pAnimationMaker->IsAnimationContinued == -1)
+	if (m_pAnimationMaker->IsAnimationContinued() == -1)
 	{
 		if (m_State == STATE::ATTACK)
 		{
@@ -168,10 +168,6 @@ void PlayerCharacter::CheckStopState()
 	}
 }
 
-bool PlayerCharacter::init()
-{
-	return false;
-}
 
 PlayerCharacter::PlayerCharacter()
 {
@@ -183,7 +179,7 @@ PlayerCharacter::~PlayerCharacter()
 
 bool PlayerCharacter::IsAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued == STATE::MOVE
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -197,7 +193,7 @@ bool PlayerCharacter::IsAttackContinued()
 
 bool PlayerCharacter::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued == STATE::ATTACK)
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK)
 	{
 		return true;
 	}

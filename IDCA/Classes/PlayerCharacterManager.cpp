@@ -38,10 +38,14 @@ PlayerCharacter* PlayerCharacterManager::GetCharacter()
 	return m_pCharacter;
 }
 
+
 void PlayerCharacterManager::GetInput()
 {
-	m_pInput = InputLayer::m_InputArray;
+	auto m_Input = InputLayer::create();
+	m_pInput = m_Input->m_InputArray;
 }
+
+
 
 void PlayerCharacterManager::CalculatePlayerCharacterState()
 {
