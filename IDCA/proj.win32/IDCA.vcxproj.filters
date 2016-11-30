@@ -7,7 +7,6 @@
     <ClCompile Include="..\Classes\CharacterManager.cpp" />
     <ClCompile Include="..\Classes\CharacterScene.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
-    <ClCompile Include="..\Classes\CreateMap.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyManager.cpp" />
     <ClCompile Include="..\Classes\EnemyState.cpp" />
@@ -31,6 +30,9 @@
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
+    <ClCompile Include="..\Classes\checkMove.cpp" />
+    <ClCompile Include="..\Classes\ManageMap.cpp" />
+    <ClCompile Include="..\Classes\ManageMove.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
@@ -39,7 +41,6 @@
     <ClInclude Include="..\Classes\CharacterManager.h" />
     <ClInclude Include="..\Classes\CharacterScene.h" />
     <ClInclude Include="..\Classes\config.h" />
-    <ClInclude Include="..\Classes\CreateMap.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyManager.h" />
@@ -64,6 +65,9 @@
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\Classes\CollideManager.h" />
+    <ClInclude Include="..\Classes\checkMove.h" />
+    <ClInclude Include="..\Classes\ManageMap.h" />
+    <ClInclude Include="..\Classes\ManageMove.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />

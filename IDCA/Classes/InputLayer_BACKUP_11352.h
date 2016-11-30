@@ -38,13 +38,21 @@ public:
 	virtual bool			init();
 	virtual void			update(const float);
 
+<<<<<<< HEAD
 
 	/* Delivery Data Structure & Functions */
+	int 					m_CurrentInputArray[idxNum];
+	int 					m_OldInputArray[idxNum];
 	
+	int						m_InputArray[idxNum];
 	
+	void					DefineWhatIsInputValue();
+	
+=======
 	/* Get input Function */
 	int*					GetInputArray();
 	int*					GetInputUnitVec();
+>>>>>>> 5a97256713f668309aefa7f7c33f55558af59826
 
 	/* JoyStick Input Setting & Functions */
 	gainput::InputManager	m_Manager;
@@ -68,8 +76,8 @@ private:
 	int 					m_CurrentInputArray[stateIdxNum];
 	int 					m_OldInputArray[stateIdxNum];
 
-	int						m_InputUnitVec[vecIdxNum];
-	int						m_InputArray[stateIdxNum];
+	int				m_InputUnitVec[vecIdxNum];
+	int				m_InputArray[stateIdxNum];
 
 	void					DefineWhatIsInputValue();
 };

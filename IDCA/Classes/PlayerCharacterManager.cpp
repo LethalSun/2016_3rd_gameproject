@@ -39,6 +39,7 @@ PlayerCharacter* PlayerCharacterManager::GetCharacter()
 	return m_pCharacter;
 }
 
+
 void PlayerCharacterManager::GetInput(int* input)
 {
 	m_pInput = input;
@@ -48,6 +49,8 @@ void PlayerCharacterManager::GetUnitVac(int * input)
 {
 	m_pUnitVec = input;
 }
+
+
 
 void PlayerCharacterManager::CalculatePlayerCharacterState()
 {

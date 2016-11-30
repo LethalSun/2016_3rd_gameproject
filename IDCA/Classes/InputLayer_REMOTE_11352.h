@@ -38,10 +38,6 @@ public:
 	virtual bool			init();
 	virtual void			update(const float);
 
-
-	/* Delivery Data Structure & Functions */
-	
-	
 	/* Get input Function */
 	int*					GetInputArray();
 	int*					GetInputUnitVec();
@@ -68,8 +64,8 @@ private:
 	int 					m_CurrentInputArray[stateIdxNum];
 	int 					m_OldInputArray[stateIdxNum];
 
-	int						m_InputUnitVec[vecIdxNum];
-	int						m_InputArray[stateIdxNum];
+	int				m_InputUnitVec[vecIdxNum];
+	int				m_InputArray[stateIdxNum];
 
 	void					DefineWhatIsInputValue();
 };
