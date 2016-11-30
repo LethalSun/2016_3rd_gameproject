@@ -27,7 +27,8 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 	}
 
 	m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
-	addChild(m_pCharacter);
+	m_pCharacter->setPosition(Vec2(100, 100));
+	addChild(m_pCharacter, 1);
 
 	m_State = STATE::STOP;
 	m_direction = DIRECTION::BOTTOM;

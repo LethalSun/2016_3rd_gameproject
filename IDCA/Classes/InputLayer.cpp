@@ -124,7 +124,7 @@ void InputLayer::DefineWhatIsInputValue()
 	// Key State Ã³¸®.
 	for (int i = keyQ; i < stateIdxNum; ++i)
 	{
-		CCAssert(((m_CurrentInputArray[i] == HOLD) || (m_OldInputArray[i] == HOLD)),
+		CCAssert(((m_CurrentInputArray[i] != HOLD) || (m_OldInputArray[i] != HOLD)),
 			"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
 
 		if (m_CurrentInputArray[i] == END)

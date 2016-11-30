@@ -26,10 +26,10 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	sprintf(m_FileName, "%s", fileName);
 	sprintf(m_FileNameExtention, "%s", fileExtention);
 
-	m_ActionName[STATE::STOP] = 'S';
-	m_ActionName[STATE::ATTACK] = 'A';
-	m_ActionName[STATE::MOVE] = 'M';
-	m_ActionName[STATE::SKILL] = 'K';
+	m_ActionName[STATE::STOP] = "S";
+	m_ActionName[STATE::ATTACK] = "A";
+	m_ActionName[STATE::MOVE] = "M";
+	m_ActionName[STATE::SKILL] = "K";
 
 	m_IsAnimationOn = false;
 	m_State = STATE::STOP;
@@ -49,17 +49,17 @@ bool AnimationMaker::AddAnimation(int directionNum)
 	for (int i = imageStartNumber; i < imageStartNumber + MAX_FRAME_NUM; ++i)
 	{
 		MakeAnimationFrameName(i);
-		auto frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
+		m_pFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
 
-		if (frame == nullptr)
+		if (m_pFrame == nullptr)
 		{
 			break;
 		}
 
-		animationFrame.pushBack(frame);
+		animationFrame.pushBack(m_pFrame);
 	}
 
-	m_pAnimation = Animation::createWithSpriteFrames(animationFrame, ANIMATION_SPEED);
+	m_pAnimation = Animation::createWithSpriteFrames(animationFrame, m_AnimationSpeed);
 	m_pAnimate = Animate::create(m_pAnimation);
 
 	auto animationOn = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOn, this));
@@ -117,5 +117,23 @@ void AnimationMaker::AnimationOff()
 
 void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 {
-	sprintf(m_FrameNameBuffer, "%s%s%d%s", m_FileName, m_ActionName + m_State, fileNumber, m_FileNameExtention);
+	if (m_State == STATE::ATTACK)
+	{
+		sprintf(m_FrameNameBuffer, "%sA%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::MOVE)
+	{
+		sprintf(m_FrameNameBuffer, "%sM%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::SKILL)
+	{
+		sprintf(m_FrameNameBuffer, "%sK%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::STOP)
+	{
+		m_AnimationSpeed = STOP_ANIMATION_SPEED;
+		sprintf(m_FrameNameBuffer, "%sS%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+
+	m_AnimationSpeed = ANIMATION_SPEED;
 }

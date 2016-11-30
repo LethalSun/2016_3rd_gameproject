@@ -4,7 +4,6 @@
 #include "CreateMap.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
-
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -37,16 +36,17 @@ bool StageOne::init()
 		return false;
 	}
 
-	auto cm = CreateMap::create();
+	//auto cm = CreateMap::create();
 	//m_pMap = TMXTiledMap::create(TEMP_DEFINE::MAP_NAME1);
-	m_pMap = cm->loadMap(TEMP_DEFINE::MAP_NAME1);
+	//m_pMap = cm->loadMap(TEMP_DEFINE::MAP_NAME1);
 
-	addChild(m_pMap);
-
+	//addChild(m_pMap);
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
 	m_InputLayer = InputLayer::create();
 
+	addChild(m_InputLayer);
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
-
+	addChild(m_pPlayerCharacterManager);
 	return true;
 }
 

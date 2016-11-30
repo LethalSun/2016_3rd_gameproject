@@ -55,7 +55,6 @@ bool HelloWorld::init()
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
 
-
 	////////Stage1
 	auto closeItem2 = MenuItemImage::create(
 		"CloseNormal.png",
@@ -67,7 +66,7 @@ bool HelloWorld::init()
 		origin.y + changeScene2->getContentSize().height / 2));
 	// create menu, it's an autorelease object
 	auto menu2 = Menu::create(closeItem2, changeScene2, NULL);
-	menu2->setPosition(Vec2(500,500));
+	menu2->setPosition(Vec2(500, 500));
 	this->addChild(menu2, 1);
 
 	/////////////////////////////

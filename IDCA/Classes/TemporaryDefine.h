@@ -48,5 +48,5 @@ namespace TEMP_DEFINE
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;
 	extern const char *PLIST_FILE_NAME;
 	extern const char*MAP_NAME1;
-
+	extern const char* PLIST_NAME_2;
 }

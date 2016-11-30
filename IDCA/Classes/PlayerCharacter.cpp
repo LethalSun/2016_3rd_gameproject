@@ -45,10 +45,9 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 
 	//애니메이션을 초기화
 	m_pAnimationMaker = AnimationMaker::create(fileName, fileExtention);
+	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(m_Direction);
-
-	addChild(m_pAnimationMaker);
 }
 
 int PlayerCharacter::GetState()

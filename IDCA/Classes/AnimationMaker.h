@@ -57,7 +57,14 @@ private:
 
 	//프레임을 불러올 때 사용하는 변수들
 	char m_FrameNameBuffer[256];
+
 	Animation *m_pAnimation;
+
 	Animate *m_pAnimate;
-	char m_ActionName[4];
+
+	SpriteFrame * m_pFrame;
+
+	char* m_ActionName[4];
+
+	float m_AnimationSpeed;
 };
