@@ -20,8 +20,12 @@ bool InputLayer::init()
 	// Array 技泼.
 	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
 	(int)memset(m_OldInputArray, NONE, stateIdxNum);
+	(int)memset(m_CurrentInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
+	(int)memset(m_OldInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
 	(int)memset(m_InputArray, NONE, stateIdxNum);
 	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
+
+	Vec2 WIN_SIZE = Vec2(1024, 768);
 
 	// JoyStick 技泼
 	// TODO :: Map 且寸 秦力秦林扁.
@@ -95,15 +99,15 @@ void InputLayer::DefineWhatIsInputValue()
 	// UnitVec 贸府
 	for (int i = unitVecX; i <= unitVecY; ++i)
 	{
-		m_InputArray[i] = m_CurrentInputArray[i];
+		m_InputUnitVec[i] = m_CurrentInputUnitVec[i];
 	}
 
 	// UnitVecStatus 贸府
 	for (int i = unitVecXStatus; i <= unitVecYStatus; ++i)
 	{
-		if (m_OldInputArray[i] == 0)
+		if (m_OldInputUnitVec[i] == 0)
 		{
-			if (m_CurrentInputArray[i] == 0)
+			if (m_CurrentInputUnitVec[i] == 0)
 			{
 				m_InputArray[i] = NONE;
 			}
@@ -115,11 +119,11 @@ void InputLayer::DefineWhatIsInputValue()
 
 		else
 		{
-			if (m_CurrentInputArray[i] == 0)
+			if (m_CurrentInputUnitVec[i] == 0)
 			{
 				m_InputArray[i] = NONE;
 			}
-			else if (m_CurrentInputArray[i] == m_OldInputArray[i])
+			else if (m_CurrentInputUnitVec[i] == m_OldInputUnitVec[i])
 			{
 				m_InputArray[i] = HOLD;
 			}
@@ -133,7 +137,7 @@ void InputLayer::DefineWhatIsInputValue()
 	// Key State 贸府.
 	for (int i = keyQ; i < stateIdxNum; ++i)
 	{
-		CCAssert(((m_CurrentInputArray[i] == HOLD) || (m_OldInputArray[i] == HOLD)),
+		CCAssert(((m_CurrentInputArray[i] != HOLD) || (m_OldInputArray[i] != HOLD)),
 				"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
 
 		if (m_CurrentInputArray[i] == END)
@@ -189,24 +193,24 @@ void InputLayer::ConvertJoyStickToUnitVec(float x, float y)
 {
 	if (x != 0)
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = (x > 0) ? 1 : -1;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = (x > 0) ? 1 : -1;
 	}
 	else
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = 0;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = 0;
 	}
 
 	if (y != 0)
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = (y > 0) ? 1 : -1;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = (y > 0) ? 1 : -1;
 	}
 	else
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = 0;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = 0;
 	}
 
 	return;
@@ -324,23 +328,23 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 	// 规氢虐 包访 贸府.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = 1;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = 1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = -1;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = -1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = 1;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = 1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = -1;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = -1;
 	}
 
 
@@ -374,23 +378,23 @@ void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 	// 规氢虐 包访 贸府.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = 0;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
 	{
-		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
-		m_CurrentInputArray[unitVecY] = 0;
+		m_OldInputUnitVec[unitVecY] = m_CurrentInputUnitVec[unitVecY];
+		m_CurrentInputUnitVec[unitVecY] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = 0;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
 	{
-		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
-		m_CurrentInputArray[unitVecX] = 0;
+		m_OldInputUnitVec[unitVecX] = m_CurrentInputUnitVec[unitVecX];
+		m_CurrentInputUnitVec[unitVecX] = 0;
 	}
 
 

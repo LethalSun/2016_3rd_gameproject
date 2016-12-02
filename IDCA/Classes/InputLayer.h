@@ -37,6 +37,8 @@ private :
 	/* Delivery Data Structure & Functions */
 	int 					m_CurrentInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
 	int 					m_OldInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+	int						m_CurrentInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
+	int						m_OldInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
 	
 	static int				m_InputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
 	static int				m_InputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
