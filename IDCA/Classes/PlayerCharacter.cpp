@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "PlayerCharacter.h"
 #include "AnimationMaker.h"
+#include <windows.h>
+#include <iostream>
 
 PlayerCharacter * PlayerCharacter::create(const char * fileName, const char * fileExtention)
 {
@@ -48,6 +50,7 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(m_Direction);
+	//addChild(Sprite);
 }
 
 int PlayerCharacter::GetState()
@@ -68,11 +71,6 @@ int PlayerCharacter::GetDirection()
 void PlayerCharacter::SetDirection(int direction)
 {
 	m_Direction = direction;
-}
-
-void PlayerCharacter::AddAnimation(int direction)
-{
-	m_pAnimationMaker->AddAnimation(direction);
 }
 
 int PlayerCharacter::GetHP()
@@ -97,24 +95,30 @@ void PlayerCharacter::SetSP(int sp)
 
 void PlayerCharacter::update(float dt)
 {
-	if (m_State == STATE::ATTACK)
+	if (m_BeforeState != m_State)
 	{
-		Attack();
+		//m_pAnimationMaker->GetSprite()->stopAllActions();
+		if (m_State == STATE::ATTACK)
+		{
+			Attack();
+		}
+		else if (m_State == STATE::MOVE)
+		{
+			Move();
+		}
+		else if (m_State == STATE::STOP)
+		{
+			std::cout << '/a';
+			stop();
+		}
+		else if (m_State == STATE::SKILL)
+		{
+			skill();
+		}
 	}
-	else if (m_State == STATE::MOVE)
-	{
-		Move();
-	}
-	else if (m_State == STATE::STOP)
-	{
-		stop();
-	}
-	else if (m_State == STATE::SKILL)
-	{
-		skill();
-	}
-	CheckStopState();
+
 	SaveBeforeStateAndDirection();
+	CheckStopState();
 }
 
 void PlayerCharacter::Attack()
@@ -123,9 +127,8 @@ void PlayerCharacter::Attack()
 	{
 		return;
 	}
-
 	m_pAnimationMaker->SetAnimationAttack();
-	m_pAnimationMaker->AddAnimation(m_Direction);
+	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
 }
 
 void PlayerCharacter::Move()
@@ -134,17 +137,16 @@ void PlayerCharacter::Move()
 	{
 		return;
 	}
-
-	m_pAnimationMaker->stopAllActions();
 	m_pAnimationMaker->SetAnimationMove();
-	m_pAnimationMaker->AddAnimation(m_Direction);
+	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
+	//addChild(Sprite);
 }
 
 void PlayerCharacter::stop()
 {
-	m_pAnimationMaker->stopAllActions();
 	m_pAnimationMaker->SetAnimationStop();
-	m_pAnimationMaker->AddAnimation(m_Direction);
+	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
+	//addChild(Sprite);
 }
 
 void PlayerCharacter::skill()
@@ -165,6 +167,9 @@ void PlayerCharacter::CheckStopState()
 			m_State = STATE::STOP;
 		}
 	}
+	char logBuffer1[100];
+	sprintf(logBuffer1, "state character:%d ", m_State);
+	cocos2d::log(logBuffer1);
 }
 
 PlayerCharacter::PlayerCharacter()
@@ -177,7 +182,7 @@ PlayerCharacter::~PlayerCharacter()
 
 bool PlayerCharacter::IsAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -191,7 +196,7 @@ bool PlayerCharacter::IsAttackContinued()
 
 bool PlayerCharacter::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK)
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE)
 	{
 		return true;
 	}

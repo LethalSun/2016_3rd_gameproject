@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "AnimationMaker.h"
 
+//생성
 AnimationMaker * AnimationMaker::create(const char * fileName, const char * fileExtention)
 {
 	auto pMaker = new(std::nothrow)AnimationMaker();
@@ -17,6 +18,7 @@ AnimationMaker * AnimationMaker::create(const char * fileName, const char * file
 	}
 }
 
+//생성하는 함수에서 초기화를 진행하는 함수.
 bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 {
 	if (!Node::init())
@@ -26,6 +28,8 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	sprintf(m_FileName, "%s", fileName);
 	sprintf(m_FileNameExtention, "%s", fileExtention);
 
+	m_pSprite = Sprite::create();
+	addChild(m_pSprite);
 	m_ActionName[STATE::STOP] = "S";
 	m_ActionName[STATE::ATTACK] = "A";
 	m_ActionName[STATE::MOVE] = "M";
@@ -36,11 +40,15 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 
 	m_pAnimation = nullptr;
 	m_pAnimate = nullptr;
+	m_tagOdd = 3;
+	m_tagEven = 2;
+	m_tag = m_tagOdd;
+	m_firstAdd = true;
 
 	return true;
 }
 
-bool AnimationMaker::AddAnimation(int directionNum)
+Sprite* AnimationMaker::AddAnimation(int directionNum)
 {
 	int imageStartNumber = directionNum * MAX_FRAME_NUM;
 
@@ -64,12 +72,17 @@ bool AnimationMaker::AddAnimation(int directionNum)
 
 	auto animationOn = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOn, this));
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
-
+	auto removeBeforeChild = CallFunc::create(CC_CALLBACK_0(AnimationMaker::RemoveChileByTag, this));
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
+	m_pSprite->stopAllActions();
+	m_pSprite->runAction(sequence);
 
-	runAction(sequence);
+	//RemoveChileByTag();
+
+	//sprite->setPosition(Vec2(0, 0));
+
 	//임시
-	return true;
+	return m_pSprite;
 }
 
 int AnimationMaker::IsAnimationContinued()
@@ -82,6 +95,11 @@ int AnimationMaker::IsAnimationContinued()
 	{
 		return -1;
 	}
+}
+
+Sprite * AnimationMaker::GetSprite()
+{
+	return m_pSprite;
 }
 
 //어떤 애니메이션인지 설정 animationMaker->SetAnimationAttack(); 처럼 사용한다.
@@ -136,4 +154,23 @@ void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 	}
 
 	m_AnimationSpeed = ANIMATION_SPEED;
+}
+
+void AnimationMaker::RemoveChileByTag()
+{
+	if (m_firstAdd == true)
+	{
+		m_firstAdd = false;
+		m_tag = m_tagEven;
+		return;
+	}
+
+	if (m_tag % 2 == 0)
+	{
+		removeChildByTag(m_tag = m_tagOdd);
+	}
+	else
+	{
+		removeChildByTag(m_tag = m_tagEven);
+	}
 }

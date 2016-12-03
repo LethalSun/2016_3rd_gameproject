@@ -55,6 +55,19 @@ void InputLayer::update(const float deltaTime)
 {
 	DetectJoyStickInput();
 	DefineWhatIsInputValue();
+
+	char logBuffer1[256];
+	sprintf(logBuffer1, "%d%d%d%d%d%d%d%d%d%d", m_InputArray[0],
+		m_InputArray[1],
+		m_InputArray[2],
+		m_InputArray[3],
+		m_InputArray[4],
+		m_InputArray[5],
+		m_InputArray[6],
+		m_InputArray[7],
+		m_InputArray[8],
+		m_InputArray[9]);
+	cocos2d::log(logBuffer1);
 }
 
 /*

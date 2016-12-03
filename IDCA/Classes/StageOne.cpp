@@ -73,14 +73,20 @@ bool StageOne::init()
 
 	/////////////////////////////////////////
 
+	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+
 	scheduleUpdate();
 	return true;
 }
 
 void StageOne::update(float delta)
 {
-	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
-	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+	auto input = m_InputLayer->GetInputArray();
+	auto unitVecC = m_InputLayer->GetInputUnitVec();
+
+	m_pPlayerCharacterManager->GetInput(input);
+	m_pPlayerCharacterManager->GetUnitVac(unitVecC);
 
 	/////////////임시 캐릭터/////
 	auto unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0], m_InputLayer->GetInputUnitVec()[1]);

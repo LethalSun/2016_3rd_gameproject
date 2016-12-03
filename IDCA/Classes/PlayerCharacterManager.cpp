@@ -25,20 +25,29 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 	{
 		return false;
 	}
+	//nt)memset(m_InputArray, NONE, stateIdxNum);fdf
+	//nt)memset(m_InputUnitVec, NONE, vecIdxNum);
 
-	m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
+	if ((m_pCharacter = PlayerCharacter::create(fileName, fileExtention)) == nullptr)
+	{
+		m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
+	}
+
 	m_pCharacter->setPosition(Vec2(100, 100));
-	addChild(m_pCharacter, 1);
+	addChild(m_pCharacter);
 
 	m_State = STATE::STOP;
 	m_direction = DIRECTION::BOTTOM;
+
+	scheduleUpdate();
+
+	return true;
 }
 
 PlayerCharacter* PlayerCharacterManager::GetCharacter()
 {
 	return m_pCharacter;
 }
-
 
 void PlayerCharacterManager::GetInput(int* input)
 {
@@ -49,8 +58,6 @@ void PlayerCharacterManager::GetUnitVac(int * input)
 {
 	m_pUnitVec = input;
 }
-
-
 
 void PlayerCharacterManager::CalculatePlayerCharacterState()
 {
@@ -133,6 +140,9 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 
 void PlayerCharacterManager::update(float dt)
 {
+	char logBuffer1[100];
+	sprintf(logBuffer1, "state manager:%d ", m_State);
+	cocos2d::log(logBuffer1);
 	CalculatePlayerCharacterState();
 	SetPlayerCharacterState();
 	CalculatePlayerCharacterDirection();
