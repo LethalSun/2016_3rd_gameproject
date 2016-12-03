@@ -65,6 +65,7 @@ void InputLayer::update(const float deltaTime)
 	DefineWhatIsInputValue();
 	StreamOldNCur();
 	
+	/* State Log part */
 	char logBuffer1[256];
 	sprintf(logBuffer1, "%d%d%d%d%d%d%d%d, oldinput X : %d, curinput X : %d",
 		m_InputArray[0],
@@ -78,6 +79,8 @@ void InputLayer::update(const float deltaTime)
 		m_OldInputArray[unitVecXStatus],
 		m_CurrentInputArray[unitVecXStatus]);
 	cocos2d::log(logBuffer1);
+	
+
 	if (!m_IsKeyboardPressed)
 	{
 		DetectJoyStickInput();
@@ -91,21 +94,7 @@ void InputLayer::update(const float deltaTime)
 	UnitVec에 대해서 :
 		Current값을 집어넣음.
 
-	UnitVecStatus에 대해서 :
-		UnitVecX, Y 각각에 대하여,
-		old(0) -> cur(0) : NONE
-		old(0) -> cur(-1, 1) : START
-		old(-1, 1) -> cur(0) : END
-		old(-1 / 1) -> cur(-1 / 1) : HOLD (같은 방향일 경우)
-		old(-1 / 1) -> cur(1 / -1) : START (다른 방향일 경우)
 
-	Key에 대해서 :
-		Cur(END)일 경우 : END
-		Cur(START)일 경우 : START
-		Cur(NONE)일 경우
-			Old(START) -> HOLD
-
-		else 상태 : NONE
 */
 
 void InputLayer::DefineWhatIsInputValue()
@@ -116,8 +105,8 @@ void InputLayer::DefineWhatIsInputValue()
 		m_InputUnitVec[i] = m_CurrentInputUnitVec[i];
 	}
 
-	// UnitVecStatus 처리
-	for (int i = unitVecXStatus; i <= unitVecYStatus; ++i)
+	// state 처리
+	for (int i = unitVecXStatus; i < stateIdxNum; ++i)
 	{
 		if (m_CurrentInputArray[i] == END || m_OldInputArray[i] == END)
 		{
@@ -137,50 +126,9 @@ void InputLayer::DefineWhatIsInputValue()
 		{
 			m_InputArray[i] = NONE;
 		}
-		/*
-		if ((m_OldInputArray[i] == 1) && (m_CurrentInputArray[i] == 1))
-		{
-			m_InputArray[i] = START;
-			m_CurrentInputArray[i] = 0;
-		}
-		else if ((m_OldInputArray[i] == 3) || (m_CurrentInputArray[i] == 3))
-		{
-			m_InputArray[i] = END;
-			m_CurrentInputArray[i] = 0;
-		}
-		else if ((m_InputArray[i] == START) || (m_InputArray[i] == HOLD))
-		{
-			m_InputArray[i] = HOLD;
-		}
-		else if ((m_OldInputArray[i] == 0) && (m_CurrentInputArray[i] == 0))
-		{
-			m_InputArray[i] = NONE;
-		}
-		*/
 	}
 
-	// Key State 처리.
-	for (int i = keyAttack; i < stateIdxNum; ++i)
-	{
-		if (m_CurrentInputArray[i] == END)
-		{
-			m_InputArray[i] = END;
-			m_CurrentInputArray[i] = NONE;
-		}
-		else if (m_CurrentInputArray[i] == START)
-		{
-			m_InputArray[i] = START;
-			m_CurrentInputArray[i] = NONE;
-		}
-		else if ((m_InputArray[i] == START && m_CurrentInputArray[i] == NONE) || m_InputArray[i] == HOLD)
-		{
-			m_InputArray[i] = HOLD;
-		}
-		else
-		{
-			m_InputArray[i] = NONE;
-		}
-	}
+	
 }
 
 bool InputLayer::IsJoyStickButtonPressed()
@@ -241,21 +189,11 @@ void InputLayer::ConvertJoyStickToUnitVec(float x, float y)
 		m_CurrentInputUnitVec[unitVecX] = (x > 0) ? 1 : -1;
 		m_CurrentInputArray[unitVecXStatus] = START;
 	}
-	else
-	{
-		m_CurrentInputUnitVec[unitVecX] = 0;
-		m_CurrentInputArray[unitVecXStatus] = NONE;
-	}
 
 	if (y != 0)
 	{
 		m_CurrentInputUnitVec[unitVecY] = (y > 0) ? 1 : -1;
 		m_CurrentInputArray[unitVecYStatus] = START;
-	}
-	else
-	{
-		m_CurrentInputUnitVec[unitVecY] = 0;
-		m_CurrentInputArray[unitVecYStatus] = NONE;
 	}
 
 	return;
