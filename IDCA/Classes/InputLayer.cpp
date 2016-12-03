@@ -27,8 +27,6 @@ bool InputLayer::init()
 	(int)memset(m_InputArray, NONE, stateIdxNum);
 	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
 
-	Vec2 WIN_SIZE = Vec2(1024, 768);
-
 	// JoyStick 세팅
 	// TODO :: Map 할당 해제해주기.
 	m_pMap = new gainput::InputMap(m_Manager);
@@ -62,6 +60,18 @@ void InputLayer::update(const float deltaTime)
 {
 	DetectJoyStickInput();
 	DefineWhatIsInputValue();
+
+	char logBuffer1[256];
+	sprintf(logBuffer1, "%d%d%d%d%d%d%d%d",
+		m_InputArray[0],
+		m_InputArray[1],
+		m_InputArray[2],
+		m_InputArray[3],
+		m_InputArray[4],
+		m_InputArray[5],
+		m_InputUnitVec[0],
+		m_InputUnitVec[1]);
+	cocos2d::log(logBuffer1);
 }
 
 /*
@@ -132,7 +142,7 @@ void InputLayer::DefineWhatIsInputValue()
 	for (int i = keyAttack; i < stateIdxNum; ++i)
 	{
 		CCAssert(((m_CurrentInputArray[i] != HOLD) || (m_OldInputArray[i] != HOLD)),
-				"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
+			"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
 
 		if (m_CurrentInputArray[i] == END)
 		{
@@ -260,7 +270,7 @@ void InputLayer::CheckBoolIsNew()
 		m_OldInputArray[keySkillAttack] = m_CurrentInputArray[keySkillAttack];
 		m_CurrentInputArray[keySkillAttack] = START;
 	}
-	
+
 	if (m_pMap->GetBoolIsNew(keySkillDefence))
 	{
 		m_OldInputArray[keySkillDefence] = m_CurrentInputArray[keySkillDefence];

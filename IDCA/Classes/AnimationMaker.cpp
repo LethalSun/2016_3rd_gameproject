@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "AnimationMaker.h"
 
+//생성
 AnimationMaker * AnimationMaker::create(const char * fileName, const char * fileExtention)
 {
 	auto pMaker = new(std::nothrow)AnimationMaker();
@@ -17,6 +18,7 @@ AnimationMaker * AnimationMaker::create(const char * fileName, const char * file
 	}
 }
 
+//생성하는 함수에서 초기화를 진행하는 함수.
 bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 {
 	if (!Node::init())
@@ -26,21 +28,27 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 	sprintf(m_FileName, "%s", fileName);
 	sprintf(m_FileNameExtention, "%s", fileExtention);
 
-	m_ActionName[STATE::STOP] = 'S';
-	m_ActionName[STATE::ATTACK] = 'A';
-	m_ActionName[STATE::MOVE] = 'M';
-	m_ActionName[STATE::SKILL] = 'K';
+	m_pSprite = Sprite::create();
+	addChild(m_pSprite);
+	m_ActionName[STATE::STOP] = "S";
+	m_ActionName[STATE::ATTACK] = "A";
+	m_ActionName[STATE::MOVE] = "M";
+	m_ActionName[STATE::SKILL] = "K";
 
 	m_IsAnimationOn = false;
 	m_State = STATE::STOP;
 
 	m_pAnimation = nullptr;
 	m_pAnimate = nullptr;
+	m_tagOdd = 3;
+	m_tagEven = 2;
+	m_tag = m_tagOdd;
+	m_firstAdd = true;
 
 	return true;
 }
 
-bool AnimationMaker::AddAnimation(int directionNum)
+Sprite* AnimationMaker::AddAnimation(int directionNum)
 {
 	int imageStartNumber = directionNum * MAX_FRAME_NUM;
 
@@ -49,27 +57,32 @@ bool AnimationMaker::AddAnimation(int directionNum)
 	for (int i = imageStartNumber; i < imageStartNumber + MAX_FRAME_NUM; ++i)
 	{
 		MakeAnimationFrameName(i);
-		auto frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
+		m_pFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
 
-		if (frame == nullptr)
+		if (m_pFrame == nullptr)
 		{
 			break;
 		}
 
-		animationFrame.pushBack(frame);
+		animationFrame.pushBack(m_pFrame);
 	}
 
-	m_pAnimation = Animation::createWithSpriteFrames(animationFrame, ANIMATION_SPEED);
+	m_pAnimation = Animation::createWithSpriteFrames(animationFrame, m_AnimationSpeed);
 	m_pAnimate = Animate::create(m_pAnimation);
 
 	auto animationOn = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOn, this));
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
-
+	auto removeBeforeChild = CallFunc::create(CC_CALLBACK_0(AnimationMaker::RemoveChileByTag, this));
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
+	m_pSprite->stopAllActions();
+	m_pSprite->runAction(sequence);
 
-	runAction(sequence);
+	//RemoveChileByTag();
+
+	//sprite->setPosition(Vec2(0, 0));
+
 	//임시
-	return true;
+	return m_pSprite;
 }
 
 int AnimationMaker::IsAnimationContinued()
@@ -82,6 +95,11 @@ int AnimationMaker::IsAnimationContinued()
 	{
 		return -1;
 	}
+}
+
+Sprite * AnimationMaker::GetSprite()
+{
+	return m_pSprite;
 }
 
 //어떤 애니메이션인지 설정 animationMaker->SetAnimationAttack(); 처럼 사용한다.
@@ -117,5 +135,42 @@ void AnimationMaker::AnimationOff()
 
 void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 {
-	sprintf(m_FrameNameBuffer, "%s%s%d%s", m_FileName, m_ActionName + m_State, fileNumber, m_FileNameExtention);
+	if (m_State == STATE::ATTACK)
+	{
+		sprintf(m_FrameNameBuffer, "%sA%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::MOVE)
+	{
+		sprintf(m_FrameNameBuffer, "%sM%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::SKILL)
+	{
+		sprintf(m_FrameNameBuffer, "%sK%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::STOP)
+	{
+		m_AnimationSpeed = STOP_ANIMATION_SPEED;
+		sprintf(m_FrameNameBuffer, "%sS%d%s", m_FileName, fileNumber, m_FileNameExtention);
+	}
+
+	m_AnimationSpeed = ANIMATION_SPEED;
+}
+
+void AnimationMaker::RemoveChileByTag()
+{
+	if (m_firstAdd == true)
+	{
+		m_firstAdd = false;
+		m_tag = m_tagEven;
+		return;
+	}
+
+	if (m_tag % 2 == 0)
+	{
+		removeChildByTag(m_tag = m_tagOdd);
+	}
+	else
+	{
+		removeChildByTag(m_tag = m_tagEven);
+	}
 }

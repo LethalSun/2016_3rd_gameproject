@@ -5,10 +5,6 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
-
-#include "Character.h"
-#include "CharacterManager.h"
-
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -40,7 +36,6 @@ bool StageOne::init()
 	{
 		return false;
 	}
-	
 
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();
@@ -55,48 +50,26 @@ bool StageOne::init()
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 
-
-
+	//addChild(m_pMap);
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
 	m_InputLayer = InputLayer::create();
 
+	addChild(m_InputLayer);
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
+	addChild(m_pPlayerCharacterManager);
 
-
-
-	/////////////임시 캐릭터///////////////////
-
-	//캐릭터 애드차일드
-	m_keyboardInput = 0;
-	m_pCharacterManager = CharacterManager::create();
-	addChild(m_pCharacterManager);
-	m_pCharacter = Character::create(TEMP_DEFINE::ARCH_BISHOP_FILE_NAME, TEMP_DEFINE::SPRITE_FRAME_FILE_EXTENTION);
-	m_pCharacter->setPosition(Vec2(100, 400));
-
-	addChild(m_pCharacter);
-
-
-
-	/////////////////////////////////////////
-
+	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
 	scheduleUpdate();
-
-
-
-
 	return true;
 }
 
 void StageOne::update(float delta)
 {
-	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
-	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+	auto input = m_InputLayer->GetInputArray();
+	auto unitVecC = m_InputLayer->GetInputUnitVec();
 
-
-	/////////////임시 캐릭터/////
-	auto unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
-	m_pCharacter->SetInput(m_keyboardInput);
-	m_pCharacterManager->GetCharacterInfo(m_pCharacter);
-
-	m_pManageMove->update(m_pCharacter->getPosition(), m_background, unitVec, m_pMap);
+	m_pPlayerCharacterManager->GetInput(input);
+	m_pPlayerCharacterManager->GetUnitVac(unitVecC);
 }

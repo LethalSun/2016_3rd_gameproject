@@ -25,7 +25,7 @@ enum DIRECTION
 const int MAX_HP = 10;
 const int MAX_SP = 10;
 
-const char PLAYER_FILE_NAME[] = "Warrior";
+const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
 //HW
 // Json 파일로 변환전까지 임시로 쓰는 Define.h
@@ -33,6 +33,7 @@ const char PLAYER_FILE_EXTENTION[] = ".png";
 
 const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
+const float STOP_ANIMATION_SPEED = 0.005f;
 
 //KW
 namespace INPUT_LAYER
