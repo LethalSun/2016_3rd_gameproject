@@ -20,10 +20,10 @@ public:
 	gainput::InputMap	   *m_pMap;
 
 	void					MapKeySetting(const unsigned int);
-	void					DetectJoyStickInput();
+	void 					DetectJoyStickInput();
 	void					ConvertJoyStickToUnitVec(const float, const float);
-	void					CheckBoolIsNew();
-	void					CheckBoolIsDown();
+	void					CheckBoolIsNew(float*, float*);
+	void					CheckBoolIsDown(float*, float*);
 
 	// TODO :: override를 쓸 거면 다 쓰고, 안 쓸거면 다 안쓰던지. 일관성 있게 바꾸기.
 	/* Keyborad Input Setting & Functions */
@@ -38,9 +38,13 @@ private:
 	int 					m_OldInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
 	int						m_CurrentInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
 	int						m_OldInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
-
-	int				m_InputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
-	int				m_InputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+	
+	int						m_InputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
+	int						m_InputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
 
 	void					DefineWhatIsInputValue();
+	bool					IsJoyStickButtonPressed();
+	void					StreamOldNCur();
+
+	bool					m_IsKeyboardPressed;
 };
