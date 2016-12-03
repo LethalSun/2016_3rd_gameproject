@@ -28,7 +28,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
@@ -149,13 +149,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClCompile Include="..\Classes\AnimationMaker.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\Character.cpp" />
-    <ClCompile Include="..\Classes\CharacterManager.cpp" />
-    <ClCompile Include="..\Classes\CharacterScene.cpp" />
-    <ClCompile Include="..\Classes\checkMove.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
-    <ClCompile Include="..\Classes\ManageMap.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyManager.cpp" />
     <ClCompile Include="..\Classes\EnemyState.cpp" />
@@ -165,35 +160,27 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\EnemyState_Search.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
     <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
-    <ClCompile Include="..\Classes\GetSpriteFrame.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\IniReader.cpp" />
     <ClCompile Include="..\Classes\InputLayer.cpp" />
-    <ClCompile Include="..\Classes\KeyboardLayer.cpp" />
-    <ClCompile Include="..\Classes\MakeAnimation.cpp" />
+    <ClCompile Include="..\Classes\ManageMap.cpp" />
     <ClCompile Include="..\Classes\ManageMove.cpp" />
     <ClCompile Include="..\Classes\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="..\Classes\PlayerCharacter.cpp" />
     <ClCompile Include="..\Classes\PlayerCharacterManager.cpp" />
+    <ClCompile Include="..\Classes\Projectile.cpp" />
+    <ClCompile Include="..\Classes\ProjectileListener.cpp" />
     <ClCompile Include="..\Classes\StageOne.cpp" />
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
-    <ClCompile Include="main.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\Character.h" />
-    <ClInclude Include="..\Classes\CharacterManager.h" />
-    <ClInclude Include="..\Classes\CharacterScene.h" />
-    <ClInclude Include="..\Classes\checkMove.h" />
     <ClInclude Include="..\Classes\CollideManager.h" />
     <ClInclude Include="..\Classes\config.h" />
-    <ClInclude Include="..\Classes\ManageMap.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyManager.h" />
@@ -204,17 +191,16 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\EnemyState_Search.h" />
     <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
     <ClInclude Include="..\Classes\Enemy_Choco.h" />
-    <ClInclude Include="..\Classes\GetSpriteFrame.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\IniReader.h" />
     <ClInclude Include="..\Classes\InputLayer.h" />
-    <ClInclude Include="..\Classes\KeyboardLayer.h" />
-    <ClInclude Include="..\Classes\MakeAnimation.h" />
+    <ClInclude Include="..\Classes\ManageMap.h" />
     <ClInclude Include="..\Classes\ManageMove.h" />
     <ClInclude Include="..\Classes\pch.h" />
-    <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\PlayerCharacter.h" />
     <ClInclude Include="..\Classes\PlayerCharacterManager.h" />
+    <ClInclude Include="..\Classes\Projectile.h" />
+    <ClInclude Include="..\Classes\ProjectileListener.h" />
     <ClInclude Include="..\Classes\StageOne.h" />
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
