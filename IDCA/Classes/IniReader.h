@@ -38,4 +38,3 @@ private :
 	wchar_t* TempConvertCharToWChar(char* string);
 
 };
-

@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>AttackLeftBack01.psd</key>
+            <key>WarriorA0.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -17,11 +17,11 @@
                 <key>spriteSourceSize</key>
                 <string>{62,88}</string>
                 <key>textureRect</key>
-                <string>{{1027,193},{62,88}}</string>
+                <string>{{1478,189},{62,88}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack02.psd</key>
+            <key>WarriorA1.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -34,16 +34,50 @@
                 <key>spriteSourceSize</key>
                 <string>{66,87}</string>
                 <key>textureRect</key>
-                <string>{{1665,185},{66,87}}</string>
+                <string>{{1658,185},{66,87}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack03.psd</key>
+            <key>WarriorA10.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.545455,0.494118}</string>
+                <string>{0.370968,0.511364}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{62,88}</string>
+                <key>spriteSourceSize</key>
+                <string>{62,88}</string>
+                <key>textureRect</key>
+                <string>{{1568,187},{62,88}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA11.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.393939,0.505747}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{66,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{66,87}</string>
+                <key>textureRect</key>
+                <string>{{1747,185},{66,87}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA12.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.454545,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -51,16 +85,16 @@
                 <key>spriteSourceSize</key>
                 <string>{55,85}</string>
                 <key>textureRect</key>
-                <string>{{679,200},{55,85}}</string>
+                <string>{{947,195},{55,85}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack04.psd</key>
+            <key>WarriorA13.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.54386,0.494118}</string>
+                <string>{0.45614,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -68,16 +102,16 @@
                 <key>spriteSourceSize</key>
                 <string>{57,85}</string>
                 <key>textureRect</key>
-                <string>{{853,195},{57,85}}</string>
+                <string>{{1034,193},{57,85}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack05.psd</key>
+            <key>WarriorA14.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.490741,0.5}</string>
+                <string>{0.481481,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -89,12 +123,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack06.psd</key>
+            <key>WarriorA15.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.712963,0.483146}</string>
+                <string>{0.277778,0.477528}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -106,12 +140,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftBack07.psd</key>
+            <key>WarriorA16.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.522388,0.488889}</string>
+                <string>{0.455224,0.466667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -119,16 +153,16 @@
                 <key>spriteSourceSize</key>
                 <string>{67,90}</string>
                 <key>textureRect</key>
-                <string>{{1481,188},{67,90}}</string>
+                <string>{{1677,1},{67,90}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
-            <key>AttackLeftBack08.psd</key>
+            <key>WarriorA17.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.306122,0.483146}</string>
+                <string>{0.673469,0.47191}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -136,186 +170,16 @@
                 <key>spriteSourceSize</key>
                 <string>{49,89}</string>
                 <key>textureRect</key>
-                <string>{{1685,1},{49,89}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>AttackLeftFront01.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.590164,0.505618}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{61,89}</string>
-                <key>spriteSourceSize</key>
-                <string>{61,89}</string>
-                <key>textureRect</key>
-                <string>{{1207,193},{61,89}}</string>
+                <string>{{764,198},{49,89}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackLeftFront02.psd</key>
+            <key>WarriorA2.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.518519,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{54,90}</string>
-                <key>spriteSourceSize</key>
-                <string>{54,90}</string>
-                <key>textureRect</key>
-                <string>{{587,201},{54,90}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackLeftFront03.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.643836,0.494253}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{73,87}</string>
-                <key>spriteSourceSize</key>
-                <string>{73,87}</string>
-                <key>textureRect</key>
-                <string>{{1767,1},{73,87}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackLeftFront04.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.619718,0.522222}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{71,90}</string>
-                <key>spriteSourceSize</key>
-                <string>{71,90}</string>
-                <key>textureRect</key>
-                <string>{{1612,1},{71,90}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>AttackLeftFront05.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.490741,0.505376}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{108,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{108,93}</string>
-                <key>textureRect</key>
-                <string>{{1,1},{108,93}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackLeftFront06.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.362319,0.49}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{69,100}</string>
-                <key>spriteSourceSize</key>
-                <string>{69,100}</string>
-                <key>textureRect</key>
-                <string>{{327,104},{69,100}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>AttackLeftFront07.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.52,0.485437}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{50,103}</string>
-                <key>spriteSourceSize</key>
-                <string>{50,103}</string>
-                <key>textureRect</key>
-                <string>{{275,1},{50,103}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>AttackLeftFront08.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.489796,0.531915}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{49,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{49,94}</string>
-                <key>textureRect</key>
-                <string>{{395,206},{49,94}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightBack01.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.354839,0.522727}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{62,88}</string>
-                <key>spriteSourceSize</key>
-                <string>{62,88}</string>
-                <key>textureRect</key>
-                <string>{{1117,193},{62,88}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightBack02.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.378788,0.517241}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{66,87}</string>
-                <key>spriteSourceSize</key>
-                <string>{66,87}</string>
-                <key>textureRect</key>
-                <string>{{1763,182},{66,87}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightBack03.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.436364,0.505882}</string>
+                <string>{0.527273,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -323,16 +187,67 @@
                 <key>spriteSourceSize</key>
                 <string>{55,85}</string>
                 <key>textureRect</key>
-                <string>{{766,199},{55,85}}</string>
+                <string>{{1208,193},{55,85}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackRightBack04.psd</key>
+            <key>WarriorA20.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.438596,0.505882}</string>
+                <string>{0.370968,0.511364}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{62,88}</string>
+                <key>spriteSourceSize</key>
+                <string>{62,88}</string>
+                <key>textureRect</key>
+                <string>{{1568,187},{62,88}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA21.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.393939,0.505747}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{66,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{66,87}</string>
+                <key>textureRect</key>
+                <string>{{1747,185},{66,87}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA22.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.454545,0.494118}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{55,85}</string>
+                <key>spriteSourceSize</key>
+                <string>{55,85}</string>
+                <key>textureRect</key>
+                <string>{{947,195},{55,85}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA23.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.45614,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -340,16 +255,16 @@
                 <key>spriteSourceSize</key>
                 <string>{57,85}</string>
                 <key>textureRect</key>
-                <string>{{940,195},{57,85}}</string>
+                <string>{{1034,193},{57,85}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackRightBack05.psd</key>
+            <key>WarriorA24.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.509259,0.476744}</string>
+                <string>{0.481481,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -357,11 +272,11 @@
                 <key>spriteSourceSize</key>
                 <string>{108,86}</string>
                 <key>textureRect</key>
-                <string>{{187,111},{108,86}}</string>
+                <string>{{187,1},{108,86}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackRightBack06.psd</key>
+            <key>WarriorA25.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -374,16 +289,16 @@
                 <key>spriteSourceSize</key>
                 <string>{108,89}</string>
                 <key>textureRect</key>
-                <string>{{96,111},{108,89}}</string>
+                <string>{{96,1},{108,89}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackRightBack07.psd</key>
+            <key>WarriorA26.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.462687,0.488889}</string>
+                <string>{0.462687,0.477778}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -391,28 +306,45 @@
                 <key>spriteSourceSize</key>
                 <string>{67,90}</string>
                 <key>textureRect</key>
-                <string>{{1573,187},{67,90}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightBack08.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.653061,0.494382}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{49,89}</string>
-                <key>spriteSourceSize</key>
-                <string>{49,89}</string>
-                <key>textureRect</key>
-                <string>{{1712,92},{49,89}}</string>
+                <string>{{1677,1},{67,90}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AttackRightFront01.psd</key>
+            <key>WarriorA27.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.673469,0.483146}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,89}</string>
+                <key>textureRect</key>
+                <string>{{764,198},{49,89}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA3.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.526316,0.494118}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{57,85}</string>
+                <key>spriteSourceSize</key>
+                <string>{57,85}</string>
+                <key>textureRect</key>
+                <string>{{1121,193},{57,85}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA30.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -425,67 +357,67 @@
                 <key>spriteSourceSize</key>
                 <string>{61,89}</string>
                 <key>textureRect</key>
-                <string>{{1298,192},{61,89}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightFront02.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.481481,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{54,90}</string>
-                <key>spriteSourceSize</key>
-                <string>{54,90}</string>
-                <key>textureRect</key>
-                <string>{{1389,191},{54,90}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightFront03.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.333333,0.494253}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{73,87}</string>
-                <key>spriteSourceSize</key>
-                <string>{73,87}</string>
-                <key>textureRect</key>
-                <string>{{1767,76},{73,87}}</string>
-                <key>textureRotated</key>
-                <true/>
-            </dict>
-            <key>AttackRightFront04.psd</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.380282,0.533333}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{71,90}</string>
-                <key>spriteSourceSize</key>
-                <string>{71,90}</string>
-                <key>textureRect</key>
-                <string>{{1639,93},{71,90}}</string>
+                <string>{{1746,1},{61,89}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AttackRightFront05.psd</key>
+            <key>WarriorA31.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.490741,0.516129}</string>
+                <string>{0.462963,0.522222}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{54,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{54,90}</string>
+                <key>textureRect</key>
+                <string>{{855,197},{54,90}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA32.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.342466,0.505747}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{73,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{73,87}</string>
+                <key>textureRect</key>
+                <string>{{1840,1},{73,87}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA33.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.366197,0.522222}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{71,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{71,90}</string>
+                <key>textureRect</key>
+                <string>{{1604,1},{71,90}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA34.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.526882}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -493,11 +425,11 @@
                 <key>spriteSourceSize</key>
                 <string>{108,93}</string>
                 <key>textureRect</key>
-                <string>{{1,111},{108,93}}</string>
+                <string>{{1,1},{108,93}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AttackRightFront06.psd</key>
+            <key>WarriorA35.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -510,16 +442,322 @@
                 <key>spriteSourceSize</key>
                 <string>{69,100}</string>
                 <key>textureRect</key>
-                <string>{{370,1},{69,100}}</string>
+                <string>{{327,104},{69,100}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AttackRightFront07.psd</key>
+            <key>WarriorA36.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.46,0.485437}</string>
+                <string>{0.46,0.466019}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{50,103}</string>
+                <key>spriteSourceSize</key>
+                <string>{50,103}</string>
+                <key>textureRect</key>
+                <string>{{275,1},{50,103}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA37.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,94}</string>
+                <key>textureRect</key>
+                <string>{{572,201},{49,94}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA4.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.509259,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,86}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,86}</string>
+                <key>textureRect</key>
+                <string>{{187,111},{108,86}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA40.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.409836,0.494382}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{61,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{61,89}</string>
+                <key>textureRect</key>
+                <string>{{1746,1},{61,89}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA41.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.462963,0.522222}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{54,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{54,90}</string>
+                <key>textureRect</key>
+                <string>{{855,197},{54,90}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA42.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.342466,0.505747}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{73,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{73,87}</string>
+                <key>textureRect</key>
+                <string>{{1840,1},{73,87}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA43.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.366197,0.522222}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{71,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{71,90}</string>
+                <key>textureRect</key>
+                <string>{{1604,1},{71,90}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA44.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.526882}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,93}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{108,93}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA45.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.608696,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{69,100}</string>
+                <key>spriteSourceSize</key>
+                <string>{69,100}</string>
+                <key>textureRect</key>
+                <string>{{327,104},{69,100}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA46.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.46,0.466019}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{50,103}</string>
+                <key>spriteSourceSize</key>
+                <string>{50,103}</string>
+                <key>textureRect</key>
+                <string>{{275,1},{50,103}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA47.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,94}</string>
+                <key>textureRect</key>
+                <string>{{572,201},{49,94}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA5.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.712963,0.47191}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,89}</string>
+                <key>textureRect</key>
+                <string>{{96,111},{108,89}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA50.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.590164,0.494382}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{61,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{61,89}</string>
+                <key>textureRect</key>
+                <string>{{1777,92},{61,89}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA51.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{54,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{54,90}</string>
+                <key>textureRect</key>
+                <string>{{1295,193},{54,90}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA52.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.643836,0.482759}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{73,87}</string>
+                <key>spriteSourceSize</key>
+                <string>{73,87}</string>
+                <key>textureRect</key>
+                <string>{{1840,90},{73,87}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA53.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.619718,0.511111}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{71,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{71,90}</string>
+                <key>textureRect</key>
+                <string>{{1635,93},{71,90}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA54.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.521505}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,93}</string>
+                <key>textureRect</key>
+                <string>{{1,111},{108,93}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA55.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.376812,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{69,100}</string>
+                <key>spriteSourceSize</key>
+                <string>{69,100}</string>
+                <key>textureRect</key>
+                <string>{{370,1},{69,100}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA56.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.52,0.485437}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -531,12 +769,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AttackRightFront08.psd</key>
+            <key>WarriorA57.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.489796,0.542553}</string>
+                <string>{0.489796,0.531915}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -544,45 +782,45 @@
                 <key>spriteSourceSize</key>
                 <string>{49,94}</string>
                 <key>textureRect</key>
-                <string>{{491,202},{49,94}}</string>
+                <string>{{668,200},{49,94}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingFront01.png</key>
+            <key>WarriorA6.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.514925,0.466667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,93}</string>
+                <string>{67,90}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,93}</string>
+                <string>{67,90}</string>
                 <key>textureRect</key>
-                <string>{{1315,96},{45,93}}</string>
+                <string>{{1708,93},{67,90}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront02.png</key>
+            <key>WarriorA60.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.590164,0.494382}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{46,93}</string>
+                <string>{61,89}</string>
                 <key>spriteSourceSize</key>
-                <string>{46,93}</string>
+                <string>{61,89}</string>
                 <key>textureRect</key>
-                <string>{{1267,97},{46,93}}</string>
+                <string>{{1777,92},{61,89}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingFront03.png</key>
+            <key>WarriorA61.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -591,904 +829,275 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{45,94}</string>
+                <string>{54,90}</string>
                 <key>spriteSourceSize</key>
-                <string>{45,94}</string>
+                <string>{54,90}</string>
                 <key>textureRect</key>
-                <string>{{949,1},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,95}</string>
-                <key>textureRect</key>
-                <string>{{818,1},{45,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,93}</string>
-                <key>textureRect</key>
-                <string>{{1350,1},{45,93}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{46,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{46,93}</string>
-                <key>textureRect</key>
-                <string>{{1302,1},{46,93}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,94}</string>
-                <key>textureRect</key>
-                <string>{{953,97},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingFront08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,95}</string>
-                <key>textureRect</key>
-                <string>{{822,98},{45,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1,221},{32,96}}</string>
+                <string>{{1295,193},{54,90}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingLeft02.png</key>
+            <key>WarriorA62.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.643836,0.482759}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{32,96}</string>
+                <string>{73,87}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{73,87}</string>
                 <key>textureRect</key>
-                <string>{{99,221},{32,96}}</string>
+                <string>{{1840,90},{73,87}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA63.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.619718,0.511111}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{71,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{71,90}</string>
+                <key>textureRect</key>
+                <string>{{1635,93},{71,90}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorA64.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.526882}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,93}</string>
+                <key>textureRect</key>
+                <string>{{1,111},{108,93}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingLeft03.png</key>
+            <key>WarriorA65.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.604651,0.494505}</string>
+                <string>{0.376812,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{43,91}</string>
+                <string>{69,100}</string>
                 <key>spriteSourceSize</key>
-                <string>{43,91}</string>
+                <string>{69,100}</string>
                 <key>textureRect</key>
-                <string>{{1449,95},{43,91}}</string>
+                <string>{{370,1},{69,100}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingLeft04.png</key>
+            <key>WarriorA66.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.540541,0.494505}</string>
+                <string>{0.52,0.485437}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{37,91}</string>
+                <string>{50,103}</string>
                 <key>spriteSourceSize</key>
-                <string>{37,91}</string>
+                <string>{50,103}</string>
                 <key>textureRect</key>
-                <string>{{1538,94},{37,91}}</string>
+                <string>{{275,106},{50,103}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingLeft05.png</key>
+            <key>WarriorA67.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.489796,0.531915}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{29,91}</string>
+                <string>{49,94}</string>
                 <key>spriteSourceSize</key>
-                <string>{29,91}</string>
+                <string>{49,94}</string>
                 <key>textureRect</key>
-                <string>{{1577,94},{29,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,89}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,89}</string>
-                <key>textureRect</key>
-                <string>{{1736,1},{29,89}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.571429,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,91}</string>
-                <key>textureRect</key>
-                <string>{{1494,94},{42,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeft08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.540541,0.494624}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,93}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,93}</string>
-                <key>textureRect</key>
-                <string>{{1362,96},{37,93}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{573,101},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{295,211},{44,98}}</string>
+                <string>{{668,200},{49,94}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingLeftFront03.png</key>
+            <key>WarriorA7.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.295918,0.466292}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{44,96}</string>
+                <string>{49,89}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{49,89}</string>
                 <key>textureRect</key>
-                <string>{{738,1},{44,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{46,92}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1401,96},{46,92}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1043,1},{44,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1089,1},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1221,1},{40,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftFront08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1093,97},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.513514,0.494845}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,97}</string>
-                <key>textureRect</key>
-                <string>{{698,100},{37,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,98}</string>
-                <key>textureRect</key>
-                <string>{{613,1},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.538462,0.494845}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{39,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{39,97}</string>
-                <key>textureRect</key>
-                <string>{{657,101},{39,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{865,1},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.540541,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,94}</string>
-                <key>textureRect</key>
-                <string>{{1263,1},{37,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.55,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{869,98},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.577778,0.489362}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,94}</string>
-                <key>textureRect</key>
-                <string>{{996,1},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingLeftUp08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.571429,0.489362}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,94}</string>
-                <key>textureRect</key>
-                <string>{{1133,1},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRIghtFront01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{484,102},{44,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.505556}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{32,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{197,221},{32,96}}</string>
+                <string>{{1387,191},{49,89}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingRight02.png</key>
+            <key>WarriorA70.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.629032,0.511364}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{32,96}</string>
+                <string>{62,88}</string>
                 <key>spriteSourceSize</key>
-                <string>{80,180}</string>
+                <string>{62,88}</string>
                 <key>textureRect</key>
-                <string>{{784,1},{32,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.372093,0.494505}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{43,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{43,91}</string>
-                <key>textureRect</key>
-                <string>{{1484,1},{43,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.418919,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,91}</string>
-                <key>textureRect</key>
-                <string>{{1573,1},{37,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.448276,0.505495}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,91}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,91}</string>
-                <key>textureRect</key>
-                <string>{{1608,94},{29,91}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRight06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.448276,0.494382}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{29,89}</string>
-                <key>spriteSourceSize</key>
-                <string>{29,89}</string>
-                <key>textureRect</key>
-                <string>{{1763,151},{29,89}}</string>
+                <string>{{1478,189},{62,88}}</string>
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WalkingRight07.png</key>
+            <key>WarriorA71.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.380952,0.505495}</string>
+                <string>{0.606061,0.505747}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{42,91}</string>
+                <string>{66,87}</string>
                 <key>spriteSourceSize</key>
-                <string>{42,91}</string>
+                <string>{66,87}</string>
                 <key>textureRect</key>
-                <string>{{1529,1},{42,91}}</string>
+                <string>{{1658,185},{66,87}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
-            <key>WalkingRight08.png</key>
+            <key>WarriorA72.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.405405,0.505376}</string>
+                <string>{0.527273,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{37,93}</string>
+                <string>{55,85}</string>
                 <key>spriteSourceSize</key>
-                <string>{37,93}</string>
+                <string>{55,85}</string>
                 <key>textureRect</key>
-                <string>{{1397,1},{37,93}}</string>
+                <string>{{1208,193},{55,85}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA73.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.526316,0.494118}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{57,85}</string>
+                <key>spriteSourceSize</key>
+                <string>{57,85}</string>
+                <key>textureRect</key>
+                <string>{{1121,193},{57,85}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA74.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.509259,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,86}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,86}</string>
+                <key>textureRect</key>
+                <string>{{187,111},{108,86}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA75.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.712963,0.47191}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{108,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{108,89}</string>
+                <key>textureRect</key>
+                <string>{{96,111},{108,89}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorA76.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.507463,0.466667}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{67,90}</string>
+                <key>spriteSourceSize</key>
+                <string>{67,90}</string>
+                <key>textureRect</key>
+                <string>{{1708,93},{67,90}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingRightFront02.png</key>
+            <key>WarriorA77.psd</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.306122,0.460674}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{49,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{49,89}</string>
+                <key>textureRect</key>
+                <string>{{1387,191},{49,89}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
                 <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,96}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{776,99},{44,96}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{46,92}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1436,1},{46,92}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{44,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1047,97},{44,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront05.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1137,97},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1225,97},{40,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{1177,1},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightFront08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{80,180}</string>
-                <key>textureRect</key>
-                <string>{{615,101},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{37,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{37,97}</string>
-                <key>textureRect</key>
-                <string>{{737,100},{37,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp02.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.475,0.510204}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,98}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,98}</string>
-                <key>textureRect</key>
-                <string>{{655,1},{40,98}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp03.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.5}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{39,97}</string>
-                <key>spriteSourceSize</key>
-                <string>{39,97}</string>
-                <key>textureRect</key>
-                <string>{{697,1},{39,97}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp04.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{907,1},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp06.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.5,0.484211}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{40,95}</string>
-                <key>spriteSourceSize</key>
-                <string>{40,95}</string>
-                <key>textureRect</key>
-                <string>{{911,98},{40,95}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp07.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.444444,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{45,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{45,94}</string>
-                <key>textureRect</key>
-                <string>{{1000,97},{45,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingRightUp08.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.452381,0.478723}</string>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{42,94}</string>
-                <key>spriteSourceSize</key>
-                <string>{42,94}</string>
-                <key>textureRect</key>
-                <string>{{1181,97},{42,94}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>WalkingUp01.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>anchor</key>
-                <string>{0.52381,0.510204}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1496,16 +1105,16 @@
                 <key>spriteSourceSize</key>
                 <string>{42,98}</string>
                 <key>textureRect</key>
-                <string>{{526,1},{42,98}}</string>
+                <string>{{530,1},{42,98}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp02.png</key>
+            <key>WarriorM1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.512195,0.515152}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1517,12 +1126,148 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp03.png</key>
+            <key>WarriorM10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.525,0.505051}</string>
+                <string>{0.378378,0.546392}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,97}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,97}</string>
+                <key>textureRect</key>
+                <string>{{700,1},{37,97}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM11.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.35,0.55102}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,98}</string>
+                <key>textureRect</key>
+                <string>{{574,1},{40,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM12.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.358974,0.546392}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{39,97}</string>
+                <key>spriteSourceSize</key>
+                <string>{39,97}</string>
+                <key>textureRect</key>
+                <string>{{658,101},{39,97}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM13.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.325,0.536842}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,95}</string>
+                <key>textureRect</key>
+                <string>{{888,98},{40,95}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM14.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.351351,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,94}</string>
+                <key>textureRect</key>
+                <string>{{1286,97},{37,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM15.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.325,0.536842}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,95}</string>
+                <key>textureRect</key>
+                <string>{{905,1},{40,95}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM16.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.311111,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,94}</string>
+                <key>textureRect</key>
+                <string>{{972,98},{45,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM17.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.309524,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{42,94}</string>
+                <key>textureRect</key>
+                <string>{{1112,97},{42,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM2.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1530,11 +1275,147 @@
                 <key>spriteSourceSize</key>
                 <string>{40,99}</string>
                 <key>textureRect</key>
-                <string>{{484,1},{40,99}}</string>
+                <string>{{442,102},{40,99}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp04.png</key>
+            <key>WarriorM20.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.511111}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{786,99},{32,96}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM21.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.505556}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{820,99},{32,96}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM22.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{43,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{43,91}</string>
+                <key>textureRect</key>
+                <string>{{1476,1},{43,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM23.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.567568,0.505495}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,91}</string>
+                <key>textureRect</key>
+                <string>{{1565,1},{37,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM24.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.655172,0.505495}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,91}</string>
+                <key>textureRect</key>
+                <string>{{1,221},{29,91}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM25.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.655172,0.494382}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,89}</string>
+                <key>textureRect</key>
+                <string>{{187,221},{29,89}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM26.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{42,91}</string>
+                <key>textureRect</key>
+                <string>{{1521,1},{42,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM27.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.567568,0.505376}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,93}</string>
+                <key>textureRect</key>
+                <string>{{1389,1},{37,93}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM3.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1551,12 +1432,148 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp05.png</key>
+            <key>WarriorM30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.505051}</string>
+                <string>{0.5625,0.505556}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{484,1},{44,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM31.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{740,100},{44,96}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM32.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.55,0.488889}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,92}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1428,1},{46,92}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM33.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1066,97},{44,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM34.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.494444}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1129,1},{42,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM35.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.55,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1244,97},{40,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM36.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5625,0.494444}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1156,97},{42,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM37.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.55,0.505556}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{616,1},{40,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM4.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.47619,0.505051}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1564,16 +1581,152 @@
                 <key>spriteSourceSize</key>
                 <string>{42,99}</string>
                 <key>textureRect</key>
-                <string>{{440,103},{42,99}}</string>
+                <string>{{398,103},{42,99}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp06.png</key>
+            <key>WarriorM40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.512195,0.514851}</string>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,93}</string>
+                <key>textureRect</key>
+                <string>{{1342,1},{45,93}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM41.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{46,93}</string>
+                <key>textureRect</key>
+                <string>{{477,203},{46,93}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM42.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,94}</string>
+                <key>textureRect</key>
+                <string>{{989,1},{45,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM43.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,95}</string>
+                <key>textureRect</key>
+                <string>{{380,206},{45,95}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM44.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,93}</string>
+                <key>textureRect</key>
+                <string>{{1373,96},{45,93}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM45.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{46,93}</string>
+                <key>textureRect</key>
+                <string>{{1325,97},{46,93}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM46.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,94}</string>
+                <key>textureRect</key>
+                <string>{{1019,97},{45,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM47.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,95}</string>
+                <key>textureRect</key>
+                <string>{{858,1},{45,95}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM5.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.487805,0.514851}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1585,12 +1738,148 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp07.png</key>
+            <key>WarriorM50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.51}</string>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{484,101},{44,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM51.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{778,1},{44,96}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM52.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,92}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1459,95},{46,92}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM53.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{44,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1083,1},{44,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM54.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1173,1},{42,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM55.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1261,1},{40,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM56.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{1200,97},{42,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM57.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{616,101},{40,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM6.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.475,0.51}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1598,11 +1887,147 @@
                 <key>spriteSourceSize</key>
                 <string>{40,100}</string>
                 <key>textureRect</key>
-                <string>{{398,103},{40,100}}</string>
+                <string>{{278,211},{40,100}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM60.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.4375,0.511111}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{824,1},{32,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WalkingUp08.png</key>
+            <key>WarriorM61.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.425,0.505556}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{32,96}</string>
+                <key>spriteSourceSize</key>
+                <string>{80,180}</string>
+                <key>textureRect</key>
+                <string>{{854,99},{32,96}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM62.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.5,0.5}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{43,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{43,91}</string>
+                <key>textureRect</key>
+                <string>{{1507,94},{43,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM63.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.405405,0.505495}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,91}</string>
+                <key>textureRect</key>
+                <string>{{1596,94},{37,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM64.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.310345,0.505495}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,91}</string>
+                <key>textureRect</key>
+                <string>{{94,221},{29,91}}</string>
+                <key>textureRotated</key>
+                <true/>
+            </dict>
+            <key>WarriorM65.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.310345,0.494382}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{29,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{29,89}</string>
+                <key>textureRect</key>
+                <string>{{1809,1},{29,89}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM66.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.47619,0.505495}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,91}</string>
+                <key>spriteSourceSize</key>
+                <string>{42,91}</string>
+                <key>textureRect</key>
+                <string>{{1552,94},{42,91}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM67.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.405405,0.516129}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,93}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,93}</string>
+                <key>textureRect</key>
+                <string>{{1420,96},{37,93}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM7.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1615,7 +2040,143 @@
                 <key>spriteSourceSize</key>
                 <string>{41,98}</string>
                 <key>textureRect</key>
-                <string>{{570,1},{41,98}}</string>
+                <string>{{573,101},{41,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM70.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.648649,0.546392}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,97}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,97}</string>
+                <key>textureRect</key>
+                <string>{{739,1},{37,97}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM71.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.675,0.55102}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,98}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,98}</string>
+                <key>textureRect</key>
+                <string>{{658,1},{40,98}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM72.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.666667,0.546392}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{39,97}</string>
+                <key>spriteSourceSize</key>
+                <string>{39,97}</string>
+                <key>textureRect</key>
+                <string>{{699,101},{39,97}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM73.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.675,0.536842}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,95}</string>
+                <key>textureRect</key>
+                <string>{{930,98},{40,95}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM74.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.648649,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{37,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,94}</string>
+                <key>textureRect</key>
+                <string>{{1303,1},{37,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM75.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.675,0.536842}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{40,95}</string>
+                <key>spriteSourceSize</key>
+                <string>{40,95}</string>
+                <key>textureRect</key>
+                <string>{{947,1},{40,95}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM76.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.688889,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{45,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{45,94}</string>
+                <key>textureRect</key>
+                <string>{{1036,1},{45,94}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>WarriorM77.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>anchor</key>
+                <string>{0.690476,0.531915}</string>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{42,94}</string>
+                <key>spriteSourceSize</key>
+                <string>{42,94}</string>
+                <key>textureRect</key>
+                <string>{{1217,1},{42,94}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -1631,9 +2192,9 @@
             <key>realTextureFileName</key>
             <string>Warrior.png</string>
             <key>size</key>
-            <string>{1855,256}</string>
+            <string>{1914,252}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:28b52ccc483e1c3eda2e27a80a2dca91:77994ba496461446360e49ac05f69c6b:643a8d5b8f8b8b741e33bbe8244f0ab7$</string>
+            <string>$TexturePacker:SmartUpdate:8bcfaf65871e9521636608a7efd8854f:acb9298632c25c8ef1a0b43985548baf:643a8d5b8f8b8b741e33bbe8244f0ab7$</string>
             <key>textureFileName</key>
             <string>Warrior.png</string>
         </dict>

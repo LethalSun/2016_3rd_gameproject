@@ -12,7 +12,8 @@ public:
 	PlayerCharacter* GetCharacter();
 
 	//인풋레이어에서 인풋값을 읽어오는 함수
-	void GetInput();
+	void GetInput(int* input);
+	void GetUnitVac(int* input);
 
 	//업데이트 함수
 	void update(float dt);
@@ -23,6 +24,8 @@ private:
 
 	//인풋값
 	int* m_pInput;
+
+	int* m_pUnitVec;
 
 	//스테이트 값
 	int m_State;
