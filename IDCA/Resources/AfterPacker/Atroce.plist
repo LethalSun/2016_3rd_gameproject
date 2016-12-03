@@ -4,12 +4,12 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>AtroceA0.psd</key>
+            <key>AtroceA0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.520408,0.34456}</string>
+                <string>{0.52381,0.352332}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -21,12 +21,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA1.psd</key>
+            <key>AtroceA1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.496599,0.352332}</string>
+                <string>{0.496599,0.357513}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -38,12 +38,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA10.psd</key>
+            <key>AtroceA10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.469388,0.352332}</string>
+                <string>{0.482993,0.34715}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -55,12 +55,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA11.psd</key>
+            <key>AtroceA11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.496599,0.352332}</string>
+                <string>{0.503401,0.357513}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -72,12 +72,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA12.psd</key>
+            <key>AtroceA12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.503401,0.360825}</string>
+                <string>{0.503401,0.35567}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -89,12 +89,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA13.psd</key>
+            <key>AtroceA13.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0689655,0.236515}</string>
+                <string>{0.062069,0.232365}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -106,12 +106,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA14.psd</key>
+            <key>AtroceA14.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0748299,0.443548}</string>
+                <string>{0.0612245,0.435484}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -123,12 +123,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA15.psd</key>
+            <key>AtroceA15.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0797101,0.5}</string>
+                <string>{0.0507246,0.482143}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -140,12 +140,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA2.psd</key>
+            <key>AtroceA2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.489796,0.35567}</string>
+                <string>{0.489796,0.360825}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -157,12 +157,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA20.psd</key>
+            <key>AtroceA20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.469388,0.352332}</string>
+                <string>{0.482993,0.34715}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -174,12 +174,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA21.psd</key>
+            <key>AtroceA21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.496599,0.352332}</string>
+                <string>{0.503401,0.357513}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -191,12 +191,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA22.psd</key>
+            <key>AtroceA22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.503401,0.360825}</string>
+                <string>{0.503401,0.35567}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -208,12 +208,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA23.psd</key>
+            <key>AtroceA23.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0689655,0.236515}</string>
+                <string>{0.062069,0.232365}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -225,12 +225,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA24.psd</key>
+            <key>AtroceA24.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0748299,0.443548}</string>
+                <string>{0.0612245,0.435484}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -242,12 +242,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA25.psd</key>
+            <key>AtroceA25.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0797101,0.5}</string>
+                <string>{0.0507246,0.482143}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -259,12 +259,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA3.psd</key>
+            <key>AtroceA3.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.924138,0.228216}</string>
+                <string>{0.944828,0.207469}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -276,12 +276,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA30.psd</key>
+            <key>AtroceA30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.679389,0.364532}</string>
+                <string>{0.679389,0.369458}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -293,12 +293,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA31.psd</key>
+            <key>AtroceA31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.671642,0.373134}</string>
+                <string>{0.656716,0.373134}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -310,12 +310,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA32.psd</key>
+            <key>AtroceA32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.669118,0.38}</string>
+                <string>{0.639706,0.37}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -327,12 +327,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA33.psd</key>
+            <key>AtroceA33.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.422222,0.391489}</string>
+                <string>{0.411111,0.387234}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -344,12 +344,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA34.psd</key>
+            <key>AtroceA34.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.422857,0.62}</string>
+                <string>{0.411429,0.606667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -361,12 +361,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA35.psd</key>
+            <key>AtroceA35.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.442424,0.618421}</string>
+                <string>{0.430303,0.592105}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -378,12 +378,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA4.psd</key>
+            <key>AtroceA4.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.92517,0.443548}</string>
+                <string>{0.945578,0.403226}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -395,12 +395,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA40.psd</key>
+            <key>AtroceA40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.679389,0.364532}</string>
+                <string>{0.679389,0.369458}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -412,12 +412,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA41.psd</key>
+            <key>AtroceA41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.671642,0.373134}</string>
+                <string>{0.656716,0.373134}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -429,12 +429,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA42.psd</key>
+            <key>AtroceA42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.669118,0.38}</string>
+                <string>{0.639706,0.37}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -446,12 +446,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA43.psd</key>
+            <key>AtroceA43.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.422222,0.391489}</string>
+                <string>{0.411111,0.387234}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -463,12 +463,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA44.psd</key>
+            <key>AtroceA44.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.422857,0.62}</string>
+                <string>{0.411429,0.606667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -480,12 +480,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA45.psd</key>
+            <key>AtroceA45.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.442424,0.618421}</string>
+                <string>{0.430303,0.592105}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -497,12 +497,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA5.psd</key>
+            <key>AtroceA5.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.92029,0.482143}</string>
+                <string>{0.934783,0.446429}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -514,12 +514,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA50.psd</key>
+            <key>AtroceA50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.320611,0.364532}</string>
+                <string>{0.328244,0.37931}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -531,12 +531,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA51.psd</key>
+            <key>AtroceA51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.335821,0.368159}</string>
+                <string>{0.328358,0.378109}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -548,12 +548,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA52.psd</key>
+            <key>AtroceA52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.330882,0.375}</string>
+                <string>{0.330882,0.38}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -565,12 +565,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA53.psd</key>
+            <key>AtroceA53.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.594444,0.391489}</string>
+                <string>{0.583333,0.378723}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -582,12 +582,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA54.psd</key>
+            <key>AtroceA54.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.577143,0.613333}</string>
+                <string>{0.577143,0.633333}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -599,12 +599,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA55.psd</key>
+            <key>AtroceA55.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.563636,0.618421}</string>
+                <string>{0.569697,0.611842}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -616,12 +616,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA60.psd</key>
+            <key>AtroceA60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.320611,0.364532}</string>
+                <string>{0.328244,0.37931}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -633,12 +633,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA61.psd</key>
+            <key>AtroceA61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.335821,0.368159}</string>
+                <string>{0.328358,0.378109}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -650,12 +650,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA62.psd</key>
+            <key>AtroceA62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.330882,0.375}</string>
+                <string>{0.330882,0.38}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -667,12 +667,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA63.psd</key>
+            <key>AtroceA63.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.594444,0.391489}</string>
+                <string>{0.583333,0.378723}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -684,12 +684,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA64.psd</key>
+            <key>AtroceA64.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.577143,0.613333}</string>
+                <string>{0.577143,0.633333}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -701,12 +701,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA65.psd</key>
+            <key>AtroceA65.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.563636,0.618421}</string>
+                <string>{0.569697,0.611842}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -718,12 +718,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA70.psd</key>
+            <key>AtroceA70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.517007,0.34715}</string>
+                <string>{0.52381,0.352332}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -735,12 +735,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA71.psd</key>
+            <key>AtroceA71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.496599,0.352332}</string>
+                <string>{0.496599,0.357513}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -752,12 +752,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA72.psd</key>
+            <key>AtroceA72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.489796,0.35567}</string>
+                <string>{0.489796,0.360825}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -769,12 +769,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA73.psd</key>
+            <key>AtroceA73.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.924138,0.228216}</string>
+                <string>{0.944828,0.207469}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -786,12 +786,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceA74.psd</key>
+            <key>AtroceA74.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.92517,0.443548}</string>
+                <string>{0.945578,0.403226}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -803,12 +803,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceA75.psd</key>
+            <key>AtroceA75.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.92029,0.482143}</string>
+                <string>{0.934783,0.446429}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -820,12 +820,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM0.psd</key>
+            <key>AtroceM0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.848101,0.483607}</string>
+                <string>{0.810127,0.467213}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -837,12 +837,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM1.psd</key>
+            <key>AtroceM1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.775281,0.474138}</string>
+                <string>{0.775281,0.456897}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -854,12 +854,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM10.psd</key>
+            <key>AtroceM10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.164557,0.47541}</string>
+                <string>{0.151899,0.467213}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -871,12 +871,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM11.psd</key>
+            <key>AtroceM11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.213483,0.491379}</string>
+                <string>{0.213483,0.474138}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -888,12 +888,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM12.psd</key>
+            <key>AtroceM12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.23913,0.464912}</string>
+                <string>{0.25,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -905,12 +905,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM13.psd</key>
+            <key>AtroceM13.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.17284,0.47619}</string>
+                <string>{0.17284,0.492063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -922,12 +922,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM14.psd</key>
+            <key>AtroceM14.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0779221,0.507353}</string>
+                <string>{0.0909091,0.507353}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -939,12 +939,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM15.psd</key>
+            <key>AtroceM15.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.104167,0.475}</string>
+                <string>{0.09375,0.475}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -956,12 +956,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM16.psd</key>
+            <key>AtroceM16.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.112245,0.447368}</string>
+                <string>{0.102041,0.447368}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -973,12 +973,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM17.psd</key>
+            <key>AtroceM17.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.09375,0.464912}</string>
+                <string>{0.09375,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -990,12 +990,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM2.psd</key>
+            <key>AtroceM2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.75,0.473684}</string>
+                <string>{0.728261,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1007,12 +1007,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM20.psd</key>
+            <key>AtroceM20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.164557,0.47541}</string>
+                <string>{0.151899,0.467213}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1024,12 +1024,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM21.psd</key>
+            <key>AtroceM21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.213483,0.491379}</string>
+                <string>{0.213483,0.474138}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1041,12 +1041,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM22.psd</key>
+            <key>AtroceM22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.23913,0.464912}</string>
+                <string>{0.25,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1058,12 +1058,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM23.psd</key>
+            <key>AtroceM23.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.17284,0.47619}</string>
+                <string>{0.17284,0.492063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1075,12 +1075,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM24.psd</key>
+            <key>AtroceM24.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.0779221,0.507353}</string>
+                <string>{0.0909091,0.507353}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1092,12 +1092,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM25.psd</key>
+            <key>AtroceM25.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.104167,0.475}</string>
+                <string>{0.09375,0.475}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1109,12 +1109,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM26.psd</key>
+            <key>AtroceM26.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.112245,0.447368}</string>
+                <string>{0.102041,0.447368}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1126,12 +1126,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM27.psd</key>
+            <key>AtroceM27.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.09375,0.464912}</string>
+                <string>{0.09375,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1143,12 +1143,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM3.psd</key>
+            <key>AtroceM3.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.802469,0.484127}</string>
+                <string>{0.839506,0.47619}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1160,7 +1160,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM30.psd</key>
+            <key>AtroceM30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1177,12 +1177,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM31.psd</key>
+            <key>AtroceM31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.529412,0.529412}</string>
+                <string>{0.55042,0.529412}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1194,12 +1194,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM32.psd</key>
+            <key>AtroceM32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.550847,0.518797}</string>
+                <string>{0.550847,0.533835}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1211,12 +1211,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM33.psd</key>
+            <key>AtroceM33.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.529412,0.496063}</string>
+                <string>{0.521008,0.496063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1228,12 +1228,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM34.psd</key>
+            <key>AtroceM34.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.508772,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1245,7 +1245,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM35.psd</key>
+            <key>AtroceM35.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1262,7 +1262,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM36.psd</key>
+            <key>AtroceM36.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1279,7 +1279,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM37.psd</key>
+            <key>AtroceM37.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1296,12 +1296,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM4.psd</key>
+            <key>AtroceM4.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.896104,0.507353}</string>
+                <string>{0.883117,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1313,7 +1313,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM40.psd</key>
+            <key>AtroceM40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1330,12 +1330,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM41.psd</key>
+            <key>AtroceM41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.529412,0.529412}</string>
+                <string>{0.554622,0.529412}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1347,12 +1347,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM42.psd</key>
+            <key>AtroceM42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.550847,0.518797}</string>
+                <string>{0.550847,0.533835}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1364,12 +1364,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM43.psd</key>
+            <key>AtroceM43.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.529412,0.496063}</string>
+                <string>{0.521008,0.496063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1381,12 +1381,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM44.psd</key>
+            <key>AtroceM44.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.508772,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1398,7 +1398,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM45.psd</key>
+            <key>AtroceM45.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1415,7 +1415,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM46.psd</key>
+            <key>AtroceM46.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1432,7 +1432,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM47.psd</key>
+            <key>AtroceM47.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1449,12 +1449,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM5.psd</key>
+            <key>AtroceM5.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.895833,0.475}</string>
+                <string>{0.90625,0.458333}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1466,7 +1466,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM50.psd</key>
+            <key>AtroceM50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1483,12 +1483,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM51.psd</key>
+            <key>AtroceM51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.462185,0.529412}</string>
+                <string>{0.462185,0.536765}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1500,12 +1500,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM52.psd</key>
+            <key>AtroceM52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.440678,0.533835}</string>
+                <string>{0.449153,0.518797}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1517,12 +1517,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM53.psd</key>
+            <key>AtroceM53.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.462185,0.496063}</string>
+                <string>{0.453782,0.503937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1534,12 +1534,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM54.psd</key>
+            <key>AtroceM54.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.491228,0.491935}</string>
+                <string>{0.482456,0.491935}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1551,12 +1551,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM55.psd</key>
+            <key>AtroceM55.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.493827,0.496}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1568,7 +1568,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM56.psd</key>
+            <key>AtroceM56.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1585,7 +1585,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM57.psd</key>
+            <key>AtroceM57.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1602,12 +1602,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM6.psd</key>
+            <key>AtroceM6.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.877551,0.438596}</string>
+                <string>{0.877551,0.429825}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1619,7 +1619,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM60.psd</key>
+            <key>AtroceM60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1636,12 +1636,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM61.psd</key>
+            <key>AtroceM61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.462185,0.529412}</string>
+                <string>{0.462185,0.536765}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1653,12 +1653,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM62.psd</key>
+            <key>AtroceM62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.440678,0.533835}</string>
+                <string>{0.449153,0.518797}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1670,12 +1670,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM63.psd</key>
+            <key>AtroceM63.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.462185,0.496063}</string>
+                <string>{0.453782,0.503937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1687,12 +1687,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM64.psd</key>
+            <key>AtroceM64.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.491228,0.491935}</string>
+                <string>{0.482456,0.491935}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1704,12 +1704,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM65.psd</key>
+            <key>AtroceM65.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.493827,0.496}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1721,7 +1721,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM66.psd</key>
+            <key>AtroceM66.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1738,7 +1738,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM67.psd</key>
+            <key>AtroceM67.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1755,12 +1755,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM7.psd</key>
+            <key>AtroceM7.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.885417,0.473684}</string>
+                <string>{0.875,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1772,12 +1772,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM70.psd</key>
+            <key>AtroceM70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.848101,0.483607}</string>
+                <string>{0.810127,0.467213}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1789,12 +1789,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM71.psd</key>
+            <key>AtroceM71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.775281,0.474138}</string>
+                <string>{0.775281,0.456897}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1806,12 +1806,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM72.psd</key>
+            <key>AtroceM72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.75,0.473684}</string>
+                <string>{0.728261,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1823,12 +1823,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM73.psd</key>
+            <key>AtroceM73.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.802469,0.484127}</string>
+                <string>{0.839506,0.47619}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1840,12 +1840,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM74.psd</key>
+            <key>AtroceM74.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.896104,0.507353}</string>
+                <string>{0.883117,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1857,12 +1857,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM75.psd</key>
+            <key>AtroceM75.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.895833,0.475}</string>
+                <string>{0.90625,0.458333}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1874,12 +1874,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceM76.psd</key>
+            <key>AtroceM76.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.877551,0.438596}</string>
+                <string>{0.877551,0.429825}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1891,12 +1891,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceM77.psd</key>
+            <key>AtroceM77.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.885417,0.473684}</string>
+                <string>{0.875,0.473684}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1908,12 +1908,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceS0.psd</key>
+            <key>AtroceS0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.475806}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1925,12 +1925,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS1.psd</key>
+            <key>AtroceS1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.912088,0.472}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1942,12 +1942,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS10.psd</key>
+            <key>AtroceS10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.475806}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1959,12 +1959,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS11.psd</key>
+            <key>AtroceS11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.472}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1976,12 +1976,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS12.psd</key>
+            <key>AtroceS12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0666667,0.479675}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1993,12 +1993,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS13.psd</key>
+            <key>AtroceS13.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2010,12 +2010,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS14.psd</key>
+            <key>AtroceS14.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0652174,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2027,12 +2027,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS15.psd</key>
+            <key>AtroceS15.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0652174,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2044,12 +2044,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceS16.psd</key>
+            <key>AtroceS16.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2061,12 +2061,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS17.psd</key>
+            <key>AtroceS17.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2078,12 +2078,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS2.psd</key>
+            <key>AtroceS2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.911111,0.479675}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2095,12 +2095,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS20.psd</key>
+            <key>AtroceS20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.475806}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2112,12 +2112,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS21.psd</key>
+            <key>AtroceS21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.472}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2129,12 +2129,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS22.psd</key>
+            <key>AtroceS22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0666667,0.479675}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2146,12 +2146,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS23.psd</key>
+            <key>AtroceS23.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2163,12 +2163,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS24.psd</key>
+            <key>AtroceS24.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0652174,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2180,12 +2180,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS25.psd</key>
+            <key>AtroceS25.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0652174,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2197,12 +2197,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceS26.psd</key>
+            <key>AtroceS26.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2214,12 +2214,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS27.psd</key>
+            <key>AtroceS27.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.0659341,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2231,12 +2231,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS3.psd</key>
+            <key>AtroceS3.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.912088,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2248,12 +2248,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS30.psd</key>
+            <key>AtroceS30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.495146,0.496063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2265,12 +2265,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS31.psd</key>
+            <key>AtroceS31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.495146,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2282,12 +2282,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS32.psd</key>
+            <key>AtroceS32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.485437,0.515873}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2299,12 +2299,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS33.psd</key>
+            <key>AtroceS33.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.485437,0.516129}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2316,12 +2316,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS34.psd</key>
+            <key>AtroceS34.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.480769,0.504065}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2333,12 +2333,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS35.psd</key>
+            <key>AtroceS35.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.466019,0.508197}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2350,12 +2350,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS36.psd</key>
+            <key>AtroceS36.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.466019,0.512195}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2367,12 +2367,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS37.psd</key>
+            <key>AtroceS37.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.480769,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2384,12 +2384,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS4.psd</key>
+            <key>AtroceS4.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.913043,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2401,12 +2401,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS40.psd</key>
+            <key>AtroceS40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.495146,0.496063}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2418,12 +2418,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS41.psd</key>
+            <key>AtroceS41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.495146,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2435,12 +2435,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS42.psd</key>
+            <key>AtroceS42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.485437,0.515873}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2452,12 +2452,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS43.psd</key>
+            <key>AtroceS43.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.485437,0.516129}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2469,12 +2469,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS44.psd</key>
+            <key>AtroceS44.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.480769,0.504065}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2486,12 +2486,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS45.psd</key>
+            <key>AtroceS45.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.466019,0.508197}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2503,12 +2503,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS46.psd</key>
+            <key>AtroceS46.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.466019,0.512195}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2520,12 +2520,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS47.psd</key>
+            <key>AtroceS47.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.480769,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2537,12 +2537,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS5.psd</key>
+            <key>AtroceS5.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923913,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2554,7 +2554,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceS50.psd</key>
+            <key>AtroceS50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2571,7 +2571,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS51.psd</key>
+            <key>AtroceS51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2588,12 +2588,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS52.psd</key>
+            <key>AtroceS52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.507937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2605,12 +2605,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS53.psd</key>
+            <key>AtroceS53.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.516129}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2622,12 +2622,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS54.psd</key>
+            <key>AtroceS54.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.509615,0.504065}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2639,12 +2639,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS55.psd</key>
+            <key>AtroceS55.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.514563,0.508197}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2656,12 +2656,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS56.psd</key>
+            <key>AtroceS56.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.512195}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2673,12 +2673,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS57.psd</key>
+            <key>AtroceS57.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.5,0.507937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2690,12 +2690,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS6.psd</key>
+            <key>AtroceS6.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2707,7 +2707,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS60.psd</key>
+            <key>AtroceS60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2724,7 +2724,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS61.psd</key>
+            <key>AtroceS61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2741,12 +2741,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS62.psd</key>
+            <key>AtroceS62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.507937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2758,12 +2758,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS63.psd</key>
+            <key>AtroceS63.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.516129}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2775,12 +2775,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS64.psd</key>
+            <key>AtroceS64.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.509615,0.504065}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2792,12 +2792,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS65.psd</key>
+            <key>AtroceS65.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.514563,0.508197}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2809,12 +2809,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS66.psd</key>
+            <key>AtroceS66.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.504854,0.512195}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2826,12 +2826,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS67.psd</key>
+            <key>AtroceS67.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.5,0.507937}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2843,12 +2843,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS7.psd</key>
+            <key>AtroceS7.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.495868}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2860,12 +2860,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS70.psd</key>
+            <key>AtroceS70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.475806}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2877,12 +2877,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS71.psd</key>
+            <key>AtroceS71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.912088,0.472}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2894,12 +2894,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS72.psd</key>
+            <key>AtroceS72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.911111,0.479675}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2911,12 +2911,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS73.psd</key>
+            <key>AtroceS73.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.912088,0.487603}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2928,12 +2928,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS74.psd</key>
+            <key>AtroceS74.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.913043,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2945,12 +2945,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS75.psd</key>
+            <key>AtroceS75.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923913,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2962,12 +2962,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>AtroceS76.psd</key>
+            <key>AtroceS76.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.495798}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2979,12 +2979,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>AtroceS77.psd</key>
+            <key>AtroceS77.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.923077,0.495868}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -3010,7 +3010,7 @@
             <key>size</key>
             <string>{983,1556}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:898497c7760e786ddac0860a1438d7cf:cd89db4062183e2a7d478ef048c5bc85:403f4926a72de96a3dfe47fc0ffbbe10$</string>
+            <string>$TexturePacker:SmartUpdate:a1edccd518a97dee7abeda7154568f25:a520b4431499b363f270fb74f801d4c5:403f4926a72de96a3dfe47fc0ffbbe10$</string>
             <key>textureFileName</key>
             <string>Atroce.png</string>
         </dict>
