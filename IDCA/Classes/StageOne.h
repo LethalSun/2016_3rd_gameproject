@@ -1,7 +1,11 @@
 #pragma once
 class InputLayer;
-class CreateMap;
+class ManageMap;
+class ManageMove;
+class PlayerCharacterManager;
 
+class Character;
+class CharacterManager;
 
 class StageOne : public Layer
 {
@@ -12,11 +16,28 @@ public:
 
 	void update(float delta);
 
-	StageOne();
-	~StageOne();
+	StageOne() = default;
+	~StageOne() = default;
 
 private:
+
+	Vec2 m_background;
+
+
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
 	
+	
+	Size m_mapSize;
+	Size m_winSize;
+	Size m_tileSize;
+
+	PlayerCharacterManager* m_pPlayerCharacterManager;
+	ManageMap* m_pManageMap;
+	ManageMove* m_pManageMove;
+
+	///임시 캐릭터
+	Character *m_pCharacter;
+	CharacterManager *m_pCharacterManager;
+	unsigned int m_keyboardInput;
 };

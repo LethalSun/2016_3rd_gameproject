@@ -24,6 +24,9 @@ enum DIRECTION
 
 const int MAX_HP = 10;
 const int MAX_SP = 10;
+
+const char PLAYER_FILE_NAME[] = "Warrior";
+const char PLAYER_FILE_EXTENTION[] = ".png";
 //HW
 // Json 파일로 변환전까지 임시로 쓰는 Define.h
 
