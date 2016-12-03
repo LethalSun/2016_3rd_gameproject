@@ -43,11 +43,10 @@ namespace INPUT_LAYER
 		unitVecXStatus = 0, unitVecYStatus = 1,
 
 		// Keyborad Input idx
-		keyQ = 2, keyW = 3, keyE = 4, keyESC = 5,
+		// 순서대로 JoyStick A, B, X, Start
+		keyAttack = 2, keySkillAttack = 3, keySkillDefence = 4, keyESC = 5,
 
-		// JoyStick Input idx
-		joyA = 6, joyB = 7, joyX = 8, joyStart = 9,
-		stateIdxNum = 10
+		stateIdxNum = 6
 
 	};
 

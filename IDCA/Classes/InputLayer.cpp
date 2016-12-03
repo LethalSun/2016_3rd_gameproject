@@ -135,7 +135,7 @@ void InputLayer::DefineWhatIsInputValue()
 	}
 
 	// Key State 贸府.
-	for (int i = keyQ; i < stateIdxNum; ++i)
+	for (int i = keyAttack; i < stateIdxNum; ++i)
 	{
 		CCAssert(((m_CurrentInputArray[i] != HOLD) || (m_OldInputArray[i] != HOLD)),
 				"CurrentArray And OldArray Can't take value KEY_STATUS::HOLD");
@@ -173,10 +173,10 @@ void InputLayer::MapKeySetting(const unsigned int padId)
 	m_pMap->MapFloat(JoyStickY, padId, gainput::PadButton::PadButtonLeftStickY);
 
 	// Receive Button Input
-	m_pMap->MapBool(joyA, padId, gainput::PadButton::PadButtonA);
-	m_pMap->MapBool(joyB, padId, gainput::PadButton::PadButtonB);
-	m_pMap->MapBool(joyX, padId, gainput::PadButton::PadButtonX);
-	m_pMap->MapBool(joyStart, padId, gainput::PadButton::PadButtonStart);
+	m_pMap->MapBool(keyAttack, padId, gainput::PadButton::PadButtonA);
+	m_pMap->MapBool(keySkillAttack, padId, gainput::PadButton::PadButtonB);
+	m_pMap->MapBool(keySkillDefence, padId, gainput::PadButton::PadButtonX);
+	m_pMap->MapBool(keyESC, padId, gainput::PadButton::PadButtonStart);
 
 	return;
 }
@@ -260,28 +260,28 @@ void InputLayer::DetectJoyStickInput()
 
 void InputLayer::CheckBoolIsNew()
 {
-	if (m_pMap->GetBoolIsNew(joyA))
+	if (m_pMap->GetBoolIsNew(keyAttack))
 	{
-		m_OldInputArray[joyA] = m_CurrentInputArray[joyA];
-		m_CurrentInputArray[joyA] = START;
+		m_OldInputArray[keyAttack] = m_CurrentInputArray[keyAttack];
+		m_CurrentInputArray[keyAttack] = START;
 	}
 
-	if (m_pMap->GetBoolIsNew(joyB))
+	if (m_pMap->GetBoolIsNew(keySkillAttack))
 	{
-		m_OldInputArray[joyB] = m_CurrentInputArray[joyB];
-		m_CurrentInputArray[joyB] = START;
+		m_OldInputArray[keySkillAttack] = m_CurrentInputArray[keySkillAttack];
+		m_CurrentInputArray[keySkillAttack] = START;
 	}
 	
-	if (m_pMap->GetBoolIsNew(joyX))
+	if (m_pMap->GetBoolIsNew(keySkillDefence))
 	{
-		m_OldInputArray[joyX] = m_CurrentInputArray[joyX];
-		m_CurrentInputArray[joyX] = START;
+		m_OldInputArray[keySkillDefence] = m_CurrentInputArray[keySkillDefence];
+		m_CurrentInputArray[keySkillDefence] = START;
 	}
 
-	if (m_pMap->GetBoolIsNew(joyStart))
+	if (m_pMap->GetBoolIsNew(keyESC))
 	{
-		m_OldInputArray[joyStart] = m_CurrentInputArray[joyStart];
-		m_CurrentInputArray[joyStart] = START;
+		m_OldInputArray[keyESC] = m_CurrentInputArray[keyESC];
+		m_CurrentInputArray[keyESC] = START;
 	}
 
 	return;
@@ -289,28 +289,28 @@ void InputLayer::CheckBoolIsNew()
 
 void InputLayer::CheckBoolIsDown()
 {
-	if (m_pMap->GetBoolWasDown(joyA))
+	if (m_pMap->GetBoolWasDown(keyAttack))
 	{
-		m_OldInputArray[joyA] = m_CurrentInputArray[joyA];
-		m_CurrentInputArray[joyA] = END;
+		m_OldInputArray[keyAttack] = m_CurrentInputArray[keyAttack];
+		m_CurrentInputArray[keyAttack] = END;
 	}
 
-	if (m_pMap->GetBoolWasDown(joyB))
+	if (m_pMap->GetBoolWasDown(keySkillAttack))
 	{
-		m_OldInputArray[joyB] = m_CurrentInputArray[joyB];
-		m_CurrentInputArray[joyB] = END;
+		m_OldInputArray[keySkillAttack] = m_CurrentInputArray[keySkillAttack];
+		m_CurrentInputArray[keySkillAttack] = END;
 	}
 
-	if (m_pMap->GetBoolWasDown(joyX))
+	if (m_pMap->GetBoolWasDown(keySkillDefence))
 	{
-		m_OldInputArray[joyX] = m_CurrentInputArray[joyX];
-		m_CurrentInputArray[joyX] = END;
+		m_OldInputArray[keySkillDefence] = m_CurrentInputArray[keySkillDefence];
+		m_CurrentInputArray[keySkillDefence] = END;
 	}
 
-	if (m_pMap->GetBoolWasDown(joyStart))
+	if (m_pMap->GetBoolWasDown(keyESC))
 	{
-		m_OldInputArray[joyStart] = m_CurrentInputArray[joyStart];
-		m_CurrentInputArray[joyStart] = END;
+		m_OldInputArray[keyESC] = m_CurrentInputArray[keyESC];
+		m_CurrentInputArray[keyESC] = END;
 	}
 	
 	return;
@@ -351,18 +351,18 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 	// 滚瓢 包访 贸府.
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
 	{
-		m_OldInputArray[keyQ] = m_CurrentInputArray[keyQ];
-		m_CurrentInputArray[keyQ] = START;
+		m_OldInputArray[keyAttack] = m_CurrentInputArray[keyAttack];
+		m_CurrentInputArray[keyAttack] = START;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_W)
 	{
-		m_OldInputArray[keyW] = m_CurrentInputArray[keyW];
-		m_CurrentInputArray[keyW] = START;
+		m_OldInputArray[keySkillAttack] = m_CurrentInputArray[keySkillAttack];
+		m_CurrentInputArray[keySkillAttack] = START;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_E)
 	{
-		m_OldInputArray[keyE] = m_CurrentInputArray[keyE];
-		m_CurrentInputArray[keyE] = START;
+		m_OldInputArray[keySkillDefence] = m_CurrentInputArray[keySkillDefence];
+		m_CurrentInputArray[keySkillDefence] = START;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
 	{
@@ -401,18 +401,18 @@ void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 	// 滚瓢 包访 贸府.
 	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
 	{
-		m_OldInputArray[keyQ] = m_CurrentInputArray[keyQ];
-		m_CurrentInputArray[keyQ] = END;
+		m_OldInputArray[keyAttack] = m_CurrentInputArray[keyAttack];
+		m_CurrentInputArray[keyAttack] = END;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_W)
 	{
-		m_OldInputArray[keyW] = m_CurrentInputArray[keyW];
-		m_CurrentInputArray[keyW] = END;
+		m_OldInputArray[keySkillAttack] = m_CurrentInputArray[keySkillAttack];
+		m_CurrentInputArray[keySkillAttack] = END;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_E)
 	{
-		m_OldInputArray[keyE] = m_CurrentInputArray[keyE];
-		m_CurrentInputArray[keyE] = END;
+		m_OldInputArray[keySkillDefence] = m_CurrentInputArray[keySkillDefence];
+		m_CurrentInputArray[keySkillDefence] = END;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
 	{
