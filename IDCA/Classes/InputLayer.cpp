@@ -64,22 +64,6 @@ void InputLayer::update(const float deltaTime)
 
 	DefineWhatIsInputValue();
 	StreamOldNCur();
-	
-	/* State Log part */
-	char logBuffer1[256];
-	sprintf(logBuffer1, "%d%d%d%d%d%d%d%d, oldinput X : %d, curinput X : %d",
-		m_InputArray[0],
-		m_InputArray[1],
-		m_InputArray[2],
-		m_InputArray[3],
-		m_InputArray[4],
-		m_InputArray[5],
-		m_InputUnitVec[0],
-		m_InputUnitVec[1],
-		m_OldInputArray[unitVecXStatus],
-		m_CurrentInputArray[unitVecXStatus]);
-	cocos2d::log(logBuffer1);
-	
 
 	if (!m_IsKeyboardPressed)
 	{
