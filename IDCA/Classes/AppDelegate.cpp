@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "CharacterScene.h"
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);

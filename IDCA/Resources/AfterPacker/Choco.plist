@@ -4,12 +4,12 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>ChocoA0.psd</key>
+            <key>ChocoA0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.461538,0.304348}</string>
+                <string>{0.5,0.347826}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -21,12 +21,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA1.psd</key>
+            <key>ChocoA1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.632653,0.128205}</string>
+                <string>{0.612245,0.179487}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -38,12 +38,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA10.psd</key>
+            <key>ChocoA10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.347826}</string>
+                <string>{0.5,0.369565}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -55,12 +55,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA11.psd</key>
+            <key>ChocoA11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.367347,0.205128}</string>
+                <string>{0.367347,0.179487}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -72,12 +72,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA12.psd</key>
+            <key>ChocoA12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.391304,0.2}</string>
+                <string>{0.391304,0.228571}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -89,12 +89,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA2.psd</key>
+            <key>ChocoA2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.608696,0.228571}</string>
+                <string>{0.608696,0.2}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -106,12 +106,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA20.psd</key>
+            <key>ChocoA20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.347826}</string>
+                <string>{0.5,0.369565}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -123,12 +123,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA21.psd</key>
+            <key>ChocoA21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.367347,0.205128}</string>
+                <string>{0.367347,0.179487}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -140,12 +140,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA22.psd</key>
+            <key>ChocoA22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.391304,0.2}</string>
+                <string>{0.391304,0.228571}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -157,12 +157,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA30.psd</key>
+            <key>ChocoA30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.666667,0.511111}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -174,7 +174,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA31.psd</key>
+            <key>ChocoA31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -191,7 +191,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA32.psd</key>
+            <key>ChocoA32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -208,12 +208,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA40.psd</key>
+            <key>ChocoA40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.62963,0.511111}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -225,7 +225,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA41.psd</key>
+            <key>ChocoA41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -242,7 +242,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA42.psd</key>
+            <key>ChocoA42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -259,12 +259,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA50.psd</key>
+            <key>ChocoA50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.333333,0.533333}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -276,7 +276,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA51.psd</key>
+            <key>ChocoA51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -293,7 +293,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA52.psd</key>
+            <key>ChocoA52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -310,12 +310,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA60.psd</key>
+            <key>ChocoA60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.333333,0.533333}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -327,7 +327,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA61.psd</key>
+            <key>ChocoA61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -344,7 +344,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA62.psd</key>
+            <key>ChocoA62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -361,12 +361,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoA70.psd</key>
+            <key>ChocoA70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.461538,0.304348}</string>
+                <string>{0.5,0.347826}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -378,12 +378,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA71.psd</key>
+            <key>ChocoA71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.632653,0.128205}</string>
+                <string>{0.612245,0.179487}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -395,12 +395,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoA72.psd</key>
+            <key>ChocoA72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.608696,0.228571}</string>
+                <string>{0.608696,0.2}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -412,7 +412,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM0.psd</key>
+            <key>ChocoM0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -429,7 +429,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM1.psd</key>
+            <key>ChocoM1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -446,7 +446,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM10.psd</key>
+            <key>ChocoM10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -463,7 +463,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM11.psd</key>
+            <key>ChocoM11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -480,7 +480,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM12.psd</key>
+            <key>ChocoM12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -497,7 +497,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM13.psd</key>
+            <key>ChocoM13.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -514,7 +514,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM2.psd</key>
+            <key>ChocoM2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -531,7 +531,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM20.psd</key>
+            <key>ChocoM20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -548,7 +548,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM21.psd</key>
+            <key>ChocoM21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -565,7 +565,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM22.psd</key>
+            <key>ChocoM22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -582,7 +582,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM23.psd</key>
+            <key>ChocoM23.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -599,7 +599,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM3.psd</key>
+            <key>ChocoM3.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -616,7 +616,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM30.psd</key>
+            <key>ChocoM30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -633,7 +633,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM31.psd</key>
+            <key>ChocoM31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -650,7 +650,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM32.psd</key>
+            <key>ChocoM32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -667,7 +667,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM33.psd</key>
+            <key>ChocoM33.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -684,7 +684,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM40.psd</key>
+            <key>ChocoM40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -701,7 +701,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM41.psd</key>
+            <key>ChocoM41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -718,7 +718,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM42.psd</key>
+            <key>ChocoM42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -735,7 +735,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM43.psd</key>
+            <key>ChocoM43.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -752,7 +752,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM50.psd</key>
+            <key>ChocoM50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -769,7 +769,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM51.psd</key>
+            <key>ChocoM51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -786,7 +786,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM52.psd</key>
+            <key>ChocoM52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -803,7 +803,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM53.psd</key>
+            <key>ChocoM53.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -820,7 +820,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM60.psd</key>
+            <key>ChocoM60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -837,7 +837,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM61.psd</key>
+            <key>ChocoM61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -854,7 +854,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM62.psd</key>
+            <key>ChocoM62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -871,7 +871,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM63.psd</key>
+            <key>ChocoM63.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -888,7 +888,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM70.psd</key>
+            <key>ChocoM70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -905,7 +905,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM71.psd</key>
+            <key>ChocoM71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -922,7 +922,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoM72.psd</key>
+            <key>ChocoM72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -939,7 +939,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoM73.psd</key>
+            <key>ChocoM73.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -956,12 +956,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS0.psd</key>
+            <key>ChocoS0.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.730769,0.264706}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -973,12 +973,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS1.psd</key>
+            <key>ChocoS1.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.419355,0.484848}</string>
+                <string>{0.612903,0.272727}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -990,12 +990,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS10.psd</key>
+            <key>ChocoS10.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.423077,0.5}</string>
+                <string>{0.307692,0.235294}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1007,12 +1007,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS11.psd</key>
+            <key>ChocoS11.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.419355,0.242424}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1024,12 +1024,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS12.psd</key>
+            <key>ChocoS12.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.384615,0.5}</string>
+                <string>{0.307692,0.235294}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1041,12 +1041,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS2.psd</key>
+            <key>ChocoS2.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.538462,0.5}</string>
+                <string>{0.730769,0.264706}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1058,12 +1058,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS20.psd</key>
+            <key>ChocoS20.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.423077,0.5}</string>
+                <string>{0.307692,0.235294}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1075,12 +1075,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS21.psd</key>
+            <key>ChocoS21.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.419355,0.242424}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1092,12 +1092,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS22.psd</key>
+            <key>ChocoS22.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.384615,0.5}</string>
+                <string>{0.307692,0.235294}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1109,12 +1109,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS30.psd</key>
+            <key>ChocoS30.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.413793,0.5}</string>
+                <string>{0.482759,0.361111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1126,12 +1126,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS31.psd</key>
+            <key>ChocoS31.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.545455,0.371429}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1143,12 +1143,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS32.psd</key>
+            <key>ChocoS32.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.392857,0.5}</string>
+                <string>{0.464286,0.361111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1160,12 +1160,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS40.psd</key>
+            <key>ChocoS40.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.413793,0.5}</string>
+                <string>{0.482759,0.361111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1177,12 +1177,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS41.psd</key>
+            <key>ChocoS41.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.545455,0.371429}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1194,12 +1194,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS42.psd</key>
+            <key>ChocoS42.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.392857,0.5}</string>
+                <string>{0.464286,0.361111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1211,12 +1211,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS50.psd</key>
+            <key>ChocoS50.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.586207,0.5}</string>
+                <string>{0.517241,0.388889}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1228,12 +1228,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS51.psd</key>
+            <key>ChocoS51.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.454545,0.4}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1245,12 +1245,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS52.psd</key>
+            <key>ChocoS52.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.607143,0.5}</string>
+                <string>{0.535714,0.388889}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1262,12 +1262,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS60.psd</key>
+            <key>ChocoS60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.586207,0.5}</string>
+                <string>{0.517241,0.388889}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1279,12 +1279,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS61.psd</key>
+            <key>ChocoS61.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.454545,0.4}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1296,12 +1296,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS62.psd</key>
+            <key>ChocoS62.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.607143,0.5}</string>
+                <string>{0.535714,0.388889}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1313,12 +1313,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS70.psd</key>
+            <key>ChocoS70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.730769,0.264706}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1330,12 +1330,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>ChocoS71.psd</key>
+            <key>ChocoS71.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.419355,0.484848}</string>
+                <string>{0.612903,0.272727}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1347,12 +1347,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>ChocoS72.psd</key>
+            <key>ChocoS72.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.538462,0.5}</string>
+                <string>{0.730769,0.264706}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1378,7 +1378,7 @@
             <key>size</key>
             <string>{253,252}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:bd2bac8ab91e4db3348643bb1a889a2b:3bd0f0f7159535ece03d4834366743b2:69bf693c0c7efd6b1206ccf15305ccd6$</string>
+            <string>$TexturePacker:SmartUpdate:6cfd74716177131e366f90ca5e655dd7:13a55f295af5fd29475455f642e9aa5d:69bf693c0c7efd6b1206ccf15305ccd6$</string>
             <key>textureFileName</key>
             <string>Choco.png</string>
         </dict>

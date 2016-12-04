@@ -5,63 +5,46 @@ class InputLayer : public Layer
 public:
 	CREATE_FUNC(InputLayer);
 
-	/* const & enum values */
-	enum ARRAY_INDEX
-	{
-
-		// UnitVec은 키보드와 조이스틱 공용으로 관리 (-1, 0, 1)
-		unitVecX, unitVecY,
-		unitVecXStatus, unitVecYStatus,
-
-		// Keyborad Input idx
-		keyQ, keyW, keyE, keyESC,
-
-		// JoyStick Input idx
-		joyA, joyB, joyX, joyStart, 
-		idxNum
-
-	};
-
-	// Key의 상태를 나타내줄 ENUM 값.
-	enum KEY_STATUS
-	{
-		NONE, START, HOLD, END
-	};
-
-
-	// JoyStick Mapping을 위한 값.
-	const int JoyStickX = 0;
-	const int JoyStickY = 1;
-
-
 	/* Basic Functions */
 	virtual bool			init();
 	virtual void			update(const float);
 
-
 	/* Delivery Data Structure & Functions */
-	int 					m_CurrentInputArray[idxNum];
-	int 					m_OldInputArray[idxNum];
-	
-	int					m_InputArray[idxNum];
-	
-	void					DefineWhatIsInputValue();
-	
+
+	/* Get input Function */
+	int*					GetInputArray();
+	int*					GetInputUnitVec();
 
 	/* JoyStick Input Setting & Functions */
 	gainput::InputManager	m_Manager;
 	gainput::InputMap	   *m_pMap;
 
 	void					MapKeySetting(const unsigned int);
-	void					DetectJoyStickInput();
+	void 					DetectJoyStickInput();
 	void					ConvertJoyStickToUnitVec(const float, const float);
-	void					CheckBoolIsNew();
-	void					CheckBoolIsDown();
+	void					CheckBoolIsNew(float*, float*);
+	void					CheckBoolIsDown(float*, float*);
 
-
+	// TODO :: override를 쓸 거면 다 쓰고, 안 쓸거면 다 안쓰던지. 일관성 있게 바꾸기.
 	/* Keyborad Input Setting & Functions */
-	virtual void			onKeyPressed(EventKeyboard::KeyCode, Event*) override;
-	virtual void			onKeyReleased(EventKeyboard::KeyCode , Event*) override;
+	virtual void			onKeyPressed(EventKeyboard::KeyCode, Event*);
+	virtual void			onKeyReleased(EventKeyboard::KeyCode, Event*);
 
+private:
+	// TODO :: Array 두 가지로 나눠보기 (UnitVec, Status);
+	// TODO :: Public 변수로 만들어서 차라리 Get함수를 지원해주자.
+	/* Delivery Data Structure & Functions */
+	int 					m_CurrentInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+	int 					m_OldInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+	int						m_CurrentInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
+	int						m_OldInputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
+	
+	int						m_InputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
+	int						m_InputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+
+	void					DefineWhatIsInputValue();
+	bool					IsJoyStickButtonPressed();
+	void					StreamOldNCur();
+
+	bool					m_IsKeyboardPressed;
 };
-

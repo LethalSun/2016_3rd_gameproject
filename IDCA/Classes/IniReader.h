@@ -8,7 +8,7 @@
 
 		생성자에서 Filename을 호출해주어야 한다. (ex) "./Resources/Data/Config.ini"
 		받은 Filename을 Private멤버로 가지고 있다가 각 함수가 호출되면 사용.
-		그 외의 함수는 각각 int, float, bool, String값을 읽는데에 사용한다.
+		그 외의 함수는 각각 int, float, String값을 읽는데에 사용한다.
 */
 
 
@@ -16,16 +16,25 @@ class IniReader
 {
 public :
 
-	IniReader(char* m_Filename);
+	IniReader(const char* m_Filename);
 
-	int ReadInteger(char* Section, char* Key, int IntDefaultValue);
-	float ReadFloat(char* Section, char* Key, float FloatDefaultValue);
-	bool ReadBoolean(char* Section, char* Key, bool BoolDefaultValue);
-	char* ReadString(char* Section, char* Key, const char* StringDefaultValue);
+
+	int ReadInteger(const char* section, const char* Key, const int IntDefaultValue);
+	float ReadFloat(const char* section, const char* Key, const float FloatDefaultValue);
+	void ReadString(const char* section, const char* Key, const char* StringDefaultValue, char* destChar);
 
 
 private :
 
-	char m_Filename[255];
+	wchar_t m_wFilename[255];
+	wchar_t m_wSectionText[255];
+	wchar_t m_wKeyText[255];
+
+	wchar_t m_wConvertHelper[255];
+	char m_ConvertHelper[255];
+
+	void TransSectionNKey(const char* section, const char* key);
+	char* TempConvertWCharToChar(wchar_t* string);
+	wchar_t* TempConvertCharToWChar(char* string);
 
 };

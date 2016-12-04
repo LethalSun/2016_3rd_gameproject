@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-#include "Player.h"
-#include "CharacterScene.h"
 #include "StageOne.h"
 
 Scene* HelloWorld::createScene()
@@ -46,15 +44,10 @@ bool HelloWorld::init()
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
 		origin.y + closeItem->getContentSize().height / 2));
 
-	// add change scene
-	auto changeScene = MenuItemImage::create("TempResourceHW/next.png", "TempResourceHW/nextC.png", CC_CALLBACK_1(HelloWorld::menuNextCallback, this));
-	changeScene->setPosition(Vec2(origin.x + changeScene->getContentSize().width / 2,
-		origin.y + changeScene->getContentSize().height / 2));
 	// create menu, it's an autorelease object
-	auto menu = Menu::create(closeItem, changeScene, NULL);
+	auto menu = Menu::create(closeItem, NULL);
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
-
 
 	////////Stage1
 	auto closeItem2 = MenuItemImage::create(
@@ -67,7 +60,7 @@ bool HelloWorld::init()
 		origin.y + changeScene2->getContentSize().height / 2));
 	// create menu, it's an autorelease object
 	auto menu2 = Menu::create(closeItem2, changeScene2, NULL);
-	menu2->setPosition(Vec2(500,500));
+	menu2->setPosition(Vec2(500, 500));
 	this->addChild(menu2, 1);
 
 	/////////////////////////////
@@ -94,9 +87,6 @@ bool HelloWorld::init()
 	// add the sprite as a child to this layer
 	this->addChild(sprite, 0);
 
-	player = Player::create();
-	addChild(player);
-
 	scheduleUpdate();
 
 	return true;
@@ -104,8 +94,6 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float dt)
 {
-	player->m_Manager.Update();
-	player->StickMove(dt);
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
@@ -121,12 +109,6 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
 	//EventCustom customEndEvent("game_scene_close_event");
 	//_eventDispatcher->dispatchEvent(&customEndEvent);
-}
-
-void HelloWorld::menuNextCallback(cocos2d::Ref * pSender)
-{
-	auto pScene = CharacterScene::createScene();
-	Director::getInstance()->pushScene(pScene);
 }
 
 void HelloWorld::menuStage1(cocos2d::Ref * pSender)

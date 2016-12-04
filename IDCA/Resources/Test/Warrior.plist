@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>WarriorA0.png</key>
+            <key>WarriorA0.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -21,7 +21,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA1.png</key>
+            <key>WarriorA1.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -38,7 +38,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA10.png</key>
+            <key>WarriorA10.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -55,7 +55,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA11.png</key>
+            <key>WarriorA11.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -72,7 +72,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA12.png</key>
+            <key>WarriorA12.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -89,7 +89,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA13.png</key>
+            <key>WarriorA13.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -106,7 +106,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA14.png</key>
+            <key>WarriorA14.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -123,12 +123,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA15.png</key>
+            <key>WarriorA15.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.287037,0.47191}</string>
+                <string>{0.277778,0.477528}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -140,12 +140,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA16.png</key>
+            <key>WarriorA16.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.477612,0.466667}</string>
+                <string>{0.455224,0.466667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -157,12 +157,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA17.png</key>
+            <key>WarriorA17.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.693878,0.47191}</string>
+                <string>{0.673469,0.47191}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -174,12 +174,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA2.png</key>
+            <key>WarriorA2.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.545455,0.494118}</string>
+                <string>{0.527273,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -191,7 +191,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA20.png</key>
+            <key>WarriorA20.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -208,7 +208,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA21.png</key>
+            <key>WarriorA21.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -225,7 +225,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA22.png</key>
+            <key>WarriorA22.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -242,7 +242,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA23.png</key>
+            <key>WarriorA23.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -259,7 +259,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA24.png</key>
+            <key>WarriorA24.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -276,12 +276,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA25.png</key>
+            <key>WarriorA25.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.287037,0.47191}</string>
+                <string>{0.277778,0.483146}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -293,12 +293,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA26.png</key>
+            <key>WarriorA26.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.477612,0.466667}</string>
+                <string>{0.462687,0.477778}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -310,12 +310,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA27.png</key>
+            <key>WarriorA27.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.693878,0.47191}</string>
+                <string>{0.673469,0.483146}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -327,12 +327,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA3.png</key>
+            <key>WarriorA3.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.54386,0.494118}</string>
+                <string>{0.526316,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -344,12 +344,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA30.png</key>
+            <key>WarriorA30.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.42623,0.494382}</string>
+                <string>{0.409836,0.494382}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -361,12 +361,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA31.png</key>
+            <key>WarriorA31.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.462963,0.522222}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -378,12 +378,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA32.png</key>
+            <key>WarriorA32.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.369863,0.517241}</string>
+                <string>{0.342466,0.505747}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -395,12 +395,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA33.png</key>
+            <key>WarriorA33.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.394366,0.522222}</string>
+                <string>{0.366197,0.522222}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -412,12 +412,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA34.png</key>
+            <key>WarriorA34.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.505376}</string>
+                <string>{0.5,0.526882}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -429,12 +429,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA35.png</key>
+            <key>WarriorA35.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.608696,0.48}</string>
+                <string>{0.608696,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -446,7 +446,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA36.png</key>
+            <key>WarriorA36.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -463,12 +463,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA37.png</key>
+            <key>WarriorA37.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.489796,0.510638}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -480,12 +480,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA4.png</key>
+            <key>WarriorA4.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.518519,0.5}</string>
+                <string>{0.509259,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -497,12 +497,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA40.png</key>
+            <key>WarriorA40.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.42623,0.494382}</string>
+                <string>{0.409836,0.494382}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -514,12 +514,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA41.png</key>
+            <key>WarriorA41.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.462963,0.522222}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -531,12 +531,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA42.png</key>
+            <key>WarriorA42.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.369863,0.517241}</string>
+                <string>{0.342466,0.505747}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -548,12 +548,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA43.png</key>
+            <key>WarriorA43.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.394366,0.522222}</string>
+                <string>{0.366197,0.522222}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -565,12 +565,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA44.png</key>
+            <key>WarriorA44.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.5,0.526882}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -582,12 +582,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA45.png</key>
+            <key>WarriorA45.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.608696,0.48}</string>
+                <string>{0.608696,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -599,7 +599,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA46.png</key>
+            <key>WarriorA46.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -616,12 +616,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA47.png</key>
+            <key>WarriorA47.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.489796,0.510638}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -633,7 +633,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA5.png</key>
+            <key>WarriorA5.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -650,12 +650,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA50.png</key>
+            <key>WarriorA50.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.57377,0.494382}</string>
+                <string>{0.590164,0.494382}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -667,7 +667,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA51.png</key>
+            <key>WarriorA51.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -684,12 +684,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA52.png</key>
+            <key>WarriorA52.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.630137,0.482759}</string>
+                <string>{0.643836,0.482759}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -701,12 +701,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA53.png</key>
+            <key>WarriorA53.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.605634,0.5}</string>
+                <string>{0.619718,0.511111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -718,12 +718,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA54.png</key>
+            <key>WarriorA54.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.5,0.521505}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -735,12 +735,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA55.png</key>
+            <key>WarriorA55.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.376812,0.49}</string>
+                <string>{0.376812,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -752,12 +752,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA56.png</key>
+            <key>WarriorA56.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.54,0.475728}</string>
+                <string>{0.52,0.485437}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -769,12 +769,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA57.png</key>
+            <key>WarriorA57.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.510204,0.521277}</string>
+                <string>{0.489796,0.531915}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -786,12 +786,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA6.png</key>
+            <key>WarriorA6.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.522388,0.466667}</string>
+                <string>{0.514925,0.466667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -803,12 +803,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA60.png</key>
+            <key>WarriorA60.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.57377,0.494382}</string>
+                <string>{0.590164,0.494382}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -820,7 +820,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA61.png</key>
+            <key>WarriorA61.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -837,12 +837,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA62.png</key>
+            <key>WarriorA62.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.630137,0.482759}</string>
+                <string>{0.643836,0.482759}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -854,12 +854,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA63.png</key>
+            <key>WarriorA63.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.605634,0.5}</string>
+                <string>{0.619718,0.511111}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -871,12 +871,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA64.png</key>
+            <key>WarriorA64.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5,0.5}</string>
+                <string>{0.5,0.526882}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -888,12 +888,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA65.png</key>
+            <key>WarriorA65.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.376812,0.49}</string>
+                <string>{0.376812,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -905,12 +905,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA66.png</key>
+            <key>WarriorA66.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.54,0.475728}</string>
+                <string>{0.52,0.485437}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -922,12 +922,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA67.png</key>
+            <key>WarriorA67.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.510204,0.521277}</string>
+                <string>{0.489796,0.531915}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -939,12 +939,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA7.png</key>
+            <key>WarriorA7.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.306122,0.47191}</string>
+                <string>{0.295918,0.466292}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -956,7 +956,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA70.png</key>
+            <key>WarriorA70.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -973,7 +973,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA71.png</key>
+            <key>WarriorA71.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -990,12 +990,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA72.png</key>
+            <key>WarriorA72.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.545455,0.494118}</string>
+                <string>{0.527273,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1007,12 +1007,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA73.png</key>
+            <key>WarriorA73.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.54386,0.494118}</string>
+                <string>{0.526316,0.494118}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1024,12 +1024,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA74.png</key>
+            <key>WarriorA74.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.518519,0.5}</string>
+                <string>{0.509259,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1041,7 +1041,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA75.png</key>
+            <key>WarriorA75.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1058,12 +1058,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorA76.png</key>
+            <key>WarriorA76.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.522388,0.466667}</string>
+                <string>{0.507463,0.466667}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1075,12 +1075,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorA77.png</key>
+            <key>WarriorA77.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.306122,0.47191}</string>
+                <string>{0.306122,0.460674}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1092,7 +1092,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorM0.png</key>
+            <key>WarriorM0.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1109,7 +1109,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM1.png</key>
+            <key>WarriorM1.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1126,12 +1126,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM10.png</key>
+            <key>WarriorM10.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.378378,0.546392}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1143,12 +1143,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM11.png</key>
+            <key>WarriorM11.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.35,0.55102}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1160,12 +1160,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM12.png</key>
+            <key>WarriorM12.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.358974,0.546392}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1177,12 +1177,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM13.png</key>
+            <key>WarriorM13.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.325,0.536842}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1194,12 +1194,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM14.png</key>
+            <key>WarriorM14.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.351351,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1211,12 +1211,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM15.png</key>
+            <key>WarriorM15.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.325,0.536842}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1228,12 +1228,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM16.png</key>
+            <key>WarriorM16.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.311111,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1245,12 +1245,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM17.png</key>
+            <key>WarriorM17.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.309524,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1262,7 +1262,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM2.png</key>
+            <key>WarriorM2.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1279,12 +1279,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM20.png</key>
+            <key>WarriorM20.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.511111}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1296,12 +1296,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM21.png</key>
+            <key>WarriorM21.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.505556}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1313,7 +1313,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM22.png</key>
+            <key>WarriorM22.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1330,12 +1330,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM23.png</key>
+            <key>WarriorM23.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.567568,0.505495}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1347,12 +1347,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM24.png</key>
+            <key>WarriorM24.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.655172,0.505495}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1364,12 +1364,12 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorM25.png</key>
+            <key>WarriorM25.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.655172,0.494382}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1381,7 +1381,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM26.png</key>
+            <key>WarriorM26.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1398,12 +1398,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM27.png</key>
+            <key>WarriorM27.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.567568,0.505376}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1415,7 +1415,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM3.png</key>
+            <key>WarriorM3.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1432,12 +1432,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM30.png</key>
+            <key>WarriorM30.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.505556}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1449,12 +1449,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM31.png</key>
+            <key>WarriorM31.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.5}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1466,12 +1466,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM32.png</key>
+            <key>WarriorM32.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.55,0.488889}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1483,12 +1483,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM33.png</key>
+            <key>WarriorM33.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.5}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1500,12 +1500,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM34.png</key>
+            <key>WarriorM34.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.494444}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1517,12 +1517,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM35.png</key>
+            <key>WarriorM35.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.55,0.5}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1534,12 +1534,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM36.png</key>
+            <key>WarriorM36.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.5625,0.494444}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1551,12 +1551,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM37.png</key>
+            <key>WarriorM37.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.55,0.505556}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1568,12 +1568,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM4.png</key>
+            <key>WarriorM4.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.47619,0.505051}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1585,7 +1585,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM40.png</key>
+            <key>WarriorM40.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1602,7 +1602,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM41.png</key>
+            <key>WarriorM41.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1619,7 +1619,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorM42.png</key>
+            <key>WarriorM42.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1636,7 +1636,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM43.png</key>
+            <key>WarriorM43.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1653,7 +1653,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM44.png</key>
+            <key>WarriorM44.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1670,7 +1670,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM45.png</key>
+            <key>WarriorM45.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1687,7 +1687,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorM46.png</key>
+            <key>WarriorM46.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1704,7 +1704,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM47.png</key>
+            <key>WarriorM47.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1721,12 +1721,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM5.png</key>
+            <key>WarriorM5.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.487805,0.514851}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1738,7 +1738,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorM50.png</key>
+            <key>WarriorM50.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1755,7 +1755,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM51.png</key>
+            <key>WarriorM51.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1772,7 +1772,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM52.png</key>
+            <key>WarriorM52.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1789,7 +1789,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM53.png</key>
+            <key>WarriorM53.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1806,7 +1806,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM54.png</key>
+            <key>WarriorM54.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1823,7 +1823,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM55.png</key>
+            <key>WarriorM55.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1840,7 +1840,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM56.png</key>
+            <key>WarriorM56.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1857,7 +1857,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM57.png</key>
+            <key>WarriorM57.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1874,12 +1874,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM6.png</key>
+            <key>WarriorM6.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.475,0.51}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1891,12 +1891,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM60.png</key>
+            <key>WarriorM60.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.4375,0.511111}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1908,12 +1908,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM61.png</key>
+            <key>WarriorM61.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.425,0.505556}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1925,7 +1925,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM62.png</key>
+            <key>WarriorM62.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1942,12 +1942,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM63.png</key>
+            <key>WarriorM63.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.405405,0.505495}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1959,12 +1959,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM64.png</key>
+            <key>WarriorM64.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.310345,0.505495}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1976,12 +1976,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM65.png</key>
+            <key>WarriorM65.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.310345,0.494382}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -1993,12 +1993,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM66.png</key>
+            <key>WarriorM66.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.47619,0.505495}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2010,12 +2010,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM67.png</key>
+            <key>WarriorM67.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.405405,0.516129}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2027,7 +2027,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM7.png</key>
+            <key>WarriorM7.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2044,12 +2044,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM70.png</key>
+            <key>WarriorM70.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.648649,0.546392}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2061,12 +2061,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM71.png</key>
+            <key>WarriorM71.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.675,0.55102}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2078,12 +2078,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM72.png</key>
+            <key>WarriorM72.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.666667,0.546392}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2095,12 +2095,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM73.png</key>
+            <key>WarriorM73.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.675,0.536842}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2112,12 +2112,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM74.png</key>
+            <key>WarriorM74.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.648649,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2129,12 +2129,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM75.png</key>
+            <key>WarriorM75.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.675,0.536842}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2146,12 +2146,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM76.png</key>
+            <key>WarriorM76.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.688889,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2163,12 +2163,12 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorM77.png</key>
+            <key>WarriorM77.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
                 <key>anchor</key>
-                <string>{0.690476,0.531915}</string>
+                <string>{0.5,0.5}</string>
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
@@ -2180,7 +2180,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS0.png</key>
+            <key>WarriorS0.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2197,7 +2197,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS10.png</key>
+            <key>WarriorS10.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2214,7 +2214,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS20.png</key>
+            <key>WarriorS20.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2231,7 +2231,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorS30.png</key>
+            <key>WarriorS30.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2248,7 +2248,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS40.png</key>
+            <key>WarriorS40.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2265,7 +2265,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS50.png</key>
+            <key>WarriorS50.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2282,7 +2282,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>WarriorS60.png</key>
+            <key>WarriorS60.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2299,7 +2299,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>WarriorS70.png</key>
+            <key>WarriorS70.psd</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -2330,7 +2330,7 @@
             <key>size</key>
             <string>{2020,253}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6526ab4d9109cb3f4f9549d6530a9635:514481b086efca0cf41a1522e67175a3:643a8d5b8f8b8b741e33bbe8244f0ab7$</string>
+            <string>$TexturePacker:SmartUpdate:e8d574d8ce84441f8b6623ec9f15af37:bc67c87f2a16351d9ef14f280cc8783c:643a8d5b8f8b8b741e33bbe8244f0ab7$</string>
             <key>textureFileName</key>
             <string>Warrior.png</string>
         </dict>
