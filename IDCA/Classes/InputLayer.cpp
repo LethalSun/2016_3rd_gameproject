@@ -63,7 +63,7 @@ void InputLayer::update(const float deltaTime)
 	m_Manager.Update();
 
 	DefineWhatIsInputValue();
-	StreamOldNCur();
+	InsertCurToOld();
 
 	if (!m_IsKeyboardPressed)
 	{
@@ -125,7 +125,7 @@ bool InputLayer::IsJoyStickButtonPressed()
 	return false;
 }
 
-void InputLayer::StreamOldNCur()
+void InputLayer::InsertCurToOld()
 {
 
 	for (int i = unitVecXStatus; i < stateIdxNum; ++i)

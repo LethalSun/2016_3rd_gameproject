@@ -44,7 +44,7 @@ private:
 
 	void					DefineWhatIsInputValue();
 	bool					IsJoyStickButtonPressed();
-	void					StreamOldNCur();
+	void					InsertCurToOld();
 
 	bool					m_IsKeyboardPressed;
 };
