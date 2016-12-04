@@ -95,7 +95,7 @@ void PlayerCharacter::SetSP(int sp)
 
 void PlayerCharacter::update(float dt)
 {
-	if (m_BeforeState != m_State)
+	if (true)//m_BeforeState != m_State)
 	{
 		//m_pAnimationMaker->GetSprite()->stopAllActions();
 		if (m_State == STATE::ATTACK)
@@ -108,7 +108,6 @@ void PlayerCharacter::update(float dt)
 		}
 		else if (m_State == STATE::STOP)
 		{
-			std::cout << '/a';
 			stop();
 		}
 		else if (m_State == STATE::SKILL)
@@ -196,7 +195,9 @@ bool PlayerCharacter::IsAttackContinued()
 
 bool PlayerCharacter::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE)
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+		&& m_BeforeDirection == m_Direction
+		&& m_BeforeState == m_State)
 	{
 		return true;
 	}
