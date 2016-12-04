@@ -69,6 +69,19 @@ void InputLayer::update(const float deltaTime)
 	{
 		DetectJoyStickInput();
 	}
+	char logBuffer1[100];
+	sprintf(logBuffer1, "%d%d%d%d%d%d%d%d, oldinput X : %d, curinput X : %d",
+		m_InputArray[0],
+		m_InputArray[1],
+		m_InputArray[2],
+		m_InputArray[3],
+		m_InputArray[4],
+		m_InputArray[5],
+		m_InputUnitVec[0],
+		m_InputUnitVec[1],
+		m_OldInputArray[unitVecXStatus],
+		m_CurrentInputArray[unitVecXStatus]);
+	cocos2d::log(logBuffer1);
 }
 
 /*
@@ -77,7 +90,6 @@ void InputLayer::update(const float deltaTime)
 	기본적인 판별 알고리즘은
 	UnitVec에 대해서 :
 		Current값을 집어넣음.
-
 
 */
 
@@ -111,8 +123,6 @@ void InputLayer::DefineWhatIsInputValue()
 			m_InputArray[i] = NONE;
 		}
 	}
-
-	
 }
 
 bool InputLayer::IsJoyStickButtonPressed()
@@ -127,7 +137,6 @@ bool InputLayer::IsJoyStickButtonPressed()
 
 void InputLayer::InsertCurToOld()
 {
-
 	for (int i = unitVecXStatus; i < stateIdxNum; ++i)
 	{
 		m_OldInputArray[i] = m_CurrentInputArray[i];
@@ -217,8 +226,6 @@ void InputLayer::DetectJoyStickInput()
 
 	return;
 }
-
-
 
 /*
 	DetectJoyStickInput에서 호출되어 버튼이 눌리고 떼는 것을 감지하는 함수.

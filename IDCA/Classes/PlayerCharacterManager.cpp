@@ -32,8 +32,7 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 	{
 		m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
 	}
-
-	m_pCharacter->setPosition(Vec2(100, 400));
+	m_pCharacter->setPosition(Vec2(100, 450));
 	addChild(m_pCharacter);
 
 	m_State = STATE::STOP;
@@ -67,7 +66,8 @@ void PlayerCharacterManager::CalculatePlayerCharacterState()
 	}
 	else
 	{
-		if (m_pInput[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::START)
+		if (m_pInput[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::START
+			|| m_pInput[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::HOLD)
 		{
 			m_State = STATE::ATTACK;
 		}
@@ -127,7 +127,7 @@ void PlayerCharacterManager::CalculatePlayerCharacterDirection()
 	{
 		m_direction = DIRECTION::LEFT;
 	}
-	else if (m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecX] == -1 && m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecY] == -1)
+	else if (m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecX] == -1 && m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecY] == 1)
 	{
 		m_direction = DIRECTION::TOP_LEFT;
 	}
