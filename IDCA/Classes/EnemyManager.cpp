@@ -28,14 +28,14 @@ void EnemyManager::deleteInstance()
 // 초기화 함수. 
 EnemyManager::EnemyManager()
 {
-	m_pEnemyVector.reserve(ENEMY::ENEMY_MAX_NUM);
+	m_pEnemyVector.reserve(8);
 }
 
 
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
-void EnemyManager::MakeEnemy(ENEMY::ENEMY_TYPE enemyType, Vec2 initPosition)
+void EnemyManager::MakeEnemy(ENEMY_TYPE enemyType, Vec2 initPosition)
 {
-	if (enemyType == ENEMY::ENEMY_TYPE::Choco)
+	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
 		auto newEnemy = Enemy_Choco::create(initPosition);
 		m_pEnemyVector.push_back(newEnemy);

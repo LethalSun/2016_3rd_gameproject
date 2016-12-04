@@ -2,7 +2,7 @@
 class AnimationMaker;
 class Skill;
 
-class PlayerCharacter :public Sprite
+class PlayerCharacter :public Node
 {
 public:
 	//어떤 직업인지 입력을 받는다.
@@ -18,9 +18,6 @@ public:
 	int GetDirection();
 
 	void SetDirection(int direction);
-
-	//캐릭터의 애니메이션을 설정하는 함수
-	void AddAnimation(int direction);
 
 	//캐릭터의 체력을 확인하고 설정하는 함수
 	int GetHP();

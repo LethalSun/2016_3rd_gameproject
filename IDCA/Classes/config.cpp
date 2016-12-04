@@ -1,42 +1,66 @@
 #include "pch.h"
 #include "config.h"
+#include "IniReader.h"
+using namespace CONFIG_DEFAULT;
 
-bool Config::init()
+
+Config* Config::_instance = nullptr;
+
+Config* Config::getInstance()
 {
-	if (!Component::init())
+	if (!_instance)
 	{
-		return false;
+		_instance = new Config();
 	}
 
-	setPlayerPlist("Warrior.plist");
-	setPlayerInitialSprite("WarriorA13.psd");
-	setPlayerMoveSpeed(400.f);
-	return true;
+	return _instance;
 }
 
-void Config::setPlayerPlist(char* src)
+void Config::deleteInstance()
 {
-	m_pPlayerPlist = src;
+	delete _instance;
+	_instance = nullptr;
 	return;
 }
 
-char* Config::getPlayerPlist()
+Config::Config()
 {
-	return m_pPlayerPlist;
+	m_pReadHelper = nullptr;
+	iniReader = new IniReader(iniFileRoute);
+	SetData();
 }
 
-void Config::setPlayerInitialSprite(char* src)
+void Config::SetData()
 {
-	m_pPlayerInitialSprite = src;
+
+	/* Section Static */
+	setWinSizeWidth(iniReader->ReadFloat("STATIC", "WIN_SIZE_WIDTH", intError));
+	setWinSizeWidth(iniReader->ReadFloat("STATIC", "WIN_SIZE_HEIGHT", intError));
+
+	/* Section Player */
+	setPlayerPlistFileName(readStringHelper("PLAYER", "PLIST_FILE_NAME", stringError));
+	setPlayerWarriorFileName(readStringHelper("PLAYER", "WARRIOR_FILE_NAME", stringError));
+	setPlayerSpriteFrameFileExtention(readStringHelper("PLAYER", "SPRITE_FRAME_FILE_EXTENTION", stringError));
+
+	/* Section Map */
+	setMapName1(readStringHelper("MAP", "MAP_NAME1", stringError));
+
+	/* Section ENEMY_CHOCO */
+	setChocoPlistFileName(readStringHelper("CHOCO", "PLIST_FILE_NAME", stringError));
+	setChocoSpriteFileName(readStringHelper("CHOCO", "SPRITE_FILE_NAME", stringError));
+	setChocoFrameFileExtention(readStringHelper("CHOCO", "SPRITE_FRAME_FILE_EXTENTION", stringError));
+
+	setChocoSearchingRange(iniReader->ReadFloat("CHOCO", "SEARCHING_RANGE", floatError));
+	setChocoChasingRange(iniReader->ReadFloat("CHOCO", "CHASING_RANGE", floatError));
+	setChocoAttackRange(iniReader->ReadFloat("CHOCO", "ATTACK_RANGE", floatError));
+	setChocoMoveSpeed(iniReader->ReadFloat("CHOCO", "MOVE_SPEED", floatError));
+
 	return;
 }
 
-char* Config::getPlayerInitialSprite()
-{
-	return m_pPlayerInitialSprite;
-}
 
-// json 파일로부터 데이터를 읽어오는 함수.
-//bool Config::ReadFromFile()
-//{
-//}
+char* Config::readStringHelper(const char* section, const char* key, const char* defaultStr)
+{
+	iniReader->ReadString(section, key, defaultStr, m_pReadHelper);
+	return m_pReadHelper;
+}

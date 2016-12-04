@@ -27,10 +27,12 @@ public:
 	void SetAnimationSkill();
 
 	//애니메이션을 더한다.
-	bool AddAnimation(int directionNum);
+	Sprite* AddAnimation(int directionNum);
 
 	//애니메이션 중인지 확인한다.
 	int IsAnimationContinued();
+
+	Sprite* GetSprite();
 
 	AnimationMaker() = default;
 	~AnimationMaker() = default;
@@ -42,6 +44,9 @@ private:
 
 	//프레임 이름을 만드는 함수
 	void MakeAnimationFrameName(int fileNumber);
+
+	//태그를 이용해 차일드를 지우는 함수
+	void RemoveChileByTag();
 
 	//애니메션중인지 갖고있는 변수
 	bool m_IsAnimationOn;
@@ -57,7 +62,22 @@ private:
 
 	//프레임을 불러올 때 사용하는 변수들
 	char m_FrameNameBuffer[256];
+
 	Animation *m_pAnimation;
+
 	Animate *m_pAnimate;
-	char m_ActionName[4];
+
+	SpriteFrame * m_pFrame;
+
+	Sprite* m_pSprite;
+
+	char* m_ActionName[4];
+
+	float m_AnimationSpeed;
+
+	int m_tagOdd;
+	int m_tagEven;
+	int m_tag;
+
+	bool m_firstAdd;
 };
