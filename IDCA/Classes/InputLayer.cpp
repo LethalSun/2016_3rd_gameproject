@@ -26,6 +26,7 @@ bool InputLayer::init()
 	(int)memset(m_OldInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
 	(int)memset(m_InputArray, NONE, stateIdxNum);
 	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
+	(int)memset(m_ArrowContainer, NONE, ARROW_NUM);
 
 	m_IsKeyboardPressed = false;
 
@@ -60,11 +61,35 @@ bool InputLayer::init()
 
 void InputLayer::update(const float deltaTime)
 {
-	m_Manager.Update();
-
+	DefineWhatIsUnitVec();
 	DefineWhatIsInputValue();
 	InsertCurToOld();
 
+	/* State Log part */
+	char logBuffer1[256];
+	sprintf(logBuffer1, "%d%d%d%d%d%d %d%d, Arrow %d%d%d%d, unitVecStateX %d%d",
+		m_InputArray[0],
+		m_InputArray[1],
+		m_InputArray[2],
+		m_InputArray[3],
+		m_InputArray[4],
+		m_InputArray[5],
+
+		m_InputUnitVec[0],
+		m_InputUnitVec[1],
+
+		m_ArrowContainer[0],
+		m_ArrowContainer[1],
+		m_ArrowContainer[2],
+		m_ArrowContainer[3],
+
+		m_OldInputArray[0],
+		m_CurrentInputArray[0]
+		);
+	
+	cocos2d::log(logBuffer1);
+
+	m_Manager.Update();
 	if (!m_IsKeyboardPressed)
 	{
 		DetectJoyStickInput();
@@ -74,11 +99,6 @@ void InputLayer::update(const float deltaTime)
 /*
 	DefineWhatIsInputValue
 	CurrentInputArray와 OldInputArray를 비교하여 InputValue를 채워넣어주는 함수.
-	기본적인 판별 알고리즘은
-	UnitVec에 대해서 :
-		Current값을 집어넣음.
-
-
 */
 
 void InputLayer::DefineWhatIsInputValue()
@@ -89,8 +109,29 @@ void InputLayer::DefineWhatIsInputValue()
 		m_InputUnitVec[i] = m_CurrentInputUnitVec[i];
 	}
 
-	// state 처리
-	for (int i = unitVecXStatus; i < stateIdxNum; ++i)
+	// UnitVec State 처리
+	for (int i = unitVecXStatus; i <= unitVecYStatus; ++i)
+	{
+		if ((m_CurrentInputArray[i] == 1) && (m_CurrentInputArray[i] == 1) && (m_InputArray[i] != START) && (m_InputArray[i] != HOLD))
+		{
+			m_InputArray[i] = START;
+		}
+		else if ((m_CurrentInputArray[i] == 1) && (m_CurrentInputArray[i] == 1) && ((m_InputArray[i] == START) || (m_InputArray[i] == HOLD)))
+		{
+			m_InputArray[i] = HOLD;
+		}
+		else if (((m_InputArray[i] == HOLD) || (m_InputArray[i] == START)) && (m_CurrentInputArray[i] == 0))
+		{
+			m_InputArray[i] = END;
+		}
+		else
+		{
+			m_InputArray[i] = NONE;
+		}
+	}
+
+	// key state 처리
+	for (int i = keyAttack; i < stateIdxNum; ++i)
 	{
 		if (m_CurrentInputArray[i] == END || m_OldInputArray[i] == END)
 		{
@@ -111,9 +152,97 @@ void InputLayer::DefineWhatIsInputValue()
 			m_InputArray[i] = NONE;
 		}
 	}
-
-	
+	return;
 }
+
+bool InputLayer::IsArrowContainerEmpty()
+{
+	if (!m_ArrowContainer[ARROW::UP] && !m_ArrowContainer[ARROW::DOWN] && !m_ArrowContainer[ARROW::RIGHT] && !m_ArrowContainer[ARROW::LEFT])
+	{
+		return true;
+	}
+	return false;
+}
+
+/*
+	ArrowContainer에 있는 정보를 바탕으로 CurrentInputUnitVec를 바꾸어 주는 함수.
+*/
+
+void InputLayer::DefineWhatIsUnitVec()
+{
+	if (IsArrowContainerEmpty())
+	{
+		m_CurrentInputUnitVec[unitVecX] = 0;
+		m_CurrentInputUnitVec[unitVecY] = 0;
+	}
+
+	if (m_ArrowContainer[ARROW::UP])
+	{
+		if (m_ArrowContainer[ARROW::DOWN])
+		{
+			m_CurrentInputUnitVec[unitVecY] = 0;
+			m_CurrentInputArray[unitVecYStatus] = NONE;
+		}
+		else
+		{
+			m_CurrentInputUnitVec[unitVecY] = 1;
+			m_CurrentInputArray[unitVecYStatus] = START;
+		}
+	}
+	else if (m_ArrowContainer[ARROW::DOWN])
+	{
+		if (m_ArrowContainer[ARROW::UP])
+		{
+			m_CurrentInputUnitVec[unitVecY] = 0;
+			m_CurrentInputArray[unitVecYStatus] = NONE;
+		}
+		else
+		{
+			m_CurrentInputUnitVec[unitVecY] = -1;
+			m_CurrentInputArray[unitVecYStatus] = START;
+		}
+	}
+	else
+	{
+		m_CurrentInputUnitVec[unitVecY] = 0;
+		m_CurrentInputArray[unitVecYStatus] = NONE;
+	}
+
+	if (m_ArrowContainer[ARROW::RIGHT])
+	{
+		if (m_ArrowContainer[ARROW::LEFT])
+		{
+			m_CurrentInputUnitVec[unitVecX] = 0;
+			m_CurrentInputArray[unitVecXStatus] = NONE;
+		}
+		else
+		{
+			m_CurrentInputUnitVec[unitVecX] = 1;
+			m_CurrentInputArray[unitVecXStatus] = START;
+		}
+	}
+	else if (m_ArrowContainer[ARROW::LEFT])
+	{
+		if (m_ArrowContainer[ARROW::RIGHT])
+		{
+			m_CurrentInputUnitVec[unitVecX] = 0;
+			m_CurrentInputArray[unitVecXStatus] = NONE;
+		}
+		else
+		{
+			m_CurrentInputUnitVec[unitVecX] = -1;
+			m_CurrentInputArray[unitVecXStatus] = START;
+		}
+	}
+	else
+	{
+		m_CurrentInputUnitVec[unitVecX] = 0;
+		m_CurrentInputArray[unitVecXStatus] = NONE;
+	}
+
+	return;
+}
+
 
 bool InputLayer::IsJoyStickButtonPressed()
 {
@@ -170,14 +299,26 @@ void InputLayer::ConvertJoyStickToUnitVec(float x, float y)
 {
 	if (x != 0)
 	{
-		m_CurrentInputUnitVec[unitVecX] = (x > 0) ? 1 : -1;
-		m_CurrentInputArray[unitVecXStatus] = START;
+		if (x > 0)
+		{
+			m_ArrowContainer[ARROW::RIGHT] = 1;
+		}
+		else
+		{
+			m_ArrowContainer[ARROW::LEFT] = 1;
+		}
 	}
 
 	if (y != 0)
 	{
-		m_CurrentInputUnitVec[unitVecY] = (y > 0) ? 1 : -1;
-		m_CurrentInputArray[unitVecYStatus] = START;
+		if (y > 0)
+		{
+			m_ArrowContainer[ARROW::UP] = 1;
+		}
+		else
+		{
+			m_ArrowContainer[ARROW::DOWN] = 1;
+		}
 	}
 
 	return;
@@ -261,14 +402,16 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 {
 	if (m_pMap->GetBoolWasDown(JoyStickX))
 	{
-		m_CurrentInputArray[unitVecXStatus] = END;
-		m_CurrentInputUnitVec[unitVecX] = 0;
+		m_ArrowContainer[ARROW::RIGHT] = 0;
+		m_ArrowContainer[ARROW::LEFT] = 0;
 	}
+
 	if (m_pMap->GetBoolWasDown(JoyStickY))
 	{
-		m_CurrentInputArray[unitVecYStatus] = END;
-		m_CurrentInputUnitVec[unitVecY] = 0;
+		m_ArrowContainer[ARROW::UP] = 0;
+		m_ArrowContainer[ARROW::DOWN] = 0;
 	}
+
 	if (m_pMap->GetBoolWasDown(keyAttack))
 	{
 		m_CurrentInputArray[keyAttack] = END;
@@ -303,23 +446,19 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecY] = 1;
-		m_CurrentInputArray[unitVecYStatus] = START;
+		m_ArrowContainer[ARROW::UP] = 1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecY] = -1;
-		m_CurrentInputArray[unitVecYStatus] = START;
+		m_ArrowContainer[ARROW::DOWN] = 1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecX] = 1;
-		m_CurrentInputArray[unitVecXStatus] = START;
+		m_ArrowContainer[ARROW::RIGHT] = 1;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecX] = -1;
-		m_CurrentInputArray[unitVecXStatus] = START;
+		m_ArrowContainer[ARROW::LEFT] = 1;
 	}
 
 	// 버튼 관련 처리.
@@ -348,23 +487,19 @@ void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecY] = 0;
-		m_CurrentInputArray[unitVecYStatus] = END;
+		m_ArrowContainer[ARROW::UP] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecY] = 0;
-		m_CurrentInputArray[unitVecYStatus] = END;
+		m_ArrowContainer[ARROW::DOWN] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecX] = 0;
-		m_CurrentInputArray[unitVecXStatus] = END;
+		m_ArrowContainer[ARROW::RIGHT] = 0;
 	}
 	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
 	{
-		m_CurrentInputUnitVec[unitVecX] = 0;
-		m_CurrentInputArray[unitVecXStatus] = END;
+		m_ArrowContainer[ARROW::LEFT] = 0;
 	}
 
 	// 버튼 관련 처리.
