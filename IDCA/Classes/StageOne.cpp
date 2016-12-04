@@ -5,6 +5,7 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -70,6 +71,11 @@ void StageOne::update(float delta)
 
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
-
+	
+	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
+	Vec2 backgroundposition = m_pMap->getPosition();
+	Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
+	position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
+	m_pPlayerCharacterManager->setPlayerPosition(position);
 
 }

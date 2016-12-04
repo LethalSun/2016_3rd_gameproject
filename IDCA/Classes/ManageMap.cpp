@@ -34,7 +34,7 @@ Vec2 ManageMap::tileCoordForPosition(Vec2 position, TMXTiledMap* map)
 	auto x = position.x / map->getTileSize().width;
 	auto y = ((map->getMapSize().height * map->getTileSize().height) - position.y) / map->getTileSize().height;
 
-	return Vec2(x, y);
+	return Vec2((int)x, (int)y);
 }
 
 bool ManageMap::checkWall(Vec2 position, TMXTiledMap* map)

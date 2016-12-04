@@ -53,6 +53,15 @@ void PlayerCharacterManager::GetInput(int* input)
 	m_pInput = input;
 }
 
+Vec2 PlayerCharacterManager::getPlayerPosition()
+{
+	return m_pCharacter->getPosition();
+}
+void PlayerCharacterManager::setPlayerPosition(Vec2 position)
+{
+	m_pCharacter->setPosition(position);
+}
+
 void PlayerCharacterManager::GetUnitVac(int * input)
 {
 	m_pUnitVec = input;

@@ -14,7 +14,7 @@ public:
 
 	Vec2 setCharacterPosition(Vec2 position, Vec2 unitVec, TMXTiledMap * map);
 
-	bool checkBackgroundMovable(Vec2 position, Vec2 unitVec, TMXTiledMap * map);
+	Vec2 checkBackgroundMovable(Vec2 position, Vec2 unitVec, TMXTiledMap * map);
 
 
 

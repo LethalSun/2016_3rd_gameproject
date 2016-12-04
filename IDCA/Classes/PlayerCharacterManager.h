@@ -10,6 +10,8 @@ public:
 
 	//캐릭터의 포인터를 멤버변수로 가지고 있고 그걸 반환한다
 	PlayerCharacter* GetCharacter();
+	Vec2			 getPlayerPosition();
+	void			 setPlayerPosition(Vec2);
 
 	//인풋레이어에서 인풋값을 읽어오는 함수
 	void GetInput(int* input);
