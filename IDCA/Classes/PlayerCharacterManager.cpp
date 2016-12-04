@@ -33,7 +33,7 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 		m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
 	}
 
-	m_pCharacter->setPosition(Vec2(100, 100));
+	m_pCharacter->setPosition(Vec2(100, 400));
 	addChild(m_pCharacter);
 
 	m_State = STATE::STOP;

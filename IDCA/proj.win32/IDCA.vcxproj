@@ -149,12 +149,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClCompile Include="..\Classes\AnimationMaker.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="..\Classes\Character.cpp" />
-    <ClCompile Include="..\Classes\CharacterManager.cpp" />
-    <ClCompile Include="..\Classes\CharacterScene.cpp" />
-=======
->>>>>>> a33075652b683567b333f6ab0c997b4e198021b4
     <ClCompile Include="..\Classes\CollideManager.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
@@ -176,12 +170,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
-<<<<<<< HEAD
-    <ClInclude Include="..\Classes\Character.h" />
-    <ClInclude Include="..\Classes\CharacterManager.h" />
-    <ClInclude Include="..\Classes\CharacterScene.h" />
-=======
->>>>>>> a33075652b683567b333f6ab0c997b4e198021b4
+
     <ClInclude Include="..\Classes\CollideManager.h" />
     <ClInclude Include="..\Classes\config.h" />
     <ClInclude Include="..\Classes\Define.h" />

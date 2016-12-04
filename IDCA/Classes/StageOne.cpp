@@ -72,9 +72,4 @@ void StageOne::update(float delta)
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
 
-	/////////////임시 캐릭터/////
-	auto unitVec = Vec2(m_InputLayer->GetInputArray()[0], m_InputLayer->GetInputArray()[1]);	
-	auto position = m_pManageMove->update(m_pCharacter->getPosition(), m_background, unitVec, m_pMap);
-	m_pCharacter->setPosition(position);
-
 }
