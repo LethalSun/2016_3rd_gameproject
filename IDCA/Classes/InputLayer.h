@@ -46,6 +46,7 @@ public:
 	int*					GetInputArray();
 	int*					GetInputUnitVec();
 
+
 	/* JoyStick Input Setting & Functions */
 	gainput::InputManager	m_Manager;
 	gainput::InputMap	   *m_pMap;

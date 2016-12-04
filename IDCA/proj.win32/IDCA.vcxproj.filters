@@ -30,7 +30,6 @@
     <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
-    <ClCompile Include="..\Classes\checkMove.cpp" />
     <ClCompile Include="..\Classes\ManageMap.cpp" />
     <ClCompile Include="..\Classes\ManageMove.cpp" />
   </ItemGroup>
@@ -65,7 +64,6 @@
     <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\Classes\CollideManager.h" />
-    <ClInclude Include="..\Classes\checkMove.h" />
     <ClInclude Include="..\Classes\ManageMap.h" />
     <ClInclude Include="..\Classes\ManageMove.h" />
   </ItemGroup>

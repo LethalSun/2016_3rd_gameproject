@@ -215,6 +215,7 @@ int* InputLayer::GetInputUnitVec()
 	return m_InputUnitVec;
 }
 
+
 /*
 	Update()에서 JoyStick인풋을 감지하고 그에 맞는 처리를 해주는 함수.
 	스틱 입력은 그 값을 받아 ConvertJoyStickToUnitVec에 넘겨준다.
@@ -305,23 +306,26 @@ void InputLayer::CheckBoolIsDown()
 
 void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 {
+
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
 		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
 		m_CurrentInputArray[unitVecY] = 1;
 	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
+	else if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
 	{
 		m_OldInputArray[unitVecY] = m_CurrentInputArray[unitVecY];
 		m_CurrentInputArray[unitVecY] = -1;
 	}
+	
+	
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
 		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
 		m_CurrentInputArray[unitVecX] = 1;
 	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
+	else if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
 	{
 		m_OldInputArray[unitVecX] = m_CurrentInputArray[unitVecX];
 		m_CurrentInputArray[unitVecX] = -1;

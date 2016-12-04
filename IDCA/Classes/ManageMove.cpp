@@ -13,8 +13,7 @@ bool ManageMove::init()
 		return false;
 	}
 
-	
-	scheduleUpdate();
+
 	return true;
 }
 
@@ -31,7 +30,13 @@ Vec2 ManageMove::update(Vec2 position,Vec2 background, Vec2 unitVec,TMXTiledMap*
 	checkChangeMap = m_manageMap->checkChangeMap(position -(map->getMapSize()), map);
 	if (checkChangeMap == true)
 	{
+		//changeMap("NEXTMAP");
 		return position;
+	}
+
+	if (unitVec == Vec2(1.0f, 0.f))
+	{
+		int a = 1;
 	}
 
 

@@ -94,9 +94,7 @@ void StageOne::update(float delta)
 
 
 	/////////////임시 캐릭터/////
-	auto unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
-	m_pCharacter->SetInput(m_keyboardInput);
-	m_pCharacterManager->GetCharacterInfo(m_pCharacter);
-
-	m_pManageMove->update(m_pCharacter->getPosition(), m_background, unitVec, m_pMap);
+	auto unitVec = Vec2(m_InputLayer->GetInputArray()[0], m_InputLayer->GetInputArray()[1]);	
+	auto position = m_pManageMove->update(m_pCharacter->getPosition(), m_background, unitVec, m_pMap);
+	m_pCharacter->setPosition(position);
 }

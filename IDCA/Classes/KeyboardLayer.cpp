@@ -34,6 +34,7 @@ bool KeyboardLayer::init()
 
 void KeyboardLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 {
+
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
 		m_keyboardInput |= KEY_BOARD_INPUT::UP;
