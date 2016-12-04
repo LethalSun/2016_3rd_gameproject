@@ -32,6 +32,7 @@ public:
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
 	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
+	CC_SYNTHESIZE(int, m_Direction, Direction);
 
 
 	/* Member Function */
@@ -41,6 +42,7 @@ public:
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
 	void				 HitedMove(const float deltaTime);
+	void				 CalDirection();
 
 	/* Create Function Re-define */
 	static Enemy* create(Vec2 initPosition) {
@@ -67,7 +69,7 @@ void Enemy::changeState()
 	// state가 존재한다면 종료.
 	if (m_pState)
 	{
-		setBeforeState()->getState();
+		setBeforeState(getState());
 		getState()->endState(this);
 		removeComponent(m_pState);
 	}

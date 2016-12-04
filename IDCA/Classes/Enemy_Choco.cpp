@@ -2,6 +2,7 @@
 #include "Enemy_Choco.h"
 #include "EnemyState_Search.h"
 #include "Config.h"
+#include "AnimationMaker.h"
 
 
 bool Enemy_Choco::init(Vec2 initPosition)
@@ -21,11 +22,14 @@ bool Enemy_Choco::init(Vec2 initPosition)
 	setMoveSpeed		(m_pConfig->getChocoMoveSpeed);
 	setIsAttackedOnce	(false);
 	setIsHited			(false);
-
-	setOrigin(Vec2(m_pConfig->getWinSizeWidth() * initPosition.x,
-		m_pConfig->getWinSizeHeight() * initPosition.y));
+	setOrigin(Vec2(initPosition.x, initPosition.y));
 
 
+	// AnimationMaker ¼¼ÆÃ.
+	m_pAnimationMaker = AnimationMaker::create(m_pConfig->getChocoSpriteFileName(), m_pConfig->getChocoFrameFileExtention());
+	addChild(m_pAnimationMaker);
+	m_pAnimationMaker->SetAnimationStop();
+	m_pAnimationMaker->AddAnimation(getDirection());
 
 	changeState<EnemyState_Search>();
 

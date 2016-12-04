@@ -10,12 +10,16 @@ bool Enemy::init(Vec2 initPosition)
 		return false;
 	}
 
+	setUnitVec(Vec2(0, 0));
+	setDirection(DIRECTION::BOTTOM);
+
 	return true;
 }
 
 void Enemy::update(const float deltaTime)
 {
 	m_pState->runState(this, deltaTime);
+	CalDirection();
 	return;
 }
 
@@ -85,11 +89,64 @@ void Enemy::CalUnitVecToPlayer()
 	}
 	auto distanceFromPlayer = getDistanceFromPlayer();
 
-	auto deltaX = getPlayerPosition().x - m_pSprite->getPosition().x;
-	auto deltaY = getPlayerPosition().y - m_pSprite->getPosition().y;
+	auto deltaX = getPlayerPosition().x - this->getPosition().x;
+	auto deltaY = getPlayerPosition().y - this->getPosition().y;
 
 	Vec2 unitVecToPlayer(deltaX / distanceFromPlayer, deltaY / distanceFromPlayer);
 	setUnitVec(unitVecToPlayer);
+	return;
+}
+
+// UnitVec을 Direction으로 바꾸어주는 함수.
+void Enemy::CalDirection()
+{
+	if (!getUnitVec().x || !getUnitVec().y)
+	{
+		int dx = 0;
+		int dy = 0;
+		if (!getUnitVec().x)
+		{
+			dx = (getUnitVec().x > 0) ? 1 : -1;
+		}
+		if (!getUnitVec().y)
+		{
+			dy = (getUnitVec().y > 0) ? 1 : -1;
+		}
+
+		if ((dx == 0) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP);
+		}
+		else if ((dx == 1) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP_RIGHT);
+		}
+		else if ((dx == 1) && (dy == 0))
+		{
+			setDirection(DIRECTION::RIGHT);
+		}
+		else if ((dx == 1) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM_RIGHT);
+		}
+		else if ((dx == 0) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM);
+		}
+		else if ((dx == -1) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM_LEFT);
+		}
+		else if ((dx == -1) && (dy == 0))
+		{
+			setDirection(DIRECTION::LEFT);
+		}
+		else if ((dx == -1) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP_LEFT);
+		}
+
+	}
 	return;
 }
 
