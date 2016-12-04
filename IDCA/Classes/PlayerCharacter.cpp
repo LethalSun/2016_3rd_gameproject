@@ -70,6 +70,10 @@ int PlayerCharacter::GetDirection()
 
 void PlayerCharacter::SetDirection(int direction)
 {
+	if (IsAttackContinued())
+	{
+		return;
+	}
 	m_Direction = direction;
 }
 
@@ -95,25 +99,22 @@ void PlayerCharacter::SetSP(int sp)
 
 void PlayerCharacter::update(float dt)
 {
-	if (true)//m_BeforeState != m_State)
+	//m_pAnimationMaker->GetSprite()->stopAllActions();
+	if (m_State == STATE::ATTACK)
 	{
-		//m_pAnimationMaker->GetSprite()->stopAllActions();
-		if (m_State == STATE::ATTACK)
-		{
-			Attack();
-		}
-		else if (m_State == STATE::MOVE)
-		{
-			Move();
-		}
-		else if (m_State == STATE::STOP)
-		{
-			stop();
-		}
-		else if (m_State == STATE::SKILL)
-		{
-			skill();
-		}
+		Attack();
+	}
+	else if (m_State == STATE::MOVE)
+	{
+		Move();
+	}
+	else if (m_State == STATE::STOP)
+	{
+		stop();
+	}
+	else if (m_State == STATE::SKILL)
+	{
+		skill();
 	}
 
 	SaveBeforeStateAndDirection();

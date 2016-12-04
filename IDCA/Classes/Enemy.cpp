@@ -5,7 +5,7 @@
 
 bool Enemy::init(Vec2 initPosition)
 {
-	if (!Sprite::init())
+	if (!Node::init())
 	{
 		return false;
 	}
@@ -22,8 +22,8 @@ void Enemy::update(const float deltaTime)
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
 {
-	auto x = getPlayerPosition().x - m_pSprite->getPosition().x;
-	auto y = getPlayerPosition().y - m_pSprite->getPosition().y;
+	auto x = getPlayerPosition().x - this->getPosition().x;
+	auto y = getPlayerPosition().y - this->getPosition().y;
 
 	setDistanceFromPlayer(abs(sqrt(x * x + y * y)));
 
@@ -34,8 +34,8 @@ void Enemy::CalDistanceFromPlayer()
 void Enemy::CalDistanceFromOrigin()
 {
 	auto originPoint = getOrigin();
-	auto x = originPoint.x - m_pSprite->getPosition().x;
-	auto y = originPoint.y - m_pSprite->getPosition().y;
+	auto x = originPoint.x - this->getPosition().x;
+	auto y = originPoint.y - this->getPosition().y;
 
 	setDistanceFromOrigin(abs(sqrt(x * x + y * y)));
 
@@ -50,10 +50,10 @@ void Enemy::move(const float deltaTime)
 	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;
 	auto deltaY = getUnitVec().y * getMoveSpeed() * deltaTime;
 
-	auto currentX = m_pSprite->getPositionX();
-	auto currentY = m_pSprite->getPositionY();
+	auto currentX = this->getPositionX();
+	auto currentY = this->getPositionY();
 
-	m_pSprite->setPosition(currentX + deltaX, currentY + deltaY);
+	this->setPosition(currentX + deltaX, currentY + deltaY);
 	return;
 }
 
@@ -68,8 +68,8 @@ void Enemy::CalUnitVecToOrigin()
 	auto distanceFromOrigin = getDistanceFromOrigin();
 	auto origin = getOrigin();
 
-	auto deltaX = origin.x - m_pSprite->getPosition().x;
-	auto deltaY = origin.y - m_pSprite->getPosition().y;
+	auto deltaX = origin.x - this->getPosition().x;
+	auto deltaY = origin.y - this->getPosition().y;
 
 	Vec2 unitVecToOrigin(deltaX / distanceFromOrigin, deltaY / distanceFromOrigin);
 	setUnitVec(unitVecToOrigin);

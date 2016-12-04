@@ -1894,7 +1894,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>archbishopS6.png</key>
+            <key>archbishopS60.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1909,7 +1909,7 @@
                 <key>textureRotated</key>
                 <true/>
             </dict>
-            <key>archbishopS7.png</key>
+            <key>archbishopS70.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -1938,7 +1938,7 @@
             <key>size</key>
             <string>{478,996}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f247b94d10665fd8141c611a853873df:d4b54b31fde37417c5bdfaad84ba9638:a61ac0f2c582f1103dccff5dbd54d31c$</string>
+            <string>$TexturePacker:SmartUpdate:c1f91820abc526ce0f611267717383b8:d4b54b31fde37417c5bdfaad84ba9638:a61ac0f2c582f1103dccff5dbd54d31c$</string>
             <key>textureFileName</key>
             <string>archbishop.png</string>
         </dict>

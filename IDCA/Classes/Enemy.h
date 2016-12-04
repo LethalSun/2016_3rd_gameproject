@@ -2,10 +2,10 @@
 
 #include "EnemyState.h"
 
-class MakeAnimation;
+class AnimationMaker;
+class Config;
 
-
-class Enemy : public Sprite
+class Enemy : public Node
 {
 public:
 	virtual bool      init(Vec2);
@@ -16,6 +16,7 @@ public:
 	void              changeState();
 
 	CC_SYNTHESIZE(EnemyState*, m_pState, State);
+	CC_SYNTHESIZE(EnemyState*, m_pBeforeState, BeforeState);
 
 
 	/* Member Variable */
@@ -54,8 +55,8 @@ public:
 		}
 	}
 
-	Sprite*           m_pSprite;
-	MakeAnimation*	  m_pMakeAnimation;
+	AnimationMaker*	  m_pAnimationMaker;
+	Config*			  m_pConfig;
 };
 
 
@@ -66,6 +67,7 @@ void Enemy::changeState()
 	// state가 존재한다면 종료.
 	if (m_pState)
 	{
+		setBeforeState()->getState();
 		getState()->endState(this);
 		removeComponent(m_pState);
 	}
