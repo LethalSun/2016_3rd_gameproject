@@ -41,9 +41,12 @@ private:
 	
 	int						m_InputUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::vecIdxNum];
 	int						m_InputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
+	int						m_ArrowContainer[INPUT_LAYER::ARROW::ARROW_NUM];
 
+	void					DefineWhatIsUnitVec();
 	void					DefineWhatIsInputValue();
 	bool					IsJoyStickButtonPressed();
+	bool					IsArrowContainerEmpty();
 	void					InsertCurToOld();
 
 	bool					m_IsKeyboardPressed;

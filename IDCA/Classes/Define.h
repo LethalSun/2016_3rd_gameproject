@@ -66,6 +66,11 @@ namespace INPUT_LAYER
 		NONE = 0, START = 1, HOLD = 2, END = 3
 	};
 
+	enum ARROW
+	{
+		UP = 0, DOWN = 1, RIGHT = 2, LEFT = 3, ARROW_NUM = 4
+	};
+
 }
 
 enum ENEMY_TYPE
