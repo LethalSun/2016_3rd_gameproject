@@ -48,6 +48,11 @@ PlayerCharacter* PlayerCharacterManager::GetCharacter()
 	return m_pCharacter;
 }
 
+int PlayerCharacterManager::getState()
+{
+	return m_State;
+}
+
 void PlayerCharacterManager::GetInput(int* input)
 {
 	m_pInput = input;

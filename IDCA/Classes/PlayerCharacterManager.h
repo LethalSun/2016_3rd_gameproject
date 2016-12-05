@@ -12,6 +12,7 @@ public:
 	PlayerCharacter* GetCharacter();
 	Vec2			 getPlayerPosition();
 	void			 setPlayerPosition(Vec2);
+	int				 getState();
 
 	//인풋레이어에서 인풋값을 읽어오는 함수
 	void GetInput(int* input);

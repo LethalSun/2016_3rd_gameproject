@@ -20,6 +20,8 @@ bool ManageMove::init()
 
 Vec2 ManageMove::update(Vec2 position,Vec2 background, Vec2 unitVec,TMXTiledMap* map)
 {
+
+
 	m_manageMap = ManageMap::create();
 	
 	auto movable = false;
