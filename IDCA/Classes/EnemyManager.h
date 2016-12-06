@@ -19,7 +19,7 @@ public :
 	std::vector<Enemy*>		m_pEnemyVector;
 	
 	/* Member Function */
-	void MakeEnemy(ENEMY_TYPE, Vec2);
+	void MakeEnemy(const ENEMY_TYPE, const Vec2);
 
 private :
 	static EnemyManager* _instance;

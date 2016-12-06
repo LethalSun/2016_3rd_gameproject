@@ -5,6 +5,8 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+#include "Enemy_Choco.h"
+#include "EnemyManager.h"
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -60,6 +62,11 @@ bool StageOne::init()
 
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+
+	// EnemyManager µî·Ï
+	m_pEnemy = Enemy_Choco::create(Vec2(500.f, 500.f));
+	addChild(m_pEnemy);
+
 
 	scheduleUpdate();
 	return true;

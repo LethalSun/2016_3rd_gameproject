@@ -3,7 +3,7 @@
 #include "math.h"
 
 
-bool Enemy::init(Vec2 initPosition)
+bool Enemy::init(const Vec2 initPosition)
 {
 	if (!Node::init())
 	{
@@ -12,6 +12,7 @@ bool Enemy::init(Vec2 initPosition)
 
 	setUnitVec(Vec2(0, 0));
 	setDirection(DIRECTION::BOTTOM);
+	setPosition(initPosition);
 
 	return true;
 }

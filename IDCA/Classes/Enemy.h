@@ -8,7 +8,7 @@ class Config;
 class Enemy : public Node
 {
 public:
-	virtual bool      init(Vec2);
+	virtual bool      init(const Vec2);
 	virtual void      update(float deltaTime) override;
 
 	/* State */
@@ -33,6 +33,7 @@ public:
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
 	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
 	CC_SYNTHESIZE(int, m_Direction, Direction);
+	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 
 
 	/* Member Function */
@@ -45,7 +46,7 @@ public:
 	void				 CalDirection();
 
 	/* Create Function Re-define */
-	static Enemy* create(Vec2 initPosition) {
+	static Enemy* create(const Vec2 initPosition) {
 		auto p = new Enemy();
 		if (p->init(initPosition)) {
 			p->autorelease();

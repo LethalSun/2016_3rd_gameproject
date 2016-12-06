@@ -33,11 +33,12 @@ EnemyManager::EnemyManager()
 
 
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
-void EnemyManager::MakeEnemy(ENEMY_TYPE enemyType, Vec2 initPosition)
+void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition)
 {
 	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
 		auto newEnemy = Enemy_Choco::create(initPosition);
 		m_pEnemyVector.push_back(newEnemy);
+		
 	}
 }
