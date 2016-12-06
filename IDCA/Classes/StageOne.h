@@ -8,6 +8,9 @@ class Character;
 class CharacterManager;
 class ManageEnemyMove;
 
+class EnemyManager;
+class Enemy_Choco;
+
 class StageOne : public Layer
 {
 public:
@@ -37,7 +40,9 @@ private:
 	CharacterManager *m_pCharacterManager;
 	unsigned int m_keyboardInput;
 
-	Sprite *test_sprite;
 
 	ManageEnemyMove * m_pManageEnemyMove;
+	// Enemy Test
+	EnemyManager* m_pEnemyManager;
+	Enemy_Choco* m_pEnemy;
 };

@@ -6,7 +6,8 @@
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
 #include "ManageEnemyMove.h"
-
+#include "Enemy_Choco.h"
+#include "EnemyManager.h"
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -58,11 +59,15 @@ bool StageOne::init()
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
-	// 임시 몬스터
-	test_sprite = Sprite::create("TempResourceHW/monster.png");
-	test_sprite->setPosition(1000, 1000);
-	m_pMap->addChild(test_sprite,3);
 	
+	// EnemyManager 등록
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 750.f));
+	addChild(m_pEnemyManager);
+
+
 	scheduleUpdate();
 	return true;
 }
