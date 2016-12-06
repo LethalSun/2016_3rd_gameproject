@@ -143,14 +143,12 @@ void PlayerCharacter::Move()
 	}
 	m_pAnimationMaker->SetAnimationMove();
 	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
-	//addChild(Sprite);
 }
 
 void PlayerCharacter::stop()
 {
 	m_pAnimationMaker->SetAnimationStop();
 	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
-	//addChild(Sprite);
 }
 
 void PlayerCharacter::skill()
@@ -171,9 +169,6 @@ void PlayerCharacter::CheckStopState()
 			m_State = STATE::STOP;
 		}
 	}
-	char logBuffer1[100];
-	sprintf(logBuffer1, "state character:%d ", m_State);
-	cocos2d::log(logBuffer1);
 }
 
 PlayerCharacter::PlayerCharacter()

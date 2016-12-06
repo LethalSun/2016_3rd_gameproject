@@ -33,6 +33,7 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 		m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
 	}
 	m_pCharacter->setPosition(Vec2(100, 450));
+
 	addChild(m_pCharacter);
 
 	m_State = STATE::STOP;
@@ -155,7 +156,9 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 void PlayerCharacterManager::update(float dt)
 {
 	char logBuffer1[100];
-	sprintf(logBuffer1, "state manager:%d ", m_State);
+	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getAnchorPoint().x, m_pCharacter->getAnchorPoint().y);
+	cocos2d::log(logBuffer1);
+	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getPosition().x, m_pCharacter->getPosition().y);
 	cocos2d::log(logBuffer1);
 	CalculatePlayerCharacterState();
 	SetPlayerCharacterState();

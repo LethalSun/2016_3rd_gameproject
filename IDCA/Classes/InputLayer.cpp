@@ -65,30 +65,6 @@ void InputLayer::update(const float deltaTime)
 	DefineWhatIsInputValue();
 	InsertCurToOld();
 
-	/* State Log part */
-	char logBuffer1[256];
-	sprintf(logBuffer1, "%d%d%d%d%d%d %d%d, Arrow %d%d%d%d, unitVecStateX %d%d",
-		m_InputArray[0],
-		m_InputArray[1],
-		m_InputArray[2],
-		m_InputArray[3],
-		m_InputArray[4],
-		m_InputArray[5],
-
-		m_InputUnitVec[0],
-		m_InputUnitVec[1],
-
-		m_ArrowContainer[0],
-		m_ArrowContainer[1],
-		m_ArrowContainer[2],
-		m_ArrowContainer[3],
-
-		m_OldInputArray[0],
-		m_CurrentInputArray[0]
-	);
-
-	cocos2d::log(logBuffer1);
-
 	m_Manager.Update();
 	if (!m_IsKeyboardPressed)
 	{
@@ -337,7 +313,6 @@ int* InputLayer::GetInputUnitVec()
 	return m_InputUnitVec;
 }
 
-
 /*
 	Update()에서 JoyStick인풋을 감지하고 그에 맞는 처리를 해주는 함수.
 	스틱 입력은 그 값을 받아 ConvertJoyStickToUnitVec에 넘겨준다.
@@ -439,7 +414,6 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 
 void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 {
-
 	m_IsKeyboardPressed = true;
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
@@ -450,8 +424,7 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 	{
 		m_ArrowContainer[ARROW::DOWN] = 1;
 	}
-	
-	
+
 	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
 	{
 		m_ArrowContainer[ARROW::RIGHT] = 1;
