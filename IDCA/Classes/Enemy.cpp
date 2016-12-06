@@ -21,6 +21,8 @@ void Enemy::update(const float deltaTime)
 {
 	m_pState->runState(this, deltaTime);
 	CalDirection();
+	TranslateUnitVec();
+
 	return;
 }
 
@@ -151,3 +153,29 @@ void Enemy::CalDirection()
 	return;
 }
 
+
+void Enemy::TranslateUnitVec()
+{
+	int x, y;
+
+	if (!getUnitVec().x)
+	{
+		x = (getUnitVec().x > 0) ? 1 : -1;
+	}
+	else
+	{
+		x = 0;
+	}
+
+	if (!getUnitVec().y)
+	{
+		y = (getUnitVec().y > 0) ? 1 : -1;
+	}
+	else
+	{
+		y = 0;
+	}
+
+	setTranslatedUnitVec(Vec2(x, y));
+	return;
+}

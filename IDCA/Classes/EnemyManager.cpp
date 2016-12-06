@@ -32,13 +32,23 @@ EnemyManager::EnemyManager()
 }
 
 
+Vector<Enemy*>* EnemyManager::getEnemyVector()
+{
+	return &m_pEnemyVector;
+}
+
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
 void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition)
 {
 	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
-		auto newEnemy = Enemy_Choco::create(initPosition);
-		m_pEnemyVector.push_back(newEnemy);
-		
+		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
+		auto* newEnemy = Enemy_Choco::create(initPosition);
+		newEnemy->setEnemyType(ENEMY_TYPE::CHOCO);
+		m_pEnemyVector.pushBack(newEnemy);
+		getMapPointer()->addChild(newEnemy);
 	}
+
+
+	return;
 }

@@ -64,8 +64,11 @@ bool StageOne::init()
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
 	// EnemyManager µî·Ï
-	m_pEnemy = Enemy_Choco::create(Vec2(500.f, 500.f));
-	addChild(m_pEnemy);
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 750.f));
+	addChild(m_pEnemyManager);
 
 
 	scheduleUpdate();

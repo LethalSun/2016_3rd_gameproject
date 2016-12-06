@@ -16,6 +16,7 @@ public:
 	void              changeState();
 
 	CC_SYNTHESIZE(EnemyState*, m_pState, State);
+	CC_SYNTHESIZE(EnemyState*, m_pCurrentState, CurrentState);
 	CC_SYNTHESIZE(EnemyState*, m_pBeforeState, BeforeState);
 
 
@@ -32,7 +33,9 @@ public:
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
 	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
+	CC_SYNTHESIZE(Vec2, m_TranslatedUnitVec, TranslatedUnitVec);
 	CC_SYNTHESIZE(int, m_Direction, Direction);
+	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 
 
@@ -40,6 +43,7 @@ public:
 	void				 move(const float deltaTime);
 	void				 CalUnitVecToPlayer();
 	void				 CalUnitVecToOrigin();
+	void				 TranslateUnitVec();
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
 	void				 HitedMove(const float deltaTime);
@@ -70,7 +74,6 @@ void Enemy::changeState()
 	// state가 존재한다면 종료.
 	if (m_pState)
 	{
-		setBeforeState(getState());
 		getState()->endState(this);
 		removeComponent(m_pState);
 	}

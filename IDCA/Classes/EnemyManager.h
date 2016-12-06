@@ -2,8 +2,9 @@
 
 
 class Enemy;
+class Enemy_Choco;
 
-class EnemyManager 
+class EnemyManager : public Node
 {
 public :
 	static EnemyManager* getInstance();
@@ -16,13 +17,15 @@ public :
 	// FIND(idx) 뭐 이런식으로 하던가, ENEMY의 TAG로 찾던가.
 	// 두 가지 함수 제공해주기.
 	/* Member Variable */
-	std::vector<Enemy*>		m_pEnemyVector;
+	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
+	Vector<Enemy*>* getEnemyVector();
 	
 	/* Member Function */
 	void MakeEnemy(const ENEMY_TYPE, const Vec2);
+	
 
 private :
 	static EnemyManager* _instance;
-
+	Vector<Enemy*> m_pEnemyVector;
 };
 

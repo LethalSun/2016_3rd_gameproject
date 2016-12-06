@@ -35,6 +35,9 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());
 
+	//m_pSprite = Sprite::create("CloseNormal.png");
+	//addChild(m_pSprite);
+
 	changeState<EnemyState_Search>();
 
 	return true;
