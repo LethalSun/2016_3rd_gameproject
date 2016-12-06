@@ -5,7 +5,12 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+<<<<<<< HEAD
 
+=======
+#include "Enemy_Choco.h"
+#include "EnemyManager.h"
+>>>>>>> Create/Enemy
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -61,6 +66,14 @@ bool StageOne::init()
 
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+
+	// EnemyManager µî·Ï
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 750.f));
+	addChild(m_pEnemyManager);
+
 
 	scheduleUpdate();
 	return true;

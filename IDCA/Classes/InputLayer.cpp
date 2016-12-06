@@ -65,30 +65,6 @@ void InputLayer::update(const float deltaTime)
 	DefineWhatIsInputValue();
 	InsertCurToOld();
 
-	/* State Log part */
-	char logBuffer1[256];
-	sprintf(logBuffer1, "%d%d%d%d%d%d %d%d, Arrow %d%d%d%d, unitVecStateX %d%d",
-		m_InputArray[0],
-		m_InputArray[1],
-		m_InputArray[2],
-		m_InputArray[3],
-		m_InputArray[4],
-		m_InputArray[5],
-
-		m_InputUnitVec[0],
-		m_InputUnitVec[1],
-
-		m_ArrowContainer[0],
-		m_ArrowContainer[1],
-		m_ArrowContainer[2],
-		m_ArrowContainer[3],
-
-		m_OldInputArray[0],
-		m_CurrentInputArray[0]
-	);
-
-	cocos2d::log(logBuffer1);
-
 	m_Manager.Update();
 	if (!m_IsKeyboardPressed)
 	{
@@ -161,6 +137,7 @@ bool InputLayer::IsArrowContainerEmpty()
 	{
 		return true;
 	}
+
 	return false;
 }
 
@@ -431,6 +408,7 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 
 	return;
 }
+
 
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.

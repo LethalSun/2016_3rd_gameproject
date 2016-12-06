@@ -65,7 +65,7 @@ void IniReader::ReadString(const char* section, const char* key, const char* str
 	wchar_t resultValue[BUFFER_MAX];
 
 	TransSectionNKey(section, key);
-	memset(destChar, 0x00, BUFFER_MAX);
+	//memset(destChar, 0x00, BUFFER_MAX);
 	mbstowcs(defaultValue, stringDefaultValue, strlen(stringDefaultValue) + 1);
 
 	GetPrivateProfileString(m_wSectionText, m_wKeyText, defaultValue, resultValue, BUFFER_MAX, m_wFilename);
