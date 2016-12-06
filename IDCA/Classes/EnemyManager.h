@@ -22,6 +22,7 @@ public :
 	
 	/* Member Function */
 	void MakeEnemy(const ENEMY_TYPE, const Vec2);
+	void ProvidePlayerPosition(const Vec2);
 	
 
 private :

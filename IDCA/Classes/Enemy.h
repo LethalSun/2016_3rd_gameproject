@@ -4,6 +4,7 @@
 
 class AnimationMaker;
 class Config;
+class ManageEnemyMove;
 
 class Enemy : public Node
 {
@@ -24,12 +25,12 @@ public:
 	CC_SYNTHESIZE(float, m_SearchingRange, SearchingRange);
 	CC_SYNTHESIZE(float, m_ChasingRange, ChasingRange);
 	CC_SYNTHESIZE(float, m_AttackRange, AttackRange);
-	CC_SYNTHESIZE(Point, m_Origin, Origin);
+	CC_SYNTHESIZE(Vec2, m_Origin, Origin);
 	CC_SYNTHESIZE(float, m_MoveSpeed, MoveSpeed);
 	CC_SYNTHESIZE(bool , m_IsAttackedOnce, IsAttackedOnce);
-	CC_SYNTHESIZE(bool , m_IsHited, IsHited);
+	CC_SYNTHESIZE(bool , m_IsEnemyPreemptive, IsEnemyPreemptive);
 
-	CC_SYNTHESIZE(Point, m_PlayerPosition, PlayerPosition)
+	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition)
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
 	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
@@ -37,6 +38,7 @@ public:
 	CC_SYNTHESIZE(int, m_Direction, Direction);
 	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
+	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 
 
 	/* Member Function */
@@ -64,6 +66,8 @@ public:
 
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
+	ManageEnemyMove*  m_pManageEnemyMove;
+
 };
 
 

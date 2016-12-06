@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Enemy.h"
 #include "math.h"
+#include "ManageEnemyMove.h"
 
 
 bool Enemy::init(const Vec2 initPosition)
@@ -12,7 +13,8 @@ bool Enemy::init(const Vec2 initPosition)
 
 	setUnitVec(Vec2(0, 0));
 	setDirection(DIRECTION::BOTTOM);
-	setPosition(initPosition);
+	m_pManageEnemyMove = ManageEnemyMove::create();
+	setIsAttackedOnce(false);
 
 	return true;
 }
@@ -21,7 +23,8 @@ void Enemy::update(const float deltaTime)
 {
 	m_pState->runState(this, deltaTime);
 	CalDirection();
-	TranslateUnitVec();
+	CalDistanceFromPlayer();
+	CalDistanceFromOrigin();
 
 	return;
 }
@@ -54,6 +57,9 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::move(const float deltaTime)
 {
+	//auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime);
+	//this->setPosition(position);
+
 	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;
 	auto deltaY = getUnitVec().y * getMoveSpeed() * deltaTime;
 
@@ -80,6 +86,7 @@ void Enemy::CalUnitVecToOrigin()
 
 	Vec2 unitVecToOrigin(deltaX / distanceFromOrigin, deltaY / distanceFromOrigin);
 	setUnitVec(unitVecToOrigin);
+	TranslateUnitVec();
 	return;
 }
 
@@ -97,6 +104,7 @@ void Enemy::CalUnitVecToPlayer()
 
 	Vec2 unitVecToPlayer(deltaX / distanceFromPlayer, deltaY / distanceFromPlayer);
 	setUnitVec(unitVecToPlayer);
+	TranslateUnitVec();
 	return;
 }
 

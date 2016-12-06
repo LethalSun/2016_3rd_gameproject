@@ -13,7 +13,7 @@ public:
 
 	bool init();
 
-	Vec2 update(Vec2 position, Vec2 unitvec, TMXTiledMap * map);
+	Vec2 update(Vec2 position, Vec2 unitvec, TMXTiledMap * map, const float);
 
 
 private:
