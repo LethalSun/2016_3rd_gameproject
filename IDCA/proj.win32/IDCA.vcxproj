@@ -154,6 +154,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\IniReader.cpp" />
     <ClCompile Include="..\Classes\InputLayer.cpp" />
+    <ClCompile Include="..\Classes\ManageEnemyMove.cpp" />
     <ClCompile Include="..\Classes\ManageMap.cpp" />
     <ClCompile Include="..\Classes\ManageMove.cpp" />
     <ClCompile Include="..\Classes\pch.cpp">
@@ -170,13 +171,13 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
-
     <ClInclude Include="..\Classes\CollideManager.h" />
     <ClInclude Include="..\Classes\config.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\IniReader.h" />
     <ClInclude Include="..\Classes\InputLayer.h" />
+    <ClInclude Include="..\Classes\ManageEnemyMove.h" />
     <ClInclude Include="..\Classes\ManageMap.h" />
     <ClInclude Include="..\Classes\ManageMove.h" />
     <ClInclude Include="..\Classes\pch.h" />

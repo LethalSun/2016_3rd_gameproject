@@ -5,6 +5,7 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+#include "ManageEnemyMove.h"
 
 Scene * StageOne::createScene()
 {
@@ -41,27 +42,27 @@ bool StageOne::init()
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
-
-	m_mapSize = m_pMap->getMapSize();
-	m_winSize = Director::getInstance()->getWinSize();
-	m_tileSize = m_pMap->getTileSize();
-	m_background = Vec2(0, 0);
-
 	addChild(m_pMap);
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
-
-	//addChild(m_pMap);
+	m_pManageEnemyMove = ManageEnemyMove::create();
+	
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
 	m_InputLayer = InputLayer::create();
-
 	addChild(m_InputLayer);
+
+
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
 	addChild(m_pPlayerCharacterManager);
 
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
+	// 임시 몬스터
+	test_sprite = Sprite::create("TempResourceHW/monster.png");
+	test_sprite->setPosition(1000, 1000);
+	m_pMap->addChild(test_sprite,3);
+	
 	scheduleUpdate();
 	return true;
 }
@@ -83,4 +84,8 @@ void StageOne::update(float delta)
 		position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
 		m_pPlayerCharacterManager->setPlayerPosition(position);
 	}
+
+	Vec2 monsterPosition = test_sprite->getPosition();
+	monsterPosition = m_pManageEnemyMove->update(monsterPosition, Vec2(1, 0), m_pMap);
+	test_sprite->setPosition(monsterPosition);
 }

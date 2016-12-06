@@ -6,6 +6,7 @@ class PlayerCharacterManager;
 
 class Character;
 class CharacterManager;
+class ManageEnemyMove;
 
 class StageOne : public Layer
 {
@@ -21,16 +22,11 @@ public:
 
 private:
 
-	Vec2 m_background;
-
 
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
 	
 	
-	Size m_mapSize;
-	Size m_winSize;
-	Size m_tileSize;
 
 	PlayerCharacterManager* m_pPlayerCharacterManager;
 	ManageMap* m_pManageMap;
@@ -40,4 +36,8 @@ private:
 	Character *m_pCharacter;
 	CharacterManager *m_pCharacterManager;
 	unsigned int m_keyboardInput;
+
+	Sprite *test_sprite;
+
+	ManageEnemyMove * m_pManageEnemyMove;
 };

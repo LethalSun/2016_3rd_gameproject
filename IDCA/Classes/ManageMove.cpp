@@ -18,7 +18,7 @@ bool ManageMove::init()
 
 
 
-Vec2 ManageMove::update(Vec2 position,Vec2 background, Vec2 unitVec,TMXTiledMap* map)
+Vec2 ManageMove::update(Vec2 position,const Vec2 background,const Vec2 unitVec,TMXTiledMap* map)
 {
 
 
@@ -48,7 +48,7 @@ Vec2 ManageMove::update(Vec2 position,Vec2 background, Vec2 unitVec,TMXTiledMap*
 
 }
 
-Vec2 ManageMove::setCharacterPosition(Vec2 position, Vec2 unitVec,TMXTiledMap* map)
+Vec2 ManageMove::setCharacterPosition(Vec2 position, Vec2 unitVec,const TMXTiledMap* map)
 {
 	
 	auto backgroundMovable = false;
@@ -62,7 +62,7 @@ Vec2 ManageMove::setCharacterPosition(Vec2 position, Vec2 unitVec,TMXTiledMap* m
 	return position + unitVec;
 }
 
-Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap* map)
+Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const TMXTiledMap* map)
 {
 	auto backgroundXMovable = false;
 	auto backgroundYMovable = false;
@@ -82,7 +82,7 @@ Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap*
 			{
 				backgroundPosition.x = 0;
 			}
-			unitVec += Vec2(-TEMP_DEFINE::CHACRACTER_MOVE_SPEED, 0);
+			unitVec*= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.x - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
 			{
 				unitVec.x = 0;
@@ -102,7 +102,7 @@ Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap*
 			{
 				backgroundPosition.x = -(map->getMapSize().width * 32 - winSize.width);
 			}
-			unitVec += Vec2(TEMP_DEFINE::CHACRACTER_MOVE_SPEED, 0);
+			unitVec*=TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.x + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.width)
 			{
 				unitVec.x = 0;
@@ -124,7 +124,7 @@ Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap*
 			{
 				backgroundPosition.y = 0;
 			}
-			unitVec += Vec2(0,-TEMP_DEFINE::CHACRACTER_MOVE_SPEED);
+			unitVec *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.y - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
 			{
 				unitVec.y = 0;
@@ -144,7 +144,7 @@ Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap*
 			{
 				backgroundPosition.y = -(map->getMapSize().height * 32 - winSize.height);
 			}
-			unitVec += Vec2(0,TEMP_DEFINE::CHACRACTER_MOVE_SPEED);
+			unitVec *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.y + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.height)
 			{
 				unitVec.y = 0;
@@ -164,12 +164,5 @@ Vec2 ManageMove::checkBackgroundMovable(Vec2 position, Vec2 unitVec,TMXTiledMap*
 
 	return unitVec;
 
-	/*
-	if (backgroundXMovable == true && backgroundYMovable == true)
-	{
-		return true;
-	}
 
-	return false;
-	*/
 }

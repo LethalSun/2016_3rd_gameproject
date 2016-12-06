@@ -46,8 +46,9 @@ namespace TEMP_DEFINE
 	const int ATTACK_RANGE_X = 37;
 	const int ATTACK_RANGE_Y = 47;
 
-	const int MAP_MOVE_SPEED = 5;
-	const int CHACRACTER_MOVE_SPEED = 4;
+	const int MAP_MOVE_SPEED = 3;
+	const int CHACRACTER_MOVE_SPEED = 3;
+	const int MONSTER_MOVE_SPEED = 3;
 
 	extern const char*ARCH_BISHOP_FILE_NAME;
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;
