@@ -11,7 +11,7 @@ public:
 
 	bool init();
 
-	bool checkMap(const Vec2 background, const Vec2 position, const Vec2 unitVec, TMXTiledMap * map);
+	//bool checkMap(const Vec2 background, const Vec2 position, const Vec2 unitVec, TMXTiledMap * map);
 
 
 

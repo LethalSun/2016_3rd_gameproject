@@ -35,11 +35,6 @@ Vec2 ManageMove::update(Vec2 position,Vec2 background, Vec2 unitVec,TMXTiledMap*
 		return position;
 	}
 
-	if (unitVec == Vec2(1, 0))
-	{
-		int a = 1;
-	}
-
 	movable = m_manageMap->checkWall(position - (backgroundPosition) + (unitVec * 5),map);
 	
 	if (movable == true)

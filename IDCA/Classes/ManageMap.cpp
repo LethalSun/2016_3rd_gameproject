@@ -20,7 +20,7 @@ bool ManageMap::init()
 	
 	return true;
 }
-
+/*
 bool ManageMap::checkMap(const Vec2 background, const Vec2 position, const Vec2 unitVec, TMXTiledMap* map)
 {
 	auto isWall = ManageMap::checkWall(position + unitVec - background, map);
@@ -28,6 +28,7 @@ bool ManageMap::checkMap(const Vec2 background, const Vec2 position, const Vec2 
 
 	return true;
 }
+*/
 
 Vec2 ManageMap::tileCoordForPosition(Vec2 position, TMXTiledMap* map)
 {
