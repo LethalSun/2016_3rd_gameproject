@@ -60,6 +60,10 @@ int PlayerCharacter::GetState()
 
 void PlayerCharacter::SetState(int state)
 {
+	if (IsAttackContinued())
+	{
+		return;
+	}
 	m_State = state;
 }
 
