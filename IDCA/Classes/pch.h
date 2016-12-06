@@ -12,6 +12,5 @@
 #pragma warning(pop)
 
 #include "Define.h"
-#include <vector>
 
 USING_NS_CC;

@@ -1,14 +1,20 @@
 #include "pch.h"
 #include "Enemy.h"
 #include "math.h"
+#include "ManageEnemyMove.h"
 
 
-bool Enemy::init(Vec2 initPosition)
+bool Enemy::init(const Vec2 initPosition)
 {
 	if (!Node::init())
 	{
 		return false;
 	}
+
+	setUnitVec(Vec2(0, 0));
+	setDirection(DIRECTION::BOTTOM);
+	m_pManageEnemyMove = ManageEnemyMove::create();
+	setIsAttackedOnce(false);
 
 	return true;
 }
@@ -16,6 +22,10 @@ bool Enemy::init(Vec2 initPosition)
 void Enemy::update(const float deltaTime)
 {
 	m_pState->runState(this, deltaTime);
+	CalDirection();
+	CalDistanceFromPlayer();
+	CalDistanceFromOrigin();
+
 	return;
 }
 
@@ -47,6 +57,9 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::move(const float deltaTime)
 {
+	//auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime);
+	//this->setPosition(position);
+
 	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;
 	auto deltaY = getUnitVec().y * getMoveSpeed() * deltaTime;
 
@@ -73,6 +86,7 @@ void Enemy::CalUnitVecToOrigin()
 
 	Vec2 unitVecToOrigin(deltaX / distanceFromOrigin, deltaY / distanceFromOrigin);
 	setUnitVec(unitVecToOrigin);
+	TranslateUnitVec();
 	return;
 }
 
@@ -85,11 +99,91 @@ void Enemy::CalUnitVecToPlayer()
 	}
 	auto distanceFromPlayer = getDistanceFromPlayer();
 
-	auto deltaX = getPlayerPosition().x - m_pSprite->getPosition().x;
-	auto deltaY = getPlayerPosition().y - m_pSprite->getPosition().y;
+	auto deltaX = getPlayerPosition().x - this->getPosition().x;
+	auto deltaY = getPlayerPosition().y - this->getPosition().y;
 
 	Vec2 unitVecToPlayer(deltaX / distanceFromPlayer, deltaY / distanceFromPlayer);
 	setUnitVec(unitVecToPlayer);
+	TranslateUnitVec();
 	return;
 }
 
+// UnitVec을 Direction으로 바꾸어주는 함수.
+void Enemy::CalDirection()
+{
+	if (!getUnitVec().x || !getUnitVec().y)
+	{
+		int dx = 0;
+		int dy = 0;
+		if (!getUnitVec().x)
+		{
+			dx = (getUnitVec().x > 0) ? 1 : -1;
+		}
+		if (!getUnitVec().y)
+		{
+			dy = (getUnitVec().y > 0) ? 1 : -1;
+		}
+
+		if ((dx == 0) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP);
+		}
+		else if ((dx == 1) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP_RIGHT);
+		}
+		else if ((dx == 1) && (dy == 0))
+		{
+			setDirection(DIRECTION::RIGHT);
+		}
+		else if ((dx == 1) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM_RIGHT);
+		}
+		else if ((dx == 0) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM);
+		}
+		else if ((dx == -1) && (dy == -1))
+		{
+			setDirection(DIRECTION::BOTTOM_LEFT);
+		}
+		else if ((dx == -1) && (dy == 0))
+		{
+			setDirection(DIRECTION::LEFT);
+		}
+		else if ((dx == -1) && (dy == 1))
+		{
+			setDirection(DIRECTION::TOP_LEFT);
+		}
+
+	}
+	return;
+}
+
+
+void Enemy::TranslateUnitVec()
+{
+	int x, y;
+
+	if (!getUnitVec().x)
+	{
+		x = (getUnitVec().x > 0) ? 1 : -1;
+	}
+	else
+	{
+		x = 0;
+	}
+
+	if (!getUnitVec().y)
+	{
+		y = (getUnitVec().y > 0) ? 1 : -1;
+	}
+	else
+	{
+		y = 0;
+	}
+
+	setTranslatedUnitVec(Vec2(x, y));
+	return;
+}

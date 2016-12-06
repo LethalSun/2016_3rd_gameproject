@@ -2,13 +2,13 @@
 #include "ManageMap.h"
 #include "TemporaryDefine.h"
 
-
-TMXTiledMap* ManageMap::loadMap(const char* MAP_NAME)
+TMXTiledMap* ManageMap::loadMap(const char* mapName)
 {
-	m_pMap = TMXTiledMap::create(MAP_NAME);
+	m_pMap = TMXTiledMap::create(mapName);
 
 	return m_pMap;
 }
+
 
 bool ManageMap::init()
 {
@@ -21,15 +21,8 @@ bool ManageMap::init()
 	return true;
 }
 
-bool ManageMap::checkMap(const Vec2 background, const Vec2 position, const Vec2 unitVec, TMXTiledMap* map)
-{
-	auto isWall = ManageMap::checkWall(position + unitVec - background, map);
 
-
-	return true;
-}
-
-Vec2 ManageMap::tileCoordForPosition(Vec2 position, TMXTiledMap* map)
+Vec2 ManageMap::tileCoordForPosition(const Vec2 position, const TMXTiledMap* map)
 {
 	auto x = position.x / map->getTileSize().width;
 	auto y = ((map->getMapSize().height * map->getTileSize().height) - position.y) / map->getTileSize().height;
@@ -37,7 +30,7 @@ Vec2 ManageMap::tileCoordForPosition(Vec2 position, TMXTiledMap* map)
 	return Vec2((int)x, (int)y);
 }
 
-bool ManageMap::checkWall(Vec2 position, TMXTiledMap* map)
+bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map)
 {
 	auto tileCoord = tileCoordForPosition(position, map);
 
@@ -62,7 +55,7 @@ bool ManageMap::checkWall(Vec2 position, TMXTiledMap* map)
 }
 
 
-bool ManageMap::checkChangeMap(Vec2 position, TMXTiledMap* map)
+bool ManageMap::checkChangeMap(const Vec2 position, const TMXTiledMap* map)
 {
 	auto tileCoord = tileCoordForPosition(position, map);
 

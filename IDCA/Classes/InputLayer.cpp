@@ -137,6 +137,7 @@ bool InputLayer::IsArrowContainerEmpty()
 	{
 		return true;
 	}
+
 	return false;
 }
 
@@ -406,6 +407,7 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 
 	return;
 }
+
 
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.
