@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Enemy.h"
+#include "SimpleAudioEngine.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
 #include "AnimationMaker.h"
@@ -256,6 +257,7 @@ void Enemy::Attack()
 	}
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
+	int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	return;
 }
