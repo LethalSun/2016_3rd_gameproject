@@ -21,19 +21,26 @@ bool Enemy::init(const Vec2 initPosition)
 	setDirection(DIRECTION::BOTTOM);
 	m_pManageEnemyMove = ManageEnemyMove::create();
 	setIsAttackedOnce(false);
+	m_pLabel = Label::create();
+	addChild(m_pLabel, 5);
 
 	return true;
 }
 
 void Enemy::update(const float deltaTime)
 {
-	DecideWhatIsCurrentAnimation();
 	m_pState->runState(this, deltaTime);
 	CalDirection();
 	CalDistanceFromPlayer();
 	CalDistanceFromOrigin();
 
-	CatchStateAndDirection();
+	DecideWhatIsCurrentAnimation();
+	
+	char buf[255];
+	sprintf(buf, "Direction : %d, beforeDirection : %d, State : %d, beforeState : %d, unitX : %f, unitY : %f", getDirection(), getBeforeDirection(), getState()->returnStateNumber(), getBeforeState()->returnStateNumber(), getTranslatedUnitVec().x, getTranslatedUnitVec().y);
+	m_pLabel->setString(buf);
+	CCLOG(buf);
+	
 	return;
 }
 
@@ -190,6 +197,7 @@ void Enemy::CatchStateAndDirection()
 	
 	// Direction Catch
 	setBeforeDirection(getDirection());
+	CalDirection();
 }
 
 void Enemy::Stop()
@@ -283,5 +291,6 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Stop();
 	}
 	
+	CatchStateAndDirection();
 	return;
 }

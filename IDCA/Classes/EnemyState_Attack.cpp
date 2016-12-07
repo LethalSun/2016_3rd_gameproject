@@ -24,6 +24,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 {
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float attackRange = enemy->getAttackRange();
+	enemy->CalUnitVecToPlayer();
 
 	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{

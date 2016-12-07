@@ -24,6 +24,7 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	auto distanceFromPlayer = enemy->getDistanceFromPlayer();
 	auto attackRange = enemy->getAttackRange();
 	auto chaseRange = enemy->getChasingRange();
+	enemy->CalUnitVecToPlayer();
 
 	if (isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
@@ -35,7 +36,6 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	}
 	else
 	{
-		enemy->CalUnitVecToPlayer();
 		enemy->MoveEnemy(deltaTime);
 	}
 
