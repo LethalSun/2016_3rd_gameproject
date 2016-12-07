@@ -47,11 +47,10 @@ bool StageOne::init()
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 	m_pManageEnemyMove = ManageEnemyMove::create();
-	
+
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
 	m_InputLayer = InputLayer::create();
 	addChild(m_InputLayer);
-
 
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
 	addChild(m_pPlayerCharacterManager);
@@ -59,7 +58,6 @@ bool StageOne::init()
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
-	
 	// EnemyManager 등록
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
@@ -67,26 +65,23 @@ bool StageOne::init()
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
 	addChild(m_pEnemyManager);
 
-
 	scheduleUpdate();
 	return true;
 }
 
 void StageOne::update(float delta)
 {
-
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
-	
 
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position;
 
-	if(state == 0 || state == 2)
+	if (state == 0 || state == 2)
 	{
 		position = m_pPlayerCharacterManager->getPlayerPosition();
 		Vec2 backgroundposition = m_pMap->getPosition();
-		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
+		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0], m_InputLayer->GetInputUnitVec()[1]);
 		position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
 		m_pPlayerCharacterManager->setPlayerPosition(position);
 	}
@@ -96,4 +91,6 @@ void StageOne::update(float delta)
 	m_pEnemyManager->ProvidePlayerPosition(position);
 	// TODO :: PlayerPosition을 지금 맵에 따라서 달라지는 값으로 받고 있음.
 	// Enemy는 절대적인 좌표값을 받아야 함.
+
+	//ColliderManager 가 Enemy의 벡터와,PlayerCharacter를 받아온다.
 }
