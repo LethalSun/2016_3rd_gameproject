@@ -21,10 +21,6 @@ void EnemyState_Approach::startState(Enemy* enemy)
 
 void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 {
-	char buf[255];
-	sprintf(buf, "[Approaching] playerDistance : %f, AttackRange : %f, this X : %f, this Y : %f", enemy->getDistanceFromPlayer(), enemy->getAttackRange(), enemy->getPosition().x, enemy->getPosition().y);
-	CCLOG(buf);
-
 	auto distanceFromPlayer = enemy->getDistanceFromPlayer();
 	auto attackRange = enemy->getAttackRange();
 	auto chaseRange = enemy->getChasingRange();
@@ -40,7 +36,7 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	else
 	{
 		enemy->CalUnitVecToPlayer();
-		enemy->move(deltaTime);
+		enemy->MoveEnemy(deltaTime);
 	}
 
 	return;
@@ -49,4 +45,9 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 void EnemyState_Approach::endState(Enemy* enemy)
 {
 	CCLOG("end_Approach!");
+}
+
+const int EnemyState_Approach::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::APPROACHING;
 }

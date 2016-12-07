@@ -2,7 +2,7 @@
 #include "ManageEnemyMove.h"
 #include "ManageMap.h"
 #include "TemporaryDefine.h"
-
+#include "Enemy.h"
 bool ManageEnemyMove::init()
 {
 	if (!Node::init())
@@ -16,17 +16,17 @@ bool ManageEnemyMove::init()
 }
 
 
-Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, const float dt)
+Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, const float dt,Enemy* enemy)
 {
 	m_pManageMap = ManageMap::create();
 
 	auto movable = false;
 
-	movable = m_pManageMap->checkWall(position + (unitVec), map);
+	movable = m_pManageMap->checkWall(position + (unitVec)*5, map);
 
 	if (movable == true)
 	{
-		position += unitVec * TEMP_DEFINE::MONSTER_MOVE_SPEED;
+		position += unitVec * enemy->getMoveSpeed();
 	}
 
 	if (movable == false) CCLOG("ManageEnemyMove::update -> moveable is false!");

@@ -3,18 +3,21 @@
 #include "EnemyState_Search.h"
 #include "AnimationMaker.h"
 
+
 bool Enemy_Atroce::init(const Vec2 initPosition)
 {
+
 	if (!Enemy::init(initPosition))
 	{
 		return false;
 	}
 
+
 	this->setPosition(initPosition);
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
 	setAttackRange(150.f);
-	setMoveSpeed(150.f);
+	setMoveSpeed(2.f);
 
 	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(true);

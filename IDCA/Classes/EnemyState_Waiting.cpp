@@ -25,10 +25,6 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 	float attackRange = enemy->getAttackRange();
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 
-	char buf[255];
-	sprintf(buf, "[Waiting] playerDistance : %f, AttackRange : %f, this X : %f, this Y : %f", enemy->getDistanceFromPlayer(), enemy->getAttackRange(), enemy->getPosition().x, enemy->getPosition().y);
-	CCLOG(buf);
-
 	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
@@ -44,4 +40,9 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 void EnemyState_Waiting::endState(Enemy* enemy)
 {
 	CCLOG("End Waiting");
+}
+
+const int EnemyState_Waiting::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::WAITING;
 }

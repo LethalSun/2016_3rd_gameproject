@@ -28,10 +28,6 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	float distanceFromOrigin = enemy->getDistanceFromOrigin();
 	float chaseRange = enemy->getChasingRange();
 
-	char buf[255];
-	sprintf(buf, "[return] playerDistance : %f, AttackRange : %f, this X : %f, this Y : %f", enemy->getDistanceFromPlayer(), enemy->getAttackRange(), enemy->getPosition().x, enemy->getPosition().y);
-	CCLOG(buf);
-
 	if (isPlayerInChasingRange(chaseRange, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
@@ -44,7 +40,7 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	else
 	{
 		enemy->CalUnitVecToOrigin();
-		enemy->move(dt);
+		enemy->MoveEnemy(dt);
 	}
 
 	return;
@@ -54,4 +50,9 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 void EnemyState_Return::endState(Enemy* enemy)
 {
 	CCLOG("End Return");
+}
+
+const int EnemyState_Return::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::RETURN;
 }
