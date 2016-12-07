@@ -19,6 +19,16 @@
     <ClCompile Include="..\Classes\Projectile.cpp" />
     <ClCompile Include="..\Classes\ProjectileListener.cpp" />
     <ClCompile Include="..\Classes\ManageEnemyMove.cpp" />
+    <ClCompile Include="..\Classes\Enemy.cpp" />
+    <ClCompile Include="..\Classes\EnemyManager.cpp" />
+    <ClCompile Include="..\Classes\EnemyState.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
+    <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
+    <ClCompile Include="..\Classes\Enemy_Atroce.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
@@ -40,6 +50,16 @@
     <ClInclude Include="..\Classes\Projectile.h" />
     <ClInclude Include="..\Classes\ProjectileListener.h" />
     <ClInclude Include="..\Classes\ManageEnemyMove.h" />
+    <ClInclude Include="..\Classes\Enemy.h" />
+    <ClInclude Include="..\Classes\EnemyManager.h" />
+    <ClInclude Include="..\Classes\EnemyState.h" />
+    <ClInclude Include="..\Classes\EnemyState_Approach.h" />
+    <ClInclude Include="..\Classes\EnemyState_Attack.h" />
+    <ClInclude Include="..\Classes\EnemyState_Return.h" />
+    <ClInclude Include="..\Classes\EnemyState_Search.h" />
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
+    <ClInclude Include="..\Classes\Enemy_Choco.h" />
+    <ClInclude Include="..\Classes\Enemy_Atroce.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />

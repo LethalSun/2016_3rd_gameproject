@@ -25,14 +25,17 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 {
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float attackRange = enemy->getAttackRange();
+	char buf[255];
+	sprintf(buf, "[Attacking] playerDistance : %f, AttackRange : %f, this X : %f, this Y : %f", enemy->getDistanceFromPlayer(), enemy->getAttackRange(), enemy->getPosition().x, enemy->getPosition().y);
+	CCLOG(buf);
 
-	if (!enemy->getIsAttackedOnce())
-	{
-		enemy->changeState<EnemyState_Waiting>();
-	}
-	else if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
+	}
+	else if (!enemy->getIsAttackedOnce() && !enemy->getIsEnemyPreemptive())
+	{
+		enemy->changeState<EnemyState_Waiting>();
 	}
 	else
 	{

@@ -48,7 +48,7 @@ namespace TEMP_DEFINE
 
 	const int MAP_MOVE_SPEED = 3;
 	const int CHACRACTER_MOVE_SPEED = 3;
-	const int MONSTER_MOVE_SPEED = 3;
+	const int MONSTER_MOVE_SPEED = 2;
 
 	extern const char*ARCH_BISHOP_FILE_NAME;
 	extern const char*SPRITE_FRAME_FILE_EXTENTION;

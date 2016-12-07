@@ -12,9 +12,12 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 		return false;
 	}
 
+	moveSpeed = 3;
+
 	// Config ½Ì±ÛÅæ Å¬·¡½º È£Ãâ.
 	//m_pConfig->getInstance();
 
+	this->setPosition(initPosition);
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
 	setAttackRange(150.f);
@@ -25,7 +28,7 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	setAttackRange		(m_pConfig->getChocoAttackRange());
 	setMoveSpeed		(m_pConfig->getChocoMoveSpeed());*/
 	setIsAttackedOnce	(false);
-	setIsHited			(false);
+	setIsEnemyPreemptive(false);
 	setOrigin(Vec2(initPosition.x, initPosition.y));
 
 
@@ -34,9 +37,6 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());
-
-	//m_pSprite = Sprite::create("CloseNormal.png");
-	//addChild(m_pSprite);
 
 	changeState<EnemyState_Search>();
 
