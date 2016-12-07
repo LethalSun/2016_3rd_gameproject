@@ -96,7 +96,5 @@ void StageOne::update(float delta)
 	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
 	CCLOG(buf);
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
-	// TODO :: PlayerPosition을 지금 맵에 따라서 달라지는 값으로 받고 있음.
-	// Enemy는 절대적인 좌표값을 받아야 함.
 	
 }

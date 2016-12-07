@@ -24,9 +24,6 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 {
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float attackRange = enemy->getAttackRange();
-	char buf[255];
-	sprintf(buf, "[Attacking] playerDistance : %f, AttackRange : %f, this X : %f, this Y : %f", enemy->getDistanceFromPlayer(), enemy->getAttackRange(), enemy->getPosition().x, enemy->getPosition().y);
-	CCLOG(buf);
 
 	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
@@ -47,4 +44,9 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 void EnemyState_Attack::endState(Enemy* enemy)
 {
 	CCLOG("End Attack!");
+}
+
+const int EnemyState_Attack::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::ATTACKING;
 }

@@ -87,4 +87,9 @@ namespace CONFIG_DEFAULT
 	const float floatError = -1.f;
 	const char stringError[6] = "ERROR";
 }
+
+enum ENEMY_STATE_TYPE
+{
+	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, STATE_NUM = 5 
+};
 //KW
