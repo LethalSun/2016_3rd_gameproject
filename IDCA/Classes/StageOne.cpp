@@ -90,7 +90,4 @@ void StageOne::update(float delta)
 		m_pPlayerCharacterManager->setPlayerPosition(position);
 	}
 
-	Vec2 monsterPosition = test_sprite->getPosition();
-	monsterPosition = m_pManageEnemyMove->update(monsterPosition, Vec2(1, 0), m_pMap);
-	test_sprite->setPosition(monsterPosition);
 }
