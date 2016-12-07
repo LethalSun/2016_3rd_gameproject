@@ -171,6 +171,19 @@ void PlayerCharacter::CheckStopState()
 	}
 }
 
+Vec2 PlayerCharacter::GetAttackAnchorPoint()
+{
+}
+
+Vec2 PlayerCharacter::GetBodyAnchorPoint()
+{
+	return Vec2();
+}
+
+void PlayerCharacter::WhenCollided(int, int, int)
+{
+}
+
 PlayerCharacter::PlayerCharacter()
 {
 }

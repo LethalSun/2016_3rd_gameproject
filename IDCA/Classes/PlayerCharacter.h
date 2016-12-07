@@ -46,7 +46,11 @@ public:
 
 	//공격이 끝났는지 확인하는 함수
 	void CheckStopState();
-
+	//공격 앵커포인터를 확인하는 함수
+	Vec2 GetAttackAnchorPoint();
+	Vec2 GetBodyAnchorPoint();
+	//충돌(공격을 받거나 했을때)일경우 충돌 매니져 에서 호출 되는 함수
+	void WhenCollided(int, int, int);
 	PlayerCharacter();
 	~PlayerCharacter();
 
@@ -70,6 +74,12 @@ private:
 	//스킬의 포인터
 	Skill* m_DefenseSkill;
 	Skill* m_AttackSkill;
+
+	//공격의 앵커포인트와 타격의 앵커 포인트
+	Vec2 m_AttackAnchorPoint;
+	Vec2 m_BodyAnchorPointer;
+	//상태이상정보
+	int m_Mezz;
 
 	//애니메이션을 만들고 관리하는 변수
 	AnimationMaker* m_pAnimationMaker;
