@@ -58,6 +58,7 @@ void Enemy::CalDistanceFromOrigin()
 void Enemy::move(const float deltaTime)
 {
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime,this);
+	
 	this->setPosition(position);
 	/*
 	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;

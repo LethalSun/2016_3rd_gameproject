@@ -32,7 +32,7 @@ Vec2 ManageMove::update(Vec2 position,const Vec2 background,const Vec2 unitVec,T
 	if (checkChangeMap == true)
 	{
 		//changeMap("NEXTMAP");
-		return position;
+		//return position;
 	}
 
 	movable = m_manageMap->checkWall(position - (backgroundPosition) + (unitVec * 5),map);
@@ -82,7 +82,7 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 			{
 				backgroundPosition.x = 0;
 			}
-			unitVec*= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
+			unitVec.x*= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.x - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
 			{
 				unitVec.x = 0;
@@ -102,7 +102,7 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 			{
 				backgroundPosition.x = -(map->getMapSize().width * 32 - winSize.width);
 			}
-			unitVec*=TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
+			unitVec.x*=TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.x + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.width)
 			{
 				unitVec.x = 0;
@@ -124,7 +124,7 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 			{
 				backgroundPosition.y = 0;
 			}
-			unitVec *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
+			unitVec.y *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.y - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
 			{
 				unitVec.y = 0;
@@ -144,7 +144,7 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 			{
 				backgroundPosition.y = -(map->getMapSize().height * 32 - winSize.height);
 			}
-			unitVec *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
+			unitVec.y *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.y + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.height)
 			{
 				unitVec.y = 0;

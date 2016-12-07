@@ -80,22 +80,22 @@ void StageOne::update(float delta)
 	
 
 	int state = m_pPlayerCharacterManager->getState();
-	Vec2 position;
+	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 
 	if(state == 0 || state == 2)
 	{
-		position = m_pPlayerCharacterManager->getPlayerPosition();
 		Vec2 backgroundposition = m_pMap->getPosition();
 		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0],m_InputLayer->GetInputUnitVec()[1]);
 		position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
-		m_pPlayerCharacterManager->setPlayerPosition(position);
+		m_pPlayerCharacterManager->setPlayerPosition(position,backgroundposition);
 	}
+
+	
 
 	char buf[255];
 	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
 	CCLOG(buf);
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
-	// TODO :: PlayerPosition을 지금 맵에 따라서 달라지는 값으로 받고 있음.
-	// Enemy는 절대적인 좌표값을 받아야 함.
+
 	
 }
