@@ -41,7 +41,6 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 
 
-	int moveSpeed;
 	/* Member Function */
 	void				 move(const float deltaTime);
 	void				 CalUnitVecToPlayer();

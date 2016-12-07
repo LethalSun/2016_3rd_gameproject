@@ -12,13 +12,12 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 		return false;
 	}
 
-	moveSpeed = 2;
 
 	this->setPosition(initPosition);
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
 	setAttackRange(150.f);
-	setMoveSpeed(150.f);
+	setMoveSpeed(2.f);
 
 	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(true);
