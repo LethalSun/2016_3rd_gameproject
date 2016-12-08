@@ -38,7 +38,8 @@ public:
 	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
-
+	CC_SYNTHESIZE(Label*, m_pLabel, Label);
+	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);

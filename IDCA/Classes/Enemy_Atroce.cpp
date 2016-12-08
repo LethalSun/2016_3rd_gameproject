@@ -22,6 +22,7 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(true);
 	setOrigin(initPosition);
+	setAttackSound("Sound/Atroce_swing.mp3");
 
 	// AnimationMaker ¼¼ÆÃ.
 	m_pAnimationMaker = AnimationMaker::create("Atroce", ".png");

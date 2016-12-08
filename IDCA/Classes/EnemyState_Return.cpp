@@ -27,6 +27,7 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float distanceFromOrigin = enemy->getDistanceFromOrigin();
 	float chaseRange = enemy->getChasingRange();
+	enemy->CalUnitVecToOrigin();
 
 	if (isPlayerInChasingRange(chaseRange, distanceFromPlayer))
 	{
@@ -39,7 +40,6 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	}
 	else
 	{
-		enemy->CalUnitVecToOrigin();
 		enemy->MoveEnemy(dt);
 	}
 
