@@ -41,36 +41,43 @@ Vector<Enemy*>* EnemyManager::getEnemyVector()
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
 void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition)
 {
-
+	// TODO :: 함수 포인터로 변환.
+	Enemy* newEnemy;
 	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
-		auto* newEnemy = Enemy_Choco::create(initPosition);
-		newEnemy->setEnemyType(ENEMY_TYPE::CHOCO);
-		newEnemy->setMapPointer(getMapPointer());
-		m_pEnemyVector.pushBack(newEnemy);
-		getMapPointer()->addChild(newEnemy);
+		newEnemy = Enemy_Choco::create(initPosition);
 	}
 	else if (enemyType == ENEMY_TYPE::ATROCE)
 	{
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
-		auto* newEnemy = Enemy_Atroce::create(initPosition);
-		newEnemy->setEnemyType(ENEMY_TYPE::ATROCE);
-		newEnemy->setMapPointer(getMapPointer());
-		m_pEnemyVector.pushBack(newEnemy);
-		getMapPointer()->addChild(newEnemy);
+		newEnemy = Enemy_Atroce::create(initPosition);
 	}
 
+	newEnemy->setEnemyType(enemyType);
+	newEnemy->setMapPointer(getMapPointer());
+	m_pEnemyVector.pushBack(newEnemy);
+	getMapPointer()->addChild(newEnemy);
 
 	return;
 }
 
 void EnemyManager::ProvidePlayerPosition(const Vec2 inputPlayerPosition)
 {
+	auto iter = m_pEnemyVector.begin();
+	for (; iter != m_pEnemyVector.end(); ++iter)
+	{
+		(*iter)->setPlayerPosition(inputPlayerPosition);
+	}
+
+	/*
 	for (int i = 0; i < m_pEnemyVector.size(); ++i)
 	{
 		m_pEnemyVector.at(i)->setPlayerPosition(inputPlayerPosition);
 	}
+	*/
 
 	return;
 }
+
+// TODO :: Function Stage 1 Setting 만들기. ( Choco 1,2가 죽으면 다른 몹 소환 )

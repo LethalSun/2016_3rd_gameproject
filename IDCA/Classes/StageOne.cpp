@@ -82,6 +82,8 @@ void StageOne::update(float delta)
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 
+	position = m_pPlayerCharacterManager->getPlayerPosition();
+
 	if(state == 0 || state == 2)
 	{
 		Vec2 backgroundposition = m_pMap->getPosition();

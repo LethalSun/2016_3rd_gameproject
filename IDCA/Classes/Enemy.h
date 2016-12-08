@@ -17,7 +17,6 @@ public:
 	void              changeState();
 
 	CC_SYNTHESIZE(EnemyState*, m_pState, State);
-	CC_SYNTHESIZE(EnemyState*, m_pCurrentState, CurrentState);
 	CC_SYNTHESIZE(EnemyState*, m_pBeforeState, BeforeState);
 
 
@@ -41,9 +40,8 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 
 
-	int moveSpeed;
 	/* Member Function */
-	void				 move(const float deltaTime);
+	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
 	void				 CalUnitVecToOrigin();
 	void				 TranslateUnitVec();
@@ -51,6 +49,16 @@ public:
 	void				 CalDistanceFromOrigin();
 	void				 HitedMove(const float deltaTime);
 	void				 CalDirection();
+	void				 CatchStateAndDirection();
+
+	/* Animation Function */
+	void				 Stop();
+	bool				 IsStopContinued();
+	void				 Move();
+	bool				 IsMoveContinued();
+	void				 Attack();
+	bool				 IsAttackContinued();
+	void				 DecideWhatIsCurrentAnimation();
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {

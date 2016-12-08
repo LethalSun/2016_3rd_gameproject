@@ -2,6 +2,12 @@
 #include "Enemy.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
+#include "AnimationMaker.h"
+#include "EnemyState_Approach.h"
+#include "EnemyState_Attack.h"
+#include "EnemyState_Return.h"
+#include "EnemyState_Search.h"
+#include "EnemyState_Waiting.h"
 
 
 bool Enemy::init(const Vec2 initPosition)
@@ -21,11 +27,13 @@ bool Enemy::init(const Vec2 initPosition)
 
 void Enemy::update(const float deltaTime)
 {
+	DecideWhatIsCurrentAnimation();
 	m_pState->runState(this, deltaTime);
 	CalDirection();
 	CalDistanceFromPlayer();
 	CalDistanceFromOrigin();
 
+	CatchStateAndDirection();
 	return;
 }
 
@@ -55,20 +63,12 @@ void Enemy::CalDistanceFromOrigin()
 
 
 // Delta 값을 받아 스프라이트를 움직이는 함수.
-void Enemy::move(const float deltaTime)
+void Enemy::MoveEnemy(const float deltaTime)
 {
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime,this);
 	
+
 	this->setPosition(position);
-	/*
-	auto deltaX = getUnitVec().x * getMoveSpeed() * deltaTime;
-	auto deltaY = getUnitVec().y * getMoveSpeed() * deltaTime;
-
-	auto currentX = this->getPositionX();
-	auto currentY = this->getPositionY();
-
-	this->setPosition(currentX + deltaX, currentY + deltaY);
-	*/
 	return;
 }
 
@@ -113,18 +113,10 @@ void Enemy::CalUnitVecToPlayer()
 // UnitVec을 Direction으로 바꾸어주는 함수.
 void Enemy::CalDirection()
 {
-	if (!getUnitVec().x || !getUnitVec().y)
+	if (!getTranslatedUnitVec().x || !getTranslatedUnitVec().y)
 	{
-		int dx = 0;
-		int dy = 0;
-		if (!getUnitVec().x)
-		{
-			dx = (getUnitVec().x > 0) ? 1 : -1;
-		}
-		if (!getUnitVec().y)
-		{
-			dy = (getUnitVec().y > 0) ? 1 : -1;
-		}
+		int dx = getTranslatedUnitVec().x;
+		int dy = getTranslatedUnitVec().y;
 
 		if ((dx == 0) && (dy == 1))
 		{
@@ -166,9 +158,11 @@ void Enemy::CalDirection()
 
 void Enemy::TranslateUnitVec()
 {
-	int x, y;
+	int x = 0;
+	int y = 0;
+	// TODO :: 무시하는 보정 값 변수로 빼기.
 
-	if (getUnitVec().x != 0)
+	if (abs(getUnitVec().x) > 0.01)
 	{
 		x = (getUnitVec().x > 0) ? 1 : -1;
 	}
@@ -177,7 +171,7 @@ void Enemy::TranslateUnitVec()
 		x = 0;
 	}
 
-	if (getUnitVec().y != 0)
+	if (abs(getUnitVec().y) > 0.01)
 	{
 		y = (getUnitVec().y > 0) ? 1 : -1;
 	}
@@ -187,5 +181,109 @@ void Enemy::TranslateUnitVec()
 	}
 
 	setTranslatedUnitVec(Vec2(x, y));
+	return;
+}
+
+
+void Enemy::CatchStateAndDirection()
+{
+	// State Catch
+	setBeforeState(getState());
+	
+	// Direction Catch
+	setBeforeDirection(getDirection());
+}
+
+void Enemy::Stop()
+{
+	if (IsStopContinued())
+	{
+		return;
+	}
+	m_pAnimationMaker->SetAnimationStop();
+	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
+
+	return;
+}
+
+bool Enemy::IsStopContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::STOP
+		&& (getBeforeDirection() == getDirection())
+		&& (getBeforeState() == getState()))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void Enemy::Move()
+{
+	if (IsMoveContinued())
+	{
+		return;
+	}
+	m_pAnimationMaker->SetAnimationMove();
+	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
+
+	return;
+}
+
+bool Enemy::IsMoveContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+		&& (getBeforeDirection() == getDirection())
+		&& (getBeforeState() == getState()))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void Enemy::Attack()
+{
+	if (IsAttackContinued())
+	{
+		return;
+	}
+	m_pAnimationMaker->SetAnimationAttack();
+	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
+
+	return;
+}
+
+bool Enemy::IsAttackContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
+		&& (getBeforeDirection() == getDirection())
+		&& (getBeforeState() == getState()))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void Enemy::DecideWhatIsCurrentAnimation()
+{
+	// TODO :: 함수 포인터로 핸들링하기.
+	auto currentStateType = getState()->returnStateNumber();
+	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
+		|| currentStateType == ENEMY_STATE_TYPE::RETURN)
+	{
+		Move();
+	}
+	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
+	{
+		Attack();
+	}
+	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
+		|| currentStateType == ENEMY_STATE_TYPE::WAITING)
+	{
+		Stop();
+	}
+	
 	return;
 }
