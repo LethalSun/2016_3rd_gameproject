@@ -11,7 +11,8 @@ public:
 	//캐릭터의 포인터를 멤버변수로 가지고 있고 그걸 반환한다
 	PlayerCharacter* GetCharacter();
 	Vec2			 getPlayerPosition();
-	void			 setPlayerPosition(Vec2);
+	void			 setPlayerPosition(Vec2 position, Vec2 backgroundPosition);
+
 	int				 getState();
 
 	//인풋레이어에서 인풋값을 읽어오는 함수
@@ -50,4 +51,6 @@ private:
 
 	//캐릭터의 포인터
 	PlayerCharacter* m_pCharacter;
+	//캐릭터의 초기 위치
+	Vec2 m_worldPosition;
 };

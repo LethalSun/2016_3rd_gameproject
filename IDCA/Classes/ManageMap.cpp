@@ -5,7 +5,10 @@
 TMXTiledMap* ManageMap::loadMap(const char* mapName)
 {
 	m_pMap = TMXTiledMap::create(mapName);
-
+/*
+	auto objectGroup = m_pMap->getObjectGroup("Object layer 1");
+	auto startObject = objectGroup->getObject("Start");
+	*/
 	return m_pMap;
 }
 

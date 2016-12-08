@@ -32,6 +32,7 @@ bool PlayerCharacterManager::init(const char * fileName, const char * fileExtent
 	{
 		m_pCharacter = PlayerCharacter::create(fileName, fileExtention);
 	}
+	
 	m_pCharacter->setPosition(Vec2(100, 450));
 
 	addChild(m_pCharacter);
@@ -63,9 +64,15 @@ Vec2 PlayerCharacterManager::getPlayerPosition()
 {
 	return m_pCharacter->getPosition();
 }
-void PlayerCharacterManager::setPlayerPosition(Vec2 position)
+
+void PlayerCharacterManager::setPlayerPosition(Vec2 position,Vec2 backgroundPosition)
 {
-	m_pCharacter->setPosition(position);
+
+	if(m_pCharacter->GetState() == 0 || m_pCharacter->GetState() == 2)
+	{
+		m_pCharacter->setPosition(position);
+		m_worldPosition = position - backgroundPosition;
+	}
 }
 
 void PlayerCharacterManager::GetUnitVac(int * input)

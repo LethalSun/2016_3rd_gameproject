@@ -73,7 +73,9 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::MoveEnemy(const float deltaTime)
 {
-	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
+	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime,this);
+	
+
 	this->setPosition(position);
 	return;
 }
