@@ -8,6 +8,10 @@
 #include "ManageEnemyMove.h"
 #include "Enemy_Choco.h"
 #include "EnemyManager.h"
+#include "SimpleAudioEngine.h"
+
+const char BGM[] = "Sound/JustClimbing.mp3";
+
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -40,6 +44,9 @@ bool StageOne::init()
 		return false;
 	}
 
+	// 배경음 등록.
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM);
+
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
@@ -61,7 +68,7 @@ bool StageOne::init()
 	// EnemyManager 등록
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
 	addChild(m_pEnemyManager);
 
