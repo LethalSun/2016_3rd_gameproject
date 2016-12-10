@@ -15,7 +15,7 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
-	setAttackRange(150.f);
+	setAttackRange(100.f);
 	setMoveSpeed(2.f);
 	setIsEnemyPreemptive(true);
 	setAttackSound("Sound/Atroce_swing.mp3");

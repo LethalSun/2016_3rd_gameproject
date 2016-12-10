@@ -29,7 +29,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
 	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
-	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange + 50.f, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
@@ -39,7 +39,6 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	}
 	else
 	{
-		enemy->Attack();
 		CCLOG("Attack!");
 	}
 

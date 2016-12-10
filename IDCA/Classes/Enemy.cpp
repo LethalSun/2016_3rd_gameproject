@@ -288,6 +288,7 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
 	{
+		Attack();
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
 		|| currentStateType == ENEMY_STATE_TYPE::WAITING)
