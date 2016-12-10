@@ -30,7 +30,6 @@ const char PLAYER_FILE_EXTENTION[] = ".png";
 //HW
 // Json 파일로 변환전까지 임시로 쓰는 Define.h
 
-
 const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
 const float STOP_ANIMATION_SPEED = 0.005f;
@@ -51,7 +50,6 @@ namespace INPUT_LAYER
 		keyAttack = 2, keySkillAttack = 3, keySkillDefence = 4, keyESC = 5,
 
 		stateIdxNum = 6
-
 	};
 
 	enum UNIT_VEC_INDEX
@@ -70,7 +68,6 @@ namespace INPUT_LAYER
 	{
 		UP = 0, DOWN = 1, RIGHT = 2, LEFT = 3, ARROW_NUM = 4
 	};
-
 }
 
 enum ENEMY_TYPE
@@ -79,7 +76,6 @@ enum ENEMY_TYPE
 	ATROCE = 1,
 	ENEMY_TYPE_NUM = 2
 };
-
 
 namespace CONFIG_DEFAULT
 {
@@ -90,6 +86,27 @@ namespace CONFIG_DEFAULT
 
 enum ENEMY_STATE_TYPE
 {
-	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, STATE_NUM = 5 
+	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, STATE_NUM = 5
 };
+
+//공격범위와 피격범위를 위한 태그
+const int RED_BOX_TAG = 10;
+const int GREEN_BOX_TAG = 11;
+//아크비숍 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float ARCHBISHOP_ATTACK_RANGE = 35.f;
+const float ARCHBISHOP_BODY_RANGE_X = 30.f;
+const float ARCHBISHOP_BODY_RANGE_Y = 90.f;
+//아트로스 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float ATROCE_ATTACK_RANGE = 68.f;
+const float ATROCE_BODY_RANGE_X = 45.f;
+const float ATROCE_BODY_RANGE_Y = 120.f;
+//초코 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float CHOCO_ATTACK_RANGE = 20.f;
+const float CHOCO_BODY_RANGE_X = 20.f;
+const float CHOCO_BODY_RANGE_Y = 45.f;
+//워리어 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float WORRIOR_ATTACK_RANGE = 50.f;
+const float WORRIOR_BODY_RANGE_X = 25.f;
+const float WORRIOR_BODY_RANGE_Y = 95.f;
+
 //KW

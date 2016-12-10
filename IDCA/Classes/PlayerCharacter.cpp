@@ -4,9 +4,45 @@
 #include <windows.h>
 #include <iostream>
 
+void PlayerCharacter::SetAttackAnchorPointForMakeDebugBox(Vec2 attackAnchorPointForDebugBox)
+{
+	m_AttackAnchorPointForDebugBox = attackAnchorPointForDebugBox;
+}
+
+void PlayerCharacter::SetBodyAnchorPointForMakeDebugBox(Vec2 bodyAnchorPointForDebugBox)
+{
+	m_BodyAnchorPointForDebugBox = bodyAnchorPointForDebugBox;
+}
+
+PlayerCharacter::PlayerCharacter(const Vec2 AttackRange, const Vec2 BodyRange)
+	:m_RedBoxTag(RED_BOX_TAG),
+	m_GreenBoxTag(GREEN_BOX_TAG),
+	m_AttackRange(AttackRange),
+	m_BodyRange(BodyRange)
+{
+}
+
+PlayerCharacter::~PlayerCharacter()
+{
+}
+
 PlayerCharacter * PlayerCharacter::create(const char * fileName, const char * fileExtention)
 {
-	auto pPlayerCharacter = new(std::nothrow) PlayerCharacter();
+	PlayerCharacter* pPlayerCharacter(nullptr);
+	String filename = fileName;
+	if (filename.compare("archbishop") == 0)
+	{
+		auto attackRange = Vec2(ARCHBISHOP_ATTACK_RANGE, ARCHBISHOP_ATTACK_RANGE);
+		auto bodyRange = Vec2(ARCHBISHOP_BODY_RANGE_X, ARCHBISHOP_BODY_RANGE_Y);
+		pPlayerCharacter = new(std::nothrow) PlayerCharacter(attackRange, bodyRange);
+	}
+	else if (filename.compare("Worrior") == 0)
+	{
+		auto attackRange = Vec2(WORRIOR_ATTACK_RANGE, WORRIOR_ATTACK_RANGE);
+		auto bodyRange = Vec2(WORRIOR_BODY_RANGE_X, WORRIOR_BODY_RANGE_Y);
+		pPlayerCharacter = new(std::nothrow) PlayerCharacter(attackRange, bodyRange);
+	}
+
 	if (pPlayerCharacter&&pPlayerCharacter->init(fileName, fileExtention))
 	{
 		pPlayerCharacter->autorelease();
@@ -173,23 +209,22 @@ void PlayerCharacter::CheckStopState()
 
 Vec2 PlayerCharacter::GetAttackAnchorPoint()
 {
+	return m_AttackAnchorPoint;
+}
+
+void PlayerCharacter::SetAttackAnchorPoint(Vec2 attackAnchorPoint)
+{
+	m_AttackAnchorPoint = attackAnchorPoint;
 }
 
 Vec2 PlayerCharacter::GetBodyAnchorPoint()
 {
-	return Vec2();
+	return m_BodyAnchorPoint;
 }
 
-void PlayerCharacter::WhenCollided(int, int, int)
+void PlayerCharacter::SetBodyAnchorPoint(Vec2 bodyAnchorPoint)
 {
-}
-
-PlayerCharacter::PlayerCharacter()
-{
-}
-
-PlayerCharacter::~PlayerCharacter()
-{
+	m_BodyAnchorPoint = bodyAnchorPoint;
 }
 
 bool PlayerCharacter::IsAttackContinued()
@@ -224,4 +259,25 @@ void PlayerCharacter::SaveBeforeStateAndDirection()
 {
 	m_BeforeState = m_State;
 	m_BeforeDirection = m_Direction;
+}
+
+void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
+{
+	if (getChildByTag(tag) != nullptr)
+	{
+		removeChildByTag(tag);
+	}
+	Vec2 vertex[2] = { Vec2(position.x - boxInfo.x / 2,position.y - boxInfo.y / 2),
+		Vec2(position.x + boxInfo.x / 2,position.y + boxInfo.y / 2) };
+	auto box = DrawNode::create();
+	if (tag == GREEN_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else if (tag == RED_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+
+	addChild(box, 0, tag);
 }

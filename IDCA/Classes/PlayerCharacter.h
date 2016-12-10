@@ -46,12 +46,27 @@ public:
 
 	//공격이 끝났는지 확인하는 함수
 	void CheckStopState();
-	//공격 앵커포인터를 확인하는 함수
+
+	//공격 앵커포인트를 확인,설정하는 함수
 	Vec2 GetAttackAnchorPoint();
+	void SetAttackAnchorPoint(Vec2);
+
+	//피격의 앵커포인트를 확인,설정하는 함수
 	Vec2 GetBodyAnchorPoint();
+	void SetBodyAnchorPoint(Vec2);
+
+	//공격의 범위를 확인,설정하는 함수
+	Vec2 GetAttackRange();
+
+	//피격의 범위를 확인,설정하는 함수
+	Vec2 GetBodyRange();
+
+	void SetAttackAnchorPointForMakeDebugBox(Vec2);
+
+	void SetBodyAnchorPointForMakeDebugBox(Vec2);
 	//충돌(공격을 받거나 했을때)일경우 충돌 매니져 에서 호출 되는 함수
 	void WhenCollided(int, int, int);
-	PlayerCharacter();
+	PlayerCharacter(const Vec2, const Vec2);
 	~PlayerCharacter();
 
 private:
@@ -75,11 +90,12 @@ private:
 	Skill* m_DefenseSkill;
 	Skill* m_AttackSkill;
 
-	//공격의 앵커포인트와 타격의 앵커 포인트
-	Vec2 m_AttackAnchorPoint;
-	Vec2 m_BodyAnchorPointer;
 	//상태이상정보
 	int m_Mezz;
+
+	//공격과 피격범위의 태그
+	const int m_RedBoxTag;
+	const int m_GreenBoxTag;
 
 	//애니메이션을 만들고 관리하는 변수
 	AnimationMaker* m_pAnimationMaker;
@@ -90,4 +106,17 @@ private:
 
 	//이전 프레임의 상태와 방향을 저장하는 함수
 	void SaveBeforeStateAndDirection();
+
+	//피격범위와 공격범위를 디버깅시 표시하는 함수
+	void MakeBox(Vec2 position, Vec2 boxInfo, const int);
+
+	//공격 방향을
+	//캐릭터의 피격범위 피격점,공격범위 공격점을 저장하는 변수
+	Vec2 m_AttackAnchorPoint;
+	Vec2 m_AttackAnchorPointForDebugBox;
+	const Vec2 m_AttackRange;
+
+	Vec2 m_BodyAnchorPoint;
+	Vec2 m_BodyAnchorPointForDebugBox;
+	const Vec2 m_BodyRange;
 };
