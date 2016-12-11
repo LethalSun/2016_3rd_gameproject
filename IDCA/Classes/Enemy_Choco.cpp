@@ -4,14 +4,12 @@
 #include "Config.h"
 #include "AnimationMaker.h"
 
-
 bool Enemy_Choco::init(const Vec2 initPosition)
 {
 	if (!Enemy::init(initPosition))
 	{
 		return false;
 	}
-
 
 	// Config 싱글톤 클래스 호출.
 	//m_pConfig->getInstance();
@@ -21,15 +19,18 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	setChasingRange(500.f);
 	setAttackRange(50.f);
 	setMoveSpeed(3.5f);
+	auto AttackRangeChoco = Vec2(CHOCO_ATTACK_RANGE, CHOCO_ATTACK_RANGE);
+	setAttackRangeForCollide(AttackRangeChoco);
+	auto BodyRangeChoco = Vec2(CHOCO_BODY_RANGE_X, CHOCO_BODY_RANGE_Y);
+	setBodyRangeForCollide(BodyRangeChoco);
 	// 내부 변수값 세팅.
 	/*setSearchingRange	(m_pConfig->getChocoSearchingRange());
 	setChasingRange		(m_pConfig->getChocoChasingRange());
 	setAttackRange		(m_pConfig->getChocoAttackRange());
 	setMoveSpeed		(m_pConfig->getChocoMoveSpeed());*/
-	setIsAttackedOnce	(false);
+	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(false);
 	setOrigin(Vec2(initPosition.x, initPosition.y));
-
 
 	// AnimationMaker 세팅.
 	m_pAnimationMaker = AnimationMaker::create("Choco", ".png");
