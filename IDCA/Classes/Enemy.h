@@ -40,7 +40,7 @@ public:
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
-	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -54,13 +54,14 @@ public:
 	void				 CatchStateAndDirection();
 
 	/* Animation Function */
-	void				 Stop();
+	bool				 Stop();
 	bool				 IsStopContinued();
-	void				 Move();
+	bool				 Move();
 	bool				 IsMoveContinued();
-	void				 Attack();
+	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
+
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {

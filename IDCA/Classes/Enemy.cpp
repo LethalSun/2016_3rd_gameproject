@@ -10,6 +10,9 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 
+const Vec2 ZERO = Vec2(0.f, 0.f);
+const float IgnoreMoveRange = 0.01f;
+
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -19,15 +22,12 @@ bool Enemy::init(const Vec2 initPosition)
 	}
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
-	m_pLabel = Label::create();
-	m_pLabel->setColor(ccc3(255, 0, 0));
-	addChild(m_pLabel, 5);
 
 	setPosition(initPosition);
 	setOrigin(initPosition);
-	setUnitVecToPlayer(Vec2(0, 0));
-	setUnitVecToOrigin(Vec2(0, 0));
-	setTranslatedUnitVec(Vec2(0, 0));
+	setUnitVecToPlayer(ZERO);
+	setUnitVecToOrigin(ZERO);
+	setTranslatedUnitVec(ZERO);
 	setBeforeDirection(DIRECTION::BOTTOM);
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
@@ -43,11 +43,6 @@ void Enemy::update(const float deltaTime)
 
 	m_pState->runState(this, deltaTime);
 	DecideWhatIsCurrentAnimation();
-
-	char buf[1024];
-	sprintf(buf, "X : %f, Y : %f\n posX : %f, posY : %f\n PlayerX : %f, PlayerY: %f Distance : %f\n BeforeDirec : %d, Direc : %d", getTranslatedUnitVec().x, getTranslatedUnitVec().y, getPosition().x, getPosition().y, getPlayerPosition().x, getPlayerPosition().y, getDistanceFromPlayer(), getBeforeDirection(), getDirection());
-	m_pLabel->setString(buf);
-	CCLOG(buf);
 	
 	return;
 }
@@ -170,9 +165,8 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 {
 	int x = 0;
 	int y = 0;
-	// TODO :: 무시하는 보정 값 변수로 빼기.
 
-	if (abs(InputUnitVec.x) > 0.01)
+	if (abs(InputUnitVec.x) > IgnoreMoveRange)
 	{
 		x = (InputUnitVec.x > 0) ? 1 : -1;
 	}
@@ -181,7 +175,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 		x = 0;
 	}
 
-	if (abs(InputUnitVec.y) > 0.01)
+	if (abs(InputUnitVec.y) > IgnoreMoveRange) 
 	{
 		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
@@ -204,16 +198,16 @@ void Enemy::CatchStateAndDirection()
 	setBeforeDirection(getDirection());
 }
 
-void Enemy::Stop()
+bool Enemy::Stop()
 {
 	if (IsStopContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationStop();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	return;
+	return true;
 }
 
 bool Enemy::IsStopContinued()
@@ -228,16 +222,16 @@ bool Enemy::IsStopContinued()
 	return false;
 }
 
-void Enemy::Move()
+bool Enemy::Move()
 {
 	if (IsMoveContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationMove();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	return;
+	return true;
 }
 
 bool Enemy::IsMoveContinued()
@@ -252,17 +246,17 @@ bool Enemy::IsMoveContinued()
 	return false;
 }
 
-void Enemy::Attack()
+bool Enemy::Attack()
 {
 	if (IsAttackContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 	int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
-	return;
+	return true;
 }
 
 bool Enemy::IsAttackContinued()
@@ -295,6 +289,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	{
 		Stop();
 	}
+
+	// Question :: 함수 포인터 질문하기.
+	//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
 	
 	return;
 }
