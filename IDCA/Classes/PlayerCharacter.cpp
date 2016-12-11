@@ -145,7 +145,7 @@ void PlayerCharacter::update(float dt)
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
-		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
+		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
 	}
 	else if (m_State == STATE::MOVE)
 	{

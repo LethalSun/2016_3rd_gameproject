@@ -99,12 +99,12 @@ void CollideManager::CheckCharacterAttack()
 			+ (*iter)->getAttackRangeForCollide().x / 2;
 
 		auto x = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().x,
-			(*iter)->getAttackAnchorPoint().x);
+			(*iter)->getBodyAnchorPoint().x);
 		// Y collide
 		auto yMin = m_pPlayerCharacter->GetAttackRange().y / 2
 			+ (*iter)->getAttackRangeForCollide().y / 2;
 		auto y = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().y,
-			(*iter)->getAttackAnchorPoint().y);
+			(*iter)->getBodyAnchorPoint().y);
 
 		if ((xMin >= x) && (yMin >= y))
 		{

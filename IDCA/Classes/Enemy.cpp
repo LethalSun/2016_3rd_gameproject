@@ -45,7 +45,7 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
+	//MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
 
 	char buf[255];
 	sprintf(buf, "HP: %d", getHP());
@@ -83,7 +83,7 @@ void Enemy::MoveEnemy(const float deltaTime)
 {
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
 
-	this->setPosition(position);
+	//this->setPosition(position);
 	return;
 }
 

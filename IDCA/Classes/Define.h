@@ -106,7 +106,7 @@ const float ARCHBISHOP_BODY_RANGE_X = 30.f;
 const float ARCHBISHOP_BODY_RANGE_Y = 90.f;
 //아트로스 의 공격범위(정사각형) 피격범위의 가로와 세로
 const float ATROCE_ATTACK_RANGE = 68.f;
-const float ATROCE_BODY_RANGE_X = 55.f;
+const float ATROCE_BODY_RANGE_X = 80.f;
 const float ATROCE_BODY_RANGE_Y = 120.f;
 //초코 의 공격범위(정사각형) 피격범위의 가로와 세로
 const float CHOCO_ATTACK_RANGE = 20.f;
