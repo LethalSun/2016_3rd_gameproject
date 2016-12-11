@@ -45,11 +45,11 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	//MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
+	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
 
-	//char buf[255];
-	//sprintf(buf, "HP: %d", getHP());
-	//m_pLabel->setString(buf);
+	char buf[255];
+	sprintf(buf, "HP: %d", getHP());
+	m_pLabel->setString(buf);
 	//CCLOG(buf);
 
 	return;

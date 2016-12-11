@@ -78,7 +78,9 @@ bool StageOne::init()
 	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
 	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
 	addChild(m_pCollideManager);
+	//임시 디버깅용 코드
 
+	//임시 디버깅용코드 끝
 	scheduleUpdate();
 	return true;
 }
