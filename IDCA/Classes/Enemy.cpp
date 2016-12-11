@@ -10,7 +10,6 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 
-
 bool Enemy::init(const Vec2 initPosition)
 {
 	if (!Node::init())
@@ -36,12 +35,16 @@ void Enemy::update(const float deltaTime)
 	CalDistanceFromOrigin();
 
 	DecideWhatIsCurrentAnimation();
-	
+
+	CalculateBodyAnchorPoint();
+
+	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
+
 	char buf[255];
-	sprintf(buf, "Direction : %d, beforeDirection : %d, State : %d, beforeState : %d, unitX : %f, unitY : %f", getDirection(), getBeforeDirection(), getState()->returnStateNumber(), getBeforeState()->returnStateNumber(), getTranslatedUnitVec().x, getTranslatedUnitVec().y);
+	sprintf(buf, "HP: %d Direction : %d, beforeDirection : %d, State : %d, beforeState : %d, unitX : %f, unitY : %f", getHP(), getDirection(), getBeforeDirection(), getState()->returnStateNumber(), getBeforeState()->returnStateNumber(), getTranslatedUnitVec().x, getTranslatedUnitVec().y);
 	m_pLabel->setString(buf);
 	CCLOG(buf);
-	
+
 	return;
 }
 
@@ -68,13 +71,10 @@ void Enemy::CalDistanceFromOrigin()
 	return;
 }
 
-
-
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::MoveEnemy(const float deltaTime)
 {
-	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime,this);
-	
+	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
 
 	this->setPosition(position);
 	return;
@@ -158,11 +158,9 @@ void Enemy::CalDirection()
 		{
 			setDirection(DIRECTION::TOP_LEFT);
 		}
-
 	}
 	return;
 }
-
 
 void Enemy::TranslateUnitVec()
 {
@@ -192,15 +190,73 @@ void Enemy::TranslateUnitVec()
 	return;
 }
 
-
 void Enemy::CatchStateAndDirection()
 {
 	// State Catch
 	setBeforeState(getState());
-	
+
 	// Direction Catch
 	setBeforeDirection(getDirection());
 	CalDirection();
+}
+
+void Enemy::CalculateAttackAnchorPoint()
+{
+	//디버그 박스용 어택포인트
+	auto position = Vec2(0.f, 0.f);
+
+	auto bodyPositionX = position.x;
+	auto bodyPositionY = position.y;
+
+	auto offsetX = (m_BodyRangeForCollide.x / 2) + (m_AttackRangeForCollide.x / 2);
+	auto deltaX = m_TranslatedUnitVec.x * offsetX;
+	auto attackPostionX = bodyPositionX + deltaX;
+
+	auto offsetY = (m_BodyRangeForCollide.y / 2) + (m_AttackRangeForCollide.y / 2);
+	auto deltaY = m_TranslatedUnitVec.y * offsetY;
+	auto attackPostionY = bodyPositionY + deltaY;
+
+	m_AttackAnchorPointForDebugBox = Vec2(attackPostionX, attackPostionY);
+
+	//실제 충돌용 어택 포인트
+	position = getPosition();
+	bodyPositionX = position.x;
+	bodyPositionY = position.y;
+
+	attackPostionX = bodyPositionX + deltaX;
+	attackPostionY = bodyPositionY + deltaY;
+
+	m_AttackAnchorPoint = Vec2(attackPostionX, attackPostionY);
+}
+
+void Enemy::CalculateBodyAnchorPoint()
+{
+	//디버그 박스용 피격포인트
+	m_BodyAnchorPointForDebugBox = Vec2(0.f, 0.f);
+
+	//실제 충돌용 피격포인트
+	m_BodyAnchorPoint = getPosition();
+}
+
+void Enemy::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
+{
+	if (getChildByTag(tag) != nullptr)
+	{
+		removeChildByTag(tag);
+	}
+	Vec2 vertex[2] = { Vec2(position.x - boxInfo.x / 2,position.y - boxInfo.y / 2),
+		Vec2(position.x + boxInfo.x / 2,position.y + boxInfo.y / 2) };
+	auto box = DrawNode::create();
+	if (tag == GREEN_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else if (tag == RED_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+
+	addChild(box, 0, tag);
 }
 
 void Enemy::Stop()
@@ -261,6 +317,8 @@ void Enemy::Attack()
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 	int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
+	CalculateAttackAnchorPoint();
+	MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
 	return;
 }
 
@@ -294,7 +352,7 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	{
 		Stop();
 	}
-	
+
 	CatchStateAndDirection();
 	return;
 }

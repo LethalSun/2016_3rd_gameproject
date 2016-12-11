@@ -19,20 +19,19 @@ public:
 	CC_SYNTHESIZE(EnemyState*, m_pState, State);
 	CC_SYNTHESIZE(EnemyState*, m_pBeforeState, BeforeState);
 
-
 	/* Member Variable */
 	CC_SYNTHESIZE(float, m_SearchingRange, SearchingRange);
 	CC_SYNTHESIZE(float, m_ChasingRange, ChasingRange);
 	CC_SYNTHESIZE(float, m_AttackRange, AttackRange);
 	CC_SYNTHESIZE(Vec2, m_Origin, Origin);
 	CC_SYNTHESIZE(float, m_MoveSpeed, MoveSpeed);
-	CC_SYNTHESIZE(bool , m_IsAttackedOnce, IsAttackedOnce);
-	CC_SYNTHESIZE(bool , m_IsEnemyPreemptive, IsEnemyPreemptive);
+	CC_SYNTHESIZE(bool, m_IsAttackedOnce, IsAttackedOnce);
+	CC_SYNTHESIZE(bool, m_IsEnemyPreemptive, IsEnemyPreemptive);
 
-	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition)
+	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
-	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
+	CC_SYNTHESIZE(Vec2, m_UnitVec, UnitVec);
 	CC_SYNTHESIZE(Vec2, m_TranslatedUnitVec, TranslatedUnitVec);
 	CC_SYNTHESIZE(int, m_Direction, Direction);
 	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
@@ -40,7 +39,14 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
 	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
-
+	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
+	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
+	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
+	CC_SYNTHESIZE(Vec2, m_BodyAnchorPoint, BodyAnchorPoint);
+	CC_SYNTHESIZE(Vec2, m_BodyAnchorPointForDebugBox, BodyAnchorPointForDebugBox);
+	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
+	CC_SYNTHESIZE(int, m_HP, HP);
+	CC_SYNTHESIZE(int, m_Damage, Damage);
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
@@ -51,6 +57,9 @@ public:
 	void				 HitedMove(const float deltaTime);
 	void				 CalDirection();
 	void				 CatchStateAndDirection();
+	void				 CalculateAttackAnchorPoint();
+	void				 CalculateBodyAnchorPoint();
+	void				 MakeBox(Vec2, Vec2, const int);
 
 	/* Animation Function */
 	void				 Stop();
@@ -77,10 +86,10 @@ public:
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
-
-
+private:
+	const int m_RedBoxTag{ RED_BOX_TAG };
+	const int m_GreenBoxTag{ GREEN_BOX_TAG };
 };
-
 
 // State¸¦ ÀüÈ¯.
 template <typename T_STATE>

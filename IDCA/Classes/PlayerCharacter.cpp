@@ -4,16 +4,6 @@
 #include <windows.h>
 #include <iostream>
 
-void PlayerCharacter::SetAttackAnchorPointForMakeDebugBox(Vec2 attackAnchorPointForDebugBox)
-{
-	m_AttackAnchorPointForDebugBox = attackAnchorPointForDebugBox;
-}
-
-void PlayerCharacter::SetBodyAnchorPointForMakeDebugBox(Vec2 bodyAnchorPointForDebugBox)
-{
-	m_BodyAnchorPointForDebugBox = bodyAnchorPointForDebugBox;
-}
-
 PlayerCharacter::PlayerCharacter(const Vec2 AttackRange, const Vec2 BodyRange)
 	:m_RedBoxTag(RED_BOX_TAG),
 	m_GreenBoxTag(GREEN_BOX_TAG),
@@ -71,6 +61,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_MaxSP = MAX_SP;
 	m_SP = MAX_SP;
 
+	//데미지 초기화
+	m_Damage = ATTACK_DAMAGE;
 	//스킬을 초기화
 	m_DefenseSkill = nullptr;
 	m_AttackSkill = nullptr;
@@ -137,12 +129,23 @@ void PlayerCharacter::SetSP(int sp)
 	m_SP = sp;
 }
 
+int PlayerCharacter::GetDamage()
+{
+	return m_Damage;
+}
+
+void PlayerCharacter::SetDamage(int damage)
+{
+	m_Damage = damage;
+}
+
 void PlayerCharacter::update(float dt)
 {
 	//m_pAnimationMaker->GetSprite()->stopAllActions();
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
+		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -156,11 +159,9 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-	
+
 	SaveBeforeStateAndDirection();
 	CheckStopState();
-	MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
-
 }
 
 void PlayerCharacter::Attack()
@@ -169,6 +170,7 @@ void PlayerCharacter::Attack()
 	{
 		return;
 	}
+	m_AttackChecked = false;
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
 }
@@ -227,6 +229,43 @@ Vec2 PlayerCharacter::GetBodyAnchorPoint()
 void PlayerCharacter::SetBodyAnchorPoint(Vec2 bodyAnchorPoint)
 {
 	m_BodyAnchorPoint = bodyAnchorPoint;
+}
+
+Vec2 PlayerCharacter::GetAttackRange()
+{
+	return m_AttackRange;
+}
+
+Vec2 PlayerCharacter::GetBodyRange()
+{
+	return m_BodyRange;
+}
+
+void PlayerCharacter::SetAttackAnchorPointForMakeDebugBox(Vec2 attackAnchorPointForDebugBox)
+{
+	m_AttackAnchorPointForDebugBox = attackAnchorPointForDebugBox;
+}
+
+void PlayerCharacter::SetBodyAnchorPointForMakeDebugBox(Vec2 bodyAnchorPointForDebugBox)
+{
+	m_BodyAnchorPointForDebugBox = bodyAnchorPointForDebugBox;
+}
+
+bool PlayerCharacter::IsAttackChecked()
+{
+	if (m_AttackChecked == true)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+void PlayerCharacter::SetAttackChecked()
+{
+	m_AttackChecked = true;
 }
 
 bool PlayerCharacter::IsAttackContinued()

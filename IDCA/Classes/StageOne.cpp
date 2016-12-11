@@ -9,6 +9,7 @@
 #include "Enemy_Choco.h"
 #include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
+#include "CollideManager.h"
 
 const char BGM[] = "Sound/JustClimbing.mp3";
 
@@ -71,6 +72,12 @@ bool StageOne::init()
 	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
 	addChild(m_pEnemyManager);
+
+	//충돌매니져 등록
+	m_pCollideManager = CollideManager::create();
+	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
+	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
+	addChild(m_pCollideManager);
 
 	scheduleUpdate();
 	return true;

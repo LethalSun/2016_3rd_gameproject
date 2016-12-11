@@ -21,9 +21,17 @@ enum DIRECTION
 	LEFT,
 	TOP_LEFT,
 };
-
+//캐릭터 체력 공격력
 const int MAX_HP = 10;
 const int MAX_SP = 10;
+const int ATTACK_DAMAGE = 3;
+
+//아트로스 체력 공격력
+const int ATROCE_MAX_HP = 10;
+const int ATROCE_ATTACK_DAMAGE = 2;
+//초코 체력 공격력
+const int CHOCO_MAX_HP = 3;
+const int CHOCO_ATTACK_DAMAGE = 1;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
@@ -98,7 +106,7 @@ const float ARCHBISHOP_BODY_RANGE_X = 30.f;
 const float ARCHBISHOP_BODY_RANGE_Y = 90.f;
 //아트로스 의 공격범위(정사각형) 피격범위의 가로와 세로
 const float ATROCE_ATTACK_RANGE = 68.f;
-const float ATROCE_BODY_RANGE_X = 45.f;
+const float ATROCE_BODY_RANGE_X = 55.f;
 const float ATROCE_BODY_RANGE_Y = 120.f;
 //초코 의 공격범위(정사각형) 피격범위의 가로와 세로
 const float CHOCO_ATTACK_RANGE = 20.f;

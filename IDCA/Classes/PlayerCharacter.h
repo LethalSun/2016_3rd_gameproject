@@ -28,6 +28,9 @@ public:
 	int GetSP();
 
 	void SetSP(int sp);
+	//데미지를 확인하고 설정하는 함수
+	int GetDamage();
+	void SetDamage(int);
 
 	//업데이트 함수
 	void update(float dt);
@@ -61,11 +64,21 @@ public:
 	//피격의 범위를 확인,설정하는 함수
 	Vec2 GetBodyRange();
 
+	//디버그용 공격피격포인트 확인하는 함스
 	void SetAttackAnchorPointForMakeDebugBox(Vec2);
-
 	void SetBodyAnchorPointForMakeDebugBox(Vec2);
+
+	//공격을 체크 했는지 확인하는 함수.
+	bool IsAttackChecked();
+	void SetAttackChecked();
+
 	//충돌(공격을 받거나 했을때)일경우 충돌 매니져 에서 호출 되는 함수
 	void WhenCollided(int, int, int);
+
+	//애니메이션을 계속해줘야 하는지 확인하는 함수
+	bool IsAttackContinued();
+	bool IsMoveContinued();
+
 	PlayerCharacter(const Vec2, const Vec2);
 	~PlayerCharacter();
 
@@ -77,6 +90,9 @@ private:
 	//마나
 	int m_MaxSP;
 	int m_SP;
+
+	//데미지
+	int m_Damage;
 
 	//이동방향
 	int m_Direction;
@@ -100,10 +116,6 @@ private:
 	//애니메이션을 만들고 관리하는 변수
 	AnimationMaker* m_pAnimationMaker;
 
-	//애니메이션을 계속해줘야 하는지 확인하는 함수
-	bool IsAttackContinued();
-	bool IsMoveContinued();
-
 	//이전 프레임의 상태와 방향을 저장하는 함수
 	void SaveBeforeStateAndDirection();
 
@@ -119,4 +131,7 @@ private:
 	Vec2 m_BodyAnchorPoint;
 	Vec2 m_BodyAnchorPointForDebugBox;
 	const Vec2 m_BodyRange;
+
+	//공격체크를 했는지 체크하는 변수
+	bool m_AttackChecked;
 };
