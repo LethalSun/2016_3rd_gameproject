@@ -10,6 +10,7 @@ class ManageEnemyMove;
 
 class EnemyManager;
 class Enemy_Choco;
+class Enemy;
 
 class StageOne : public Layer
 {
@@ -24,7 +25,7 @@ public:
 	~StageOne() = default;
 
 private:
-
+	Vector<Enemy*>* testVector;
 
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;

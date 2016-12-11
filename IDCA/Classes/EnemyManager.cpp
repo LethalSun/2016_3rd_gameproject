@@ -15,7 +15,6 @@ EnemyManager* EnemyManager::getInstance()
 	return _instance;
 }
 
-
 // ½Ì±ÛÅæÀ» Áö¿öÁÖ´Â ÇÔ¼ö.
 void EnemyManager::deleteInstance()
 {
@@ -30,6 +29,11 @@ void EnemyManager::deleteInstance()
 EnemyManager::EnemyManager()
 {
 	m_pEnemyVector.reserve(8);
+}
+
+EnemyManager::~EnemyManager()
+{
+	int a;
 }
 
 
