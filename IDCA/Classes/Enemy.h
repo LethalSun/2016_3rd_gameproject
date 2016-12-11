@@ -32,7 +32,8 @@ public:
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition)
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
-	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
+	CC_SYNTHESIZE(Vec2 , m_UnitVecToPlayer, UnitVecToPlayer);
+	CC_SYNTHESIZE(Vec2, m_UnitVecToOrigin, UnitVecToOrigin);
 	CC_SYNTHESIZE(Vec2, m_TranslatedUnitVec, TranslatedUnitVec);
 	CC_SYNTHESIZE(int, m_Direction, Direction);
 	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
@@ -45,11 +46,11 @@ public:
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
 	void				 CalUnitVecToOrigin();
-	void				 TranslateUnitVec();
+	void				 TranslateUnitVec(Vec2);
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
 	void				 HitedMove(const float deltaTime);
-	void				 CalDirection();
+	void				 CalDirection(Vec2);
 	void				 CatchStateAndDirection();
 
 	/* Animation Function */
