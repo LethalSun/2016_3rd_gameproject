@@ -7,19 +7,20 @@
 
 bool ManageEnemyMove::init()
 {
-	if (!Node::init())
+	if (!Component::init())
 	{
 		return false;
 	}
+	this->setName("Enemy Mover Component");
+	m_EnemyManager = m_EnemyManager->getInstance();
 
-	//m_EnemyManager = EnemyManager::getInstance();
 	return true;
 }
 
 
+
 Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, const float dt,Enemy* enemy)
 {
-	m_EnemyManager = EnemyManager::getInstance();
 	m_pManageMap = ManageMap::create();
 	enemyVector = m_EnemyManager->getEnemyVector();
 
