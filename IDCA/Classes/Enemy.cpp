@@ -18,27 +18,34 @@ bool Enemy::init(const Vec2 initPosition)
 		return false;
 	}
 
-	setUnitVec(Vec2(0, 0));
-	setDirection(DIRECTION::BOTTOM);
 	m_pManageEnemyMove = ManageEnemyMove::create();
-	setIsAttackedOnce(false);
 	m_pLabel = Label::create();
+	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
+
+	setPosition(initPosition);
+	setOrigin(initPosition);
+	setUnitVecToPlayer(Vec2(0, 0));
+	setUnitVecToOrigin(Vec2(0, 0));
+	setTranslatedUnitVec(Vec2(0, 0));
+	setBeforeDirection(DIRECTION::BOTTOM);
+	setDirection(DIRECTION::BOTTOM);
+	setIsAttackedOnce(false);
 
 	return true;
 }
 
 void Enemy::update(const float deltaTime)
 {
-	m_pState->runState(this, deltaTime);
-	CalDirection();
+	CatchStateAndDirection();
 	CalDistanceFromPlayer();
 	CalDistanceFromOrigin();
 
+	m_pState->runState(this, deltaTime);
 	DecideWhatIsCurrentAnimation();
-	
-	char buf[255];
-	sprintf(buf, "Direction : %d, beforeDirection : %d, State : %d, beforeState : %d, unitX : %f, unitY : %f", getDirection(), getBeforeDirection(), getState()->returnStateNumber(), getBeforeState()->returnStateNumber(), getTranslatedUnitVec().x, getTranslatedUnitVec().y);
+
+	char buf[1024];
+	sprintf(buf, "X : %f, Y : %f\n posX : %f, posY : %f\n PlayerX : %f, PlayerY: %f Distance : %f\n BeforeDirec : %d, Direc : %d", getTranslatedUnitVec().x, getTranslatedUnitVec().y, getPosition().x, getPosition().y, getPlayerPosition().x, getPlayerPosition().y, getDistanceFromPlayer(), getBeforeDirection(), getDirection());
 	m_pLabel->setString(buf);
 	CCLOG(buf);
 	
@@ -95,8 +102,7 @@ void Enemy::CalUnitVecToOrigin()
 	auto deltaY = origin.y - this->getPosition().y;
 
 	Vec2 unitVecToOrigin(deltaX / distanceFromOrigin, deltaY / distanceFromOrigin);
-	setUnitVec(unitVecToOrigin);
-	TranslateUnitVec();
+	setUnitVecToOrigin(unitVecToOrigin);
 	return;
 }
 
@@ -113,18 +119,15 @@ void Enemy::CalUnitVecToPlayer()
 	auto deltaY = getPlayerPosition().y - this->getPosition().y;
 
 	Vec2 unitVecToPlayer(deltaX / distanceFromPlayer, deltaY / distanceFromPlayer);
-	setUnitVec(unitVecToPlayer);
-	TranslateUnitVec();
+	setUnitVecToPlayer(unitVecToPlayer);
 	return;
 }
 
 // UnitVec을 Direction으로 바꾸어주는 함수.
-void Enemy::CalDirection()
+void Enemy::CalDirection(Vec2 InputUnitVec)
 {
-	if (!getTranslatedUnitVec().x || !getTranslatedUnitVec().y)
-	{
-		int dx = getTranslatedUnitVec().x;
-		int dy = getTranslatedUnitVec().y;
+		int dx = InputUnitVec.x;
+		int dy = InputUnitVec.y;
 
 		if ((dx == 0) && (dy == 1))
 		{
@@ -159,29 +162,28 @@ void Enemy::CalDirection()
 			setDirection(DIRECTION::TOP_LEFT);
 		}
 
-	}
 	return;
 }
 
 
-void Enemy::TranslateUnitVec()
+void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 {
 	int x = 0;
 	int y = 0;
 	// TODO :: 무시하는 보정 값 변수로 빼기.
 
-	if (abs(getUnitVec().x) > 0.01)
+	if (abs(InputUnitVec.x) > 0.01)
 	{
-		x = (getUnitVec().x > 0) ? 1 : -1;
+		x = (InputUnitVec.x > 0) ? 1 : -1;
 	}
 	else
 	{
 		x = 0;
 	}
 
-	if (abs(getUnitVec().y) > 0.01)
+	if (abs(InputUnitVec.y) > 0.01)
 	{
-		y = (getUnitVec().y > 0) ? 1 : -1;
+		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
 	else
 	{
@@ -200,7 +202,6 @@ void Enemy::CatchStateAndDirection()
 	
 	// Direction Catch
 	setBeforeDirection(getDirection());
-	CalDirection();
 }
 
 void Enemy::Stop()
@@ -295,6 +296,5 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Stop();
 	}
 	
-	CatchStateAndDirection();
 	return;
 }

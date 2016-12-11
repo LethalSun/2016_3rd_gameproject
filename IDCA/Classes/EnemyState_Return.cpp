@@ -27,7 +27,11 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float distanceFromOrigin = enemy->getDistanceFromOrigin();
 	float chaseRange = enemy->getChasingRange();
+
+	// Settings for walk. ( To Origin )
 	enemy->CalUnitVecToOrigin();
+	enemy->TranslateUnitVec(enemy->getUnitVecToOrigin());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
 	if (isPlayerInChasingRange(chaseRange, distanceFromPlayer))
 	{

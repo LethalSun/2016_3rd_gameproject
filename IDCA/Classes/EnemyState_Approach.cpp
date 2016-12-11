@@ -24,7 +24,11 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	auto distanceFromPlayer = enemy->getDistanceFromPlayer();
 	auto attackRange = enemy->getAttackRange();
 	auto chaseRange = enemy->getChasingRange();
+
+	// Settings for walk ( To Player )
 	enemy->CalUnitVecToPlayer();
+	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
 	if (isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{

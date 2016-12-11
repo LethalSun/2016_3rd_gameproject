@@ -13,15 +13,11 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	}
 
 
-	this->setPosition(initPosition);
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
-	setAttackRange(150.f);
+	setAttackRange(100.f);
 	setMoveSpeed(2.f);
-
-	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(true);
-	setOrigin(initPosition);
 	setAttackSound("Sound/Atroce_swing.mp3");
 
 	// AnimationMaker ¼¼ÆÃ.
@@ -31,6 +27,7 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	m_pAnimationMaker->AddAnimation(getDirection());
 
 	changeState<EnemyState_Search>();
+	setBeforeState(getState());
 
 	return true;
 }
