@@ -49,11 +49,6 @@ void CollideManager::SetPlayerCharacterPointer(PlayerCharacter * playerCharacter
 	m_pPlayerCharacter = playerCharacter;
 }
 
-void CollideManager::SetBackGroundPosition(Vec2 backgroundPosition)
-{
-	m_BackgroundPosition = backgroundPosition;
-}
-
 void CollideManager::SetCMEnemyPointer(Vector<Enemy*>* enemyVector)
 {
 	m_pvEnemy = enemyVector;
@@ -61,4 +56,61 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>* enemyVector)
 
 void CollideManager::update(float dt)
 {
+	CheckCollide();
+}
+
+void CollideManager::CheckCollide()
+{
+	//캐릭터 공격 체크
+	CheckCharacterAttack();
+}
+
+float CollideManager::AbsFloat(float f1, float f2)
+{
+	float fr;
+	if (f1 > f2)
+	{
+		fr = f1 - f2;
+	}
+	else
+	{
+		fr = f2 - f1;
+	}
+	return fr;
+}
+
+void CollideManager::CheckCharacterAttack()
+{
+	if (m_pPlayerCharacter->GetState() != STATE::ATTACK)
+	{
+		return;
+	}
+
+	if (m_pPlayerCharacter->IsAttackChecked() == true)
+	{
+		return;
+	}
+
+	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
+	for (; iter != m_pvEnemy->end(); ++iter)
+	{
+		// X collide
+		auto xMin = m_pPlayerCharacter->GetAttackRange().x / 2
+			+ (*iter)->getAttackRangeForCollide().x / 2;
+
+		auto x = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().x,
+			(*iter)->getAttackAnchorPoint().x);
+		// Y collide
+		auto yMin = m_pPlayerCharacter->GetAttackRange().y / 2
+			+ (*iter)->getAttackRangeForCollide().y / 2;
+		auto y = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().y,
+			(*iter)->getAttackAnchorPoint().y);
+
+		if ((xMin >= x) && (yMin >= y))
+		{
+			auto curHP = (*iter)->getHP();
+			curHP = curHP - m_pPlayerCharacter->GetDamage();
+			(*iter)->setHP(curHP);
+		}
+	}
 }

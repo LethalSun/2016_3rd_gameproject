@@ -4,9 +4,35 @@
 #include <windows.h>
 #include <iostream>
 
+PlayerCharacter::PlayerCharacter(const Vec2 AttackRange, const Vec2 BodyRange)
+	:m_RedBoxTag(RED_BOX_TAG),
+	m_GreenBoxTag(GREEN_BOX_TAG),
+	m_AttackRange(AttackRange),
+	m_BodyRange(BodyRange)
+{
+}
+
+PlayerCharacter::~PlayerCharacter()
+{
+}
+
 PlayerCharacter * PlayerCharacter::create(const char * fileName, const char * fileExtention)
 {
-	auto pPlayerCharacter = new(std::nothrow) PlayerCharacter();
+	PlayerCharacter* pPlayerCharacter(nullptr);
+	String filename = fileName;
+	if (filename.compare("archbishop") == 0)
+	{
+		auto attackRange = Vec2(ARCHBISHOP_ATTACK_RANGE, ARCHBISHOP_ATTACK_RANGE);
+		auto bodyRange = Vec2(ARCHBISHOP_BODY_RANGE_X, ARCHBISHOP_BODY_RANGE_Y);
+		pPlayerCharacter = new(std::nothrow) PlayerCharacter(attackRange, bodyRange);
+	}
+	else if (filename.compare("Worrior") == 0)
+	{
+		auto attackRange = Vec2(WORRIOR_ATTACK_RANGE, WORRIOR_ATTACK_RANGE);
+		auto bodyRange = Vec2(WORRIOR_BODY_RANGE_X, WORRIOR_BODY_RANGE_Y);
+		pPlayerCharacter = new(std::nothrow) PlayerCharacter(attackRange, bodyRange);
+	}
+
 	if (pPlayerCharacter&&pPlayerCharacter->init(fileName, fileExtention))
 	{
 		pPlayerCharacter->autorelease();
@@ -35,6 +61,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_MaxSP = MAX_SP;
 	m_SP = MAX_SP;
 
+	//데미지 초기화
+	m_Damage = ATTACK_DAMAGE;
 	//스킬을 초기화
 	m_DefenseSkill = nullptr;
 	m_AttackSkill = nullptr;
@@ -101,12 +129,23 @@ void PlayerCharacter::SetSP(int sp)
 	m_SP = sp;
 }
 
+int PlayerCharacter::GetDamage()
+{
+	return m_Damage;
+}
+
+void PlayerCharacter::SetDamage(int damage)
+{
+	m_Damage = damage;
+}
+
 void PlayerCharacter::update(float dt)
 {
 	//m_pAnimationMaker->GetSprite()->stopAllActions();
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
+		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -131,6 +170,7 @@ void PlayerCharacter::Attack()
 	{
 		return;
 	}
+	m_AttackChecked = false;
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(m_Direction);
 }
@@ -173,23 +213,59 @@ void PlayerCharacter::CheckStopState()
 
 Vec2 PlayerCharacter::GetAttackAnchorPoint()
 {
+	return m_AttackAnchorPoint;
+}
+
+void PlayerCharacter::SetAttackAnchorPoint(Vec2 attackAnchorPoint)
+{
+	m_AttackAnchorPoint = attackAnchorPoint;
 }
 
 Vec2 PlayerCharacter::GetBodyAnchorPoint()
 {
-	return Vec2();
+	return m_BodyAnchorPoint;
 }
 
-void PlayerCharacter::WhenCollided(int, int, int)
+void PlayerCharacter::SetBodyAnchorPoint(Vec2 bodyAnchorPoint)
 {
+	m_BodyAnchorPoint = bodyAnchorPoint;
 }
 
-PlayerCharacter::PlayerCharacter()
+Vec2 PlayerCharacter::GetAttackRange()
 {
+	return m_AttackRange;
 }
 
-PlayerCharacter::~PlayerCharacter()
+Vec2 PlayerCharacter::GetBodyRange()
 {
+	return m_BodyRange;
+}
+
+void PlayerCharacter::SetAttackAnchorPointForMakeDebugBox(Vec2 attackAnchorPointForDebugBox)
+{
+	m_AttackAnchorPointForDebugBox = attackAnchorPointForDebugBox;
+}
+
+void PlayerCharacter::SetBodyAnchorPointForMakeDebugBox(Vec2 bodyAnchorPointForDebugBox)
+{
+	m_BodyAnchorPointForDebugBox = bodyAnchorPointForDebugBox;
+}
+
+bool PlayerCharacter::IsAttackChecked()
+{
+	if (m_AttackChecked == true)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+void PlayerCharacter::SetAttackChecked()
+{
+	m_AttackChecked = true;
 }
 
 bool PlayerCharacter::IsAttackContinued()
@@ -224,4 +300,25 @@ void PlayerCharacter::SaveBeforeStateAndDirection()
 {
 	m_BeforeState = m_State;
 	m_BeforeDirection = m_Direction;
+}
+
+void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
+{
+	if (getChildByTag(tag) != nullptr)
+	{
+		removeChildByTag(tag);
+	}
+	Vec2 vertex[2] = { Vec2(position.x - boxInfo.x / 2,position.y - boxInfo.y / 2),
+		Vec2(position.x + boxInfo.x / 2,position.y + boxInfo.y / 2) };
+	auto box = DrawNode::create();
+	if (tag == GREEN_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else if (tag == RED_BOX_TAG)
+	{
+		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+
+	addChild(box, 0, tag);
 }
