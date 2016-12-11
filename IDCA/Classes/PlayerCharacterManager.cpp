@@ -86,11 +86,6 @@ void PlayerCharacterManager::CalculateAnchorPointForCollide()
 {
 	CalculateBodyAnchorPoint();
 
-	if (m_pCharacter->GetState() == STATE::ATTACK)
-	{
-		return;
-	}
-
 	if (IsInputAttackState() == true)
 	{
 		CalculateAttackAnchorPoint();
@@ -100,7 +95,7 @@ void PlayerCharacterManager::CalculateAnchorPointForCollide()
 void PlayerCharacterManager::CalculateAttackAnchorPoint()
 {
 	//화면에서의 공격앵커포인트
-	auto position = m_pCharacter->getPosition();
+	auto position = Vec2(0.f, 0.f);
 
 	auto bodyPositionX = position.x;
 	auto bodyPositionY = position.y;
@@ -135,7 +130,7 @@ void PlayerCharacterManager::CalculateAttackAnchorPoint()
 void PlayerCharacterManager::CalculateBodyAnchorPoint()
 {
 	//화면에서의 피격앵커포인트
-	m_BodyAnchorPointForDebugBox = m_pCharacter->getPosition();
+	m_BodyAnchorPointForDebugBox = Vec2(0,0);
 	//맵에서의 피격앵커 포인트
 	m_BodyAnchorPoint = m_worldPosition;
 }
@@ -255,7 +250,7 @@ void PlayerCharacterManager::update(float dt)
 	CalculatePlayerCharacterState();
 	SetPlayerCharacterState();
 	CalculatePlayerCharacterDirection();
-	SetPlayerCharacterDirection();
+	SetPlayerCharacterDirection();	
 	CalculateAnchorPointForCollide();
 
 	//캐릭터 값 설정및 업데이트
@@ -264,6 +259,8 @@ void PlayerCharacterManager::update(float dt)
 	m_pCharacter->SetBodyAnchorPointForMakeDebugBox(m_BodyAnchorPointForDebugBox);
 	m_pCharacter->SetAttackAnchorPoint(m_AttackAnchorPoint);
 	m_pCharacter->SetBodyAnchorPoint(m_BodyAnchorPoint);
+
+
 }
 
 //상태,유닛벡터 조건 확인 함수

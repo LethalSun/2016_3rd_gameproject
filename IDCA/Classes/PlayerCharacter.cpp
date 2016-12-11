@@ -156,9 +156,11 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-
+	
 	SaveBeforeStateAndDirection();
 	CheckStopState();
+	MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
+
 }
 
 void PlayerCharacter::Attack()
