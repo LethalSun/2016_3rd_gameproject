@@ -20,4 +20,5 @@ public:
 	bool	   	 isPlayerInChasingRange(const float, const float);
 	bool	     isPlayerInAttackRange(const float, const float);
 	bool		 isPlayerInSearchRange(const float, const float);
+	virtual const int returnStateNumber() = 0;
 };

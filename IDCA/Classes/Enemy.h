@@ -17,7 +17,6 @@ public:
 	void              changeState();
 
 	CC_SYNTHESIZE(EnemyState*, m_pState, State);
-	CC_SYNTHESIZE(EnemyState*, m_pCurrentState, CurrentState);
 	CC_SYNTHESIZE(EnemyState*, m_pBeforeState, BeforeState);
 
 
@@ -33,24 +32,35 @@ public:
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition)
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
 	CC_SYNTHESIZE(float, m_DistanceFromOrigin, DistanceFromOrigin);
-	CC_SYNTHESIZE(Vec2 , m_UnitVec, UnitVec);
+	CC_SYNTHESIZE(Vec2 , m_UnitVecToPlayer, UnitVecToPlayer);
+	CC_SYNTHESIZE(Vec2, m_UnitVecToOrigin, UnitVecToOrigin);
 	CC_SYNTHESIZE(Vec2, m_TranslatedUnitVec, TranslatedUnitVec);
 	CC_SYNTHESIZE(int, m_Direction, Direction);
 	CC_SYNTHESIZE(int, m_BeforeDirection, BeforeDirection);
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
+	CC_SYNTHESIZE(Label*, m_pLabel, Label);
+	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
 
-
-	int moveSpeed;
 	/* Member Function */
-	void				 move(const float deltaTime);
+	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
 	void				 CalUnitVecToOrigin();
-	void				 TranslateUnitVec();
+	void				 TranslateUnitVec(Vec2);
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
 	void				 HitedMove(const float deltaTime);
-	void				 CalDirection();
+	void				 CalDirection(Vec2);
+	void				 CatchStateAndDirection();
+
+	/* Animation Function */
+	void				 Stop();
+	bool				 IsStopContinued();
+	void				 Move();
+	bool				 IsMoveContinued();
+	void				 Attack();
+	bool				 IsAttackContinued();
+	void				 DecideWhatIsCurrentAnimation();
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {

@@ -13,5 +13,5 @@ public:
 	void		startState(Enemy* enemy) override;
 	void		runState(Enemy* enemy, const float deltaTime) override;
 	void		endState(Enemy* enemy) override;
-
+	const int	returnStateNumber() override;
 };

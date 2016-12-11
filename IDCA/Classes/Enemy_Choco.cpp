@@ -12,7 +12,6 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 		return false;
 	}
 
-	moveSpeed = 3;
 
 	// Config 싱글톤 클래스 호출.
 	//m_pConfig->getInstance();
@@ -20,8 +19,8 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	this->setPosition(initPosition);
 	setSearchingRange(400.f);
 	setChasingRange(500.f);
-	setAttackRange(150.f);
-	setMoveSpeed(200.f);
+	setAttackRange(50.f);
+	setMoveSpeed(3.5f);
 	// 내부 변수값 세팅.
 	/*setSearchingRange	(m_pConfig->getChocoSearchingRange());
 	setChasingRange		(m_pConfig->getChocoChasingRange());
