@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AnimationMaker.cpp" />
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\config.cpp" />
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\IniReader.cpp" />
+    <ClCompile Include="..\Classes\InputLayer.cpp" />
+    <ClCompile Include="..\Classes\pch.cpp" />
+    <ClCompile Include="..\Classes\PlayerCharacter.cpp" />
+    <ClCompile Include="..\Classes\PlayerCharacterManager.cpp" />
+    <ClCompile Include="..\Classes\StageOne.cpp" />
+    <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\Classes\CollideManager.cpp" />
+    <ClCompile Include="..\Classes\ManageMap.cpp" />
+    <ClCompile Include="..\Classes\ManageMove.cpp" />
+    <ClCompile Include="..\Classes\Projectile.cpp" />
+    <ClCompile Include="..\Classes\ProjectileListener.cpp" />
+    <ClCompile Include="..\Classes\ManageEnemyMove.cpp" />
+    <ClCompile Include="..\Classes\Enemy.cpp" />
+    <ClCompile Include="..\Classes\EnemyManager.cpp" />
+    <ClCompile Include="..\Classes\EnemyState.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Approach.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Attack.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Return.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Search.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
+    <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
+    <ClCompile Include="..\Classes\Enemy_Atroce.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AnimationMaker.h" />
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\config.h" />
+    <ClInclude Include="..\Classes\Define.h" />
+    <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\IniReader.h" />
+    <ClInclude Include="..\Classes\InputLayer.h" />
+    <ClInclude Include="..\Classes\pch.h" />
+    <ClInclude Include="..\Classes\PlayerCharacter.h" />
+    <ClInclude Include="..\Classes\PlayerCharacterManager.h" />
+    <ClInclude Include="..\Classes\StageOne.h" />
+    <ClInclude Include="..\Classes\TemporaryDefine.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="..\Classes\CollideManager.h" />
+    <ClInclude Include="..\Classes\ManageMap.h" />
+    <ClInclude Include="..\Classes\ManageMove.h" />
+    <ClInclude Include="..\Classes\Projectile.h" />
+    <ClInclude Include="..\Classes\ProjectileListener.h" />
+    <ClInclude Include="..\Classes\ManageEnemyMove.h" />
+    <ClInclude Include="..\Classes\Enemy.h" />
+    <ClInclude Include="..\Classes\EnemyManager.h" />
+    <ClInclude Include="..\Classes\EnemyState.h" />
+    <ClInclude Include="..\Classes\EnemyState_Approach.h" />
+    <ClInclude Include="..\Classes\EnemyState_Attack.h" />
+    <ClInclude Include="..\Classes\EnemyState_Return.h" />
+    <ClInclude Include="..\Classes\EnemyState_Search.h" />
+    <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
+    <ClInclude Include="..\Classes\Enemy_Choco.h" />
+    <ClInclude Include="..\Classes\Enemy_Atroce.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+</Project>

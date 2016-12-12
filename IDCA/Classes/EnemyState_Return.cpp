@@ -14,6 +14,8 @@ Returning
 
 */
 
+const float returnEndRange = 50.f;
+
 void EnemyState_Return::startState(Enemy* enemy)
 {
 	CCLOG("Start Return!");
@@ -26,19 +28,23 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	float distanceFromOrigin = enemy->getDistanceFromOrigin();
 	float chaseRange = enemy->getChasingRange();
 
+	// Settings for walk. ( To Origin )
+	enemy->CalUnitVecToOrigin();
+	enemy->TranslateUnitVec(enemy->getUnitVecToOrigin());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
+
 	if (isPlayerInChasingRange(chaseRange, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
 	// TODO :: json 파일로 상수값 변환시키기.
-	else if (distanceFromOrigin < 50)
+	else if (distanceFromOrigin < returnEndRange)
 	{
 		enemy->changeState<EnemyState_Search>();
 	}
 	else
 	{
-		enemy->CalUnitVecToOrigin();
-		enemy->move(dt);
+		enemy->MoveEnemy(dt);
 	}
 
 	return;
@@ -48,4 +54,9 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 void EnemyState_Return::endState(Enemy* enemy)
 {
 	CCLOG("End Return");
+}
+
+const int EnemyState_Return::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::RETURN;
 }

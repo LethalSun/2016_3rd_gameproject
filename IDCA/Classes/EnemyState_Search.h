@@ -7,6 +7,7 @@ public:
 	CREATE_FUNC(EnemyState_Search);
 	bool		init() override
 	{
+		setName("EnemyState_Search");
 		return true;
 	}
 
@@ -14,4 +15,5 @@ public:
 	void		runState(Enemy* enemy, float dt) override;
 	void		endState(Enemy* enemy) override;
 
+	const int	returnStateNumber() override;
 };

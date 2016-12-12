@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
+#include "Enemy_Atroce.h"
 
 EnemyManager* EnemyManager::_instance = nullptr;
 
@@ -13,7 +14,6 @@ EnemyManager* EnemyManager::getInstance()
 	}
 	return _instance;
 }
-
 
 // 싱글톤을 지워주는 함수.
 void EnemyManager::deleteInstance()
@@ -31,13 +31,72 @@ EnemyManager::EnemyManager()
 	m_pEnemyVector.reserve(8);
 }
 
-
-// Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
-void EnemyManager::MakeEnemy(ENEMY_TYPE enemyType, Vec2 initPosition)
+EnemyManager::~EnemyManager()
 {
-	if (enemyType == ENEMY_TYPE::CHOCO)
+	int a;
+}
+
+
+Vector<Enemy*>* EnemyManager::getEnemyVector()
+{
+	return &m_pEnemyVector;
+}
+
+void EnemyManager::DeleteEnemy(void)
+{
+	auto enemyVector = getEnemyVector();
+
+	for (int i = 0; i < enemyVector->size(); i++)
 	{
-		auto newEnemy = Enemy_Choco::create(initPosition);
-		m_pEnemyVector.push_back(newEnemy);
+		auto temp_enemy = enemyVector->at(i);
+		if (temp_enemy->getHP() <= 0)
+		{
+			temp_enemy->getMapPointer()->removeChild(temp_enemy);
+
+		}
 	}
 }
+
+// Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
+void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition)
+{
+	// TODO :: 함수 포인터로 변환.
+	Enemy* newEnemy;
+	if (enemyType == ENEMY_TYPE::CHOCO)
+	{
+		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
+		newEnemy = Enemy_Choco::create(initPosition);
+	}
+	else if (enemyType == ENEMY_TYPE::ATROCE)
+	{
+		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
+		newEnemy = Enemy_Atroce::create(initPosition);
+	}
+
+	newEnemy->setEnemyType(enemyType);
+	newEnemy->setMapPointer(getMapPointer());
+	m_pEnemyVector.pushBack(newEnemy);
+	getMapPointer()->addChild(newEnemy);
+
+	return;
+}
+
+void EnemyManager::ProvidePlayerPosition(const Vec2 inputPlayerPosition)
+{
+	auto iter = m_pEnemyVector.begin();
+	for (; iter != m_pEnemyVector.end(); ++iter)
+	{
+		(*iter)->setPlayerPosition(inputPlayerPosition);
+	}
+
+	/*
+	for (int i = 0; i < m_pEnemyVector.size(); ++i)
+	{
+		m_pEnemyVector.at(i)->setPlayerPosition(inputPlayerPosition);
+	}
+	*/
+
+	return;
+}
+
+// TODO :: Function Stage 1 Setting 만들기. ( Choco 1,2가 죽으면 다른 몹 소환 )
