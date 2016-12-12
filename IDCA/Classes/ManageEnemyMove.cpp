@@ -24,9 +24,19 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 	m_pManageMap = ManageMap::create();
 	enemyVector = m_EnemyManager->getEnemyVector();
 
+	for (int i = 0; i < enemyVector->size(); i++)
+	{
+		auto temp_enemy = enemyVector->at(i);
+		if (temp_enemy->getHP() <= 0)
+		{
+			temp_enemy->getMapPointer()->removeChild(temp_enemy);
+			
+		}
+	}
+
 	auto movable = false;
 
-	movable = m_pManageMap->checkWall(position + (unitVec)*5, map, enemyVector);
+	movable = m_pManageMap->checkWall(position + (unitVec)*32, map, enemyVector);
 
 
 

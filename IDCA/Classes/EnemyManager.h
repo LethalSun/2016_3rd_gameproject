@@ -4,7 +4,7 @@
 class Enemy;
 class Enemy_Choco;
 
-class EnemyManager// : public Node
+class EnemyManager
 {
 public :
 	static EnemyManager* getInstance();
@@ -21,6 +21,8 @@ public :
 	/* Member Variable */
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	Vector<Enemy*>* getEnemyVector();
+
+	void DeleteEnemy(void);
 	
 	/* Member Function */
 	void MakeEnemy(const ENEMY_TYPE, const Vec2);

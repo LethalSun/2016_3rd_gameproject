@@ -108,4 +108,5 @@ void StageOne::update(float delta)
 	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
 	CCLOG(buf);
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
+	m_pEnemyManager->DeleteEnemy();
 }
