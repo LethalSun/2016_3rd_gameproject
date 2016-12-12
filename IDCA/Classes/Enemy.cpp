@@ -83,7 +83,7 @@ void Enemy::MoveEnemy(const float deltaTime)
 {
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
 
-	//this->setPosition(position);
+	this->setPosition(position);
 	return;
 }
 
