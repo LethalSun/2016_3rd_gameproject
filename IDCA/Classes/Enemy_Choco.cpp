@@ -32,6 +32,10 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	setIsEnemyPreemptive(false);
 	setOrigin(Vec2(initPosition.x, initPosition.y));
 
+	setHP(CHOCO_MAX_HP);
+	setDamage(CHOCO_ATTACK_DAMAGE);
+
+
 	// AnimationMaker ¼¼ÆÃ.
 	m_pAnimationMaker = AnimationMaker::create("Choco", ".png");
 	addChild(m_pAnimationMaker);

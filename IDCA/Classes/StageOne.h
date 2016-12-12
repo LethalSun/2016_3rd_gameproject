@@ -10,6 +10,7 @@ class ManageEnemyMove;
 
 class EnemyManager;
 class Enemy_Choco;
+class Enemy;
 
 class StageOne : public Layer
 {

@@ -15,7 +15,6 @@ EnemyManager* EnemyManager::getInstance()
 	return _instance;
 }
 
-
 // 싱글톤을 지워주는 함수.
 void EnemyManager::deleteInstance()
 {
@@ -32,10 +31,30 @@ EnemyManager::EnemyManager()
 	m_pEnemyVector.reserve(8);
 }
 
+EnemyManager::~EnemyManager()
+{
+	int a;
+}
+
 
 Vector<Enemy*>* EnemyManager::getEnemyVector()
 {
 	return &m_pEnemyVector;
+}
+
+void EnemyManager::DeleteEnemy(void)
+{
+	auto enemyVector = getEnemyVector();
+
+	for (int i = 0; i < enemyVector->size(); i++)
+	{
+		auto temp_enemy = enemyVector->at(i);
+		if (temp_enemy->getHP() <= 0)
+		{
+			temp_enemy->getMapPointer()->removeChild(temp_enemy);
+
+		}
+	}
 }
 
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.

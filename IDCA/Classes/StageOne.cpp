@@ -69,15 +69,17 @@ bool StageOne::init()
 	// EnemyManager 등록
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
-	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
-	addChild(m_pEnemyManager);
+	//addChild(m_pEnemyManager);
+
 
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();
 	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
 	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
 	addChild(m_pCollideManager);
+
 	//임시 디버깅용 코드
 
 	//임시 디버깅용코드 끝
@@ -106,4 +108,5 @@ void StageOne::update(float delta)
 	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
 	CCLOG(buf);
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
+	m_pEnemyManager->DeleteEnemy();
 }

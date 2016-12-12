@@ -7,6 +7,7 @@ public:
 	CREATE_FUNC(EnemyState_Search);
 	bool		init() override
 	{
+		setName("EnemyState_Search");
 		return true;
 	}
 

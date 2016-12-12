@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "ManageMap.h"
 #include "TemporaryDefine.h"
+#include "Enemy.h"
 
 TMXTiledMap* ManageMap::loadMap(const char* mapName)
 {
@@ -52,6 +53,71 @@ bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map)
 		return false;
 	}
 			
+
+	return true;
+
+}
+
+bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map,Vector<Enemy*>* enemyVector)
+{
+	auto checkWithMap = true;
+	auto checkWithEnemy = true;
+	
+
+
+
+
+	auto tileCoord = tileCoordForPosition(position, map);
+
+	if ((tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width) ||
+		(tileCoord.y < 0 || tileCoord.y >= map->getMapSize().height))
+	{
+		checkWithMap = false;
+
+	}
+
+	auto tileGid1 = map->layerNamed(TEMP_DEFINE::TILELAYER1)->tileGIDAt(tileCoord);
+	auto tileGid2 = map->layerNamed(TEMP_DEFINE::TILELAYER2)->tileGIDAt(tileCoord);
+
+	if (tileGid1 == 0 || tileGid2 != 0)
+	{
+		checkWithMap = false;
+	}
+
+
+
+
+	for (int i = 0; i < enemyVector->size(); i++)
+	{
+
+		Vec2 enemyPosition = enemyVector->at(i)->getPosition();
+		auto enemyTileCoord = tileCoordForPosition(enemyPosition, map);
+
+		if (tileCoord == enemyTileCoord)
+		{
+
+			for (int j = 0; j <enemyVector->size(); j++)
+			{
+				auto otherEnemy = enemyVector->at(j);
+				auto otherEnemyTileCoord = tileCoordForPosition(otherEnemy->getPosition(), map);
+
+				if (tileCoord == otherEnemyTileCoord&& j!= i)
+				{
+					checkWithEnemy = false;
+				}
+
+			}
+		}
+	}
+
+
+
+
+	if (checkWithEnemy == false || checkWithMap == false)
+	{
+		return false;
+	}
+
 
 	return true;
 

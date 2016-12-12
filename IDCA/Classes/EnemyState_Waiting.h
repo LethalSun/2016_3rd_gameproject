@@ -7,6 +7,7 @@ public:
 	CREATE_FUNC(EnemyState_Waiting);
 	bool		init() override
 	{
+		setName("EnemyState_Waiting");
 		return true;
 	}
 

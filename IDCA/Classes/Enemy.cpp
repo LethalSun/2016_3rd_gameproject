@@ -18,6 +18,7 @@ bool Enemy::init(const Vec2 initPosition)
 	}
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
+	addComponent(m_pManageEnemyMove);
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
@@ -317,7 +318,7 @@ void Enemy::Attack()
 	}
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
-	int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
+	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
 	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);

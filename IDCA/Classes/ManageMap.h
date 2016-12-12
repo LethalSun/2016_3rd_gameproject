@@ -1,4 +1,6 @@
 #pragma once
+class Enemy;
+
 class ManageMap : public Layer
 {
 
@@ -16,7 +18,8 @@ public:
 	Vec2 tileCoordForPosition(const Vec2 position, const TMXTiledMap * map);
 
 	bool checkWall(const Vec2 position,const TMXTiledMap * map);
-
+	bool checkWall(const Vec2 position, const TMXTiledMap * map, Vector<Enemy*>* enemyVector);
+	
 	bool checkChangeMap(const Vec2 position,const TMXTiledMap * map);
 
 	Vec2 getStartPosition();
