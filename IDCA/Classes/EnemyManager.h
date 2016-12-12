@@ -16,6 +16,7 @@ public :
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
 	Vector<Enemy*>*			getEnemyVector();
+	bool(EnemyManager::*m_pMakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2, Enemy*);
 	
 	/* Member Function */
 	void					MakeEnemy(const ENEMY_TYPE, const Vec2);

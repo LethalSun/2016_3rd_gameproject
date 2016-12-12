@@ -31,6 +31,8 @@ EnemyManager::EnemyManager()
 {
 	setStageOneTrigger(false);
 	m_pEnemyVector.reserve(8);
+	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
+	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
 }
 
 
@@ -45,6 +47,7 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 	// TODO :: 함수 포인터로 변환.
 	Enemy* newEnemy;
 	
+	/*
 	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
@@ -55,10 +58,9 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
 		newEnemy = Enemy_Atroce::create(initPosition);
 	}
-	
+	*/
 	// Question :: 함수포인터 사용법.
-	//bool(*MakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2, Enemy*) = { MakeChoco(), MakeAtroce() };
-	//MakeHandler[enemyType];
+	(this->*m_pMakeHandler[enemyType])(initPosition, newEnemy);
 
 	newEnemy->setEnemyType(enemyType);
 	newEnemy->setMapPointer(getMapPointer());

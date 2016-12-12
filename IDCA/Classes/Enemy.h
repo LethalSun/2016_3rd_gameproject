@@ -41,6 +41,16 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
 	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
+	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
+	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
+	CC_SYNTHESIZE(Vec2, m_BodyAnchorPoint, BodyAnchorPoint);
+	CC_SYNTHESIZE(Vec2, m_BodyAnchorPointForDebugBox, BodyAnchorPointForDebugBox);
+	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
+	CC_SYNTHESIZE(int, m_HP, HP);
+	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
+	CC_SYNTHESIZE(int, m_Damage, Damage);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -52,6 +62,10 @@ public:
 	void				 HitedMove(const float deltaTime);
 	void				 CalDirection(Vec2);
 	void				 CatchStateAndDirection();
+	void				 CalculateAttackAnchorPoint();
+	void				 CalculateBodyAnchorPoint();
+	void				 MakeBox(Vec2, Vec2, const int);
+	bool				 IsEnemyMaxHp();
 
 	/* Animation Function */
 	bool				 Stop();

@@ -42,6 +42,7 @@ void Enemy::update(const float deltaTime)
 	CalDistanceFromOrigin();
 
 	m_pState->runState(this, deltaTime);
+
 	DecideWhatIsCurrentAnimation();
 	
 	return;
@@ -290,8 +291,18 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Stop();
 	}
 
-	// Question :: 함수 포인터 질문하기.
+	//Question :: 함수 포인터 질문하기.
 	//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
 	
 	return;
+}
+
+bool Enemy::IsEnemyMaxHp()
+{
+	if (getHP() == getMaxHP())
+	{
+		return true;
+	}
+
+	return false;
 }
