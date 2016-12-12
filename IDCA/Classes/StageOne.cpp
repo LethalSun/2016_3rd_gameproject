@@ -11,7 +11,7 @@
 #include "SimpleAudioEngine.h"
 #include "CollideManager.h"
 
-const char BGM[] = "Sound/JustClimbing.mp3";
+const char BGM[] = "Sound/Forbidden.mp3";
 
 Scene * StageOne::createScene()
 {
