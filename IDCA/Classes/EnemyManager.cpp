@@ -66,7 +66,7 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 	// TODO :: 함수 포인터로 변환.
 	Enemy* newEnemy;
 	
-	/*
+	
 	if (enemyType == ENEMY_TYPE::CHOCO)
 	{
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
@@ -77,9 +77,9 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
 		newEnemy = Enemy_Atroce::create(initPosition);
 	}
-	*/
+	
 	// Question :: 함수포인터 사용법.
-	(this->*m_pMakeHandler[enemyType])(initPosition, newEnemy);
+	//(this->*m_pMakeHandler[enemyType])(initPosition, newEnemy);
 
 	newEnemy->setEnemyType(enemyType);
 	newEnemy->setMapPointer(getMapPointer());

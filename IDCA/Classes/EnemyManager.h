@@ -9,7 +9,6 @@ class EnemyManager
 public :
 	static EnemyManager* getInstance();
 	void deleteInstance();
-	Vector<Enemy*> m_pEnemyVector;
 
 	EnemyManager();
 
@@ -23,6 +22,7 @@ public :
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
 	Vector<Enemy*>*			getEnemyVector();
 	bool(EnemyManager::*m_pMakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2, Enemy*);
+	void					DeleteEnemy();
 	
 	/* Member Function */
 	void					MakeEnemy(const ENEMY_TYPE, const Vec2);
