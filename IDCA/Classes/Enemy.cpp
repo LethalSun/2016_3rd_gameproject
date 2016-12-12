@@ -10,6 +10,10 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 
+const Vec2 ZERO = Vec2(0.f, 0.f);
+const float IgnoreMoveRange = 0.01f;
+
+
 bool Enemy::init(const Vec2 initPosition)
 {
 	if (!Node::init())
@@ -25,9 +29,9 @@ bool Enemy::init(const Vec2 initPosition)
 
 	setPosition(initPosition);
 	setOrigin(initPosition);
-	setUnitVecToPlayer(Vec2(0, 0));
-	setUnitVecToOrigin(Vec2(0, 0));
-	setTranslatedUnitVec(Vec2(0, 0));
+	setUnitVecToPlayer(ZERO);
+	setUnitVecToOrigin(ZERO);
+	setTranslatedUnitVec(ZERO);
 	setBeforeDirection(DIRECTION::BOTTOM);
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
@@ -42,7 +46,6 @@ void Enemy::update(const float deltaTime)
 	CalDistanceFromOrigin();
 
 	m_pState->runState(this, deltaTime);
-	DecideWhatIsCurrentAnimation();
 
 	CalculateBodyAnchorPoint();
 
@@ -53,6 +56,8 @@ void Enemy::update(const float deltaTime)
 	m_pLabel->setString(buf);
 	//CCLOG(buf);
 
+	DecideWhatIsCurrentAnimation();
+	
 	return;
 }
 
@@ -170,9 +175,8 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 {
 	int x = 0;
 	int y = 0;
-	// TODO :: 무시하는 보정 값 변수로 빼기.
 
-	if (abs(InputUnitVec.x) > 0.01)
+	if (abs(InputUnitVec.x) > IgnoreMoveRange)
 	{
 		x = (InputUnitVec.x > 0) ? 1 : -1;
 	}
@@ -181,7 +185,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 		x = 0;
 	}
 
-	if (abs(InputUnitVec.y) > 0.01)
+	if (abs(InputUnitVec.y) > IgnoreMoveRange) 
 	{
 		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
@@ -262,16 +266,16 @@ void Enemy::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 	addChild(box, 0, tag);
 }
 
-void Enemy::Stop()
+bool Enemy::Stop()
 {
 	if (IsStopContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationStop();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	return;
+	return true;
 }
 
 bool Enemy::IsStopContinued()
@@ -286,16 +290,16 @@ bool Enemy::IsStopContinued()
 	return false;
 }
 
-void Enemy::Move()
+bool Enemy::Move()
 {
 	if (IsMoveContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationMove();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	return;
+	return true;
 }
 
 bool Enemy::IsMoveContinued()
@@ -310,11 +314,11 @@ bool Enemy::IsMoveContinued()
 	return false;
 }
 
-void Enemy::Attack()
+bool Enemy::Attack()
 {
 	if (IsAttackContinued())
 	{
-		return;
+		return false;
 	}
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
@@ -322,7 +326,8 @@ void Enemy::Attack()
 
 	CalculateAttackAnchorPoint();
 	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
-	return;
+
+	return true;
 }
 
 bool Enemy::IsAttackContinued()
@@ -356,4 +361,18 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Stop();
 	}
 	return;
+}
+
+	//Question :: 함수 포인터 질문하기.
+	//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
+	
+
+bool Enemy::IsEnemyMaxHp()
+{
+	if (getHP() == getMaxHP())
+	{
+		return true;
+	}
+
+	return false;
 }
