@@ -63,24 +63,10 @@ void EnemyManager::DeleteEnemy(void)
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
 void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition)
 {
-	// TODO :: 함수 포인터로 변환.
-	Enemy* newEnemy;
-	
-	
-	if (enemyType == ENEMY_TYPE::CHOCO)
-	{
-		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
-		newEnemy = Enemy_Choco::create(initPosition);
-	}
-	else if (enemyType == ENEMY_TYPE::ATROCE)
-	{
-		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
-		newEnemy = Enemy_Atroce::create(initPosition);
-	}
-	
-	// Question :: 함수포인터 사용법.
-	//(this->*m_pMakeHandler[enemyType])(initPosition, newEnemy);
+	// 함수포인터 m_pMakeHandler사용.
+	Enemy* newEnemy = (this->*m_pMakeHandler[enemyType])(initPosition);
 
+	// Enemy 공동 처리 부분.
 	newEnemy->setEnemyType(enemyType);
 	newEnemy->setMapPointer(getMapPointer());
 	m_pEnemyVector.pushBack(newEnemy);
@@ -89,30 +75,32 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 	return;
 }
 
-bool EnemyManager::MakeChoco(const Vec2 initPosition, Enemy* newEnemy)
+// Choco를 만드는 함수.
+Enemy* EnemyManager::MakeChoco(const Vec2 initPosition)
 {
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
-	newEnemy = Enemy_Choco::create(initPosition);
+	Enemy* newEnemy = Enemy_Choco::create(initPosition);
 
 	if (!newEnemy)
 	{
-		return false;
+		return nullptr;
 	}
 
-	return true;
+	return newEnemy;
 }
 
-bool EnemyManager::MakeAtroce(const Vec2 initPosition, Enemy* newEnemy)
+// Atroce를 만드는 함수.
+Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 {
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
-	newEnemy = Enemy_Atroce::create(initPosition);
+	Enemy* newEnemy = Enemy_Atroce::create(initPosition);
 
 	if (!newEnemy)
 	{
-		return false;
+		return nullptr;
 	}
 
-	return true;
+	return newEnemy;
 }
 
 

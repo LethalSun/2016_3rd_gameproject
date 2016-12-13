@@ -21,7 +21,7 @@ public :
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
 	Vector<Enemy*>*			getEnemyVector();
-	bool(EnemyManager::*m_pMakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2, Enemy*);
+	Enemy*(EnemyManager::*m_pMakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2);
 	void					DeleteEnemy();
 	
 	/* Member Function */
@@ -31,8 +31,8 @@ public :
 	Vector<Enemy*>*			FindEnemyWithType(const ENEMY_TYPE);
 	void					StageOneSetting();
 
-	bool					MakeChoco(const Vec2, Enemy*);
-	bool					MakeAtroce(const Vec2, Enemy*);
+	Enemy*					MakeChoco(const Vec2);
+	Enemy*					MakeAtroce(const Vec2);
 
 private :
 	static EnemyManager*	_instance;
