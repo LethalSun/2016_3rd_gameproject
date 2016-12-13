@@ -46,7 +46,7 @@ bool StageOne::init()
 	}
 
 	// 배경음 등록.
-	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
 
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();
