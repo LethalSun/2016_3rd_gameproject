@@ -3,6 +3,18 @@
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
 
+const int STAGE_ONE_ENEMY_NUM = 20;
+
+// EnemyManager 생성자.
+// EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
+EnemyManager::EnemyManager()
+{
+	setStageOneTrigger(false);
+	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
+	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
+	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
+}
+
 EnemyManager* EnemyManager::_instance = nullptr;
 
 // EnemyManager 싱글톤 구현.
@@ -18,21 +30,12 @@ EnemyManager* EnemyManager::getInstance()
 // 싱글톤을 지워주는 함수.
 void EnemyManager::deleteInstance()
 {
-	// TODO :: LOG를 사용하여 진짜 호출하는지 안하는지 확인해주기.
 	delete _instance;
 	_instance = nullptr;
+	CCLOG("Delete EnemyManager!");
 	return;
 }
 
-// TODO :: 생성자는 맨 위로 옮기기.
-// 초기화 함수. 
-EnemyManager::EnemyManager()
-{
-	setStageOneTrigger(false);
-	m_pEnemyVector.reserve(8);
-	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
-	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
-}
 
 EnemyManager::~EnemyManager()
 {
@@ -104,7 +107,7 @@ Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 }
 
 
-
+// Vector안의 모든 Enemy에게 Player Position을 넘겨주는 함수.
 void EnemyManager::ProvidePlayerPosition(const Vec2 inputPlayerPosition)
 {
 	auto iter = m_pEnemyVector.begin();
@@ -116,11 +119,13 @@ void EnemyManager::ProvidePlayerPosition(const Vec2 inputPlayerPosition)
 	return;
 }
 
+// Vector번호를 넣으면 해당하는 Enemy의 포인터를 반환해 주는 함수.
 Enemy* EnemyManager::FindEnemyWithIdx(const int findIdx)
 {
 	return m_pEnemyVector.at(findIdx);
 }
 
+// Enemy Type을 넣으면 해당하는 Enemy들을 묶어 Vector의 형태로 반환해 주는 함수.
 Vector<Enemy*>* EnemyManager::FindEnemyWithType(const ENEMY_TYPE findType)
 {
 	if (findType < ENEMY_TYPE::ENEMY_TYPE_NUM)
@@ -144,7 +149,6 @@ Vector<Enemy*>* EnemyManager::FindEnemyWithType(const ENEMY_TYPE findType)
 
 
 // TODO :: Function Stage 1 Setting 만들기. ( Choco 1,2가 죽으면 다른 몹 소환 )
-
 void EnemyManager::StageOneSetting()
 {
 	// 구상중.
