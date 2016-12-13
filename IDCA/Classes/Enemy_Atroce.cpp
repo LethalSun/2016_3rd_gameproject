@@ -23,10 +23,6 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	setChasingRange(Atroce_ChasingRange);
 	setAttackRange(Atroce_AttackRange);
 	setMoveSpeed(Atroce_MoveSpeed);
-	setSearchingRange(400.f);
-	setChasingRange(500.f);
-	setAttackRange(100.f);
-	setMoveSpeed(2.f);
 	setMaxHP(ATROCE_MAX_HP);
 
 	auto AttackRangeAtroce = Vec2(ATROCE_ATTACK_RANGE, ATROCE_ATTACK_RANGE);

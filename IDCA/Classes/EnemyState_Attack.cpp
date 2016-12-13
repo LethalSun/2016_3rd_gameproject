@@ -16,6 +16,8 @@
 
 */
 
+const float ATTACK_CORRECTION_VALUE = 50.f;
+
 void EnemyState_Attack::startState(Enemy* enemy)
 {
 	CCLOG("Start Attack!");
@@ -29,7 +31,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
 	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
-	if (!isPlayerInAttackRange(attackRange + 50.f, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange + ATTACK_CORRECTION_VALUE, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}

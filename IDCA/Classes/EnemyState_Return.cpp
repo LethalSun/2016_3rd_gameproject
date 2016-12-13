@@ -38,7 +38,6 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
-	// TODO :: json 파일로 상수값 변환시키기.
 	else if (distanceFromOrigin < returnEndRange)
 	{
 		enemy->changeState<EnemyState_Search>();

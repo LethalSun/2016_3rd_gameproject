@@ -4,6 +4,8 @@
 #include "Enemy_Atroce.h"
 
 const int STAGE_ONE_ENEMY_NUM = 20;
+const char CHOCO_PLIST[] = "Choco.plist";
+const char ATROCE_PLIST[] = "Atroce.plist";
 
 // EnemyManager 생성자.
 // EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
@@ -81,7 +83,7 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 // Choco를 만드는 함수.
 Enemy* EnemyManager::MakeChoco(const Vec2 initPosition)
 {
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Choco.plist");
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(CHOCO_PLIST);
 	Enemy* newEnemy = Enemy_Choco::create(initPosition);
 
 	if (!newEnemy)
@@ -95,7 +97,7 @@ Enemy* EnemyManager::MakeChoco(const Vec2 initPosition)
 // Atroce를 만드는 함수.
 Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 {
-	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Atroce.plist");
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(ATROCE_PLIST);
 	Enemy* newEnemy = Enemy_Atroce::create(initPosition);
 
 	if (!newEnemy)
