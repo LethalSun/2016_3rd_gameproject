@@ -27,6 +27,7 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float distanceFromOrigin = enemy->getDistanceFromOrigin();
 	float chaseRange = enemy->getChasingRange();
+	Vec2 catchPosition = enemy->getPosition();
 
 	// Settings for walk. ( To Origin )
 	enemy->CalUnitVecToOrigin();
@@ -45,6 +46,10 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	else
 	{
 		enemy->MoveEnemy(dt);
+		if (enemy->getPosition() == catchPosition)
+		{
+			enemy->setPosition(enemy->getOrigin());
+		}
 	}
 
 	return;
