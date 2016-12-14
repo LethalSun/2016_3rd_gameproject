@@ -36,7 +36,7 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 
 	auto movable = false;
 
-	movable = m_pManageMap->checkWall(position + (unitVec)*32, map, enemyVector);
+	movable = m_pManageMap->checkBlocked(position,unitVec, map, enemyVector);
 
 
 

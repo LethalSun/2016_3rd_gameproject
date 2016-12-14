@@ -34,9 +34,10 @@ Vec2 ManageMap::tileCoordForPosition(const Vec2 position, const TMXTiledMap* map
 	return Vec2((int)x, (int)y);
 }
 
-bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map)
+bool ManageMap::checkBlocked(const Vec2 position,const Vec2 unitVec, const TMXTiledMap* map)
 {
-	auto tileCoord = tileCoordForPosition(position, map);
+	auto nextPosition = position + unitVec * 16;
+	auto tileCoord = tileCoordForPosition(nextPosition, map);
 
 	if ((tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width) ||
 		(tileCoord.y < 0 || tileCoord.y >= map->getMapSize().height))
@@ -58,7 +59,7 @@ bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map)
 
 }
 
-bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map,Vector<Enemy*>* enemyVector)
+bool ManageMap::checkBlocked( Vec2 position,const Vec2 unitVec,const TMXTiledMap* map,Vector<Enemy*>* enemyVector)
 {
 	auto checkWithMap = true;
 	auto checkWithEnemy = true;
@@ -67,7 +68,7 @@ bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map,Vector<Ene
 
 
 
-	auto tileCoord = tileCoordForPosition(position, map);
+	auto tileCoord = tileCoordForPosition(position + unitVec*16, map);
 
 	if ((tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width) ||
 		(tileCoord.y < 0 || tileCoord.y >= map->getMapSize().height))
@@ -86,22 +87,25 @@ bool ManageMap::checkWall(const Vec2 position, const TMXTiledMap* map,Vector<Ene
 
 
 
+	tileCoord = tileCoordForPosition(position, map);
 
 	for (int i = 0; i < enemyVector->size(); i++)
 	{
-
-		Vec2 enemyPosition = enemyVector->at(i)->getPosition();
-		auto enemyTileCoord = tileCoordForPosition(enemyPosition, map);
-
-		if (tileCoord == enemyTileCoord)
+		auto thisEnemy = enemyVector->at(i);
+		Vec2 enemyPosition = thisEnemy->getPosition();
+		
+		if (position == enemyPosition)
 		{
+			auto enemyTileCoord = tileCoordForPosition(enemyPosition, map);
+
 
 			for (int j = 0; j <enemyVector->size(); j++)
 			{
 				auto otherEnemy = enemyVector->at(j);
-				auto otherEnemyTileCoord = tileCoordForPosition(otherEnemy->getPosition(), map);
-
-				if (tileCoord == otherEnemyTileCoord&& j!= i)
+				auto otherEnemyPosition = otherEnemy->getPosition();
+				auto otherEnemyTileCoord = tileCoordForPosition(otherEnemyPosition, map);
+				enemyTileCoord = tileCoordForPosition(enemyPosition + unitVec * thisEnemy->getMoveSpeed() , map);
+				if (enemyTileCoord == otherEnemyTileCoord&& j!= i)
 				{
 					checkWithEnemy = false;
 				}

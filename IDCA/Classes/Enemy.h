@@ -48,6 +48,8 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
+	
+	
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
