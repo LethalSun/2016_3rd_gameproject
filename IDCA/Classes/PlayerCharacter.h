@@ -86,10 +86,12 @@ private:
 	//체력
 	int m_MaxHP;
 	int m_HP;
+	Label* m_pHPLabel;
 
 	//마나
 	int m_MaxSP;
 	int m_SP;
+	Label* m_pSPLabel;
 
 	//데미지
 	int m_Damage;
@@ -122,6 +124,8 @@ private:
 	//피격범위와 공격범위를 디버깅시 표시하는 함수
 	void MakeBox(Vec2 position, Vec2 boxInfo, const int);
 
+	//체력박스를 만드는 함수.
+	int MakeHPBox();
 	//공격 방향을
 	//캐릭터의 피격범위 피격점,공격범위 공격점을 저장하는 변수
 	Vec2 m_AttackAnchorPoint;

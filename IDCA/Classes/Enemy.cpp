@@ -49,7 +49,7 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	//MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
+	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
 
 	char buf[255];
 	sprintf(buf, "HP: %d", getHP());
@@ -325,7 +325,11 @@ bool Enemy::Attack()
 	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
-	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
+	for (int i = 0; i < 50; ++i)
+	{
+		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
+	}
+	
 
 	return true;
 }
