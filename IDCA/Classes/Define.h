@@ -48,9 +48,6 @@ namespace INPUT_LAYER
 	/* const & enum values */
 	enum ARRAY_INDEX
 	{
-		// TODO :: ENUM값 명시적으로 표현 (unitVecX = 0, unitVecY = 1) 이런식으로.
-		// ENUM은 하나로 빼서 한 곳에 모아 놓기. 헤더는 최대한 심플하게.
-		// UnitVec은 키보드와 조이스틱 공용으로 관리 (-1, 0, 1)
 		unitVecXStatus = 0, unitVecYStatus = 1,
 
 		// Keyborad Input idx
