@@ -57,6 +57,10 @@ void Enemy::update(const float deltaTime)
 	//CCLOG(buf);
 
 	DecideWhatIsCurrentAnimation();
+	if (!IsEnemyMaxHp())
+	{
+		setIsAttackedOnce(false);
+	}
 	
 	return;
 }
