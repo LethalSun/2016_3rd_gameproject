@@ -39,6 +39,11 @@ private:
 
 	//방향값
 	int m_direction;
+	//TODO :: 테이블 방식으로 충돌방향 구현
+	//TODO :: 충돌범위 앵커포인드 수정해서 보기
+	//TODO :: 한번만 충돌하게 바꾸기
+	int m_arrUnitVecX[8];
+	int m_arrUnitVecY[8];
 
 	//캐릭터의 상태를 인풋으로부터 계산한다.
 	void CalculatePlayerCharacterState();
