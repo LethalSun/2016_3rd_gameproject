@@ -64,6 +64,7 @@ public:
 	void				 CalculateBodyAnchorPoint();
 	void				 MakeBox(Vec2, Vec2, const int);
 	bool				 IsEnemyMaxHp();
+	void				 CheckEnemyAttacked();
 
 	/* Animation Function */
 	bool				 Stop();
