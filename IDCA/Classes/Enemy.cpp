@@ -9,6 +9,7 @@
 #include "EnemyState_Return.h"
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
+#include "EnemyState_BeAttacked.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
 const float IgnoreMoveRange = 0.01f;
@@ -57,7 +58,6 @@ void Enemy::update(const float deltaTime)
 	//CCLOG(buf);
 
 	DecideWhatIsCurrentAnimation();
-	CheckEnemyAttacked();
 	
 	return;
 }
@@ -358,7 +358,8 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Attack();
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
-		|| currentStateType == ENEMY_STATE_TYPE::WAITING)
+		|| currentStateType == ENEMY_STATE_TYPE::WAITING
+		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
 	{
 		Stop();
 	}
@@ -388,4 +389,14 @@ void Enemy::CheckEnemyAttacked()
 	}
 
 	return;
+}
+
+
+// Enemy가 Attack받았을 경우 Damage를 받는 함수.
+bool Enemy::setAttackedDamage(const int damage)
+{
+	CheckEnemyAttacked();
+	setHP(getHP() - damage);
+	changeState<EnemyState_BeAttacked>();
+	return true;
 }
