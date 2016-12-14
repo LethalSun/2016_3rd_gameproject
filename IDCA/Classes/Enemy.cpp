@@ -322,6 +322,8 @@ bool Enemy::Attack()
 	{
 		return false;
 	}
+	
+	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
@@ -356,6 +358,7 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
 	{
 		Attack();
+		//TODO :: Attack로직 들어간 뒤, 고쳐야 할 듯.
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
 		|| currentStateType == ENEMY_STATE_TYPE::WAITING

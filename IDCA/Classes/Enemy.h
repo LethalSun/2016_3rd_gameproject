@@ -27,7 +27,7 @@ public:
 	CC_SYNTHESIZE(float, m_MoveSpeed, MoveSpeed);
 	CC_SYNTHESIZE(bool, m_IsAttackedOnce, IsAttackedOnce);
 	CC_SYNTHESIZE(bool, m_IsEnemyPreemptive, IsEnemyPreemptive);
-	CC_SYNTHESIZE(bool, m_IsAttackNow, IsAttackNow);
+	CC_SYNTHESIZE(bool, m_AttackChecked, AttackChecked);
 
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
