@@ -22,7 +22,7 @@ bool ManageEnemyMove::init()
 Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, const float dt,Enemy* enemy)
 {
 	m_pManageMap = ManageMap::create();
-	enemyVector = m_EnemyManager->getEnemyVector();
+	auto enemyVector = m_EnemyManager->getEnemyVector();
 
 	for (int i = 0; i < enemyVector->size(); i++)
 	{
