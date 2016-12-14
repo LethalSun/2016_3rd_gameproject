@@ -57,9 +57,11 @@ void Enemy::update(const float deltaTime)
 	//CCLOG(buf);
 
 	DecideWhatIsCurrentAnimation();
+	CheckEnemyAttacked();
 	
 	return;
 }
+
 
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
@@ -379,4 +381,15 @@ bool Enemy::IsEnemyMaxHp()
 	}
 
 	return false;
+}
+
+// Enemy가 Attack받았는지 않았는지 확인하는 함수.
+void Enemy::CheckEnemyAttacked()
+{
+	if (!IsEnemyMaxHp())
+	{
+		setIsAttackedOnce(true);
+	}
+
+	return;
 }

@@ -49,9 +49,9 @@ void CollideManager::SetPlayerCharacterPointer(PlayerCharacter * playerCharacter
 	m_pPlayerCharacter = playerCharacter;
 }
 
-void CollideManager::SetCMEnemyPointer(Vector<Enemy*>* enemyVector)
+void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 {
-	m_pvEnemy = enemyVector;
+	m_pvEnemy = &enemyVector;
 }
 
 void CollideManager::update(float dt)

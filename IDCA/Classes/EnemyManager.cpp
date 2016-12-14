@@ -45,18 +45,18 @@ EnemyManager::~EnemyManager()
 }
 
 
-Vector<Enemy*>* EnemyManager::getEnemyVector()
+Vector<Enemy*>& EnemyManager::getEnemyVector()
 {
-	return &m_pEnemyVector;
+	return m_pEnemyVector;
 }
 
 void EnemyManager::DeleteEnemy(void)
 {
 	auto enemyVector = getEnemyVector();
 
-	for (int i = 0; i < enemyVector->size(); i++)
+	for (int i = 0; i < enemyVector.size(); i++)
 	{
-		auto temp_enemy = enemyVector->at(i);
+		auto temp_enemy = enemyVector.at(i);
 		if (temp_enemy->getHP() <= 0)
 		{
 			temp_enemy->getMapPointer()->removeChild(temp_enemy);
