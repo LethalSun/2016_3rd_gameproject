@@ -13,6 +13,7 @@ public:
 	Vec2			 getPlayerPosition();
 	void			 setPlayerPosition(Vec2 position, Vec2 backgroundPosition);
 
+	//상태를 확인할수 있는 함수
 	int				 getState();
 
 	//인풋레이어에서 인풋값을 읽어오는 함수
@@ -22,8 +23,10 @@ public:
 	//업데이트 함수
 	void update(float dt);
 
-	PlayerCharacterManager();
+	//생성자 소멸자
+	PlayerCharacterManager(const Vec2 AttackRange, const Vec2 BodyRange);
 	~PlayerCharacterManager();
+
 private:
 
 	//인풋값
@@ -49,8 +52,43 @@ private:
 	//캐릭터의 방향을 설정해 준다
 	void SetPlayerCharacterDirection();
 
+	//공격과 피격범위의 태그
+	const int m_RedBoxTag;
+	const int m_GreenBoxTag;
+	//공격과 피격범위의 값 과 중심값
+	Vec2 m_AttackAnchorPoint;
+	Vec2 m_AttackAnchorPointForDebugBox;
+	const Vec2 m_AttackRange;
+
+	Vec2 m_BodyAnchorPoint;
+	Vec2 m_BodyAnchorPointForDebugBox;
+	const Vec2 m_BodyRange;
+
+	/*공격범위의 중심 AttackAnchorpoint 와 피격범위의 중심인 BodyAnchorPoint를
+	계산하고 반환하는 함수*/
+	void CalculateAnchorPointForCollide();
+	void CalculateAttackAnchorPoint();
+	void CalculateBodyAnchorPoint();
+
 	//캐릭터의 포인터
 	PlayerCharacter* m_pCharacter;
+
 	//캐릭터의 초기 위치
 	Vec2 m_worldPosition;
+
+	//상태조건 확인 함수
+	bool IsInputAttackState();
+	bool IsInputStopState();
+	bool IsInputMoveStartState();
+	bool IsInputMoveHoldState();
+
+	//방향 조건 확인 함수
+	bool IsUnitVecTop();
+	bool IsUnitVecTopRight();
+	bool IsUnitVecRight();
+	bool IsUnitVecBottomRight();
+	bool IsUnitVecBottom();
+	bool IsUnitVecBottomLeft();
+	bool IsUnitVecLeft();
+	bool IsUnitVecTopLeft();
 };
