@@ -111,6 +111,8 @@ void CollideManager::CheckCharacterAttack()
 			auto curHP = (*iter)->getHP();
 			curHP = curHP - m_pPlayerCharacter->GetDamage();
 			(*iter)->setHP(curHP);
+			m_pPlayerCharacter->SetAttackChecked();
+			break;
 		}
 	}
 }
