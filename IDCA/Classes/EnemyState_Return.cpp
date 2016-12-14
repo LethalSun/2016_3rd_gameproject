@@ -14,6 +14,7 @@ Returning
 
 */
 
+// TODO :: 원점에서 어느 정도 이상 벌어지면 돌아가도록.
 const float returnEndRange = 50.f;
 
 void EnemyState_Return::startState(Enemy* enemy)

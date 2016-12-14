@@ -1,5 +1,7 @@
 #pragma once
 
+// TODO :: EnemyManager에서 Enemy끼리의 거리를 검사해주기.
+// 
 
 class Enemy;
 class Enemy_Choco;
@@ -17,7 +19,9 @@ public :
 	/* Member Variable */
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
-	Vector<Enemy*>*			getEnemyVector();
+
+	// 포인터는 원칙적으로 NULL 계산이 필요하기 때문에 NULL이 들어오지 않는 경우에 참조자 반환.
+	Vector<Enemy*>&			getEnemyVector();
 	Enemy*(EnemyManager::*m_pMakeHandler[ENEMY_TYPE::ENEMY_TYPE_NUM])(const Vec2);
 	void					DeleteEnemy();
 	
