@@ -1,7 +1,26 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "StageOne.h"
+#include "InputLayer.h"
+
+const char BGM[] = "TitleScene/Bgm.mp3";
+
+const char BackgroundImg[] = "TitleScene/Background.png";
+const float BackgroundWidth = 0.5f;
+const float BackgroundHeight = 0.5f;
+
+const char TitleImg[] = "TitleScene/Title_darker.png";
+const float TitleWidth = 0.5f;
+const float TitleHeight = 0.75f;
+
+const char TextBackgroundImg[] = "TitleScene/TitleTextBackground_softsmall.png";
+const float TextBackgroundWidth = 0.5f;
+const float TextBackgroundHeight = 0.2f;
+
+const char SelectTextKeyboard[] = "TitleScene/TitleTextKeyboard_agencysmall.png";
+
+const float SelectTextTwinkleTime = 1.0f;
 
 Scene* HelloWorld::createScene()
 {
@@ -18,11 +37,8 @@ Scene* HelloWorld::createScene()
 	return scene;
 }
 
-// on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-	//////////////////////////////
-	// 1. super init first
 	if (!Layer::init())
 	{
 		return false;
@@ -31,61 +47,40 @@ bool HelloWorld::init()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-	/////////////////////////////
-	// 2. add a menu item with "X" image, which is clicked to quit the program
-	//    you may modify it.
+	// 백그라운드 이미지 등록.
+	auto Background = Sprite::create(BackgroundImg);
+	Background->setPosition(Vec2(visibleSize.width * BackgroundWidth, visibleSize.height * BackgroundHeight));
+	addChild(Background);
 
-	// add a "close" icon to exit the progress. it's an autorelease object
-	auto closeItem = MenuItemImage::create(
-		"CloseNormal.png",
-		"CloseSelected.png",
-		CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+	// 타이틀 등록.
+	auto Title = Sprite::create(TitleImg);
+	Title->setPosition(Vec2(visibleSize.width * TitleWidth, visibleSize.height * TitleHeight));
+	addChild(Title);
 
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width / 2,
-		origin.y + closeItem->getContentSize().height / 2));
+	// 텍스트 백그라운드 등록.
+	auto TextBackground = Sprite::create(TextBackgroundImg);
+	TextBackground->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight));
+	addChild(TextBackground);
 
-	// create menu, it's an autorelease object
-	auto menu = Menu::create(closeItem, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 1);
+	// TODO :: JoyStick일 경우와 Keyboard일 경우 다르게 해주기.
+	// 텍스트 등록.
+	auto SelectText = Sprite::create(SelectTextKeyboard);
+	SelectText->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight - 7.5f));
+	addChild(SelectText);
 
-	////////Stage1
-	auto closeItem2 = MenuItemImage::create(
-		"CloseNormal.png",
-		"CloseSelected.png",
-		CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+	// 텍스트 액션 등록.
+	auto actionFadeOut = FadeOut::create(SelectTextTwinkleTime);
+	auto actionFadeIn = FadeIn::create(SelectTextTwinkleTime);
+	auto textSequence = Sequence::createWithTwoActions(actionFadeOut, actionFadeIn);
+	auto repeatTextAction = RepeatForever::create(textSequence);
+	SelectText->runAction(repeatTextAction);
 
-	auto changeScene2 = MenuItemImage::create("TempResourceHW/next.png", "TempResourceHW/nextC.png", CC_CALLBACK_1(HelloWorld::menuStage1, this));
-	changeScene2->setPosition(Vec2(origin.x + changeScene2->getContentSize().width / 2,
-		origin.y + changeScene2->getContentSize().height / 2));
-	// create menu, it's an autorelease object
-	auto menu2 = Menu::create(closeItem2, changeScene2, NULL);
-	menu2->setPosition(Vec2(500, 500));
-	this->addChild(menu2, 1);
-
-	/////////////////////////////
-	// 3. add your codes below...
-
-	// add a label shows "Hello World"
-	// create and initialize a label
-
-	auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-
-	// position the label on the center of the screen
-	label->setPosition(Vec2(origin.x + visibleSize.width / 2,
-		origin.y + visibleSize.height - label->getContentSize().height));
-
-	// add the label as a child to this layer
-	this->addChild(label, 1);
-
-	// add "HelloWorld" splash screen"
-	auto sprite = Sprite::create("HelloWorld.png");
-
-	// position the sprite on the center of the screen
-	sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
-
-	// add the sprite as a child to this layer
-	this->addChild(sprite, 0);
+	// 배경음 등록.
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
+	
+	// InputLayer 등록.
+	m_pInputLayer = InputLayer::create();
+	addChild(m_pInputLayer);
 
 	scheduleUpdate();
 
@@ -94,25 +89,25 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float dt)
 {
+	// TODO :: Press Q to Start, ESC to exit로 바꿔주기. 
+	auto startChecker = m_pInputLayer->GetInputArray();
+	
+	if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
+	{
+		ChangeToStageOne();
+	}
+	else if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyESC] == INPUT_LAYER::KEY_STATUS::END)
+	{
+		ExitGame();
+	}
 }
 
-void HelloWorld::menuCloseCallback(Ref* pSender)
+void HelloWorld::ChangeToStageOne()
 {
-	//Close the cocos2d-x game scene and quit the application
-	Director::getInstance()->end();
+	Director::getInstance()->replaceScene(StageOne::createScene());
+}
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+void HelloWorld::ExitGame()
+{
 	exit(0);
-#endif
-
-	/*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() and exit(0) as given above,instead trigger a custom event created in RootViewController.mm as below*/
-
-	//EventCustom customEndEvent("game_scene_close_event");
-	//_eventDispatcher->dispatchEvent(&customEndEvent);
-}
-
-void HelloWorld::menuStage1(cocos2d::Ref * pSender)
-{
-	auto pScene = StageOne::createScene();
-	Director::getInstance()->pushScene(pScene);
 }

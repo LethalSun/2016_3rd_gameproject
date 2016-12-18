@@ -5,6 +5,14 @@
 #include "ManageMove.h"
 #include "TemporaryDefine.h"
 #include "PlayerCharacterManager.h"
+#include "ManageEnemyMove.h"
+#include "Enemy_Choco.h"
+#include "EnemyManager.h"
+#include "SimpleAudioEngine.h"
+#include "CollideManager.h"
+
+const char BGM[] = "Sound/Forbidden.mp3";
+
 Scene * StageOne::createScene()
 {
 	auto scene = Scene::create();
@@ -37,39 +45,70 @@ bool StageOne::init()
 		return false;
 	}
 
+	// 배경음 등록.
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
+
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
-
-	m_mapSize = m_pMap->getMapSize();
-	m_winSize = Director::getInstance()->getWinSize();
-	m_tileSize = m_pMap->getTileSize();
-	m_background = Vec2(0, 0);
-
 	addChild(m_pMap);
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
+	m_pManageEnemyMove = ManageEnemyMove::create();
 
-	//addChild(m_pMap);
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
 	m_InputLayer = InputLayer::create();
-
 	addChild(m_InputLayer);
+
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
 	addChild(m_pPlayerCharacterManager);
 
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
+	// EnemyManager 등록
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
+	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 650.f));
+	auto vector = m_pEnemyManager->getEnemyVector();
+	vector.at(1)->setMoveSpeed(3.f);
+
+
+	//충돌매니져 등록
+	m_pCollideManager = CollideManager::create();
+	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
+	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
+	addChild(m_pCollideManager);
+
+	//임시 디버깅용 코드
+
+	//임시 디버깅용코드 끝
 	scheduleUpdate();
 	return true;
 }
 
 void StageOne::update(float delta)
 {
-	auto input = m_InputLayer->GetInputArray();
-	auto unitVecC = m_InputLayer->GetInputUnitVec();
+	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
-	m_pPlayerCharacterManager->GetInput(input);
-	m_pPlayerCharacterManager->GetUnitVac(unitVecC);
+	int state = m_pPlayerCharacterManager->getState();
+	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
+	position = m_pPlayerCharacterManager->getPlayerPosition();
+
+	if (state == 0 || state == 2)
+	{
+		Vec2 backgroundposition = m_pMap->getPosition();
+		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0], m_InputLayer->GetInputUnitVec()[1]);
+		position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
+		m_pPlayerCharacterManager->setPlayerPosition(position, backgroundposition);
+	}
+
+	char buf[255];
+	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
+	CCLOG(buf);
+	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
+	m_pEnemyManager->DeleteEnemy();
 }

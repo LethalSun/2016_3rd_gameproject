@@ -167,10 +167,12 @@ void AnimationMaker::RemoveChileByTag()
 
 	if (m_tag % 2 == 0)
 	{
-		removeChildByTag(m_tag = m_tagOdd);
+		m_tag = m_tagOdd;
+		removeChildByTag(m_tag);
 	}
 	else
 	{
-		removeChildByTag(m_tag = m_tagEven);
+		m_tag = m_tagEven;
+		removeChildByTag(m_tag);
 	}
 }

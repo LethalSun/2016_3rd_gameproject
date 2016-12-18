@@ -25,6 +25,11 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	auto attackRange = enemy->getAttackRange();
 	auto chaseRange = enemy->getChasingRange();
 
+	// Settings for walk ( To Player )
+	enemy->CalUnitVecToPlayer();
+	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
+
 	if (isPlayerInAttackRange(attackRange, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Attack>();
@@ -35,8 +40,7 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 	}
 	else
 	{
-		enemy->CalUnitVecToPlayer();
-		enemy->move(deltaTime);
+		enemy->MoveEnemy(deltaTime);
 	}
 
 	return;
@@ -45,4 +49,9 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 void EnemyState_Approach::endState(Enemy* enemy)
 {
 	CCLOG("end_Approach!");
+}
+
+const int EnemyState_Approach::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::APPROACHING;
 }

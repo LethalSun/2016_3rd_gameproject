@@ -29,7 +29,7 @@ private :
 
 	/* Section Static */
 	CC_SYNTHESIZE(float, m_WinSizeWidth, WinSizeWidth);
-	CC_SYNTHESIZE(float, m_WinSizeHeight, m_WinSizeHeight);
+	CC_SYNTHESIZE(float, m_WinSizeHeight, WinSizeHeight);
 
 
 	/* Section Player */

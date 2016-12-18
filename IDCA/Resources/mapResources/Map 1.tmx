@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="2">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="5">
  <tileset firstgid="1" name="BlackForest_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="BlackForest_A.png" width="256" height="512"/>
  </tileset>
@@ -28,7 +28,7 @@
  </layer>
  <layer name="Tile Layer 2" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJztm99NAzEMh6tsgjoMbFA2gFd4gVcoCxRYANZAbAA7kaqKsKz7k9hObKf5pMhSaR8uP77LJbnsw2bzEtveYf2MbYpd/Pw6/NclLuPfr8KpPsb2oFzfYnt3UI99/4GqBDC729hulKuF/3OqB9LswvCjlQclmQw/2nqwhqYnlnyoRRqzS9Dy5Bx8yHnOWvodrL36YeXeVEptb3r2ohY1fRle8JD2xaIXlPFXE0lPLHpBHX81kfLEkhfekfDEkhc9wPVkeCEPx5PhRR2ongwv6kHx5By8uAinpkGpJ717kbLQzkTDj1flPHC/4yw0c8n1pBc/lvreSi45nnjYv8jBQx5H1jzx6gOEmoXmeDK3Pux5vEh4ywOC328ZfthhR/DCyngBoWaxNXQNCY8+TFErh0Pj+7LneTeklhOt7wXn4MUWNct49cLrmL2GhBet77FHesoDvmPP9eIQ9OYjPeSBzzlwvcC/L83kLn7/nthnXvOAPuD1Euq8AnrBmbc/xe8+M/rMWx5r534oz09TXnA94eJhzjflA66ULLytb1kg9zxcCTleaHtija94/d8hfz9qjvQMC6v3dWANfuK1/waeHxQPvM7vW5Azbsz5AbPoZV9dk9Jz1BB8T5J8L6t1JhprBpgSL7AfNbzQ9ER7j6bUC+hHTS+0PeFCWT+geJFqCy88jyel6wdUL1Jt5YV3T3LgeIHXrzRqT5lwvVha323tCZ57ekPCCwt+ePYGrplLnnfW9sPT+LK0b9GzHxY9kfZgrv4Bq3EUXQ==
+   eJztm8tNBDEMhlfphGqgg6EDuMIFrrA0sEAD0AaiA+iJrFYRljWPxHZiO5tPiizt47Dz7zeZODP7sNu9xLF3WD/jmGOKr1+H/7rGZXz/KpzqYxwPyvUtjncH9XjsP1CVAGZ3G8eNcrXwP6d6IM0Uhh+tPCjJZPjR1oMtND2x5EMt0pxdgpYn5+BDznXW2vdg7dUPK+emUmp707MXtajpy/CCh7QvFr2gzL+aSHpi0Qvq/KuJlCeWvPCOhCeWvOgBrifDC3k4ngwv6kD1ZHhRD4on5+DFRTgNDUo96d2LlIV2Jhp+vCrngY87zkIzl1xPevFj7dhbySXHEw/7Fzl4yOPIlidefYBQs9CcT5b6w57ni4S3PCD4/pbhhx0mghdW5gtID1kkPPowR60cDo3Py57X3ZBaTrQ+F5yDF57w6oX3eWIJCS9an2OP9JQHvMee68Uh6K1HesgDP+fA9QJ/vzSTu/j5e+Ix85oH9AH3S6jrCugFZ93+FD/7zDhm3vLYeu6Hcv005wXXEy5estjqt1Oy8NbfskDu83Al5Hih7Yk1vuLv/w75+1FLpGtYWL33gTX4ib/9N/D8oHjgdX3fgpx5Y8kPmEUv++qalD5HDcHnJMn7slpnotEzwJR4gf2o4YWmJ9p7NKVeQD9qeqHtCRdK/4DiRaotvPA8n5T2D6hepNrKC++e5MDxAvevNGpPmXC9WOvvtvYErz29IeGFBT88ewN75pLPO2v74Wl+Wdu36NkPi55Ie7BU/wD8QBM1
   </data>
  </layer>
  <layer name="Tile Layer 4" width="100" height="50">
@@ -42,7 +42,12 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="Start" x="26" y="1216" width="74" height="74"/>
+  <object id="3" name="Choco_1" x="580" y="770" width="26" height="26">
+   <ellipse/>
+  </object>
+  <object id="4" name="Choco_2" x="583" y="864" width="27" height="28">
+   <ellipse/>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 5" width="100" height="50">
   <data encoding="base64" compression="zlib">

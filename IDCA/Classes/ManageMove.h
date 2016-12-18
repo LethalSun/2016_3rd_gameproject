@@ -10,11 +10,11 @@ public:
 
 	bool init();
 
-	Vec2 update(Vec2 position, Vec2 background, Vec2 unitVec, TMXTiledMap * map);
+	Vec2 update(Vec2 position, const Vec2 background, const Vec2 unitVec, TMXTiledMap * map);
 
-	Vec2 setCharacterPosition(Vec2 position, Vec2 unitVec, TMXTiledMap * map);
+	Vec2 setCharacterPosition(Vec2 position, Vec2 unitVec, const TMXTiledMap * map);
 
-	bool checkBackgroundMovable(Vec2 position, Vec2 unitVec, TMXTiledMap * map);
+	Vec2 checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const TMXTiledMap * map);
 
 
 

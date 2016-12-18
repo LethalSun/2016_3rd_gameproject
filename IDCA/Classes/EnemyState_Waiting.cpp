@@ -15,6 +15,8 @@ Waiting
 
 */
 
+const float correctionValue = 30.f;
+
 void EnemyState_Waiting::startState(Enemy* enemy)
 {
 	CCLOG("Start Waiting");
@@ -23,14 +25,15 @@ void EnemyState_Waiting::startState(Enemy* enemy)
 void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 {
 	float attackRange = enemy->getAttackRange();
-	
-	if (enemy->getIsAttackedOnce())
-	{
-		enemy->changeState<EnemyState_Attack>();
-	}
-	else if (!isPlayerInAttackRange(attackRange, enemy->getDistanceFromPlayer()))
+	float distanceFromPlayer = enemy->getDistanceFromPlayer();
+
+	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer) + correctionValue)
 	{
 		enemy->changeState<EnemyState_Approach>();
+	}
+	else if (enemy->getIsAttackedOnce())
+	{
+		enemy->changeState<EnemyState_Attack>();
 	}
 
 	return;
@@ -39,4 +42,9 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 void EnemyState_Waiting::endState(Enemy* enemy)
 {
 	CCLOG("End Waiting");
+}
+
+const int EnemyState_Waiting::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::WAITING;
 }

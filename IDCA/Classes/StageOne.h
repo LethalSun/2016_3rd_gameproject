@@ -3,9 +3,14 @@ class InputLayer;
 class ManageMap;
 class ManageMove;
 class PlayerCharacterManager;
-
+class CollideManager;
 class Character;
 class CharacterManager;
+class ManageEnemyMove;
+
+class EnemyManager;
+class Enemy_Choco;
+class Enemy;
 
 class StageOne : public Layer
 {
@@ -21,16 +26,11 @@ public:
 
 private:
 
-	Vec2 m_background;
-
-
 	InputLayer* m_InputLayer;
 	TMXTiledMap* m_pMap;
-	
-	
-	Size m_mapSize;
-	Size m_winSize;
-	Size m_tileSize;
+
+	//충돌 매니져
+	CollideManager* m_pCollideManager;
 
 	PlayerCharacterManager* m_pPlayerCharacterManager;
 	ManageMap* m_pManageMap;
@@ -40,4 +40,9 @@ private:
 	Character *m_pCharacter;
 	CharacterManager *m_pCharacterManager;
 	unsigned int m_keyboardInput;
+
+	ManageEnemyMove * m_pManageEnemyMove;
+	// Enemy Test
+	EnemyManager* m_pEnemyManager;
+	Enemy_Choco* m_pEnemy;
 };

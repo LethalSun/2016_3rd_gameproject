@@ -21,15 +21,22 @@ enum DIRECTION
 	LEFT,
 	TOP_LEFT,
 };
-
+//캐릭터 체력 공격력
 const int MAX_HP = 10;
 const int MAX_SP = 10;
+const int ATTACK_DAMAGE = 3;
+
+//아트로스 체력 공격력
+const int ATROCE_MAX_HP = 1000;
+const int ATROCE_ATTACK_DAMAGE = 2;
+//초코 체력 공격력
+const int CHOCO_MAX_HP = 1000;
+const int CHOCO_ATTACK_DAMAGE = 1;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
 //HW
 // Json 파일로 변환전까지 임시로 쓰는 Define.h
-
 
 const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
@@ -41,9 +48,6 @@ namespace INPUT_LAYER
 	/* const & enum values */
 	enum ARRAY_INDEX
 	{
-		// TODO :: ENUM값 명시적으로 표현 (unitVecX = 0, unitVecY = 1) 이런식으로.
-		// ENUM은 하나로 빼서 한 곳에 모아 놓기. 헤더는 최대한 심플하게.
-		// UnitVec은 키보드와 조이스틱 공용으로 관리 (-1, 0, 1)
 		unitVecXStatus = 0, unitVecYStatus = 1,
 
 		// Keyborad Input idx
@@ -51,7 +55,6 @@ namespace INPUT_LAYER
 		keyAttack = 2, keySkillAttack = 3, keySkillDefence = 4, keyESC = 5,
 
 		stateIdxNum = 6
-
 	};
 
 	enum UNIT_VEC_INDEX
@@ -66,6 +69,10 @@ namespace INPUT_LAYER
 		NONE = 0, START = 1, HOLD = 2, END = 3
 	};
 
+	enum ARROW
+	{
+		UP = 0, DOWN = 1, RIGHT = 2, LEFT = 3, ARROW_NUM = 4
+	};
 }
 
 enum ENEMY_TYPE
@@ -75,11 +82,36 @@ enum ENEMY_TYPE
 	ENEMY_TYPE_NUM = 2
 };
 
-
 namespace CONFIG_DEFAULT
 {
 	const int intError = -1;
 	const float floatError = -1.f;
 	const char stringError[6] = "ERROR";
 }
+
+enum ENEMY_STATE_TYPE
+{
+	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, BE_ATTACKED = 5, STATE_NUM = 6
+};
+
+//공격범위와 피격범위를 위한 태그
+const int RED_BOX_TAG = 10;
+const int GREEN_BOX_TAG = 11;
+//아크비숍 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float ARCHBISHOP_ATTACK_RANGE = 35.f;
+const float ARCHBISHOP_BODY_RANGE_X = 30.f;
+const float ARCHBISHOP_BODY_RANGE_Y = 90.f;
+//아트로스 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float ATROCE_ATTACK_RANGE = 68.f;
+const float ATROCE_BODY_RANGE_X = 80.f;
+const float ATROCE_BODY_RANGE_Y = 120.f;
+//초코 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float CHOCO_ATTACK_RANGE = 20.f;
+const float CHOCO_BODY_RANGE_X = 20.f;
+const float CHOCO_BODY_RANGE_Y = 45.f;
+//워리어 의 공격범위(정사각형) 피격범위의 가로와 세로
+const float WORRIOR_ATTACK_RANGE = 50.f;
+const float WORRIOR_BODY_RANGE_X = 25.f;
+const float WORRIOR_BODY_RANGE_Y = 95.f;
+
 //KW

@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "SimpleAudioEngine.h"
 #include "Enemy.h"
 #include "EnemyState_Attack.h"
 #include "EnemyState_Approach.h"
@@ -15,24 +16,28 @@
 
 */
 
+const float ATTACK_CORRECTION_VALUE = 50.f;
+
 void EnemyState_Attack::startState(Enemy* enemy)
 {
 	CCLOG("Start Attack!");
-	//enemy->SetSpriteToAttack();
 }
 
 void EnemyState_Attack::runState(Enemy* enemy, float dt)
 {
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 	float attackRange = enemy->getAttackRange();
+	enemy->CalUnitVecToPlayer();
+	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
-	if (!enemy->getIsAttackedOnce())
-	{
-		enemy->changeState<EnemyState_Waiting>();
-	}
-	else if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange + ATTACK_CORRECTION_VALUE, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
+	}
+	else if (!enemy->getIsAttackedOnce() && !enemy->getIsEnemyPreemptive())
+	{
+		enemy->changeState<EnemyState_Waiting>();
 	}
 	else
 	{
@@ -45,5 +50,9 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 void EnemyState_Attack::endState(Enemy* enemy)
 {
 	CCLOG("End Attack!");
-	//enemy->SetSpriteToCommon();
+}
+
+const int EnemyState_Attack::returnStateNumber()
+{
+	return ENEMY_STATE_TYPE::ATTACKING;
 }

@@ -206,7 +206,7 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA0.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.520408,0.65544</point_f>
+                <point_f>0.380952,0.647668</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -217,12 +217,9 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA1.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA11.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA21.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA71.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.496599,0.647668</point_f>
+                <point_f>0.360544,0.642487</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -236,7 +233,20 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA20.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.469388,0.647668</point_f>
+                <point_f>0.62585,0.65285</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9Paddings</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA11.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.646259,0.647668</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -250,7 +260,7 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA22.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.503401,0.639175</point_f>
+                <point_f>0.653061,0.64433</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -261,10 +271,9 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA13.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA23.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.0689655,0.763485</point_f>
+                <point_f>0.234483,0.775934</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -278,7 +287,7 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA24.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.0748299,0.556452</point_f>
+                <point_f>0.231293,0.572581</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -289,10 +298,9 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA15.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA25.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.0797101,0.5</point_f>
+                <point_f>0.253623,0.535714</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -306,7 +314,7 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA72.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.489796,0.64433</point_f>
+                <point_f>0.353741,0.64433</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -316,11 +324,49 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA3.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA73.psd</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA21.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.924138,0.771784</point_f>
+                <point_f>0.653061,0.647668</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9Paddings</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA23.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.241379,0.775934</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>36,60,73,121</rect>
+                <key>scale9Paddings</key>
+                <rect>36,60,73,121</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA25.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.26087,0.535714</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>35,28,69,56</rect>
+                <key>scale9Paddings</key>
+                <rect>35,28,69,56</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA3.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.758621,0.771784</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -415,10 +461,9 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA4.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA74.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.92517,0.556452</point_f>
+                <point_f>0.768707,0.572581</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -429,10 +474,9 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA5.psd</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA75.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.92029,0.517857</point_f>
+                <point_f>0.746377,0.526786</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -529,13 +573,65 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA70.psd</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.517007,0.65285</point_f>
+                <point_f>0.387755,0.65285</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
                 <rect>37,48,74,97</rect>
                 <key>scale9Paddings</key>
                 <rect>37,48,74,97</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA71.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.360544,0.647668</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9Paddings</key>
+                <rect>37,48,74,97</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA73.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.765517,0.771784</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>36,60,73,121</rect>
+                <key>scale9Paddings</key>
+                <rect>36,60,73,121</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA74.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.761905,0.556452</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>37,31,74,62</rect>
+                <key>scale9Paddings</key>
+                <rect>37,31,74,62</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/AtroceA75.psd</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.73913,0.517857</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>35,28,69,56</rect>
+                <key>scale9Paddings</key>
+                <rect>35,28,69,56</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
