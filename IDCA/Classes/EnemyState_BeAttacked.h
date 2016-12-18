@@ -23,5 +23,6 @@ public:
 	void		runState(Enemy* enemy, const float deltaTime) override;
 	void		endState(Enemy* enemy) override;
 	const int   returnStateNumber() override;
-
+	EaseElasticInOut* m_pEasePushedAction;
+	bool        m_Pushable;
 };

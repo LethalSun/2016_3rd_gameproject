@@ -69,6 +69,7 @@ public:
 	bool				 IsEnemyMaxHp();
 	void				 CheckEnemyAttacked();
 	bool				 setAttackedDamage(const int);
+	ManageEnemyMove*     getManageEnemyMove();
 
 	/* Animation Function */
 	bool				 Stop();

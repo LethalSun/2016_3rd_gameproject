@@ -16,9 +16,11 @@ public:
 	virtual bool init() override;
 
 	Vec2 update(Vec2 position, Vec2 unitvec, TMXTiledMap * map, const float,Enemy* );
-	
-private:
 	ManageMap* m_pManageMap;
+	Vector<Enemy*>* enemyVector;
+
+private:
+
 	EnemyManager* m_EnemyManager;
 };
 
