@@ -401,10 +401,18 @@ bool Enemy::setAttackedDamage(const int damage)
 {
 	CheckEnemyAttacked();
 	setHP(getHP() - damage);
+
 	if (getFlagBeAttacked() == false)
 	{
 		changeState<EnemyState_BeAttacked>();
 		setFlagBeAttacked(true);
 	}
+
+
 	return true;
+}
+
+ManageEnemyMove * Enemy::getManageEnemyMove()
+{
+	return m_pManageEnemyMove;
 }
