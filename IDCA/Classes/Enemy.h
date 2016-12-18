@@ -50,7 +50,8 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
 	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
-	CC_SYNTHESIZE(int, m_damage, Damage);
+	CC_SYNTHESIZE(int, m_Damage, Damage);
+	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);

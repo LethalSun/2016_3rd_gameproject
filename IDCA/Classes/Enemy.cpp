@@ -36,6 +36,7 @@ bool Enemy::init(const Vec2 initPosition)
 	setBeforeDirection(DIRECTION::BOTTOM);
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
+	setFlagBeAttacked(false);
 
 	return true;
 }
@@ -400,6 +401,10 @@ bool Enemy::setAttackedDamage(const int damage)
 {
 	CheckEnemyAttacked();
 	setHP(getHP() - damage);
-	changeState<EnemyState_BeAttacked>();
+	if (getFlagBeAttacked() == false)
+	{
+		changeState<EnemyState_BeAttacked>();
+		setFlagBeAttacked(true);
+	}
 	return true;
 }
