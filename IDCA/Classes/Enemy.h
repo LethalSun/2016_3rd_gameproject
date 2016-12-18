@@ -39,7 +39,7 @@ public:
 	CC_SYNTHESIZE(ENEMY_TYPE, m_EnemyType, EnemyType);
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
-	CC_SYNTHESIZE(char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
@@ -48,8 +48,9 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
-	
-	
+
+	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
+
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
@@ -63,15 +64,17 @@ public:
 	void				 CalculateAttackAnchorPoint();
 	void				 CalculateBodyAnchorPoint();
 	void				 MakeBox(Vec2, Vec2, const int);
+	bool				 IsEnemyMaxHp();
 
 	/* Animation Function */
-	void				 Stop();
+	bool				 Stop();
 	bool				 IsStopContinued();
-	void				 Move();
+	bool				 Move();
 	bool				 IsMoveContinued();
-	void				 Attack();
+	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
+
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {
