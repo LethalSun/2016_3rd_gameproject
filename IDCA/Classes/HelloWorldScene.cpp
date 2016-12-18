@@ -10,17 +10,17 @@ const char BackgroundImg[] = "TitleScene/Background.png";
 const float BackgroundWidth = 0.5f;
 const float BackgroundHeight = 0.5f;
 
-const char TitleImg[] = "TitleScene/Title.png";
+const char TitleImg[] = "TitleScene/Title_darker.png";
 const float TitleWidth = 0.5f;
-const float TitleHeight = 0.75;
+const float TitleHeight = 0.75f;
 
-const char ButtonStartNormal[] = "TitleScene/Play_Normal.png";
-const char ButtonStartSelected[] = "TitleScene/Play_Selected.png";
-const char ButtonExitNormal[] = "TitleScene/Exit_Normal.png";
-const char ButtonExitSelected[] = "TitleScene/Exit_Normal.png";
+const char TextBackgroundImg[] = "TitleScene/TitleTextBackground_softsmall.png";
+const float TextBackgroundWidth = 0.5f;
+const float TextBackgroundHeight = 0.2f;
 
-const float MenuWidth = 0.3f;
-const float MenuHeight = 0.4f;
+const char SelectTextKeyboard[] = "TitleScene/TitleTextKeyboard_agencysmall.png";
+
+const float SelectTextTwinkleTime = 1.0f;
 
 Scene* HelloWorld::createScene()
 {
@@ -57,6 +57,24 @@ bool HelloWorld::init()
 	Title->setPosition(Vec2(visibleSize.width * TitleWidth, visibleSize.height * TitleHeight));
 	addChild(Title);
 
+	// 텍스트 백그라운드 등록.
+	auto TextBackground = Sprite::create(TextBackgroundImg);
+	TextBackground->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight));
+	addChild(TextBackground);
+
+	// TODO :: JoyStick일 경우와 Keyboard일 경우 다르게 해주기.
+	// 텍스트 등록.
+	auto SelectText = Sprite::create(SelectTextKeyboard);
+	SelectText->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight - 7.5f));
+	addChild(SelectText);
+
+	// 텍스트 액션 등록.
+	auto actionFadeOut = FadeOut::create(SelectTextTwinkleTime);
+	auto actionFadeIn = FadeIn::create(SelectTextTwinkleTime);
+	auto textSequence = Sequence::createWithTwoActions(actionFadeOut, actionFadeIn);
+	auto repeatTextAction = RepeatForever::create(textSequence);
+	SelectText->runAction(repeatTextAction);
+
 	// 배경음 등록.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
 	
@@ -74,11 +92,6 @@ void HelloWorld::update(float dt)
 	// TODO :: Press Q to Start, ESC to exit로 바꿔주기. 
 	auto startChecker = m_pInputLayer->GetInputArray();
 	
-	char buf[255];
-	sprintf(buf, "keyAttack : %d", startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack]);
-	CCLOG(buf);
-
-
 	if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
 	{
 		ChangeToStageOne();

@@ -407,7 +407,13 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 	return;
 }
 
+// JoyStick이 연결되어 있는지를 확인하여 bool값을 반환하여주는 함수.
+/*
+bool InputLayer::IsJoyStickConnected()
+{
 
+}
+*/
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.
 	기본적으로는 CheckBoolIsNew, CheckBoolIsDown과 같은 일을 한다.
