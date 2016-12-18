@@ -11,8 +11,8 @@ public:
 	virtual bool init() override;
 	virtual void update(float) override;
 
-	void ChangeToStageOne(Ref*);
-	void ExitGame(Ref*);
+	void ChangeToStageOne();
+	void ExitGame();
 
 	InputLayer* m_pInputLayer;
 };

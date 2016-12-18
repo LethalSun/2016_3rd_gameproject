@@ -15,6 +15,8 @@ Waiting
 
 */
 
+const float correctionValue = 30.f;
+
 void EnemyState_Waiting::startState(Enemy* enemy)
 {
 	CCLOG("Start Waiting");
@@ -25,7 +27,7 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 	float attackRange = enemy->getAttackRange();
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 
-	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange, distanceFromPlayer) + correctionValue)
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}

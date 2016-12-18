@@ -27,6 +27,8 @@ public:
 	CC_SYNTHESIZE(float, m_MoveSpeed, MoveSpeed);
 	CC_SYNTHESIZE(bool, m_IsAttackedOnce, IsAttackedOnce);
 	CC_SYNTHESIZE(bool, m_IsEnemyPreemptive, IsEnemyPreemptive);
+	CC_SYNTHESIZE(bool, m_AttackChecked, AttackChecked);
+	CC_SYNTHESIZE(float, m_StiffTime, StiffTime);
 
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);
@@ -49,6 +51,7 @@ public:
 	CC_SYNTHESIZE(int, m_HP, HP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
 	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
+	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -65,6 +68,8 @@ public:
 	void				 MakeBox(Vec2, Vec2, const int);
 	bool				 IsEnemyMaxHp();
 	void				 CheckEnemyAttacked();
+	bool				 setAttackedDamage(const int);
+	ManageEnemyMove*     getManageEnemyMove();
 
 	/* Animation Function */
 	bool				 Stop();

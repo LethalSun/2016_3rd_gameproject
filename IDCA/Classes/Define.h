@@ -24,7 +24,7 @@ enum DIRECTION
 //캐릭터 체력 공격력
 const int MAX_HP = 1000;
 const int MAX_SP = 10;
-const int ATTACK_DAMAGE = 3;
+const int ATTACK_DAMAGE = 0;
 
 //아트로스 체력 공격력
 const int ATROCE_MAX_HP = 10;
@@ -91,7 +91,7 @@ namespace CONFIG_DEFAULT
 
 enum ENEMY_STATE_TYPE
 {
-	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, STATE_NUM = 5
+	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, BE_ATTACKED = 5, STATE_NUM = 6
 };
 
 //공격범위와 피격범위를 위한 태그
