@@ -29,6 +29,7 @@
     <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
     <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
     <ClCompile Include="..\Classes\Enemy_Atroce.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_BeAttacked.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
@@ -60,6 +61,7 @@
     <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
     <ClInclude Include="..\Classes\Enemy_Choco.h" />
     <ClInclude Include="..\Classes\Enemy_Atroce.h" />
+    <ClInclude Include="..\Classes\EnemyState_BeAttacked.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />

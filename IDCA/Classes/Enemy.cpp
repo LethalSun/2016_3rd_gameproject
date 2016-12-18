@@ -9,6 +9,7 @@
 #include "EnemyState_Return.h"
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
+#include "EnemyState_BeAttacked.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
 const float IgnoreMoveRange = 0.01f;
@@ -57,13 +58,10 @@ void Enemy::update(const float deltaTime)
 	//CCLOG(buf);
 
 	DecideWhatIsCurrentAnimation();
-	if (!IsEnemyMaxHp())
-	{
-		setIsAttackedOnce(false);
-	}
 	
 	return;
 }
+
 
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
@@ -325,6 +323,8 @@ bool Enemy::Attack()
 	{
 		return false;
 	}
+	
+	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
@@ -359,9 +359,11 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
 	{
 		Attack();
+		//TODO :: Attack로직 들어간 뒤, 고쳐야 할 듯.
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
-		|| currentStateType == ENEMY_STATE_TYPE::WAITING)
+		|| currentStateType == ENEMY_STATE_TYPE::WAITING
+		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
 	{
 		Stop();
 	}
@@ -380,4 +382,25 @@ bool Enemy::IsEnemyMaxHp()
 	}
 
 	return false;
+}
+
+// Enemy가 Attack받았는지 않았는지 확인하는 함수.
+void Enemy::CheckEnemyAttacked()
+{
+	if (!IsEnemyMaxHp())
+	{
+		setIsAttackedOnce(true);
+	}
+
+	return;
+}
+
+
+// Enemy가 Attack받았을 경우 Damage를 받는 함수.
+bool Enemy::setAttackedDamage(const int damage)
+{
+	CheckEnemyAttacked();
+	setHP(getHP() - damage);
+	changeState<EnemyState_BeAttacked>();
+	return true;
 }

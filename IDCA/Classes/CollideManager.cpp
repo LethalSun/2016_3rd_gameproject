@@ -108,9 +108,8 @@ void CollideManager::CheckCharacterAttack()
 
 		if ((xMin >= x) && (yMin >= y))
 		{
-			auto curHP = (*iter)->getHP();
-			curHP = curHP - m_pPlayerCharacter->GetDamage();
-			(*iter)->setHP(curHP);
+			int damage = m_pPlayerCharacter->GetDamage();
+			(*iter)->setAttackedDamage(damage);
 		}
 	}
 }

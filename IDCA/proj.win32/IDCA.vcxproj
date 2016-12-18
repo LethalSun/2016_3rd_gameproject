@@ -157,6 +157,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\EnemyState.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Approach.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Attack.cpp" />
+    <ClCompile Include="..\Classes\EnemyState_BeAttacked.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Return.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Search.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Waiting.cpp" />
@@ -191,6 +192,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\EnemyState.h" />
     <ClInclude Include="..\Classes\EnemyState_Approach.h" />
     <ClInclude Include="..\Classes\EnemyState_Attack.h" />
+    <ClInclude Include="..\Classes\EnemyState_BeAttacked.h" />
     <ClInclude Include="..\Classes\EnemyState_Return.h" />
     <ClInclude Include="..\Classes\EnemyState_Search.h" />
     <ClInclude Include="..\Classes\EnemyState_Waiting.h" />
