@@ -69,7 +69,7 @@ bool StageOne::init()
 	// EnemyManager µî·Ï
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
+	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
 	//addChild(m_pEnemyManager);
 

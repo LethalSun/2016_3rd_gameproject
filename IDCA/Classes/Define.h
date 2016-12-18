@@ -24,7 +24,7 @@ enum DIRECTION
 //캐릭터 체력 공격력
 const int MAX_HP = 10;
 const int MAX_SP = 10;
-const int ATTACK_DAMAGE = 3;
+const int ATTACK_DAMAGE = 0;
 
 //아트로스 체력 공격력
 const int ATROCE_MAX_HP = 1000;

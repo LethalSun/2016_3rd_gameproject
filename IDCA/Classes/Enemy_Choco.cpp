@@ -8,6 +8,7 @@ const float Choco_SearchingRange = 400.f;
 const float Choco_ChasingRange = 500.f;
 const float Choco_AttackRange = 50.f;
 const float Choco_MoveSpeed = 3.5f;
+const float Choco_StiffTime = 0.6f;
 
 const char Choco_Name[] = "Choco";
 const char Choco_Extention[] = ".png";
@@ -24,6 +25,7 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	setAttackRange(Choco_AttackRange);
 	setMoveSpeed(Choco_MoveSpeed);
 	setIsAttackedOnce	(false);
+	setStiffTime(Choco_StiffTime);
 
 	auto AttackRangeChoco = Vec2(CHOCO_ATTACK_RANGE, CHOCO_ATTACK_RANGE);
 	setAttackRangeForCollide(AttackRangeChoco);
