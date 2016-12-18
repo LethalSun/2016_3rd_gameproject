@@ -63,6 +63,7 @@ void CollideManager::CheckCollide()
 {
 	//캐릭터 공격 체크
 	CheckCharacterAttack();
+	CheckMonsterAttack();
 }
 
 float CollideManager::AbsFloat(float f1, float f2)
@@ -79,6 +80,7 @@ float CollideManager::AbsFloat(float f1, float f2)
 	return fr;
 }
 
+//캐릭터->몬스터 공격체크
 void CollideManager::CheckCharacterAttack()
 {
 	if (m_pPlayerCharacter->GetState() != STATE::ATTACK)
@@ -94,7 +96,6 @@ void CollideManager::CheckCharacterAttack()
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
-		//캐릭터->몬스터 공격체크
 		// X collide
 		auto xMin = m_pPlayerCharacter->GetAttackRange().x / 2
 			+ (*iter)->getBodyRangeForCollide().x / 2;
@@ -118,21 +119,43 @@ void CollideManager::CheckCharacterAttack()
 
 			//int damage = m_pPlayerCharacter->GetDamage();
 			//(*iter)->setAttackedDamage(damage);
-			int damage = m_pPlayerCharacter->GetDamage();
+			auto damage = m_pPlayerCharacter->GetDamage();
 			(*iter)->setAttackedDamage(damage);
 			m_pPlayerCharacter->SetAttackChecked();
 			break;
 		}
-		
 	}
 }
-
+//몬스터->캐릭터 공격체크
 void CollideManager::CheckMonsterAttack()
 {
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
+		if ((*iter)->getState()->returnStateNumber() != ENEMY_STATE_TYPE::ATTACKING)
+		{
+			continue;
+		}
+		if ((*iter)->getAttackChecked() == true)
+		{
+			continue;
+		}
 
+		// X collide
+		auto xMin = m_pPlayerCharacter->GetBodyRange().x / 2
+			+ (*iter)->getAttackRangeForCollide().x / 2;
+
+		auto x = AbsFloat(m_pPlayerCharacter->GetBodyAnchorPoint().x,
+			(*iter)->getAttackAnchorPoint().x);
+		// Y collide
+		auto yMin = m_pPlayerCharacter->GetBodyRange().y / 2
+			+ (*iter)->getAttackRangeForCollide().y / 2;
+		auto y = AbsFloat(m_pPlayerCharacter->GetBodyAnchorPoint().y,
+			(*iter)->getAttackAnchorPoint().y);
+		if ((xMin >= x) && (yMin >= y))
+		{
+			(*iter)->setAttackChecked(true);
+			CCLOG("Attacked!");
+		}
 	}
-
 }

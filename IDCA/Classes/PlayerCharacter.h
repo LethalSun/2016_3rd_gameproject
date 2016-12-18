@@ -84,6 +84,7 @@ public:
 
 private:
 	//체력
+	//TODO :체력레이블 표시하기.
 	int m_MaxHP;
 	int m_HP;
 	Label* m_pHPLabel;

@@ -341,7 +341,9 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 int PlayerCharacter::MakeHPBox()
 {
 	auto HPBarStart = Vec2(-m_BodyRange.x / 2, m_BodyRange.y);
-	auto range = Vec2((m_BodyRange.x*(float)m_HP)/(float)m_MaxHP,10.f);
+
+	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);
+
 	if (range.x >= m_BodyRange.x / 2)
 	{
 		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);

@@ -70,6 +70,7 @@ public:
 	void				 CheckEnemyAttacked();
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
+	int					 MakeHPBox();
 
 	/* Animation Function */
 	bool				 Stop();
@@ -79,7 +80,6 @@ public:
 	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
-
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {
