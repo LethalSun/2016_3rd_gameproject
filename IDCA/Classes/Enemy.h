@@ -28,6 +28,7 @@ public:
 	CC_SYNTHESIZE(bool, m_IsAttackedOnce, IsAttackedOnce);
 	CC_SYNTHESIZE(bool, m_IsEnemyPreemptive, IsEnemyPreemptive);
 	CC_SYNTHESIZE(bool, m_AttackChecked, AttackChecked);
+	CC_SYNTHESIZE(float, m_StiffTime, StiffTime);
 
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
 	CC_SYNTHESIZE(float, m_DistanceFromPlayer, DistanceFromPlayer);

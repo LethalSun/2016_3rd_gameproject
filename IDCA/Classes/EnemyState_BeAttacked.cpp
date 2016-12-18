@@ -3,7 +3,6 @@
 #include "EnemyState_BeAttacked.h"
 #include "EnemyState_Search.h"
 
-const float stiffTime = 0.5f;
 
 void EnemyState_BeAttacked::startState(Enemy* enemy)
 {
@@ -14,7 +13,7 @@ void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
 {
 	m_AccumulateTime += deltaTime;
 
-	if (m_AccumulateTime > stiffTime)
+	if (m_AccumulateTime > enemy->getStiffTime())
 	{
 		m_AccumulateTime = 0.f;
 		enemy->changeState<EnemyState_Search>();
