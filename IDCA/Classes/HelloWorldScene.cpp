@@ -60,20 +60,9 @@ bool HelloWorld::init()
 	// 배경음 등록.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
 	
-	// 버튼, 메뉴 등록
-	auto itemStart = MenuItemImage::create(ButtonStartNormal, ButtonStartSelected, CC_CALLBACK_1(HelloWorld::ChangeToStageOne, this));
-	auto itemExit = MenuItemImage::create(ButtonExitNormal, ButtonExitSelected, CC_CALLBACK_1(HelloWorld::ExitGame, this));
-
-	auto menu = Menu::create(itemStart, itemExit, NULL);
-	menu->alignItemsVertically();
-	menu->setPosition(Vec2(visibleSize.width * MenuWidth, visibleSize.height * MenuHeight));
-	this->addChild(menu);
-
 	// InputLayer 등록.
 	m_pInputLayer = InputLayer::create();
-
-	// TODO :: Press Q to Start, ESC to exit로 바꿔주기. 
-	
+	addChild(m_pInputLayer);
 
 	scheduleUpdate();
 
@@ -82,14 +71,30 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float dt)
 {
+	// TODO :: Press Q to Start, ESC to exit로 바꿔주기. 
+	auto startChecker = m_pInputLayer->GetInputArray();
+	
+	char buf[255];
+	sprintf(buf, "keyAttack : %d", startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack]);
+	CCLOG(buf);
+
+
+	if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
+	{
+		ChangeToStageOne();
+	}
+	else if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyESC] == INPUT_LAYER::KEY_STATUS::END)
+	{
+		ExitGame();
+	}
 }
 
-void HelloWorld::ChangeToStageOne(Ref* pSender)
+void HelloWorld::ChangeToStageOne()
 {
 	Director::getInstance()->replaceScene(StageOne::createScene());
 }
 
-void HelloWorld::ExitGame(Ref* pSender)
+void HelloWorld::ExitGame()
 {
 	exit(0);
 }

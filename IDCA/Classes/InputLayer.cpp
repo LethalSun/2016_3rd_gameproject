@@ -18,7 +18,6 @@ bool InputLayer::init()
 
 	Vec2 WIN_SIZE(1024.f, 768.f);
 
-	// TODO :: MEMSET 사용해서 초기화.
 	// Array 세팅.
 	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
 	(int)memset(m_OldInputArray, NONE, stateIdxNum);
