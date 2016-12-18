@@ -22,7 +22,7 @@ enum DIRECTION
 	TOP_LEFT,
 };
 //캐릭터 체력 공격력
-const int MAX_HP = 10;
+const int MAX_HP = 1000;
 const int MAX_SP = 10;
 const int ATTACK_DAMAGE = 3;
 

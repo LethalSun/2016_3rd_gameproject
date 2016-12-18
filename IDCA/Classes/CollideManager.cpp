@@ -94,15 +94,16 @@ void CollideManager::CheckCharacterAttack()
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
+		//캐릭터->몬스터 공격체크
 		// X collide
 		auto xMin = m_pPlayerCharacter->GetAttackRange().x / 2
-			+ (*iter)->getAttackRangeForCollide().x / 2;
+			+ (*iter)->getBodyRangeForCollide().x / 2;
 
 		auto x = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().x,
 			(*iter)->getBodyAnchorPoint().x);
 		// Y collide
 		auto yMin = m_pPlayerCharacter->GetAttackRange().y / 2
-			+ (*iter)->getAttackRangeForCollide().y / 2;
+			+ (*iter)->getBodyRangeForCollide().y / 2;
 		auto y = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().y,
 			(*iter)->getBodyAnchorPoint().y);
 
@@ -114,5 +115,16 @@ void CollideManager::CheckCharacterAttack()
 			m_pPlayerCharacter->SetAttackChecked();
 			break;
 		}
+		
 	}
+}
+
+void CollideManager::CheckMonsterAttack()
+{
+	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
+	for (; iter != m_pvEnemy->end(); ++iter)
+	{
+
+	}
+
 }
