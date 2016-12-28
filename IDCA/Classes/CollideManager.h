@@ -29,4 +29,5 @@ private:
 	void CheckCollide();
 	float AbsFloat(float, float);
 	void CheckCharacterAttack();
+	void CheckMonsterAttack();
 };

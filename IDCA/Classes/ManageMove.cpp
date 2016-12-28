@@ -35,7 +35,7 @@ Vec2 ManageMove::update(Vec2 position,const Vec2 background,const Vec2 unitVec,T
 		//return position;
 	}
 
-	movable = m_manageMap->checkWall(position - (backgroundPosition) + (unitVec * 5),map);
+	movable = m_manageMap->checkBlocked(position - (backgroundPosition),unitVec,map);
 	
 	if (movable == true)
 	{

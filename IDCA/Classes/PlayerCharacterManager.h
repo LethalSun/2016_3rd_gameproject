@@ -40,8 +40,8 @@ private:
 	//방향값
 	int m_direction;
 	//TODO :: 테이블 방식으로 충돌방향 구현
-	//TODO :: 충돌범위 앵커포인드 수정해서 보기
-	//TODO :: 한번만 충돌하게 바꾸기
+	//TODO :: 충돌범위 앵커포인드 수정해서 보기 수정완료 멤버 동의 후 투두삭제하기
+	//TODO :: 한번만 충돌하게 바꾸기 수정완료 멤버 동의 후 투두삭제하기
 	int m_arrUnitVecX[8];
 	int m_arrUnitVecY[8];
 

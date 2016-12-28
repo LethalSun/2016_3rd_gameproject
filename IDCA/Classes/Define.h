@@ -22,15 +22,15 @@ enum DIRECTION
 	TOP_LEFT,
 };
 //캐릭터 체력 공격력
-const int MAX_HP = 10;
+const int MAX_HP = 1000;
 const int MAX_SP = 10;
 const int ATTACK_DAMAGE = 3;
 
 //아트로스 체력 공격력
-const int ATROCE_MAX_HP = 1000;
+const int ATROCE_MAX_HP = 20;
 const int ATROCE_ATTACK_DAMAGE = 2;
 //초코 체력 공격력
-const int CHOCO_MAX_HP = 1000;
+const int CHOCO_MAX_HP = 10;
 const int CHOCO_ATTACK_DAMAGE = 1;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
@@ -97,6 +97,9 @@ enum ENEMY_STATE_TYPE
 //공격범위와 피격범위를 위한 태그
 const int RED_BOX_TAG = 10;
 const int GREEN_BOX_TAG = 11;
+//체력바와 mp바를 위한 태그
+const int RED_BOX_SOLID_TAG = 12;
+const int GREEN_BOX_SOLID_TAG = 13;
 //아크비숍 의 공격범위(정사각형) 피격범위의 가로와 세로
 const float ARCHBISHOP_ATTACK_RANGE = 35.f;
 const float ARCHBISHOP_BODY_RANGE_X = 30.f;

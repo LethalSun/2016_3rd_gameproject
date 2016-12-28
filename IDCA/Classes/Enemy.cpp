@@ -12,8 +12,7 @@
 #include "EnemyState_BeAttacked.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.01f;
-
+const float IgnoreMoveRange = 0.05f;
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -51,18 +50,12 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	//MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
-
-	char buf[255];
-	sprintf(buf, "HP: %d", getHP());
-	m_pLabel->setString(buf);
-	//CCLOG(buf);
+	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
 
 	DecideWhatIsCurrentAnimation();
-	
+	MakeHPBox();
 	return;
 }
-
 
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
@@ -188,7 +181,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 		x = 0;
 	}
 
-	if (abs(InputUnitVec.y) > IgnoreMoveRange) 
+	if (abs(InputUnitVec.y) > IgnoreMoveRange)
 	{
 		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
@@ -265,6 +258,18 @@ void Enemy::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 	{
 		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
 	}
+	else if (tag == RED_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+	else if (tag == GREEN_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else
+	{
+		return;
+	}
 
 	addChild(box, 0, tag);
 }
@@ -323,14 +328,17 @@ bool Enemy::Attack()
 	{
 		return false;
 	}
-	
+
 	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
-	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
+	for (int i = 0; i < 50; ++i)
+	{
+		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
+	}
 
 	return true;
 }
@@ -370,10 +378,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	return;
 }
 
-	//Question :: 함수 포인터 질문하기.
-	//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
-	
 
+// Enemy가 현재 MaxHP인지 확인하는 함수.
+// 현재 HP와 MaxHP가 같다면 true를, 아니라면 false 반환.
 bool Enemy::IsEnemyMaxHp()
 {
 	if (getHP() == getMaxHP())
@@ -395,12 +402,11 @@ void Enemy::CheckEnemyAttacked()
 	return;
 }
 
-
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
 bool Enemy::setAttackedDamage(const int damage)
 {
-	CheckEnemyAttacked();
 	setHP(getHP() - damage);
+	CheckEnemyAttacked();
 
 	if (getFlagBeAttacked() == false)
 	{
@@ -408,11 +414,32 @@ bool Enemy::setAttackedDamage(const int damage)
 		setFlagBeAttacked(true);
 	}
 
-
 	return true;
 }
 
 ManageEnemyMove * Enemy::getManageEnemyMove()
 {
 	return m_pManageEnemyMove;
+}
+
+int Enemy::MakeHPBox()
+{
+	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y);
+	auto range = Vec2((m_BodyRangeForCollide.x*(float)m_HP) / (float)m_MaxHP, 10.f);
+	//TODO :저번에 서형석교수님이 말하신 숫자나 문자를 이미지에 대응시켜서 문자처럼쓸수 있는걸로 체력바를띄우면 어떨까?
+	char buf[255];
+	sprintf(buf, "HP: %d", getHP());
+	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
+	m_pLabel->setScale(3.f);
+	m_pLabel->setString(buf);
+	//CCLOG(buf);
+	if (range.x >= m_BodyRangeForCollide.x / 2)
+	{
+		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
+	}
+	else
+	{
+		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
+	}
+	return 0;
 }

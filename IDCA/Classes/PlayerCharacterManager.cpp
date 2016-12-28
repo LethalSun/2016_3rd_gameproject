@@ -26,7 +26,7 @@ PlayerCharacterManager * PlayerCharacterManager::create(const char * fileName, c
 		auto bodyRange = Vec2(ARCHBISHOP_BODY_RANGE_X, ARCHBISHOP_BODY_RANGE_Y);
 		pManager = new(std::nothrow)PlayerCharacterManager(attackRange, bodyRange);
 	}
-	else if (filename.compare("Worrior") == 0)
+	else if (filename.compare("Warrior") == 0)
 	{
 		auto attackRange = Vec2(WORRIOR_ATTACK_RANGE, WORRIOR_ATTACK_RANGE);
 		auto bodyRange = Vec2(WORRIOR_BODY_RANGE_X, WORRIOR_BODY_RANGE_Y);

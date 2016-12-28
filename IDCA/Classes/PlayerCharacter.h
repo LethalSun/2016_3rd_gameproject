@@ -84,12 +84,15 @@ public:
 
 private:
 	//체력
+	//TODO :체력레이블 표시하기.
 	int m_MaxHP;
 	int m_HP;
+	Label* m_pHPLabel;
 
 	//마나
 	int m_MaxSP;
 	int m_SP;
+	Label* m_pSPLabel;
 
 	//데미지
 	int m_Damage;
@@ -122,6 +125,8 @@ private:
 	//피격범위와 공격범위를 디버깅시 표시하는 함수
 	void MakeBox(Vec2 position, Vec2 boxInfo, const int);
 
+	//체력박스를 만드는 함수.
+	int MakeHPBox();
 	//공격 방향을
 	//캐릭터의 피격범위 피격점,공격범위 공격점을 저장하는 변수
 	Vec2 m_AttackAnchorPoint;
@@ -132,6 +137,6 @@ private:
 	Vec2 m_BodyAnchorPointForDebugBox;
 	const Vec2 m_BodyRange;
 
-	//공격체크를 했는지 체크하는 변수
+	//공격판정을 했는지 확인하는 변수(false일때만 충돌 매니져에서 판정을 함)
 	bool m_AttackChecked;
 };

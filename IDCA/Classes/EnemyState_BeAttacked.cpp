@@ -19,7 +19,7 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);
 
 	// TODO :: 애니메이션을 넣으면 빨갛게 안변하는 것 고치기.
-	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
+	auto pushedAction = MoveBy::create(enemy->getStiffTime(), - (enemy->getUnitVecToPlayer()) * pushedDistance);
 	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
 	m_pEasePushedAction->setTag(PushedActionTag);
 	enemy->runAction(m_pEasePushedAction);
@@ -31,7 +31,7 @@ void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
 {
 
 	m_AccumulateTime += deltaTime;
-	m_Pushable = enemy->getManageEnemyMove()->m_pManageMap->checkWall(enemy->getPosition() - (enemy->getUnitVecToPlayer() * 5), enemy->getMapPointer());
+	m_Pushable = enemy->getManageEnemyMove()->m_pManageMap->checkBlocked(enemy->getPosition(), - (enemy->getUnitVecToPlayer() *deltaTime), enemy->getMapPointer());
 
 	if (!m_Pushable)
 	{

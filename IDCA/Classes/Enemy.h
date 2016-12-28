@@ -49,8 +49,8 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyAnchorPointForDebugBox, BodyAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
-	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
+	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 
 	/* Member Function */
@@ -70,6 +70,7 @@ public:
 	void				 CheckEnemyAttacked();
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
+	int					 MakeHPBox();
 
 	/* Animation Function */
 	bool				 Stop();
@@ -79,7 +80,6 @@ public:
 	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
-
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {
@@ -97,6 +97,7 @@ public:
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };
