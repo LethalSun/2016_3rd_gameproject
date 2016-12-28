@@ -12,15 +12,19 @@ enum STATE
 
 enum DIRECTION
 {
-	TOP,
-	TOP_RIGHT,
-	RIGHT,
-	BOTTOM_RIGHT,
-	BOTTOM,
-	BOTTOM_LEFT,
-	LEFT,
-	TOP_LEFT,
+	TOP = 0,
+	TOP_RIGHT = 1,
+	RIGHT = 2,
+	BOTTOM_RIGHT = 3,
+	BOTTOM = 4,
+	BOTTOM_LEFT = 5,
+	LEFT = 6,
+	TOP_LEFT = 7,
 };
+//유닛벡터 배열
+const int UNIT_X[8] = { 0,1,1,1,0,-1,-1,-1 };
+const int UNIT_Y[8] = { 1,1,0,-1,-1,-1,0,1 };
+
 //캐릭터 체력 공격력
 const int MAX_HP = 1000;
 const int MAX_SP = 10;

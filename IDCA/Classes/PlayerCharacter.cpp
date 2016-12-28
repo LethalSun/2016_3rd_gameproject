@@ -346,10 +346,18 @@ int PlayerCharacter::MakeHPBox()
 
 	if (range.x >= m_BodyRange.x / 2)
 	{
+		if (getChildByTag(RED_BOX_SOLID_TAG) != nullptr)
+		{
+			removeChildByTag(RED_BOX_SOLID_TAG);
+		}
 		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
 	}
 	else
 	{
+		if (getChildByTag(GREEN_BOX_SOLID_TAG) != nullptr)
+		{
+			removeChildByTag(GREEN_BOX_SOLID_TAG);
+		}
 		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
 	}
 	return 0;

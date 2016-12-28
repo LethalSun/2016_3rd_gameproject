@@ -101,11 +101,11 @@ void PlayerCharacterManager::CalculateAttackAnchorPoint()
 	auto bodyPositionY = position.y;
 
 	auto offsetX = (m_BodyRange.x / 2) + (m_AttackRange.x / 2);
-	auto deltaX = m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecX] * offsetX;
+	auto deltaX = UNIT_X[m_pCharacter->GetDirection()] * offsetX;
 	auto attackPostionX = bodyPositionX + deltaX;
 
 	auto offsetY = (m_BodyRange.y / 2) + (m_AttackRange.y / 2);
-	auto deltaY = m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecY] * offsetY;
+	auto deltaY = UNIT_Y[m_pCharacter->GetDirection()] * offsetY;
 	auto attackPostionY = bodyPositionY + deltaY;
 
 	m_AttackAnchorPointForDebugBox = Vec2(attackPostionX, attackPostionY);
