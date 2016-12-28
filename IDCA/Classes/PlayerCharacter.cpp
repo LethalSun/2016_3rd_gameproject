@@ -145,7 +145,10 @@ void PlayerCharacter::update(float dt)
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
-		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
+		for (int i = 0; i < 50; ++i)
+		{
+			MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
+		}
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -159,7 +162,7 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-
+	MakeHPBox();
 	SaveBeforeStateAndDirection();
 	CheckStopState();
 }
@@ -319,6 +322,35 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 	{
 		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
 	}
+	else if (tag == RED_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+	else if (tag == GREEN_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else
+	{
+		return;
+	}
 
 	addChild(box, 0, tag);
+}
+
+int PlayerCharacter::MakeHPBox()
+{
+	auto HPBarStart = Vec2(-m_BodyRange.x / 2, m_BodyRange.y);
+
+	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);
+
+	if (range.x >= m_BodyRange.x / 2)
+	{
+		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
+	}
+	else
+	{
+		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
+	}
+	return 0;
 }

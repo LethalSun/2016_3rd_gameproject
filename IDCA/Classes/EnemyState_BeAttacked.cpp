@@ -19,7 +19,7 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	auto seqAction = Sequence::createWithTwoActions(redAction, recoveryAction);
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);
 
-	enemy->m_pEffectManager->makeEffect(0);
+	enemy->m_pEffectManager->MakeEffect(3);
 	
 	
 

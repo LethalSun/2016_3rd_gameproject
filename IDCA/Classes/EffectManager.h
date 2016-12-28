@@ -4,12 +4,16 @@ class EffectManager : public Node
 
 
 public:
-	void makeEffect(int damage);
+	void MakeEffect(int damage);
 	CREATE_FUNC(EffectManager);
 
 	bool init();
 
 	EffectManager() = default;
 	~EffectManager() = default;
+
+
+	EaseElasticInOut* m_pEaseEffectMove;
+
 };
 
