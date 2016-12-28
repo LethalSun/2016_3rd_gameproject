@@ -12,7 +12,7 @@
 #include "EnemyState_BeAttacked.h"
 #include "EffectManager.h"
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.01f;
+const float IgnoreMoveRange = 0.05f;
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -380,9 +380,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	return;
 }
 
-//Question :: 함수 포인터 질문하기.
-//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
 
+// Enemy가 현재 MaxHP인지 확인하는 함수.
+// 현재 HP와 MaxHP가 같다면 true를, 아니라면 false 반환.
 bool Enemy::IsEnemyMaxHp()
 {
 	if (getHP() == getMaxHP())
@@ -407,8 +407,8 @@ void Enemy::CheckEnemyAttacked()
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
 bool Enemy::setAttackedDamage(const int damage)
 {
-	CheckEnemyAttacked();
 	setHP(getHP() - damage);
+	CheckEnemyAttacked();
 
 	if (getFlagBeAttacked() == false)
 	{
@@ -433,22 +433,47 @@ void Enemy::CreateEffect(int damage)
 
 int Enemy::MakeHPBox()
 {
-	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y);
-	auto range = Vec2((m_BodyRangeForCollide.x*(float)m_HP) / (float)m_MaxHP, 10.f);
+	if (getChildByTag(GREEN_BOX_SOLID_TAG) != nullptr)
+	{
+		removeChildByTag(GREEN_BOX_SOLID_TAG);
+	}
+
+	auto anchorPoint = getAnchorPoint();
+
+	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y / 2);
+
+	auto HPBarEnd = Vec2(HPBarStart.x + m_BodyRangeForCollide.x, HPBarStart.y + 10.f);
+
+	auto hpRatio = ((float)m_HP / (float)m_MaxHP);
+
+	auto range = Vec2(HPBarStart.x + m_BodyRangeForCollide.x*hpRatio, HPBarStart.y + 10.f);
+
 	//TODO :저번에 서형석교수님이 말하신 숫자나 문자를 이미지에 대응시켜서 문자처럼쓸수 있는걸로 체력바를띄우면 어떨까?
+	//TODO :체력바를 밑에서 약간떯어뜨려서 배치하기
 	char buf[255];
 	sprintf(buf, "HP: %d", getHP());
 	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
 	m_pLabel->setScale(3.f);
 	m_pLabel->setString(buf);
+
+	auto box = DrawNode::create();
+
+	if (getChildByTag(RED_BOX_SOLID_TAG) == nullptr)
+	{
+		box->drawSolidRect(HPBarStart, HPBarEnd, Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+
+	box->drawSolidRect(HPBarStart, range, Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	addChild(box, 0, GREEN_BOX_SOLID_TAG);
+
 	//CCLOG(buf);
-	if (range.x >= m_BodyRangeForCollide.x / 2)
-	{
-		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
-	}
-	else
-	{
-		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
-	}
+	//if (range.x >= m_BodyRangeForCollide.x / 2)
+	//{
+	//	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
+	//}
+	//else
+	//{
+	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
+	//}
 	return 0;
 }

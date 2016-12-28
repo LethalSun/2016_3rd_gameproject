@@ -78,6 +78,10 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(m_Direction);
+	//체력 숫자 표시용 레이블
+	m_pLabel = Label::create();
+	m_pLabel->setColor(ccc3(255, 0, 0));
+	addChild(m_pLabel, 5);
 	//addChild(Sprite);
 }
 
@@ -340,17 +344,17 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 
 int PlayerCharacter::MakeHPBox()
 {
-	auto HPBarStart = Vec2(-m_BodyRange.x / 2, m_BodyRange.y);
-
+	auto HPBarStart = Vec2(0, m_BodyRange.y / 2);
+	auto HPBarEnd = Vec2(m_BodyRange.x, 10.f);
 	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);
 
-	if (range.x >= m_BodyRange.x / 2)
-	{
-		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
-	}
-	else
-	{
-		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
-	}
+	char buf[255];
+	sprintf(buf, "HP: %d", GetHP());
+	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
+	m_pLabel->setScale(3.f);
+	m_pLabel->setString(buf);
+
+	MakeBox(HPBarStart, HPBarEnd, RED_BOX_SOLID_TAG);
+	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
 	return 0;
 }

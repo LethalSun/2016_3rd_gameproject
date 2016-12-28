@@ -24,7 +24,7 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	
 
 	// TODO :: 애니메이션을 넣으면 빨갛게 안변하는 것 고치기.
-	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
+	auto pushedAction = MoveBy::create(enemy->getStiffTime(), - (enemy->getUnitVecToPlayer()) * pushedDistance);
 	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
 	m_pEasePushedAction->setTag(PushedActionTag);
 	enemy->runAction(m_pEasePushedAction);

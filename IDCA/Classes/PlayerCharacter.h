@@ -139,4 +139,7 @@ private:
 
 	//공격판정을 했는지 확인하는 변수(false일때만 충돌 매니져에서 판정을 함)
 	bool m_AttackChecked;
+
+	//방향 변수(int)로부터 유닛벡터 순서쌍을 얻는 배열
+	Label* m_pLabel;
 };

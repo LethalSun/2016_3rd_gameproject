@@ -122,7 +122,7 @@ void CollideManager::CheckCharacterAttack()
 			auto damage = m_pPlayerCharacter->GetDamage();
 			(*iter)->setAttackedDamage(damage);
 			m_pPlayerCharacter->SetAttackChecked();
-			break;
+			//break;
 		}
 	}
 }

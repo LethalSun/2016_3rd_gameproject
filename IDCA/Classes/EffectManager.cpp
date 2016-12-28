@@ -5,21 +5,38 @@
 void EffectManager::MakeEffect(int damage)
 {
 	
-	auto effect = Sprite::create("Effect/effect.png");
+	m_pEffect = Sprite::create("Effect/effect.png");
 	
-	effect->setPosition(Vec2(0, 50));
+	m_pEffect->setPosition(Vec2(0, 50));
+	m_pEffect->setScale(1.5f);
+	addChild(m_pEffect);
 	
-	addChild(effect);
 	
-	auto effectMove = MoveBy::create(0.5f, Vec2(0, 50.f));
+	auto damageStr = itoa(damage,damageBuf,10);
+	m_pDamageLabel = LabelBMFont::create( damageStr, "Effect/damageFont.fnt");
+	m_pDamageLabel->setPosition(Vec2(0, 30));
+	m_pDamageLabel->setScale(2.0f);
+	addChild(m_pDamageLabel);
+
+
+	auto effectMove = MoveBy::create(0.8f, Vec2(0, 50.f));
 	m_pEaseEffectMove = EaseElasticInOut::create(effectMove, 0.5f);
 
-	runAction(m_pEaseEffectMove);
+	auto callBack = CallFunc::create(CC_CALLBACK_0(EffectManager::afterEnd, this));
+	auto sequence = Sequence::create(m_pEaseEffectMove, callBack,NULL);
+
+
+	runAction(sequence);
+	
 
 }
 
-
-
+void EffectManager::afterEnd()
+{
+	this->setPosition(Vec2(0, 0));
+	removeChild(m_pEffect);
+	removeChild(m_pDamageLabel);
+}
 
 bool EffectManager::init()
 {
@@ -29,6 +46,7 @@ bool EffectManager::init()
 
 	}
 
+	scheduleUpdate();
 	return true;
 
 }
