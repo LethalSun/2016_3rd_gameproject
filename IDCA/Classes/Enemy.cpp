@@ -12,7 +12,7 @@
 #include "EnemyState_BeAttacked.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.01f;
+const float IgnoreMoveRange = 0.05f;
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -378,9 +378,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	return;
 }
 
-//Question :: 함수 포인터 질문하기.
-//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
 
+// Enemy가 현재 MaxHP인지 확인하는 함수.
+// 현재 HP와 MaxHP가 같다면 true를, 아니라면 false 반환.
 bool Enemy::IsEnemyMaxHp()
 {
 	if (getHP() == getMaxHP())
@@ -405,8 +405,8 @@ void Enemy::CheckEnemyAttacked()
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
 bool Enemy::setAttackedDamage(const int damage)
 {
-	CheckEnemyAttacked();
 	setHP(getHP() - damage);
+	CheckEnemyAttacked();
 
 	if (getFlagBeAttacked() == false)
 	{

@@ -97,6 +97,7 @@ public:
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };
