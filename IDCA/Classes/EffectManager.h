@@ -5,7 +5,11 @@ class EffectManager : public Node
 
 public:
 	void makeEffect(int damage);
-	EffectManager();
-	~EffectManager();
+	CREATE_FUNC(EffectManager);
+
+	bool init();
+
+	EffectManager() = default;
+	~EffectManager() = default;
 };
 

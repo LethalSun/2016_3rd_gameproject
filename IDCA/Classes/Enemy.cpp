@@ -10,7 +10,7 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
-
+#include "EffectManager.h"
 const Vec2 ZERO = Vec2(0.f, 0.f);
 const float IgnoreMoveRange = 0.01f;
 
@@ -23,6 +23,7 @@ bool Enemy::init(const Vec2 initPosition)
 	}
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
+	m_pEffectManager = EffectManager::create();
 	addComponent(m_pManageEnemyMove);
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
@@ -416,4 +417,11 @@ bool Enemy::setAttackedDamage(const int damage)
 ManageEnemyMove * Enemy::getManageEnemyMove()
 {
 	return m_pManageEnemyMove;
+}
+
+
+void Enemy::createEffect(int damage)
+{
+	m_pEffectManager->makeEffect(damage);
+	
 }
