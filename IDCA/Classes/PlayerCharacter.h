@@ -141,4 +141,5 @@ private:
 	bool m_AttackChecked;
 
 	//방향 변수(int)로부터 유닛벡터 순서쌍을 얻는 배열
+	Label* m_pLabel;
 };

@@ -424,22 +424,47 @@ ManageEnemyMove * Enemy::getManageEnemyMove()
 
 int Enemy::MakeHPBox()
 {
-	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y);
-	auto range = Vec2((m_BodyRangeForCollide.x*(float)m_HP) / (float)m_MaxHP, 10.f);
+	if (getChildByTag(GREEN_BOX_SOLID_TAG) != nullptr)
+	{
+		removeChildByTag(GREEN_BOX_SOLID_TAG);
+	}
+
+	auto anchorPoint = getAnchorPoint();
+
+	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y / 2);
+
+	auto HPBarEnd = Vec2(HPBarStart.x + m_BodyRangeForCollide.x, HPBarStart.y + 10.f);
+
+	auto hpRatio = ((float)m_HP / (float)m_MaxHP);
+
+	auto range = Vec2(HPBarStart.x + m_BodyRangeForCollide.x*hpRatio, HPBarStart.y + 10.f);
+
 	//TODO :저번에 서형석교수님이 말하신 숫자나 문자를 이미지에 대응시켜서 문자처럼쓸수 있는걸로 체력바를띄우면 어떨까?
+	//TODO :체력바를 밑에서 약간떯어뜨려서 배치하기
 	char buf[255];
 	sprintf(buf, "HP: %d", getHP());
 	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
 	m_pLabel->setScale(3.f);
 	m_pLabel->setString(buf);
+
+	auto box = DrawNode::create();
+
+	if (getChildByTag(RED_BOX_SOLID_TAG) == nullptr)
+	{
+		box->drawSolidRect(HPBarStart, HPBarEnd, Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+
+	box->drawSolidRect(HPBarStart, range, Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	addChild(box, 0, GREEN_BOX_SOLID_TAG);
+
 	//CCLOG(buf);
-	if (range.x >= m_BodyRangeForCollide.x / 2)
-	{
-		MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
-	}
-	else
-	{
-		MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
-	}
+	//if (range.x >= m_BodyRangeForCollide.x / 2)
+	//{
+	//	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
+	//}
+	//else
+	//{
+	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
+	//}
 	return 0;
 }
