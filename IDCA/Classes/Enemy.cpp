@@ -40,6 +40,7 @@ bool Enemy::init(const Vec2 initPosition)
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
 	setFlagBeAttacked(false);
+	setIsDead(false);
 
 	return true;
 }

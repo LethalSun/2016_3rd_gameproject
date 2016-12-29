@@ -105,4 +105,6 @@ void StageOne::update(float delta)
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
 	m_pEnemyManager->StageOneTriggerCheck();
 	m_pEnemyManager->DieCheck();
+
+	return;
 }
