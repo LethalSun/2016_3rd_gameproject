@@ -23,13 +23,24 @@
 const float FADEOUT_TIME = 1.5f;
 const float RESTING_TIME = 0.1f;
 
+// TODO :: pushedDistance를 enemy안의 멤버 변수로 등록하여 enemy마다 밀려나는 거 다르게 하기.
+const int PushedActionTag = 1;
+const float pushedDistance = 75.f;
+
 void EnemyState_Dead::startState(Enemy* enemy)
 {
 	CCLOG("start_Dead!");
 	m_AccumulateTime = 0.f;
 
+	// 마지막에 죽을 때는 두 배로 밀려나도록.
+	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
+	auto m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
+	m_pEasePushedAction->setTag(PushedActionTag);
+	enemy->runAction(m_pEasePushedAction);
+
+	// Fade out Action
 	auto action = FadeOut::create(FADEOUT_TIME);
-	enemy->m_pAnimationMaker->runAction(action);
+	enemy->m_pAnimationMaker->GetSprite()->runAction(action);
 
 	// Enemy 메모리 해제 작업.
 	auto manager = EnemyManager::getInstance();
@@ -38,10 +49,6 @@ void EnemyState_Dead::startState(Enemy* enemy)
 	// EnemyManager의 Vector에서 삭제.
 	auto enemyVector = &manager->getEnemyVector();
 	enemyVector->erase(vecIdx);
-
-	// EnemyManager의 deleteVector에 삽입.
-	auto deleteVector = &manager->getDeleteEenemyVector();
-	deleteVector->pushBack(enemy);
 
 	return;
 }
@@ -61,6 +68,11 @@ void EnemyState_Dead::endState(Enemy* enemy)
 {
 	// TODO :: RemoveChild를 했는데 어째서 Update에 들어가서 죽는걸까?
 	CCLOG("end_Dead!");
+
+	// EnemyManager의 deleteVector에 삽입.
+	auto manager = EnemyManager::getInstance();
+	auto deleteVector = &manager->getDeleteEenemyVector();
+	deleteVector->pushBack(enemy);
 
 	return;
 }

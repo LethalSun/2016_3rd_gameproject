@@ -20,8 +20,6 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);
 
 	enemy->m_pEffectManager->MakeEffect(3);
-	
-	
 
 	// TODO :: 애니메이션을 넣으면 빨갛게 안변하는 것 고치기.
 	auto pushedAction = MoveBy::create(enemy->getStiffTime(), - (enemy->getUnitVecToPlayer()) * pushedDistance);
