@@ -44,6 +44,8 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
 	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(const char*, m_HitedSound, HitedSound);
+	CC_SYNTHESIZE(const char*, m_DyingSound, DyingSound);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
