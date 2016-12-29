@@ -192,10 +192,14 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 {
 	// TODO :: 생성 위치 매직 넘버 없애기.
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(750.f, 700.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
+
 	return;
 }
 
-
+// 매 Update마다 Enemy가 죽었는지 확인을 하고 release를 진행해준다.
 void EnemyManager::DieCheck()
 {
 	for (int i = 0; i < m_pEnemyVector.size(); ++i)
