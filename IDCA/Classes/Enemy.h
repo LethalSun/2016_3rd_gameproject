@@ -5,6 +5,7 @@
 class AnimationMaker;
 class Config;
 class ManageEnemyMove;
+class EnemyManager;
 
 class Enemy : public Node
 {
@@ -71,6 +72,7 @@ public:
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
 	int					 MakeHPBox();
+	void				 Die();
 
 	/* Animation Function */
 	bool				 Stop();
@@ -97,6 +99,7 @@ public:
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };

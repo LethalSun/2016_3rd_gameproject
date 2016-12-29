@@ -32,7 +32,7 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	auto BodyRangeChoco = Vec2(CHOCO_BODY_RANGE_X, CHOCO_BODY_RANGE_Y);
 	setBodyRangeForCollide(BodyRangeChoco);
 	setIsAttackedOnce(false);
-	setIsEnemyPreemptive(false);
+	setIsEnemyPreemptive(true);
 
 	setHP(CHOCO_MAX_HP);
 	setMaxHP(CHOCO_MAX_HP);
