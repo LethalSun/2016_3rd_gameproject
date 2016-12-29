@@ -4,6 +4,7 @@
 #include "Enemy_Atroce.h"
 #include "Enemy_Choco.h"
 #include "PlayerCharacter.h"
+#include "EnemyManager.h"
 
 CollideManager::CollideManager()
 {
@@ -83,6 +84,7 @@ float CollideManager::AbsFloat(float f1, float f2)
 //캐릭터->몬스터 공격체크
 void CollideManager::CheckCharacterAttack()
 {
+	SetCMEnemyPointer(EnemyManager::getInstance()->getEnemyVector());
 	if (m_pPlayerCharacter->GetState() != STATE::ATTACK)
 	{
 		return;
@@ -93,6 +95,7 @@ void CollideManager::CheckCharacterAttack()
 		return;
 	}
 
+	// TODO :: Enemy를 지우면 여기서 자꾸 충돌이 일어나는데 어떻게 해결해야 할지?
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
@@ -125,6 +128,7 @@ void CollideManager::CheckCharacterAttack()
 			//break;
 		}
 	}
+
 }
 //몬스터->캐릭터 공격체크
 void CollideManager::CheckMonsterAttack()

@@ -69,11 +69,7 @@ bool StageOne::init()
 	// EnemyManager 등록
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 650.f));
-	auto vector = m_pEnemyManager->getEnemyVector();
-	
+	m_pEnemyManager->StageOneSetting();
 
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();
@@ -105,6 +101,8 @@ void StageOne::update(float delta)
 		m_pPlayerCharacterManager->setPlayerPosition(position, backgroundposition);
 	}
 
+	// EnemyManager
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
-	m_pEnemyManager->DeleteEnemy();
+	m_pEnemyManager->StageOneTriggerCheck();
+	m_pEnemyManager->DieCheck();
 }

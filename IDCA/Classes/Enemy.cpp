@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Enemy.h"
+#include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
@@ -416,6 +417,7 @@ bool Enemy::setAttackedDamage(const int damage)
 		setFlagBeAttacked(true);
 	}
 
+
 	return true;
 }
 
@@ -476,4 +478,17 @@ int Enemy::MakeHPBox()
 	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
 	//}
 	return 0;
+}
+
+// Enemy의 HP가 0이하일 경우 호출되는 함수.
+// EnemyManager의 Vector에서 자신을 지우고, 그 다음 자신을 removeChild해준다.
+void Enemy::Die()
+{
+	auto manager = EnemyManager::getInstance();
+	const int vecIdx = manager->FindEnemyWithPointer(this);
+
+	auto enemyVector = &EnemyManager::getInstance()->getEnemyVector();
+	enemyVector->erase(vecIdx);
+
+	removeChild(this);
 }
