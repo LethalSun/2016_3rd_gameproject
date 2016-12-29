@@ -12,6 +12,7 @@
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
 #include "EffectManager.h"
+
 const Vec2 ZERO = Vec2(0.f, 0.f);
 const float IgnoreMoveRange = 0.05f;
 
@@ -335,7 +336,10 @@ bool Enemy::Attack()
 	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
-	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
+
+	// TODO :: 소리가 겹치면 안나는 이유 물어보기.
+	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
 	for (int i = 0; i < 50; ++i)

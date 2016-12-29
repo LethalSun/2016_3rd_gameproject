@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "SimpleAudioEngine.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
@@ -6,6 +7,7 @@
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
 const char ATROCE_PLIST[] = "Atroce.plist";
+const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 
 // EnemyManager 생성자.
 // EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
@@ -195,6 +197,9 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(750.f, 700.f));
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
+
+	// Sound 출력
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
 
 	return;
 }
