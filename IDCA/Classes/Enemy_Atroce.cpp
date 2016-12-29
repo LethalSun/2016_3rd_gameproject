@@ -38,6 +38,8 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 
 	setIsAttackedOnce(false);
 	setIsEnemyPreemptive(true);
+
+	// Sound 세팅
 	setAttackSound(Atroce_AttackSound);
 
 	// AnimationMaker 세팅.

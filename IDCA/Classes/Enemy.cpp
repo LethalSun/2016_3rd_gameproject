@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Enemy.h"
+#include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
@@ -10,9 +11,10 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
+#include "EffectManager.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.01f;
+const float IgnoreMoveRange = 0.05f;
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -22,6 +24,8 @@ bool Enemy::init(const Vec2 initPosition)
 	}
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
+	m_pEffectManager = EffectManager::create();
+	addChild(m_pEffectManager,5);
 	addComponent(m_pManageEnemyMove);
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
@@ -36,6 +40,7 @@ bool Enemy::init(const Vec2 initPosition)
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
 	setFlagBeAttacked(false);
+	setIsDead(false);
 
 	return true;
 }
@@ -332,7 +337,10 @@ bool Enemy::Attack()
 	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
-	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
+
+	// TODO :: 소리가 겹치면 안나는 이유 물어보기.
+	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
 	for (int i = 0; i < 50; ++i)
@@ -378,9 +386,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	return;
 }
 
-//Question :: 함수 포인터 질문하기.
-//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
 
+// Enemy가 현재 MaxHP인지 확인하는 함수.
+// 현재 HP와 MaxHP가 같다면 true를, 아니라면 false 반환.
 bool Enemy::IsEnemyMaxHp()
 {
 	if (getHP() == getMaxHP())
@@ -405,14 +413,15 @@ void Enemy::CheckEnemyAttacked()
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
 bool Enemy::setAttackedDamage(const int damage)
 {
-	CheckEnemyAttacked();
 	setHP(getHP() - damage);
+	CheckEnemyAttacked();
 
 	if (getFlagBeAttacked() == false)
 	{
 		changeState<EnemyState_BeAttacked>();
 		setFlagBeAttacked(true);
 	}
+
 
 	return true;
 }
@@ -421,6 +430,13 @@ ManageEnemyMove * Enemy::getManageEnemyMove()
 {
 	return m_pManageEnemyMove;
 }
+
+
+void Enemy::CreateEffect(int damage)
+{
+	m_pEffectManager->MakeEffect(damage);
+}
+
 
 int Enemy::MakeHPBox()
 {
@@ -467,4 +483,17 @@ int Enemy::MakeHPBox()
 	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
 	//}
 	return 0;
+}
+
+// Enemy의 HP가 0이하일 경우 호출되는 함수.
+// EnemyManager의 Vector에서 자신을 지우고, 그 다음 자신을 removeChild해준다.
+void Enemy::Die()
+{
+	auto manager = EnemyManager::getInstance();
+	const int vecIdx = manager->FindEnemyWithPointer(this);
+
+	auto enemyVector = &EnemyManager::getInstance()->getEnemyVector();
+	enemyVector->erase(vecIdx);
+
+	removeChild(this);
 }

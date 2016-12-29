@@ -1,11 +1,15 @@
 #include "pch.h"
+#include "SimpleAudioEngine.h"
+#include "EnemyState.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
+#include "EnemyState_Dead.h"
 
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
 const char ATROCE_PLIST[] = "Atroce.plist";
+const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 
 // EnemyManager 생성자.
 // EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
@@ -39,30 +43,15 @@ void EnemyManager::deleteInstance()
 }
 
 
-EnemyManager::~EnemyManager()
-{
-	int a;
-}
-
-
+// Manager내 내부 EnemyVector 반환.
 Vector<Enemy*>& EnemyManager::getEnemyVector()
 {
 	return m_pEnemyVector;
 }
 
-void EnemyManager::DeleteEnemy(void)
+Vector<Enemy*>& EnemyManager::getDeleteEenemyVector()
 {
-	auto enemyVector = getEnemyVector();
-
-	for (int i = 0; i < enemyVector.size(); i++)
-	{
-		auto temp_enemy = enemyVector.at(i);
-		if (temp_enemy->getHP() <= 0)
-		{
-			temp_enemy->getMapPointer()->removeChild(temp_enemy);
-
-		}
-	}
+	return m_DeleteEnemyVector;
 }
 
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
@@ -149,10 +138,98 @@ Vector<Enemy*>* EnemyManager::FindEnemyWithType(const ENEMY_TYPE findType)
 	return returnVector;
 }
 
+// Enemy의 포인터를 넣어주면 Vector의 인덱스를 반환해주는 함수. 
+int EnemyManager::FindEnemyWithPointer(Enemy* enemyPointer)
+{
+	auto enemyVector = getEnemyVector();
+
+	for (int i = 0; i < enemyVector.size(); i++)
+	{
+		auto temp_enemy = enemyVector.at(i);
+		if (temp_enemy == enemyPointer)
+		{
+			return i;
+		}
+	}
+
+	return -1;
+}
 
 // TODO :: Function Stage 1 Setting 만들기. ( Choco 1,2가 죽으면 다른 몹 소환 )
 void EnemyManager::StageOneSetting()
 {
-	// 구상중.
-	setStageOneTrigger(true);
+	// 초기 Choco Enemy 생성.
+	// TODO :: Choco Enemy 매직넘버 없애기.
+	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
+	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(800.f, 650.f));
+
+	// 초기 Choco 두 마리는 비 선공 몹으로.
+	m_pEnemyVector.at(0)->setIsEnemyPreemptive(false);
+	m_pEnemyVector.at(1)->setIsEnemyPreemptive(false);
+
+	return;
+}
+
+// StageOne의 Trigger가 만족되었는지 체크해주는 함수.
+// StageOne의 Update에서 호출.
+void EnemyManager::StageOneTriggerCheck()
+{
+	// Trigger가 false일때만 확인. (중복 호출 불가)
+	if (!getStageOneTrigger() && IsStageOneChocoDied())
+	{
+		StageOneCreateAdditionalEnemies();
+	}
+
+	return;
+}
+
+// 초기에 생성했던 Choco 두 마리가 죽었는지 확인하고 Trigger를 올리는 함수.
+bool EnemyManager::IsStageOneChocoDied()
+{
+	if (m_pEnemyVector.empty())
+	{
+		setStageOneTrigger(true);
+		return true;
+	}
+
+	return false;
+}
+
+
+// StageOne의 트리거가 발동되면 나머지 Enemy들을 생성해주는 함수.
+void EnemyManager::StageOneCreateAdditionalEnemies()
+{
+	// TODO :: 생성 위치 매직 넘버 없애기.
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(750.f, 700.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
+	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
+
+	// Sound 출력
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
+
+	return;
+}
+
+// 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.
+// 그리고 deleteVector에 있는 Enemy객체를 release해준다.
+void EnemyManager::DieCheck()
+{
+	for (int i = 0; i < m_pEnemyVector.size(); ++i)
+	{
+		auto tmpEnemy = m_pEnemyVector.at(i);
+		if (tmpEnemy->getHP() <= 0)
+		{
+			tmpEnemy->changeState<EnemyState_Dead>();
+		}
+	}
+
+	for (int i = 0; i < m_DeleteEnemyVector.size(); ++i)
+	{
+		getMapPointer()->removeChild(m_DeleteEnemyVector.at(i));
+	}
+
+	m_DeleteEnemyVector.clear();
+
+	return;
 }

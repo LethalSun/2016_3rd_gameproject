@@ -273,6 +273,42 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA13.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA23.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA3.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA73.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,10,25,20</rect>
+                <key>scale9Paddings</key>
+                <rect>12,10,25,20</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA14.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA15.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA24.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA25.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA4.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA5.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA74.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA75.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,9,23,18</rect>
+                <key>scale9Paddings</key>
+                <rect>12,9,23,18</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA2.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA72.png</key>
             <struct type="IndividualSpriteSettings">
@@ -305,12 +341,24 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA31.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA32.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA33.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA34.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA35.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA41.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA42.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA43.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA44.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA45.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA51.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA52.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA53.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA54.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA55.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA61.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA62.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA63.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA64.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA65.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -654,6 +702,30 @@
             <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM2.png</filename>
             <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM3.png</filename>
             <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoM0.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA3.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA4.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA5.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA13.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA14.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA15.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA23.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA24.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA25.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA33.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA34.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA35.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA43.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA44.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA45.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA53.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA54.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA55.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA63.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA64.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA65.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA73.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA74.png</filename>
+            <filename>../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Monster/ChocoA75.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

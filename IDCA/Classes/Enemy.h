@@ -5,6 +5,8 @@
 class AnimationMaker;
 class Config;
 class ManageEnemyMove;
+class EffectManager;
+class EnemyManager;
 
 class Enemy : public Node
 {
@@ -52,6 +54,7 @@ public:
 	CC_SYNTHESIZE(int, m_Damage, Damage);
 	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
+	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -71,6 +74,9 @@ public:
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
 	int					 MakeHPBox();
+	void				 Die();
+
+	void				 CreateEffect(int damage);
 
 	/* Animation Function */
 	bool				 Stop();
@@ -97,6 +103,8 @@ public:
 	AnimationMaker*	  m_pAnimationMaker;
 	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+	EffectManager* m_pEffectManager;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };
