@@ -41,7 +41,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	}
 	else
 	{
-		enemy->setAttackChecked(false);
+		//enemy->setAttackChecked(false);
 		CCLOG("Attack!");
 	}
 

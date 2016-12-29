@@ -78,7 +78,8 @@ public:
 	//애니메이션을 계속해줘야 하는지 확인하는 함수
 	bool IsAttackContinued();
 	bool IsMoveContinued();
-
+	//공격을 받았을때 체력을 감소 시키는 함수
+	bool SetAttackedDamage(int);
 	PlayerCharacter(const Vec2, const Vec2);
 	~PlayerCharacter();
 

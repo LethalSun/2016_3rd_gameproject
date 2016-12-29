@@ -3,7 +3,7 @@
 #include "StageOne.h"
 #include "ManageMap.h"
 #include "ManageMove.h"
-#include "TemporaryDefine.h"
+#include "Define.h"
 #include "PlayerCharacterManager.h"
 #include "ManageEnemyMove.h"
 #include "Enemy_Choco.h"
@@ -74,7 +74,6 @@ bool StageOne::init()
 	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 650.f));
 	auto vector = m_pEnemyManager->getEnemyVector();
 	vector.at(1)->setMoveSpeed(3.f);
-
 
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();

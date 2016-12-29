@@ -110,19 +110,9 @@ void CollideManager::CheckCharacterAttack()
 
 		if ((xMin >= x) && (yMin >= y))
 		{
-			//TODO:아침에 일어나서 혼자 머지 하다가 일단 수정함그런데 혹시나 해서 양쪽 코드 주석 달아놓음의견묻고 지울것
-			//auto curHP = (*iter)->getHP();
-			//curHP = curHP - m_pPlayerCharacter->GetDamage();
-			//(*iter)->setHP(curHP);
-			//m_pPlayerCharacter->SetAttackChecked();
-			//break;
-
-			//int damage = m_pPlayerCharacter->GetDamage();
-			//(*iter)->setAttackedDamage(damage);
 			auto damage = m_pPlayerCharacter->GetDamage();
 			(*iter)->setAttackedDamage(damage);
 			m_pPlayerCharacter->SetAttackChecked();
-			//break;
 		}
 	}
 }
@@ -147,6 +137,7 @@ void CollideManager::CheckMonsterAttack()
 
 		auto x = AbsFloat(m_pPlayerCharacter->GetBodyAnchorPoint().x,
 			(*iter)->getAttackAnchorPoint().x);
+
 		// Y collide
 		auto yMin = m_pPlayerCharacter->GetBodyRange().y / 2
 			+ (*iter)->getAttackRangeForCollide().y / 2;
@@ -154,7 +145,9 @@ void CollideManager::CheckMonsterAttack()
 			(*iter)->getAttackAnchorPoint().y);
 		if ((xMin >= x) && (yMin >= y))
 		{
+			auto damage = (*iter)->getDamage();
 			(*iter)->setAttackChecked(true);
+			m_pPlayerCharacter->SetAttackedDamage(damage);
 			CCLOG("Attacked!");
 		}
 	}

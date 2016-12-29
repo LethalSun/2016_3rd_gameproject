@@ -151,6 +151,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
+    <ClCompile Include="..\Classes\Define.cpp" />
     <ClCompile Include="..\Classes\EffectManager.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyManager.cpp" />
@@ -177,7 +178,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Projectile.cpp" />
     <ClCompile Include="..\Classes\ProjectileListener.cpp" />
     <ClCompile Include="..\Classes\StageOne.cpp" />
-    <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +210,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Projectile.h" />
     <ClInclude Include="..\Classes\ProjectileListener.h" />
     <ClInclude Include="..\Classes\StageOne.h" />
-    <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
