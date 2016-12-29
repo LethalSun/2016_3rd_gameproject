@@ -1,11 +1,15 @@
 #include "pch.h"
+#include "SimpleAudioEngine.h"
+#include "EnemyState.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
+#include "EnemyState_Dead.h"
 
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
 const char ATROCE_PLIST[] = "Atroce.plist";
+const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 
 // EnemyManager 생성자.
 // EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
@@ -43,6 +47,11 @@ void EnemyManager::deleteInstance()
 Vector<Enemy*>& EnemyManager::getEnemyVector()
 {
 	return m_pEnemyVector;
+}
+
+Vector<Enemy*>& EnemyManager::getDeleteEenemyVector()
+{
+	return m_DeleteEnemyVector;
 }
 
 // Enemy타입과 첫 포지션을 받아 Enemy를 생성해주는 함수.
@@ -196,10 +205,14 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
 
+	// Sound 출력
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
+
 	return;
 }
 
-// 매 Update마다 Enemy가 죽었는지 확인을 하고 release를 진행해준다.
+// 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.
+// 그리고 deleteVector에 있는 Enemy객체를 release해준다.
 void EnemyManager::DieCheck()
 {
 	for (int i = 0; i < m_pEnemyVector.size(); ++i)
@@ -207,10 +220,16 @@ void EnemyManager::DieCheck()
 		auto tmpEnemy = m_pEnemyVector.at(i);
 		if (tmpEnemy->getHP() <= 0)
 		{
-			m_pEnemyVector.erase(i);
-			getMapPointer()->removeChild(tmpEnemy);
+			tmpEnemy->changeState<EnemyState_Dead>();
 		}
 	}
+
+	for (int i = 0; i < m_DeleteEnemyVector.size(); ++i)
+	{
+		getMapPointer()->removeChild(m_DeleteEnemyVector.at(i));
+	}
+
+	m_DeleteEnemyVector.clear();
 
 	return;
 }
