@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "SimpleAudioEngine.h"
 #include "EnemyState_Dead.h"
 #include "Enemy.h"
 #include "EnemyManager.h"
@@ -49,6 +50,9 @@ void EnemyState_Dead::startState(Enemy* enemy)
 	// EnemyManager의 Vector에서 삭제.
 	auto enemyVector = &manager->getEnemyVector();
 	enemyVector->erase(vecIdx);
+
+	// Sound 처리
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(enemy->getDyingSound(), false);
 
 	return;
 }

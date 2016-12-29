@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Enemy.h"
+#include "SimpleAudioEngine.h"
 #include "EnemyState_BeAttacked.h"
 #include "EnemyState_Search.h"
 #include "AnimationMaker.h"
@@ -26,6 +27,9 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
 	m_pEasePushedAction->setTag(PushedActionTag);
 	enemy->runAction(m_pEasePushedAction);
+
+	// Sound Ã³¸®.
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(enemy->getHitedSound(), false);
 
 	CCLOG("start_BeAttacked!");
 }
