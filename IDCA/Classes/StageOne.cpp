@@ -91,7 +91,6 @@ void StageOne::update(float delta)
 {
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
-
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 	position = m_pPlayerCharacterManager->getPlayerPosition();

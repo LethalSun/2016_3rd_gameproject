@@ -65,7 +65,6 @@ public:
 	void				 TranslateUnitVec(Vec2);
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
-	void				 HitedMove(const float deltaTime);
 	void				 CalDirection(Vec2);
 	void				 CatchStateAndDirection();
 	void				 CalculateAttackAnchorPoint();
@@ -76,7 +75,6 @@ public:
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
 	int					 MakeHPBox();
-	void				 Die();
 
 	void				 CreateEffect(int damage);
 
