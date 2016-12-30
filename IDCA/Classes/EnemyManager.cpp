@@ -161,18 +161,21 @@ void EnemyManager::StageOneSetting()
 	// 초기 Choco Enemy 생성.
 	// TODO :: Choco Enemy 매직넘버 없애기.
 
-	auto objectGroup = m_pMap->getObjectGroup("firstChoco");
-	auto object = objectGroup->getObjects();
 
 
+	auto objectGroup = m_pMap->objectGroupNamed("firstChoco");
+	auto objects = objectGroup->getObjects();
 
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
+	for (int i = 0; i < objects.size(); i++)
+	{
+		auto object = objects.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
 
-	
-	// 초기 Choco 두 마리는 비 선공 몹으로.
-	m_pEnemyVector.at(0)->setIsEnemyPreemptive(false);
-	m_pEnemyVector.at(1)->setIsEnemyPreemptive(false);
+		MakeEnemy(ENEMY_TYPE::CHOCO, position);
+		m_pEnemyVector.at(i)->setIsEnemyPreemptive(false);
+	}
+
+
 
 	return;
 }
@@ -206,11 +209,31 @@ bool EnemyManager::IsStageOneChocoDied()
 // StageOne의 트리거가 발동되면 나머지 Enemy들을 생성해주는 함수.
 void EnemyManager::StageOneCreateAdditionalEnemies()
 {
-	// TODO :: 생성 위치 매직 넘버 없애기.
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(750.f, 700.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
+
+	auto atroceGroup = m_pMap->getObjectGroup("Atroce");
+
+	auto atroces = atroceGroup->getObjects();
+
+	for (int i = 0; i < atroces.size(); ++i)
+	{
+		auto object = atroces.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+
+		MakeEnemy(ENEMY_TYPE::ATROCE, position);
+
+	}
+	auto ChocoGroup = m_pMap->getObjectGroup("Choco");
+
+	auto Chocos = ChocoGroup->getObjects();
+
+	for (int i = 0; i < Chocos.size(); ++i)
+	{
+		auto object = Chocos.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+
+		MakeEnemy(ENEMY_TYPE::CHOCO, position);
+
+	}
 
 	// Sound 출력
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);

@@ -55,8 +55,6 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
-
 	DecideWhatIsCurrentAnimation();
 	MakeHPBox();
 	return;
@@ -343,11 +341,8 @@ bool Enemy::Attack()
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
-	for (int i = 0; i < 50; ++i)
-	{
-		MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
-	}
-
+	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
+	
 	return true;
 }
 
@@ -411,10 +406,18 @@ void Enemy::CheckEnemyAttacked()
 }
 
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
-bool Enemy::setAttackedDamage(const int damage)
+bool Enemy::setAttackedDamage(int damage)
 {
+
+	//일단 짜잘한 랜덤 damage
+	auto randomDamage = rand()%2;
+
+	damage += randomDamage;
 	setHP(getHP() - damage);
 	CheckEnemyAttacked();
+
+	//attack 받았을 때 그 damage로 맞는 effect
+	CreateEffect(damage);
 
 	if (getFlagBeAttacked() == false)
 	{
