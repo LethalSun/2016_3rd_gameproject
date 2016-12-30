@@ -25,12 +25,14 @@ bool Enemy::init(const Vec2 initPosition)
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
 	m_pEffectManager = EffectManager::create();
-	addChild(m_pEffectManager,5);
+	addChild(m_pEffectManager, 5);
 	addComponent(m_pManageEnemyMove);
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
 
+	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
+	
 	setPosition(initPosition);
 	setOrigin(initPosition);
 	setUnitVecToPlayer(ZERO);
@@ -172,6 +174,8 @@ void Enemy::CalDirection(Vec2 InputUnitVec)
 	return;
 }
 
+// float 형태의 유닛벡터를 받아서 int형태의 값으로 바꿔준다.
+// IgnoreMoveRange의 범위 만큼은 무시하여 흔들림을 보정해준다.
 void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 {
 	int x = 0;
@@ -199,6 +203,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 	return;
 }
 
+// Before State와 Direction을 저장해주는 함수.
 void Enemy::CatchStateAndDirection()
 {
 	// State Catch
@@ -338,8 +343,7 @@ bool Enemy::Attack()
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	// TODO :: 소리가 겹치면 안나는 이유 물어보기.
-	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
+	// TODO :: newAudioEngine 사용하기.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
 
 	CalculateAttackAnchorPoint();
@@ -365,9 +369,8 @@ bool Enemy::IsAttackContinued()
 
 void Enemy::DecideWhatIsCurrentAnimation()
 {
-	// TODO :: 함수 포인터로 핸들링하기.
 	auto currentStateType = getState()->returnStateNumber();
-	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
+	if (   currentStateType == ENEMY_STATE_TYPE::APPROACHING
 		|| currentStateType == ENEMY_STATE_TYPE::RETURN)
 	{
 		Move();
@@ -375,11 +378,10 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
 	{
 		Attack();
-		//TODO :: Attack로직 들어간 뒤, 고쳐야 할 듯.
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
-		|| currentStateType == ENEMY_STATE_TYPE::WAITING
-		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
+		||   currentStateType == ENEMY_STATE_TYPE::WAITING
+		||   currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
 	{
 		Stop();
 	}
@@ -455,7 +457,6 @@ int Enemy::MakeHPBox()
 
 	auto range = Vec2(HPBarStart.x + m_BodyRangeForCollide.x*hpRatio, HPBarStart.y + 10.f);
 
-	//TODO :저번에 서형석교수님이 말하신 숫자나 문자를 이미지에 대응시켜서 문자처럼쓸수 있는걸로 체력바를띄우면 어떨까?
 	//TODO :체력바를 밑에서 약간떯어뜨려서 배치하기
 	char buf[255];
 	sprintf(buf, "HP: %d", getHP());
@@ -483,17 +484,4 @@ int Enemy::MakeHPBox()
 	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
 	//}
 	return 0;
-}
-
-// Enemy의 HP가 0이하일 경우 호출되는 함수.
-// EnemyManager의 Vector에서 자신을 지우고, 그 다음 자신을 removeChild해준다.
-void Enemy::Die()
-{
-	auto manager = EnemyManager::getInstance();
-	const int vecIdx = manager->FindEnemyWithPointer(this);
-
-	auto enemyVector = &EnemyManager::getInstance()->getEnemyVector();
-	enemyVector->erase(vecIdx);
-
-	removeChild(this);
 }

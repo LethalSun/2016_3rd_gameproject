@@ -3,7 +3,6 @@
 
 using namespace INPUT_LAYER;
 
-// TODO :: 다른 애들이 볼 필요 없으면 cpp로 가야한다. cpp의 맨 위로 넣자.
 // JoyStick Mapping을 위한 값.
 
 const int JoyStickX = 0;
