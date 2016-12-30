@@ -74,7 +74,10 @@ Sprite* AnimationMaker::AddAnimation(int directionNum)
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
 	auto removeBeforeChild = CallFunc::create(CC_CALLBACK_0(AnimationMaker::RemoveChileByTag, this));
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
-	m_pSprite->stopAllActions();
+
+	sequence->setTag(ANIMATION_TAG);
+
+	m_pSprite->stopActionByTag(ANIMATION_TAG);
 	m_pSprite->runAction(sequence);
 
 	//RemoveChileByTag();

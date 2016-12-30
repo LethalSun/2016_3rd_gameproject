@@ -45,6 +45,9 @@ const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
 const float STOP_ANIMATION_SPEED = 0.005f;
 
+const int ANIMATION_TAG = 3;
+
+//KW
 namespace INPUT_LAYER
 {
 	/* const & enum values */
