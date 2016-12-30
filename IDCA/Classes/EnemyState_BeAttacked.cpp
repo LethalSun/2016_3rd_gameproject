@@ -36,7 +36,6 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	// Sound Ã³¸®.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(enemy->getHitedSound(), false);
 
-	CCLOG("start_BeAttacked!");
 }
 
 void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
@@ -62,7 +61,6 @@ void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
 void EnemyState_BeAttacked::endState(Enemy* enemy)
 {
 	enemy->setFlagBeAttacked(false);
-	CCLOG("end_BeAttacked!");
 }
 
 const int EnemyState_BeAttacked::returnStateNumber()

@@ -38,7 +38,6 @@ void EnemyManager::deleteInstance()
 {
 	delete _instance;
 	_instance = nullptr;
-	CCLOG("Delete EnemyManager!");
 	return;
 }
 
