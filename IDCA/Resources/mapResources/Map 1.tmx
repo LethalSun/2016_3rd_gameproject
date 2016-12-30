@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="14">
  <tileset firstgid="1" name="BlackForest_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="BlackForest_A.png" width="256" height="512"/>
  </tileset>
@@ -41,17 +41,20 @@
    eJzt2sWuFVEURdGC+/4Sd3d3d3d3d3d3d6eFN3FoYYM/AJK6r0LWTEb/ZO3uKYqUUkoppZRSSimllFJKKaWUUkrp32tWK4rmtKAlrWhNG9rSjvZ0oCOdao394v+7zvbtQle60Z0e9KQXvelDX/rRP/cotQH2HcggBjOEoQxjOCMYyShGMyb3KLWx9h3HeCYwkUlMZgpTmcZ0ZjAz9yi1WfadzRzmMo/5LGAhi1jMEpayLPcoteX2XcFKVrGaNaxlHevZwEY2sTn3KLUt9t3KNrazg53sYjd72Ms+9nMg9yi1g/Y9xGGOcJRjHOcEJznFac7kFqV3zsbnucBFLnGZK1zlGte5wU1u5Saldtu+d7jLPe7zgIc84jFPeJo71L1nNn/OC17yite8yS0arbe2f8d7PvCRT3zmC19zm7r3zebf+cHP3/s3FEUTmlJraOzXpZRSSimllFJKf17+bVSr/NuoVvm3Ua3yb6Na5d9Gtcq/jWqVfxvV6m//bZzNPUot/zbq2y/J76Zz
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="3" name="Choco_1" x="580" y="770" width="26" height="26">
-   <ellipse/>
-  </object>
-  <object id="4" name="Choco_2" x="583" y="864" width="27" height="28">
-   <ellipse/>
-  </object>
- </objectgroup>
  <layer name="Tile Layer 5" width="100" height="50">
   <data encoding="base64" compression="zlib">
    eJzt0cEJgDAURMF/SONqBZoKTBp1rcIgM7D3hVcFAAAAAAAAAAAAwN9srWrPjvb1E15nOlxZ12MJdzqMbOoBAAAAAAAAACzoATLvBUc=
   </data>
  </layer>
+ <objectgroup name="Atroce">
+  <object id="11" name="Atroce1" x="928" y="767" width="31" height="31"/>
+ </objectgroup>
+ <objectgroup name="Choco">
+  <object id="12" name="Choco1-1" x="993" y="671" width="31" height="32"/>
+  <object id="13" name="Choco1-2" x="992" y="865" width="31" height="29"/>
+ </objectgroup>
+ <objectgroup name="firstChoco">
+  <object id="9" name="firstChoco1" x="609" y="737" width="31" height="31"/>
+  <object id="10" name="firstChoco" x="608" y="865" width="30" height="31"/>
+ </objectgroup>
 </map>

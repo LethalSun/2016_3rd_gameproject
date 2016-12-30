@@ -15,7 +15,7 @@ const int PushedActionTag = 1;
 void EnemyState_BeAttacked::startState(Enemy* enemy)
 {
 	m_Pushable = true;
-	auto redAction = TintTo::create(redTime, 121, 0, 0);
+	auto redAction = TintTo::create(0, 128, 0, 0);
 	auto recoveryAction = TintTo::create(redTime, 255, 255, 255);
 	auto seqAction = Sequence::createWithTwoActions(redAction, recoveryAction);
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);

@@ -160,9 +160,16 @@ void EnemyManager::StageOneSetting()
 {
 	// 초기 Choco Enemy 생성.
 	// TODO :: Choco Enemy 매직넘버 없애기.
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(800.f, 650.f));
 
+	auto objectGroup = m_pMap->getObjectGroup("firstChoco");
+	auto object = objectGroup->getObjects();
+
+
+
+	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
+	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
+
+	
 	// 초기 Choco 두 마리는 비 선공 몹으로.
 	m_pEnemyVector.at(0)->setIsEnemyPreemptive(false);
 	m_pEnemyVector.at(1)->setIsEnemyPreemptive(false);

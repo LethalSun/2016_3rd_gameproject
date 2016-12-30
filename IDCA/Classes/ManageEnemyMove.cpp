@@ -35,6 +35,14 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 	}
 
 	auto movable = false;
+	auto checkCurrent = false;
+
+	checkCurrent = m_pManageMap->checkBlocked(position, Vec2(0, 0), map, enemyVector);
+	
+	if (checkCurrent == false)
+	{
+		return position + unitVec * enemy->getMoveSpeed();
+	}
 
 	movable = m_pManageMap->checkBlocked(position,unitVec, map, enemyVector);
 

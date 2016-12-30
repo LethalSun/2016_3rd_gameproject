@@ -52,6 +52,9 @@ bool StageOne::init()
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
 	addChild(m_pMap);
+
+	
+
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 	m_pManageEnemyMove = ManageEnemyMove::create();
