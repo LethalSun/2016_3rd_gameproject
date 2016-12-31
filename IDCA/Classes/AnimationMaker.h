@@ -71,9 +71,13 @@ private:
 
 	Sprite* m_pSprite;
 
-	char* m_ActionName[4];
-
 	float m_AnimationSpeed;
+
+	//애니메이션이름을 만드는 함수
+	void MakeAnimationName(int);
+
+	//애니메이션을 불러올 때 사용하는 변수
+	char m_AnimationName[256];
 
 	int m_tagOdd;
 	int m_tagEven;

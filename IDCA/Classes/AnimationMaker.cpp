@@ -30,11 +30,6 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 
 	m_pSprite = Sprite::create();
 	addChild(m_pSprite);
-	m_ActionName[STATE::STOP] = "S";
-	m_ActionName[STATE::ATTACK] = "A";
-	m_ActionName[STATE::MOVE] = "M";
-	m_ActionName[STATE::SKILL] = "K";
-
 	m_IsAnimationOn = false;
 	m_State = STATE::STOP;
 
@@ -50,25 +45,39 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 
 Sprite* AnimationMaker::AddAnimation(int directionNum)
 {
-	int imageStartNumber = directionNum * MAX_FRAME_NUM;
+	MakeAnimationName(directionNum);
 
-	Vector<SpriteFrame*> animationFrame;
+	auto animationCache = AnimationCache::getInstance();
 
-	for (int i = imageStartNumber; i < imageStartNumber + MAX_FRAME_NUM; ++i)
+	auto cachedAnimation = animationCache->getAnimation(m_AnimationName);
+
+	if (cachedAnimation == nullptr)
 	{
-		MakeAnimationFrameName(i);
-		m_pFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
+		int imageStartNumber = directionNum * MAX_FRAME_NUM;
 
-		if (m_pFrame == nullptr)
+		Vector<SpriteFrame*> animationFrame;
+
+		for (int i = imageStartNumber; i < imageStartNumber + MAX_FRAME_NUM; ++i)
 		{
-			break;
+			MakeAnimationFrameName(i);
+			m_pFrame = SpriteFrameCache::getInstance()->getSpriteFrameByName(m_FrameNameBuffer);
+
+			if (m_pFrame == nullptr)
+			{
+				break;
+			}
+
+			animationFrame.pushBack(m_pFrame);
 		}
 
-		animationFrame.pushBack(m_pFrame);
+		m_pAnimation = Animation::createWithSpriteFrames(animationFrame, m_AnimationSpeed);
+		animationCache->addAnimation(m_pAnimation, m_AnimationName);
+		m_pAnimate = Animate::create(m_pAnimation);
 	}
-
-	m_pAnimation = Animation::createWithSpriteFrames(animationFrame, m_AnimationSpeed);
-	m_pAnimate = Animate::create(m_pAnimation);
+	else
+	{
+		m_pAnimate = Animate::create(cachedAnimation);
+	}
 
 	auto animationOn = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOn, this));
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
@@ -154,6 +163,7 @@ void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 	{
 		m_AnimationSpeed = STOP_ANIMATION_SPEED;
 		sprintf(m_FrameNameBuffer, "%sS%d%s", m_FileName, fileNumber, m_FileNameExtention);
+		return;
 	}
 
 	m_AnimationSpeed = ANIMATION_SPEED;
@@ -177,5 +187,25 @@ void AnimationMaker::RemoveChileByTag()
 	{
 		m_tag = m_tagEven;
 		removeChildByTag(m_tag);
+	}
+}
+
+void AnimationMaker::MakeAnimationName(int directionNumber)
+{
+	if (m_State == STATE::ATTACK)
+	{
+		sprintf(m_AnimationName, "%sA%d%s", m_FileName, directionNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::MOVE)
+	{
+		sprintf(m_AnimationName, "%sM%d%s", m_FileName, directionNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::SKILL)
+	{
+		sprintf(m_AnimationName, "%sK%d%s", m_FileName, directionNumber, m_FileNameExtention);
+	}
+	else if (m_State == STATE::STOP)
+	{
+		sprintf(m_AnimationName, "%sS%d%s", m_FileName, directionNumber, m_FileNameExtention);
 	}
 }
