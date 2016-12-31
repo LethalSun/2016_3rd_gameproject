@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "SimpleAudioEngine.h"
+#include "AudioEngine.h"
 #include "EnemyState.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
@@ -206,7 +207,8 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
 
 	// Sound Ãâ·Â
-	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
+	//CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
+	experimental::AudioEngine::play2d(TRIGGER_SOUND, false);
 
 	return;
 }
