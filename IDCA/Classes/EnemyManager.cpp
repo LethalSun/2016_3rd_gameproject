@@ -18,6 +18,7 @@ EnemyManager::EnemyManager()
 {
 	setStageOneTrigger(false);
 	setDiedEnemyNum(0);
+	setSoundPlayNum(0);
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
@@ -259,8 +260,7 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	}
 
 	// Sound Ãâ·Â
-	//CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
-	experimental::AudioEngine::play2d(TRIGGER_SOUND, false);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
 
 	return;
 }

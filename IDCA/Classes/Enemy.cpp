@@ -2,6 +2,7 @@
 #include "Enemy.h"
 #include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
+#include "AudioEngine.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
 #include "AnimationMaker.h"
@@ -32,7 +33,7 @@ bool Enemy::init(const Vec2 initPosition)
 	addChild(m_pLabel, 5);
 
 	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
-	
+
 	setPosition(initPosition);
 	setOrigin(initPosition);
 	setUnitVecToPlayer(ZERO);
@@ -342,12 +343,17 @@ bool Enemy::Attack()
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	// TODO :: newAudioEngine 사용하기.
-	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
+	char buf[255];
+	auto i = EnemyManager::getInstance()->getSoundPlayNum();
+	sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
+	i = (i + 1) % 5;
+	EnemyManager::getInstance()->setSoundPlayNum(i);
+
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
 
 	CalculateAttackAnchorPoint();
 	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
-	
+
 	return true;
 }
 
@@ -366,7 +372,7 @@ bool Enemy::IsAttackContinued()
 void Enemy::DecideWhatIsCurrentAnimation()
 {
 	auto currentStateType = getState()->returnStateNumber();
-	if (   currentStateType == ENEMY_STATE_TYPE::APPROACHING
+	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
 		|| currentStateType == ENEMY_STATE_TYPE::RETURN)
 	{
 		Move();
@@ -376,8 +382,8 @@ void Enemy::DecideWhatIsCurrentAnimation()
 		Attack();
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
-		||   currentStateType == ENEMY_STATE_TYPE::WAITING
-		||   currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
+		|| currentStateType == ENEMY_STATE_TYPE::WAITING
+		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
 	{
 		Stop();
 	}
@@ -413,7 +419,7 @@ bool Enemy::setAttackedDamage(int damage)
 {
 
 	//일단 짜잘한 랜덤 damage
-	auto randomDamage = rand()%2;
+	auto randomDamage = rand() % 2;
 
 	damage += randomDamage;
 	setHP(getHP() - damage);
