@@ -14,9 +14,9 @@ void EffectManager::MakeEffect(int damage)
 	
 	auto damageStr = itoa(damage,damageBuf,10);
 	m_pDamageLabel = LabelBMFont::create( damageStr, "Effect/damageFont.fnt");
-	m_pDamageLabel->setPosition(Vec2(0, 30));
+	m_pDamageLabel->setPosition(Vec2(30, 0));
 	m_pDamageLabel->setScale(2.0f);
-	addChild(m_pDamageLabel);
+	m_pEffect->addChild(m_pDamageLabel);
 
 
 	auto effectMove = MoveBy::create(0.8f, Vec2(0, 50.f));
@@ -26,14 +26,14 @@ void EffectManager::MakeEffect(int damage)
 	auto sequence = Sequence::create(m_pEaseEffectMove, callBack,NULL);
 
 
-	runAction(sequence);
+	m_pEffect->runAction(sequence);
 	
 
 }
 
 void EffectManager::afterEnd()
 {
-	this->setPosition(Vec2(0, 0));
+	//this->setposition(vec2(0, 0));
 	removeChild(m_pEffect);
 	removeChild(m_pDamageLabel);
 }

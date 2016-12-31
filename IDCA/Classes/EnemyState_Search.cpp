@@ -12,7 +12,6 @@
 
 void EnemyState_Search::startState(Enemy* enemy)
 {
-	CCLOG("start_Searching!");
 }
 
 void EnemyState_Search::runState(Enemy* enemy, float dt)
@@ -25,7 +24,6 @@ void EnemyState_Search::runState(Enemy* enemy, float dt)
 
 void EnemyState_Search::endState(Enemy* enemy)
 {
-	CCLOG("end_Searching!");
 }
 
 const int EnemyState_Search::returnStateNumber()

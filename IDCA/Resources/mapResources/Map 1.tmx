@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="42">
  <tileset firstgid="1" name="BlackForest_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="BlackForest_A.png" width="256" height="512"/>
  </tileset>
@@ -41,17 +41,76 @@
    eJzt2sWuFVEURdGC+/4Sd3d3d3d3d3d3d6eFN3FoYYM/AJK6r0LWTEb/ZO3uKYqUUkoppZRSSimllFJKKaWUUkrp32tWK4rmtKAlrWhNG9rSjvZ0oCOdao394v+7zvbtQle60Z0e9KQXvelDX/rRP/cotQH2HcggBjOEoQxjOCMYyShGMyb3KLWx9h3HeCYwkUlMZgpTmcZ0ZjAz9yi1WfadzRzmMo/5LGAhi1jMEpayLPcoteX2XcFKVrGaNaxlHevZwEY2sTn3KLUt9t3KNrazg53sYjd72Ms+9nMg9yi1g/Y9xGGOcJRjHOcEJznFac7kFqV3zsbnucBFLnGZK1zlGte5wU1u5Saldtu+d7jLPe7zgIc84jFPeJo71L1nNn/OC17yite8yS0arbe2f8d7PvCRT3zmC19zm7r3zebf+cHP3/s3FEUTmlJraOzXpZRSSimllFJKf17+bVSr/NuoVvm3Ua3yb6Na5d9Gtcq/jWqVfxvV6m//bZzNPUot/zbq2y/J76Zz
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="3" name="Choco_1" x="580" y="770" width="26" height="26">
-   <ellipse/>
-  </object>
-  <object id="4" name="Choco_2" x="583" y="864" width="27" height="28">
-   <ellipse/>
-  </object>
- </objectgroup>
  <layer name="Tile Layer 5" width="100" height="50">
   <data encoding="base64" compression="zlib">
    eJzt0cEJgDAURMF/SONqBZoKTBp1rcIgM7D3hVcFAAAAAAAAAAAAwN9srWrPjvb1E15nOlxZ12MJdzqMbOoBAAAAAAAAACzoATLvBUc=
   </data>
  </layer>
+ <objectgroup name="Atroce">
+  <object id="11" x="928" y="767" width="31" height="31"/>
+  <object id="15" x="1314" y="420" width="30" height="30"/>
+  <object id="16" x="1280" y="1150" width="34" height="38"/>
+  <object id="17" x="1728" y="1440" width="38" height="36"/>
+  <object id="19" x="2188" y="1038" width="30" height="34"/>
+  <object id="20" x="2210" y="712" width="32" height="32"/>
+  <object id="21" x="1760" y="260" width="34" height="34"/>
+  <object id="23" x="2406" y="894" width="40" height="36"/>
+ </objectgroup>
+ <objectgroup name="Choco">
+  <object id="25" x="994" y="676" width="36" height="38">
+   <ellipse/>
+  </object>
+  <object id="26" x="992" y="832" width="48" height="46">
+   <ellipse/>
+  </object>
+  <object id="27" x="1326" y="334" width="38" height="36">
+   <ellipse/>
+  </object>
+  <object id="28" x="1394" y="430" width="34" height="32">
+   <ellipse/>
+  </object>
+  <object id="29" x="1386" y="1210" width="46" height="38">
+   <ellipse/>
+  </object>
+  <object id="30" x="1230" y="1278" width="58" height="42">
+   <ellipse/>
+  </object>
+  <object id="31" x="1712" y="172" width="38" height="36">
+   <ellipse/>
+  </object>
+  <object id="32" x="1866" y="298" width="48" height="40">
+   <ellipse/>
+  </object>
+  <object id="33" x="1712" y="1536" width="38" height="32">
+   <ellipse/>
+  </object>
+  <object id="34" x="1806" y="1358" width="44" height="38">
+   <ellipse/>
+  </object>
+  <object id="35" x="2132" y="1016" width="30" height="36">
+   <ellipse/>
+  </object>
+  <object id="36" x="2240" y="1090" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="37" x="2174" y="670" width="34" height="26">
+   <ellipse/>
+  </object>
+  <object id="38" x="2278" y="726" width="34" height="28">
+   <ellipse/>
+  </object>
+  <object id="39" x="2466" y="860" width="32" height="36">
+   <ellipse/>
+  </object>
+  <object id="40" x="2470" y="970" width="36" height="30">
+   <ellipse/>
+  </object>
+  <object id="41" x="2002" y="1418" width="2" height="6">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="firstChoco" visible="0">
+  <object id="9" name="firstChoco1" x="609" y="737" width="31" height="31"/>
+  <object id="10" name="firstChoco" x="608" y="865" width="30" height="31"/>
+ </objectgroup>
 </map>

@@ -19,7 +19,6 @@ const float correctionValue = 50.f;
 
 void EnemyState_Waiting::startState(Enemy* enemy)
 {
-	CCLOG("Start Waiting");
 }
 
 void EnemyState_Waiting::runState(Enemy* enemy, float dt)
@@ -45,7 +44,6 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 
 void EnemyState_Waiting::endState(Enemy* enemy)
 {
-	CCLOG("End Waiting");
 }
 
 const int EnemyState_Waiting::returnStateNumber()

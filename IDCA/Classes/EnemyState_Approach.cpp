@@ -16,7 +16,6 @@
 
 void EnemyState_Approach::startState(Enemy* enemy)
 {
-	CCLOG("start_Approaching!");
 }
 
 void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
@@ -48,7 +47,6 @@ void EnemyState_Approach::runState(Enemy* enemy, const float deltaTime)
 
 void EnemyState_Approach::endState(Enemy* enemy)
 {
-	CCLOG("end_Approach!");
 }
 
 const int EnemyState_Approach::returnStateNumber()

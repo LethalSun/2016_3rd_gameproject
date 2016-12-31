@@ -152,7 +152,6 @@ void CollideManager::CheckMonsterAttack()
 			auto damage = (*iter)->getDamage();
 			(*iter)->setAttackChecked(true);
 			m_pPlayerCharacter->SetAttackedDamage(damage);
-			CCLOG("Attacked!");
 		}
 	}
 }
