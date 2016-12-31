@@ -1,7 +1,6 @@
 #pragma once
 #include "cocos2d.h"
 
-//HW
 enum STATE
 {
 	STOP = 0,
@@ -39,7 +38,7 @@ const int CHOCO_ATTACK_DAMAGE = 1;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
-//HW
+
 // Json 파일로 변환전까지 임시로 쓰는 Define.h
 
 const int MAX_FRAME_NUM = 10;
@@ -123,4 +122,36 @@ const float WORRIOR_ATTACK_RANGE = 50.f;
 const float WORRIOR_BODY_RANGE_X = 25.f;
 const float WORRIOR_BODY_RANGE_Y = 95.f;
 
-//KW
+//TEMP_DEFINE 옮긴곳.
+namespace TEMP_DEFINE
+{
+	const int MAX_HP = 5;
+	const int BOX_TAG_MONSTER = 2;
+	const int BOX_TAG_CHARACTER = 1;
+	const float ARCH_BISHOP_ATTACK_RANGE_X = 46.0f;
+	const float ARCH_BISHOP_ATTACK_RANGE_Y = 76.0f;
+	const int VELOCITY = 100;
+	const int NUM_OF_SPRITE_FILE_PER_ACTIONS = 10;
+	const float STOP_ANIMATION_SPEED = 0.005f;
+	const float ANIMATION_SPEED = 0.1f;
+	const float HIT_ANIMATION_SPEED = 0.03f;
+	const int ATTACK_RANGE_X = 37;
+	const int ATTACK_RANGE_Y = 47;
+
+	const int MAP_MOVE_SPEED = 3;
+	const int CHACRACTER_MOVE_SPEED = 3;
+	const int MONSTER_MOVE_SPEED = 2;
+
+	extern const char*ARCH_BISHOP_FILE_NAME;
+	extern const char*SPRITE_FRAME_FILE_EXTENTION;
+	extern const char *PLIST_FILE_NAME;
+	extern const char* PLIST_NAME_2;
+
+	extern const char*MAP_NAME1;
+	extern const char*TILELAYER1;
+	extern const char*TILELAYER2;
+	extern const char*TILELAYER3;
+	extern const char*TILELAYER4;
+	extern const char*TILELAYER5;
+	extern const char*OBJECTLAYER;
+}

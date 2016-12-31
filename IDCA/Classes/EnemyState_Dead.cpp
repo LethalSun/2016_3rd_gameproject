@@ -30,7 +30,6 @@ const float pushedDistance = 75.f;
 
 void EnemyState_Dead::startState(Enemy* enemy)
 {
-	CCLOG("start_Dead!");
 	m_AccumulateTime = 0.f;
 
 	// 마지막에 죽을 때는 두 배로 밀려나도록.
@@ -71,7 +70,6 @@ void EnemyState_Dead::runState(Enemy* enemy, const float deltaTime)
 void EnemyState_Dead::endState(Enemy* enemy)
 {
 	// TODO :: RemoveChild를 했는데 어째서 Update에 들어가서 죽는걸까?
-	CCLOG("end_Dead!");
 
 	// EnemyManager의 deleteVector에 삽입.
 	auto manager = EnemyManager::getInstance();

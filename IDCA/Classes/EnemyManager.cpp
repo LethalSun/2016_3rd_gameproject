@@ -17,6 +17,7 @@ const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 EnemyManager::EnemyManager()
 {
 	setStageOneTrigger(false);
+	setDiedEnemyNum(0);
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
@@ -39,7 +40,6 @@ void EnemyManager::deleteInstance()
 {
 	delete _instance;
 	_instance = nullptr;
-	CCLOG("Delete EnemyManager!");
 	return;
 }
 
@@ -66,6 +66,28 @@ void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition
 	newEnemy->setMapPointer(getMapPointer());
 	m_pEnemyVector.pushBack(newEnemy);
 	getMapPointer()->addChild(newEnemy);
+
+	return;
+}
+
+// Enemy타입과 첫 포지션, 그리고 자고 있는지 여부를 받아 Enemy를 생성해주는 함수.
+void EnemyManager::MakeEnemy(const ENEMY_TYPE enemyType, const Vec2 initPosition, const bool IsSleeping)
+{
+	// 함수포인터 m_pMakeHandler사용.
+	Enemy* newEnemy = (this->*m_pMakeHandler[enemyType])(initPosition);
+
+	// Enemy 공동 처리 부분.
+	newEnemy->setEnemyType(enemyType);
+	newEnemy->setMapPointer(getMapPointer());
+	m_pEnemyVector.pushBack(newEnemy);
+	getMapPointer()->addChild(newEnemy);
+
+	// Sleeping이 true라면 추가 작업 (invisible, setIsSleeping)
+	if (IsSleeping)
+	{
+		newEnemy->setVisible(false);
+		newEnemy->setIsSleeping(true);
+	}
 
 	return;
 }
@@ -156,17 +178,46 @@ int EnemyManager::FindEnemyWithPointer(Enemy* enemyPointer)
 	return -1;
 }
 
-// TODO :: Function Stage 1 Setting 만들기. ( Choco 1,2가 죽으면 다른 몹 소환 )
 void EnemyManager::StageOneSetting()
 {
-	// 초기 Choco Enemy 생성.
-	// TODO :: Choco Enemy 매직넘버 없애기.
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(700.f, 650.f));
-	MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(800.f, 650.f));
+	// 초기 choco 두 마리 생성.
+	auto objectGroup = m_pMap->objectGroupNamed("firstChoco");
+	auto objects = objectGroup->getObjects();
 
-	// 초기 Choco 두 마리는 비 선공 몹으로.
-	m_pEnemyVector.at(0)->setIsEnemyPreemptive(false);
-	m_pEnemyVector.at(1)->setIsEnemyPreemptive(false);
+	for (int i = 0; i < objects.size(); i++)
+	{
+		auto object = objects.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+
+		MakeEnemy(ENEMY_TYPE::CHOCO, position);
+		m_pEnemyVector.at(i)->setIsEnemyPreemptive(false);
+	}
+
+	// Trigger후 생성될 몬스터 미리 생성.
+	auto atroceGroup = m_pMap->getObjectGroup("Atroce");
+
+	auto atroces = atroceGroup->getObjects();
+
+	for (int i = 0; i < atroces.size(); ++i)
+	{
+		auto object = atroces.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+
+		MakeEnemy(ENEMY_TYPE::ATROCE, position, true);
+
+	}
+	auto ChocoGroup = m_pMap->getObjectGroup("Choco");
+
+	auto Chocos = ChocoGroup->getObjects();
+
+	for (int i = 0; i < Chocos.size(); ++i)
+	{
+		auto object = Chocos.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+
+		MakeEnemy(ENEMY_TYPE::CHOCO, position, true);
+
+	}
 
 	return;
 }
@@ -187,7 +238,7 @@ void EnemyManager::StageOneTriggerCheck()
 // 초기에 생성했던 Choco 두 마리가 죽었는지 확인하고 Trigger를 올리는 함수.
 bool EnemyManager::IsStageOneChocoDied()
 {
-	if (m_pEnemyVector.empty())
+	if (getDiedEnemyNum() == 2)
 	{
 		setStageOneTrigger(true);
 		return true;
@@ -200,11 +251,12 @@ bool EnemyManager::IsStageOneChocoDied()
 // StageOne의 트리거가 발동되면 나머지 Enemy들을 생성해주는 함수.
 void EnemyManager::StageOneCreateAdditionalEnemies()
 {
-	// TODO :: 생성 위치 매직 넘버 없애기.
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(750.f, 700.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 850.f));
-	MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(900.f, 900.f));
+	auto vecSize = m_pEnemyVector.size();
+	for (int i = 0; i < vecSize; ++i)
+	{
+		m_pEnemyVector.at(i)->setVisible(true);
+		m_pEnemyVector.at(i)->setIsSleeping(false);
+	}
 
 	// Sound 출력
 	//CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
@@ -222,6 +274,8 @@ void EnemyManager::DieCheck()
 		auto tmpEnemy = m_pEnemyVector.at(i);
 		if (tmpEnemy->getHP() <= 0)
 		{
+			auto diedEnemyNum = getDiedEnemyNum();
+			setDiedEnemyNum(++diedEnemyNum);
 			tmpEnemy->changeState<EnemyState_Dead>();
 		}
 	}

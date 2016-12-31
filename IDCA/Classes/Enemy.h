@@ -57,6 +57,7 @@ public:
 	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
+	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);

@@ -12,12 +12,15 @@
 
 void EnemyState_Search::startState(Enemy* enemy)
 {
-	CCLOG("start_Searching!");
 }
 
 void EnemyState_Search::runState(Enemy* enemy, float dt)
 {
-	if (isPlayerInSearchRange(enemy->getSearchingRange(), enemy->getDistanceFromPlayer()))
+	if (enemy->getIsSleeping())
+	{
+		return;
+	}
+	else if (isPlayerInSearchRange(enemy->getSearchingRange(), enemy->getDistanceFromPlayer()))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
@@ -25,7 +28,6 @@ void EnemyState_Search::runState(Enemy* enemy, float dt)
 
 void EnemyState_Search::endState(Enemy* enemy)
 {
-	CCLOG("end_Searching!");
 }
 
 const int EnemyState_Search::returnStateNumber()

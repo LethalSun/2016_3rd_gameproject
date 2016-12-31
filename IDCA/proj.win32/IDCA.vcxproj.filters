@@ -11,7 +11,6 @@
     <ClCompile Include="..\Classes\PlayerCharacter.cpp" />
     <ClCompile Include="..\Classes\PlayerCharacterManager.cpp" />
     <ClCompile Include="..\Classes\StageOne.cpp" />
-    <ClCompile Include="..\Classes\TemporaryDefine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
     <ClCompile Include="..\Classes\ManageMap.cpp" />
@@ -31,6 +30,7 @@
     <ClCompile Include="..\Classes\Enemy_Atroce.cpp" />
     <ClCompile Include="..\Classes\EnemyState_BeAttacked.cpp" />
     <ClCompile Include="..\Classes\EffectManager.cpp" />
+    <ClCompile Include="..\Classes\Define.cpp" />
     <ClCompile Include="..\Classes\EnemyState_Dead.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -45,7 +45,6 @@
     <ClInclude Include="..\Classes\PlayerCharacter.h" />
     <ClInclude Include="..\Classes\PlayerCharacterManager.h" />
     <ClInclude Include="..\Classes\StageOne.h" />
-    <ClInclude Include="..\Classes\TemporaryDefine.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\Classes\CollideManager.h" />
     <ClInclude Include="..\Classes\ManageMap.h" />

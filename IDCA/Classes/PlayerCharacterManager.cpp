@@ -235,11 +235,6 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 
 void PlayerCharacterManager::update(float dt)
 {
-	char logBuffer1[100];
-	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getAnchorPoint().x, m_pCharacter->getAnchorPoint().y);
-	cocos2d::log(logBuffer1);
-	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getPosition().x, m_pCharacter->getPosition().y);
-	cocos2d::log(logBuffer1);
 
 	//여러가지 값 계산
 	CalculatePlayerCharacterState();

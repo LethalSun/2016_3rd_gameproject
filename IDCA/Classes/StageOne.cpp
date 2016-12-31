@@ -3,7 +3,7 @@
 #include "StageOne.h"
 #include "ManageMap.h"
 #include "ManageMove.h"
-#include "TemporaryDefine.h"
+#include "Define.h"
 #include "PlayerCharacterManager.h"
 #include "ManageEnemyMove.h"
 #include "Enemy_Choco.h"
@@ -52,6 +52,9 @@ bool StageOne::init()
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
 	addChild(m_pMap);
+
+	
+
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 	m_pManageEnemyMove = ManageEnemyMove::create();
@@ -88,7 +91,6 @@ void StageOne::update(float delta)
 {
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
-
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 	position = m_pPlayerCharacterManager->getPlayerPosition();

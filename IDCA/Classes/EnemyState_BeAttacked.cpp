@@ -16,6 +16,7 @@ const int TintActionTag = 2;
 void EnemyState_BeAttacked::startState(Enemy* enemy)
 {
 	m_Pushable = true;
+
 	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
 	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
 	m_pEasePushedAction->setTag(PushedActionTag);
@@ -28,15 +29,14 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	auto seqAction = Sequence::create(redAction, recoveryAction, nullptr);
 	seqAction->setTag(TintActionTag);
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);
+	
 
-	enemy->m_pEffectManager->MakeEffect(3);
 
 	// TODO :: 애니메이션을 넣으면 빨갛게 안변하는 것 고치기.
 	
 	// Sound 처리.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(enemy->getHitedSound(), false);
 
-	CCLOG("start_BeAttacked!");
 }
 
 void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
@@ -62,7 +62,6 @@ void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
 void EnemyState_BeAttacked::endState(Enemy* enemy)
 {
 	enemy->setFlagBeAttacked(false);
-	CCLOG("end_BeAttacked!");
 }
 
 const int EnemyState_BeAttacked::returnStateNumber()

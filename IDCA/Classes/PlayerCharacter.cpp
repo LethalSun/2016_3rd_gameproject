@@ -4,6 +4,13 @@
 #include <windows.h>
 #include <iostream>
 
+bool PlayerCharacter::SetAttackedDamage(int damage)
+{
+	auto newHP = GetHP() - damage;
+	SetHP(newHP);
+	return true;
+}
+
 PlayerCharacter::PlayerCharacter(const Vec2 AttackRange, const Vec2 BodyRange)
 	:m_RedBoxTag(RED_BOX_TAG),
 	m_GreenBoxTag(GREEN_BOX_TAG),
@@ -149,10 +156,8 @@ void PlayerCharacter::update(float dt)
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
-		for (int i = 0; i < 50; ++i)
-		{
-			MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
-		}
+		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
+		
 	}
 	else if (m_State == STATE::MOVE)
 	{
