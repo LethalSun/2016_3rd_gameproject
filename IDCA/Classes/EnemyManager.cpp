@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "SimpleAudioEngine.h"
+#include "AudioEngine.h"
 #include "EnemyState.h"
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
@@ -17,6 +18,7 @@ EnemyManager::EnemyManager()
 {
 	setStageOneTrigger(false);
 	setDiedEnemyNum(0);
+	setSoundPlayNum(0);
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
