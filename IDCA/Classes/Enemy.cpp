@@ -43,6 +43,7 @@ bool Enemy::init(const Vec2 initPosition)
 	setIsAttackedOnce(false);
 	setFlagBeAttacked(false);
 	setIsDead(false);
+	setIsSleeping(false);
 
 	return true;
 }
