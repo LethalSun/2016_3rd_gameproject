@@ -32,9 +32,14 @@ const int ATTACK_DAMAGE = 3;
 //아트로스 체력 공격력
 const int ATROCE_MAX_HP = 20;
 const int ATROCE_ATTACK_DAMAGE = 2;
+
 //초코 체력 공격력
 const int CHOCO_MAX_HP = 10;
 const int CHOCO_ATTACK_DAMAGE = 1;
+
+//보스 체력 공격력
+const int ANCIENT_TREE_MAX_HP = 350;
+const int ANCIENT_TREE_DAMAGE = 10;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
@@ -84,7 +89,8 @@ enum ENEMY_TYPE
 {
 	CHOCO = 0,
 	ATROCE = 1,
-	ENEMY_TYPE_NUM = 2
+	ANCIENT_TREE = 2,
+	ENEMY_TYPE_NUM = 3
 };
 
 namespace CONFIG_DEFAULT
@@ -96,7 +102,10 @@ namespace CONFIG_DEFAULT
 
 enum ENEMY_STATE_TYPE
 {
-	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, RETURN = 4, BE_ATTACKED = 5, DEAD = 6, STATE_NUM = 7
+	SEARCHING = 0, APPROACHING = 1, ATTACKING = 2, WAITING = 3, 
+	RETURN = 4, BE_ATTACKED = 5, DEAD = 6, 
+	BOSS_ATTACK =7, BOSS_STRIKE = 8, BOSS_RUSH = 9, BOSS_SUMMON = 10, 
+	STATE_NUM = 11
 };
 
 //공격범위와 피격범위를 위한 태그
@@ -121,6 +130,11 @@ const float CHOCO_BODY_RANGE_Y = 45.f;
 const float WORRIOR_ATTACK_RANGE = 50.f;
 const float WORRIOR_BODY_RANGE_X = 25.f;
 const float WORRIOR_BODY_RANGE_Y = 95.f;
+
+// Ancient Tree의 공격범위
+const float ANCIENT_TREE_ATTACK_RANGE = 50.f;
+const float ANCIENT_TREE_BODY_RANGE_X = 40.f;
+const float ANCIENT_TREE_BODY_RANGE_Y = 95.f;
 
 //TEMP_DEFINE 옮긴곳.
 namespace TEMP_DEFINE

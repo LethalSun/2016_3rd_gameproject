@@ -10,6 +10,7 @@
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
 const char ATROCE_PLIST[] = "Atroce.plist";
+const char ANCIENT_TREE_PLIST[] = "AncientTree.plist";
 const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 
 // EnemyManager 생성자.
@@ -119,6 +120,12 @@ Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 	}
 
 	return newEnemy;
+}
+
+// AncientTree를 만드는 함수.
+Enemy* EnemyManager::MakeAncientTree(const Vec2 initPosition)
+{
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(ANCIENT_TREE_PLIST);
 }
 
 

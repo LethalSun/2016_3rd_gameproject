@@ -39,6 +39,7 @@ public :
 
 	Enemy*					MakeChoco(const Vec2);
 	Enemy*					MakeAtroce(const Vec2);
+	Enemy*					MakeAncientTree(const Vec2);
 
 private :
 	static EnemyManager*	_instance;

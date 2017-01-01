@@ -59,7 +59,11 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	DecideWhatIsCurrentAnimation();
+	if (getEnemyType() != ANCIENT_TREE)
+	{
+		DecideWhatIsCurrentAnimation();
+	}
+
 	MakeHPBox();
 	return;
 }

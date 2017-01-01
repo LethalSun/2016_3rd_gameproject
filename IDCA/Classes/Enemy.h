@@ -60,6 +60,13 @@ public:
 	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
 	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
 
+	/* Only For Boss */
+	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
+	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
+	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
+	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
+
+
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
