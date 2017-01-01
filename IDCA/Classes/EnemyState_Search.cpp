@@ -16,7 +16,11 @@ void EnemyState_Search::startState(Enemy* enemy)
 
 void EnemyState_Search::runState(Enemy* enemy, float dt)
 {
-	if (isPlayerInSearchRange(enemy->getSearchingRange(), enemy->getDistanceFromPlayer()))
+	if (enemy->getIsSleeping())
+	{
+		return;
+	}
+	else if (isPlayerInSearchRange(enemy->getSearchingRange(), enemy->getDistanceFromPlayer()))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
