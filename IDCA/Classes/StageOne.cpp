@@ -72,7 +72,8 @@ bool StageOne::init()
 	// EnemyManager 등록
 	m_pEnemyManager = m_pEnemyManager->getInstance();
 	m_pEnemyManager->setMapPointer(m_pMap);
-	m_pEnemyManager->StageOneSetting();
+	//m_pEnemyManager->StageOneSetting();
+	m_pEnemyManager->SummonAncientTree();
 
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();

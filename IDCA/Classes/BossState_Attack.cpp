@@ -21,16 +21,16 @@ void BossState_Attack::runState(Enemy* enemy, float dt)
 {
 	auto attackNumber = enemy->getAttackNumber();
 
+	// Player가 공격 거리내에 없다면 Rush상태로 변경.
+	if (!isPlayerInAttackRange(enemy->getChasingRange(), enemy->getDistanceFromPlayer()))
+	{
+		enemy->changeState<BossState_Rush>();
+	}
 	// 3번 공격을 했다면 공격 회수 초기화 후 Strike 상태로 변경.
-	if (!(attackNumber % 3))
+	else if (!(attackNumber % 3))
 	{
 		enemy->setAttackNumber(0);
 		enemy->changeState<BossState_Strike>();
-	}
-	// Player가 공격 거리내에 없다면 Rush상태로 변경.
-	else if (isPlayerInAttackRange(enemy->getChasingRange(), enemy->getDistanceFromPlayer()))
-	{
-		enemy->changeState<BossState_Rush>();
 	}
 
 	return;

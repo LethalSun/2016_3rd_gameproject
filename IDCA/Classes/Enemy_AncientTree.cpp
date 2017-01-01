@@ -28,6 +28,7 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	setMaxHP(ANCIENT_TREE_MAX_HP);
 	setHP(ANCIENT_TREE_MAX_HP);
 	setDamage(ANCIENT_TREE_DAMAGE);
+	setMoveSpeed(AncientTree_MoveSpeed);
 
 	auto BodyRange = Vec2(ANCIENT_TREE_BODY_RANGE_X, ANCIENT_TREE_BODY_RANGE_Y);
 	setBodyRangeForCollide(BodyRange);

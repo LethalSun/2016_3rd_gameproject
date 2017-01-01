@@ -10,7 +10,8 @@ const float rushtime = 2.f;
 void BossState_Rush::startState(Enemy* enemy)
 {
 	m_AcculmulateTime = 0.f;
-	enemy->setcapturedUnitVecToPlayer(enemy->getUnitVecToPlayer());
+	enemy->CalUnitVecToPlayer();
+	//enemy->setcapturedUnitVecToPlayer(enemy->getUnitVecToPlayer());
 	return;
 }
 
@@ -24,7 +25,7 @@ void BossState_Rush::runState(Enemy* enemy, float dt)
 	}
 	else 
 	{
-		auto position = enemy->m_pManageEnemyMove->update(enemy->getPosition(), enemy->getcapturedUnitVecToPlayer(), enemy->getMapPointer(), dt, enemy);
+		auto position = enemy->m_pManageEnemyMove->update(enemy->getPosition(), enemy->getUnitVecToPlayer(), enemy->getMapPointer(), dt, enemy);
 		enemy->setPosition(position);
 	}
 	return;

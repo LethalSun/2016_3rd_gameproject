@@ -62,6 +62,11 @@ void Enemy::update(const float deltaTime)
 	DecideWhatIsCurrentAnimation();
 
 	MakeHPBox();
+
+	char buf[255];
+	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
+	CCLOG(buf);
+
 	return;
 }
 
@@ -344,13 +349,20 @@ bool Enemy::Attack()
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
 
-	char buf[255];
-	auto i = EnemyManager::getInstance()->getSoundPlayNum();
-	sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
-	i = (i + 1) % 5;
-	EnemyManager::getInstance()->setSoundPlayNum(i);
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
+	{
+		char buf[255];
+		auto i = EnemyManager::getInstance()->getSoundPlayNum();
+		sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
+		i = (i + 1) % 5;
+		EnemyManager::getInstance()->setSoundPlayNum(i);
 
-	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
+	}
+	else
+	{
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getAttackSound(), false);
+	}
 
 	CalculateAttackAnchorPoint();
 	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
@@ -375,11 +387,15 @@ void Enemy::DecideWhatIsCurrentAnimation()
 {
 	auto currentStateType = getState()->returnStateNumber();
 	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
-		|| currentStateType == ENEMY_STATE_TYPE::RETURN)
+		|| currentStateType == ENEMY_STATE_TYPE::RETURN
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_RUSH)
 	{
 		Move();
 	}
-	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
+	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_ATTACK
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_STRIKE
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_SUMMON)
 	{
 		Attack();
 	}
