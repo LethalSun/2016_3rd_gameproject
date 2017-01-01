@@ -36,6 +36,7 @@ public :
 	bool					IsStageOneChocoDied();
 	void					StageOneCreateAdditionalEnemies();
 	void					DieCheck();
+	void					SummonAncientTree();
 
 	Enemy*					MakeChoco(const Vec2);
 	Enemy*					MakeAtroce(const Vec2);

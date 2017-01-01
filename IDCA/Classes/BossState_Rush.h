@@ -19,4 +19,5 @@ public:
 	void		endState(Enemy* enemy) override;
 
 	const int	returnStateNumber() override;
+	float		m_AcculmulateTime;
 };

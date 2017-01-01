@@ -3,14 +3,17 @@
 #include "EnemyState_Search.h"
 #include "AnimationMaker.h"
 
-const float AncientTree_SearchingRange = 1500.f;
-const float AncientTree_ChansingRange = 1500.f;
-const float AncientTree_AttackRange = 1500.f;
+const float AncientTree_SearchingRange = 400.f;
+const float AncientTree_ChansingRange = 400.f;
+const float AncientTree_AttackRange = 500.f;
 const float AncientTree_MoveSpeed = 2.f;
 const float AncientTree_StiffTime = 0.7f;
 
 const char AncientTree_Name[] = "AncientTree";
 const char AncientTree_Extension[] = ".png";
+const char AncientTree_AttackSound[] = "Sound/AncientTree_attack.wav";
+const char AncientTree_HitedSound[] = "Sound/AncientTree_hited.aiff";
+const char AncientTree_DyingSound[] = "Sound/AncientTree_dying.wav";
 
 bool Enemy_AncientTree::init(const Vec2 initPosition)
 {
@@ -33,6 +36,11 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	setIsEnemyPreemptive(true);
 	setAttackNumber(0);
 
+	// Sound 세팅
+	setAttackSound(AncientTree_AttackSound);
+	setHitedSound(AncientTree_HitedSound);
+	setDyingSound(AncientTree_DyingSound);
+
 	// AnimationMaker 세팅.
 	m_pAnimationMaker = AnimationMaker::create(AncientTree_Name, AncientTree_Extension);
 	addChild(m_pAnimationMaker);
@@ -40,6 +48,7 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	m_pAnimationMaker->AddAnimation(getDirection());
 
 	changeState<EnemyState_Search>();
+	setBeforeState(getState());
 
 	return true;
 }

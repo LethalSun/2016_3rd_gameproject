@@ -249,6 +249,10 @@ void EnemyManager::StageOneTriggerCheck()
 	{
 		StageOneCreateAdditionalEnemies();
 	}
+	if (getStageOneTrigger() && m_pEnemyVector.empty())
+	{
+		SummonAncientTree();
+	}
 
 	return;
 }
@@ -266,7 +270,7 @@ bool EnemyManager::IsStageOneChocoDied()
 }
 
 
-// StageOne의 트리거가 발동되면 나머지 Enemy들을 생성해주는 함수.
+// StageOne의 트리거가 발동되면 나머지 Enemy들을 활성화해주는 함수.
 void EnemyManager::StageOneCreateAdditionalEnemies()
 {
 	auto vecSize = m_pEnemyVector.size();
@@ -280,6 +284,12 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
 
 	return;
+}
+
+// 모든 Enemy들이 죽었을 경우 보스를 소환해주는 함수.
+void EnemyManager::SummonAncientTree()
+{
+	MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(900.f, 900.f));
 }
 
 // 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.

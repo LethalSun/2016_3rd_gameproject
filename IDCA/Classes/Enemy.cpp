@@ -59,10 +59,7 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	if (getEnemyType() != ANCIENT_TREE)
-	{
-		DecideWhatIsCurrentAnimation();
-	}
+	DecideWhatIsCurrentAnimation();
 
 	MakeHPBox();
 	return;
@@ -373,6 +370,7 @@ bool Enemy::IsAttackContinued()
 	return false;
 }
 
+// ENEMY들의 State에 따라서 지금 어떤 ENEMY가 어떤 행동을 취해야 할지 결정하는 함수.
 void Enemy::DecideWhatIsCurrentAnimation()
 {
 	auto currentStateType = getState()->returnStateNumber();
@@ -391,6 +389,9 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	{
 		Stop();
 	}
+
+	// TODO :: BOSS State 판별도 넣기.
+
 	return;
 }
 

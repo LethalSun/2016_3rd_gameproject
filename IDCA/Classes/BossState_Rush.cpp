@@ -3,18 +3,30 @@
 #include "BossState_Rush.h"
 #include "BossState_Attack.h"
 #include "EnemyState_Search.h"
+#include "ManageEnemyMove.h"
 
+const float rushtime = 2.f;
 
 void BossState_Rush::startState(Enemy* enemy)
 {
+	m_AcculmulateTime = 0.f;
 	enemy->setcapturedUnitVecToPlayer(enemy->getUnitVecToPlayer());
 	return;
 }
 
 void BossState_Rush::runState(Enemy* enemy, float dt)
 {
-	// TODO :: 일정 거리 or 시간 동안 capture된 unitVec으로 돌진.
-	enemy->changeState<EnemyState_Search>();
+	m_AcculmulateTime += dt;
+
+	if (m_AcculmulateTime > rushtime)
+	{
+		enemy->changeState<EnemyState_Search>();
+	}
+	else 
+	{
+		auto position = enemy->m_pManageEnemyMove->update(enemy->getPosition(), enemy->getcapturedUnitVecToPlayer(), enemy->getMapPointer(), dt, enemy);
+		enemy->setPosition(position);
+	}
 	return;
 }
 
