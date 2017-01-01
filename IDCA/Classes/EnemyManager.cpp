@@ -5,6 +5,7 @@
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
+#include "Enemy_AncientTree.h"
 #include "EnemyState_Dead.h"
 
 const int STAGE_ONE_ENEMY_NUM = 20;
@@ -23,6 +24,7 @@ EnemyManager::EnemyManager()
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
+	m_pMakeHandler[ENEMY_TYPE::ANCIENT_TREE] = &EnemyManager::MakeAncientTree;
 }
 
 EnemyManager* EnemyManager::_instance = nullptr;
@@ -126,6 +128,14 @@ Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 Enemy* EnemyManager::MakeAncientTree(const Vec2 initPosition)
 {
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(ANCIENT_TREE_PLIST);
+	Enemy* newEnemy = Enemy_AncientTree::create(initPosition);
+
+	if (!newEnemy)
+	{
+		return nullptr;
+	}
+
+	return newEnemy;
 }
 
 
