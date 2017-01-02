@@ -185,6 +185,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\ProjectileListener.cpp" />
     <ClCompile Include="..\Classes\Skill.cpp" />
     <ClCompile Include="..\Classes\StageOne.cpp" />
+    <ClCompile Include="..\Classes\Tentacle.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +225,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\ProjectileListener.h" />
     <ClInclude Include="..\Classes\Skill.h" />
     <ClInclude Include="..\Classes\StageOne.h" />
+    <ClInclude Include="..\Classes\Tentacle.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

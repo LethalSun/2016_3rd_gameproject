@@ -36,7 +36,7 @@ private:
 	ManageMap* m_pManageMap;
 	ManageMove* m_pManageMove;
 
-	///임시 캐릭터
+	//임시 캐릭터
 	Character *m_pCharacter;
 	CharacterManager *m_pCharacterManager;
 	unsigned int m_keyboardInput;

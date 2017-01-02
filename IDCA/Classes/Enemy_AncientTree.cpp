@@ -52,5 +52,8 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	changeState<EnemyState_Search>();
 	setBeforeState(getState());
 
+	scheduleUpdate();
 	return true;
 }
+
+

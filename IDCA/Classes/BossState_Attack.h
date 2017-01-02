@@ -1,5 +1,6 @@
 #pragma once
 #include "EnemyState.h"
+#include "Enemy_AncientTree.h"
 
 /*
 	BossState_Attack
@@ -19,10 +20,13 @@ public :
 		setName("BossState_Attack");
 		return true;
 	}
+	float		m_AccumulateTime = 0.f;
 
 	void		startState(Enemy* enemy) override;
 	void		runState(Enemy* enemy, float dt) override;
 	void		endState(Enemy* enemy) override;
 
 	const int	returnStateNumber() override;
+
+	void		MakeTentacles(Enemy* enemy);
 };

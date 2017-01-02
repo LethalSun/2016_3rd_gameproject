@@ -13,6 +13,7 @@
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
 #include "EffectManager.h"
+#include "Tentacle.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
 const float IgnoreMoveRange = 0.05f;
@@ -26,13 +27,14 @@ bool Enemy::init(const Vec2 initPosition)
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
 	m_pEffectManager = EffectManager::create();
+	m_pEnemyManager = EnemyManager::getInstance();
+
 	addChild(m_pEffectManager, 5);
 	addComponent(m_pManageEnemyMove);
+
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
-
-	CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect(this->getAttackSound());
 
 	setPosition(initPosition);
 	setOrigin(initPosition);
@@ -45,6 +47,7 @@ bool Enemy::init(const Vec2 initPosition)
 	setFlagBeAttacked(false);
 	setIsDead(false);
 	setIsSleeping(false);
+	
 
 	return true;
 }
@@ -62,6 +65,7 @@ void Enemy::update(const float deltaTime)
 	DecideWhatIsCurrentAnimation();
 
 	MakeHPBox();
+	//DieTentacleCheck();
 
 	char buf[255];
 	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
@@ -351,18 +355,9 @@ bool Enemy::Attack()
 
 	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
 	{
-		char buf[255];
-		auto i = EnemyManager::getInstance()->getSoundPlayNum();
-		sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
-		i = (i + 1) % 5;
-		EnemyManager::getInstance()->setSoundPlayNum(i);
+		EnemyAttackSound();
+	}
 
-		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
-	}
-	else
-	{
-		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getAttackSound(), false);
-	}
 
 	CalculateAttackAnchorPoint();
 	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
@@ -370,8 +365,24 @@ bool Enemy::Attack()
 	return true;
 }
 
+// Boss가 아닌 Enemy일 경우 공격하는 소리를 재생해주는 함수.
+void Enemy::EnemyAttackSound()
+{
+	// 여러 Enemy가 같이 공격할 경우 소리가 나지 않아서 임시방편으로 대체.
+	char buf[255];
+	auto i = EnemyManager::getInstance()->getSoundPlayNum();
+	sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
+	i = (i + 1) % 5;
+
+	EnemyManager::getInstance()->setSoundPlayNum(i);
+
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
+}
+
+// State Attack이 계속되고 있는지 확인해 주는 함수.
 bool Enemy::IsAttackContinued()
 {
+	// 현재 STATE가 Attack인지, 직전 방향과 현재 방향이 맞는지, 직전 STATE와 현재 STATE가 맞는지 확인.
 	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
@@ -379,6 +390,7 @@ bool Enemy::IsAttackContinued()
 		return true;
 	}
 
+	// 하나라도 다르다면 STATE가 계속 되고 있지 않는다고 판단.
 	return false;
 }
 
@@ -386,6 +398,7 @@ bool Enemy::IsAttackContinued()
 void Enemy::DecideWhatIsCurrentAnimation()
 {
 	auto currentStateType = getState()->returnStateNumber();
+
 	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
 		|| currentStateType == ENEMY_STATE_TYPE::RETURN
 		|| currentStateType == ENEMY_STATE_TYPE::BOSS_RUSH)
@@ -405,8 +418,6 @@ void Enemy::DecideWhatIsCurrentAnimation()
 	{
 		Stop();
 	}
-
-	// TODO :: BOSS State 판별도 넣기.
 
 	return;
 }
@@ -464,7 +475,6 @@ ManageEnemyMove * Enemy::getManageEnemyMove()
 	return m_pManageEnemyMove;
 }
 
-
 void Enemy::CreateEffect(int damage)
 {
 	m_pEffectManager->MakeEffect(damage);
@@ -516,3 +526,46 @@ int Enemy::MakeHPBox()
 	//}
 	return 0;
 }
+
+// Manager내 내부 TentacleVector 반환.
+Vector<Tentacle*>& Enemy::getTentacleVector()
+{
+	return m_pTentacleVector;
+}
+
+// 현재 Player의 Position에 Boss 공격용 텐타클을 만들어주는 함수.
+void Enemy::MakeTentacle()
+{
+	auto tentacle = Tentacle::create(getPlayerPosition(), 3.0f, 20.f, getMapPointer());
+	m_pTentacleVector.pushBack(tentacle);
+	getMapPointer()->addChild(tentacle);
+	return;
+}
+
+// 행동이 끝났다고 표시된 Tentacle을 없애주는 함수.
+void Enemy::DieTentacleCheck()
+{
+	auto tentacleVector = getTentacleVector();
+	auto size = tentacleVector.size();
+	auto deleteVector = new Vector<Tentacle*>;
+
+	for (int i = 0; i < size; ++i)
+	{
+		auto tmpTentacle = tentacleVector.at(i);
+		if (tmpTentacle->getIsAttackEnd())
+		{
+			deleteVector->pushBack(tmpTentacle);
+			tentacleVector.erase(i);
+		}
+	}
+
+	size = deleteVector->size();
+	for (int i = 0; i < size; ++i)
+	{
+		auto tmpTentacle = deleteVector->at(i);
+		deleteVector->erase(i);
+		getMapPointer()->removeChild(tmpTentacle);
+	}
+
+	return;
+}-

@@ -2,7 +2,6 @@
 
 
 class Enemy;
-class Enemy_Choco;
 
 class EnemyManager
 {
