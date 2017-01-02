@@ -11,7 +11,7 @@ const float AncientTree_StiffTime = 0.0f;
 
 const char AncientTree_Name[] = "AncientTree";
 const char AncientTree_Extension[] = ".png";
-const char AncientTree_AttackSound[] = "Sound/AncientTree_attack.wav";
+const char AncientTree_AttackSound[] = "Sound/AncientTree_hitGround.wav";
 const char AncientTree_HitedSound[] = "Sound/AncientTree_hited.aiff";
 const char AncientTree_DyingSound[] = "Sound/AncientTree_dying.wav";
 

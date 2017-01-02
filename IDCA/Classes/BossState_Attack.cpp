@@ -17,7 +17,7 @@
 		- MakeTentacle함수를 통해 우선 뿌리를 소환 ( TODO :: Vector로 관리 )
 */
 
-const float AttackFrequency = 1.4f;
+const float AttackFrequency = 0.9f;
 
 void BossState_Attack::startState(Enemy* enemy)
 {

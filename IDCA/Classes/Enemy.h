@@ -66,6 +66,7 @@ public:
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
 
 	void				 MakeTentacle();
+	void				 Strike();
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);

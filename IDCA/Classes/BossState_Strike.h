@@ -23,4 +23,6 @@ public:
 
 	const int	returnStateNumber() override;
 	float		m_AcculmulateTime;
+	void		MakeBossGrowl();
+
 };

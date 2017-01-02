@@ -2,7 +2,7 @@
 #include "Tentacle.h"
 #include "SimpleAudioEngine.h"
 
-bool Tentacle::init(const Vec2 initPosition, const float duration, const float damage, TMXTiledMap* mapPointer)
+bool Tentacle::init(const Vec2 initPosition, const float duration, const float damage, TMXTiledMap* mapPointer, const bool cautionExist)
 {
 	if (!Node::init())
 	{
@@ -16,7 +16,10 @@ bool Tentacle::init(const Vec2 initPosition, const float duration, const float d
 	setAcculmulateTime(0);
 	setIsAttackEnd(false);
 	
-	MakeCautionRange();
+	if (cautionExist)
+	{
+		MakeCautionRange();
+	}
 
 	scheduleUpdate();
 
@@ -43,7 +46,7 @@ void Tentacle::MakeTentacleAnimation()
 	addChild(getTentacleSprite());
 
 	setTentacleAnimation(Animation::create());
-	getTentacleAnimation()->setDelayPerUnit(0.3f);
+	getTentacleAnimation()->setDelayPerUnit(0.05f);
 
 	for (int i = 0; i < 10; ++i)
 	{
@@ -58,6 +61,8 @@ void Tentacle::MakeTentacleAnimation()
 	setTentacleAnimate(Animate::create(getTentacleAnimation()));
 	auto callfunc = CallFunc::create(CC_CALLBACK_0(Tentacle::MakeTentacleDead, this));
 	auto seqAction = Sequence::create(getTentacleAnimate(), callfunc, nullptr);
+	
+	removeChild(getRangeSprite());
 	getTentacleSprite()->runAction(seqAction);
 
 	return;
@@ -65,13 +70,14 @@ void Tentacle::MakeTentacleAnimation()
 
 void Tentacle::MakeCautionRange()
 {
-	auto rangeSprite = Sprite::create("Monster/range.png");
-	rangeSprite->setPosition(getCreatePosition());
-	rangeSprite->setOpacity(0);
-	addChild(rangeSprite);
+	setRangeSprite(Sprite::create("Monster/range.png"));
+	getRangeSprite()->setPosition(getCreatePosition());
+	getRangeSprite()->setOpacity(0);
+	this->reorderChild(getRangeSprite(), 0);
+	addChild(getRangeSprite());
 
-	auto action = FadeIn::create(getDuration() * 1.7f);
-	rangeSprite->runAction(action);
+	auto action = FadeIn::create(getDuration() * 1.2f);
+	getRangeSprite()->runAction(action);
 
 	return;
 }

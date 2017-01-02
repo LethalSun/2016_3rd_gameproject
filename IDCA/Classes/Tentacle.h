@@ -6,17 +6,20 @@
 	인자로 플레이어의 포지션, 지연시간, 데미지를 받아서 생성되는 Boss의 공격 클래스.
 */
 
+// TODO :: Tentacle들에게 player와의 거리를 잴 수 있도록 (데미지)
+
 class Tentacle : public Node
 {
 public :
 
-	virtual bool init(const Vec2, const float, const float, TMXTiledMap*);
+	virtual bool init(const Vec2, const float, const float, TMXTiledMap*, const bool);
 	virtual void update(float deltaTime) override;
 
 	/* Create Function Re-define */
-	static Tentacle* create(const Vec2 initPosition, const float duration, const float damage, TMXTiledMap* mapPointer) {
+	static Tentacle* create(const Vec2 initPosition, const float duration, const float damage, TMXTiledMap* mapPointer, const bool cautionExist) 
+	{
 		auto p = new Tentacle();
-		if (p->init(initPosition, duration, damage, mapPointer)) {
+		if (p->init(initPosition, duration, damage, mapPointer, cautionExist)) {
 			p->autorelease();
 			return p;
 		}
@@ -38,6 +41,7 @@ public :
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMapPointer, MapPointer);
 	CC_SYNTHESIZE(float, m_AcculmulateTime, AcculmulateTime);
 	CC_SYNTHESIZE(bool, m_IsAttackEnd, IsAttackEnd);
+	CC_SYNTHESIZE(Sprite*, m_RangeSprite, RangeSprite);
 
 
 	/* Member Function */
