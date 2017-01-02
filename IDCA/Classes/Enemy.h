@@ -1,13 +1,11 @@
 #pragma once
 
 #include "EnemyState.h"
-#include "Tentacle.h"
 
 class AnimationMaker;
 class ManageEnemyMove;
 class EffectManager;
 class EnemyManager;
-class Tentacle;
 
 class Enemy : public Node
 {
@@ -67,9 +65,7 @@ public:
 	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
 
-	Vector<Tentacle*>&	 getTentacleVector();
 	void				 MakeTentacle();
-	void				 DieTentacleCheck();
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -120,7 +116,6 @@ public:
 	EnemyManager*	  m_pEnemyManager;
 
 private:
-	Vector<Tentacle*> m_pTentacleVector;
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };
 };

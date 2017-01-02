@@ -526,11 +526,6 @@ int Enemy::MakeHPBox()
 	return 0;
 }
 
-// Manager내 내부 TentacleVector 반환.
-Vector<Tentacle*>& Enemy::getTentacleVector()
-{
-	return m_pTentacleVector;
-}
 
 // 현재 Player의 Position에 Boss 공격용 텐타클을 만들어주는 함수.
 void Enemy::MakeTentacle()
