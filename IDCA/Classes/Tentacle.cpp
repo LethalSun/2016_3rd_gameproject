@@ -40,7 +40,7 @@ void Tentacle::MakeTentacleAnimation()
 {
 	setTentacleSprite(Sprite::createWithSpriteFrameName("AncientTreeE0.png"));
 	getTentacleSprite()->setPosition(getCreatePosition());
-	getMapPointer()->addChild(getTentacleSprite());
+	addChild(getTentacleSprite());
 
 	setTentacleAnimation(Animation::create());
 	getTentacleAnimation()->setDelayPerUnit(0.3f);
@@ -68,7 +68,7 @@ void Tentacle::MakeCautionRange()
 	auto rangeSprite = Sprite::create("Monster/range.png");
 	rangeSprite->setPosition(getCreatePosition());
 	rangeSprite->setOpacity(0);
-	getMapPointer()->addChild(rangeSprite);
+	addChild(rangeSprite);
 
 	auto action = FadeIn::create(getDuration() * 1.7f);
 	rangeSprite->runAction(action);
@@ -78,6 +78,10 @@ void Tentacle::MakeCautionRange()
 
 void Tentacle::MakeTentacleDead()
 {
-	setIsAttackEnd(true);
+	getMapPointer()->removeChild(this);
+	//auto action = RemoveSelf::create(false); 
+	//this->runAction(action);
+	//setIsAttackEnd(true);
+	//this->removeFromParentAndCleanup(false);
 	return;
 }

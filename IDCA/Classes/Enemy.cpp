@@ -65,7 +65,6 @@ void Enemy::update(const float deltaTime)
 	DecideWhatIsCurrentAnimation();
 
 	MakeHPBox();
-	//DieTentacleCheck();
 
 	char buf[255];
 	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
@@ -537,35 +536,6 @@ Vector<Tentacle*>& Enemy::getTentacleVector()
 void Enemy::MakeTentacle()
 {
 	auto tentacle = Tentacle::create(getPlayerPosition(), 3.0f, 20.f, getMapPointer());
-	m_pTentacleVector.pushBack(tentacle);
 	getMapPointer()->addChild(tentacle);
 	return;
 }
-
-// 행동이 끝났다고 표시된 Tentacle을 없애주는 함수.
-void Enemy::DieTentacleCheck()
-{
-	auto tentacleVector = getTentacleVector();
-	auto size = tentacleVector.size();
-	auto deleteVector = new Vector<Tentacle*>;
-
-	for (int i = 0; i < size; ++i)
-	{
-		auto tmpTentacle = tentacleVector.at(i);
-		if (tmpTentacle->getIsAttackEnd())
-		{
-			deleteVector->pushBack(tmpTentacle);
-			tentacleVector.erase(i);
-		}
-	}
-
-	size = deleteVector->size();
-	for (int i = 0; i < size; ++i)
-	{
-		auto tmpTentacle = deleteVector->at(i);
-		deleteVector->erase(i);
-		getMapPointer()->removeChild(tmpTentacle);
-	}
-
-	return;
-}-
