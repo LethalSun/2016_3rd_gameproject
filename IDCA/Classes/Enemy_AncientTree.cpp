@@ -6,7 +6,7 @@
 const float AncientTree_SearchingRange = 400.f;
 const float AncientTree_ChansingRange = 400.f;
 const float AncientTree_AttackRange = 500.f;
-const float AncientTree_MoveSpeed = 2.f;
+const float AncientTree_MoveSpeed = 4.f;
 const float AncientTree_StiffTime = 0.7f;
 
 const char AncientTree_Name[] = "AncientTree";

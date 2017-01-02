@@ -490,6 +490,8 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeAttack/AncientTreeA30.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM20.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM30.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.560606,0.772152</point_f>
@@ -1184,15 +1186,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM0.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM10.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM15.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM5.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM60.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM65.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM70.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM75.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.766467</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1204,15 +1200,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM1.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM11.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM61.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM71.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS1.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS11.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS61.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS71.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.572519,0.761628</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1224,11 +1214,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM12.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM2.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM62.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM72.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.581395,0.764368</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1240,11 +1228,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM13.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM3.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM63.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM73.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.579365,0.757225</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1256,11 +1242,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM14.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM4.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM64.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM74.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.573643,0.771084</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1270,27 +1254,17 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM20.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM22.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM30.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM32.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM40.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM42.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM50.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM52.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS20.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS30.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS40.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS50.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM15.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.572519,0.766467</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>33,40,66,79</rect>
+                <rect>33,42,66,84</rect>
                 <key>scale9Paddings</key>
-                <rect>33,40,66,79</rect>
+                <rect>33,42,66,84</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -1298,17 +1272,9 @@
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM25.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM31.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM35.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM41.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM45.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM51.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM55.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS25.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS35.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS45.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS55.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.556391,0.772152</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1318,13 +1284,24 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM23.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM33.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM43.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM53.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM22.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM23.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM33.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.570313,0.75</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1335,32 +1312,217 @@
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM24.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM34.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM44.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM54.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS24.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS34.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS44.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS54.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.75625</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
                 <rect>33,40,66,80</rect>
                 <key>scale9Paddings</key>
                 <rect>33,40,66,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM32.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.564885,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM34.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.564885,0.75625</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM40.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM50.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.439394,0.772152</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM41.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM51.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.443609,0.772152</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM42.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM52.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.450382,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM43.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM53.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.445313,0.75625</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,40,64,80</rect>
+                <key>scale9Paddings</key>
+                <rect>32,40,64,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM44.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM54.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.442748,0.76875</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM45.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM55.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.428571,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM60.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM70.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.40458,0.802395</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,42,66,84</rect>
+                <key>scale9Paddings</key>
+                <rect>33,42,66,84</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM61.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM71.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.412214,0.796512</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9Paddings</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM62.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM72.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.403101,0.781609</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,44,65,87</rect>
+                <key>scale9Paddings</key>
+                <rect>32,44,65,87</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM63.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM73.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.404762,0.780347</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,43,63,87</rect>
+                <key>scale9Paddings</key>
+                <rect>32,43,63,87</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM64.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM74.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.403101,0.807229</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,42,65,83</rect>
+                <key>scale9Paddings</key>
+                <rect>32,42,65,83</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM65.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeMove/AncientTreeM75.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.412214,0.796407</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,42,66,84</rect>
+                <key>scale9Paddings</key>
+                <rect>33,42,66,84</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS0.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS10.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS60.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS70.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.776471</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1370,13 +1532,25 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS12.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS2.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS62.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS72.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS1.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS11.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.77907</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9Paddings</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS12.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.565891,0.780347</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1388,11 +1562,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS13.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS3.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS63.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS73.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.563492,0.789474</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1404,11 +1576,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS14.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS4.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS64.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS74.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.565891,0.782353</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1420,11 +1590,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS15.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS5.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS65.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS75.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.564886,0.786982</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1434,13 +1602,25 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS21.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS31.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS41.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS51.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS20.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS30.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.549618,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS21.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS31.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.548872,0.770186</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1452,11 +1632,9 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS22.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS32.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS42.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS52.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.557252,0.765432</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -1468,17 +1646,211 @@
             </struct>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS23.png</key>
             <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS33.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS43.png</key>
-            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS53.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
+                <point_f>0.55814,0.770186</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
                 <rect>32,40,65,81</rect>
                 <key>scale9Paddings</key>
                 <rect>32,40,65,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS24.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS34.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.549618,0.779874</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS25.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS35.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.548872,0.778481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS40.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS50.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.442748,0.772152</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS41.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS51.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.458647,0.757764</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,67,81</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,67,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS42.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS52.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.450382,0.753086</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,41,66,81</rect>
+                <key>scale9Paddings</key>
+                <rect>33,41,66,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS43.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS53.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.449612,0.757764</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,40,65,81</rect>
+                <key>scale9Paddings</key>
+                <rect>32,40,65,81</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS44.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS54.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.450382,0.767296</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,66,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS45.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS55.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.443609,0.78481</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9Paddings</key>
+                <rect>33,40,67,79</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS60.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS70.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.442748,0.776471</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,43,66,85</rect>
+                <key>scale9Paddings</key>
+                <rect>33,43,66,85</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS61.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS71.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.435115,0.773256</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9Paddings</key>
+                <rect>33,43,66,86</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS62.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS72.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.434109,0.757225</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,43,65,87</rect>
+                <key>scale9Paddings</key>
+                <rect>32,43,65,87</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS63.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS73.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.436508,0.754386</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,43,63,86</rect>
+                <key>scale9Paddings</key>
+                <rect>32,43,63,86</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS64.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS74.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.449612,0.764706</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>32,43,65,85</rect>
+                <key>scale9Paddings</key>
+                <rect>32,43,65,85</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS65.png</key>
+            <key type="filename">../../../../../../Documents/2016 3학기/개발경험프로젝트/리소스 정리/리소스/편집 후/Boss/AncientTreeStop/AncientTreeS75.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.442748,0.775148</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>33,42,66,85</rect>
+                <key>scale9Paddings</key>
+                <rect>33,42,66,85</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

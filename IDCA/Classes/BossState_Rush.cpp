@@ -11,6 +11,8 @@ void BossState_Rush::startState(Enemy* enemy)
 {
 	m_AcculmulateTime = 0.f;
 	enemy->CalUnitVecToPlayer();
+	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
+	enemy->CalDirection(enemy->getTranslatedUnitVec());
 	//enemy->setcapturedUnitVecToPlayer(enemy->getUnitVecToPlayer());
 	return;
 }
