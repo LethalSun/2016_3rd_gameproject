@@ -3,8 +3,10 @@
 #include "EnemyState.h"
 
 class AnimationMaker;
-class Config;
 class ManageEnemyMove;
+class EffectManager;
+class EnemyManager;
+class CollideManager;
 
 class Enemy : public Node
 {
@@ -42,6 +44,9 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
 	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(const char*, m_pAttackSoundExtension, AttackSoundExtension);
+	CC_SYNTHESIZE(const char*, m_HitedSound, HitedSound);
+	CC_SYNTHESIZE(const char*, m_DyingSound, DyingSound);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
@@ -49,9 +54,21 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyAnchorPointForDebugBox, BodyAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
-	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
+	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
+	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
+	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
+
+	/* Only For Boss */
+	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
+	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
+	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
+	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
+
+	void				 MakeTentacle();
+	void				 Strike();
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -60,7 +77,6 @@ public:
 	void				 TranslateUnitVec(Vec2);
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
-	void				 HitedMove(const float deltaTime);
 	void				 CalDirection(Vec2);
 	void				 CatchStateAndDirection();
 	void				 CalculateAttackAnchorPoint();
@@ -70,6 +86,10 @@ public:
 	void				 CheckEnemyAttacked();
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
+	int					 MakeHPBox();
+	void				 EnemyAttackSound();
+
+	void				 CreateEffect(int damage);
 
 	/* Animation Function */
 	bool				 Stop();
@@ -79,7 +99,6 @@ public:
 	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
-
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {
@@ -95,8 +114,10 @@ public:
 	}
 
 	AnimationMaker*	  m_pAnimationMaker;
-	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+	EffectManager*	  m_pEffectManager;
+	EnemyManager*	  m_pEnemyManager;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };

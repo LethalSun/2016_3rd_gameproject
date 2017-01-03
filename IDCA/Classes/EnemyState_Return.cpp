@@ -19,7 +19,6 @@ const float returnEndRange = 50.f;
 
 void EnemyState_Return::startState(Enemy* enemy)
 {
-	CCLOG("Start Return!");
 }
 
 
@@ -58,7 +57,6 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 
 void EnemyState_Return::endState(Enemy* enemy)
 {
-	CCLOG("End Return");
 }
 
 const int EnemyState_Return::returnStateNumber()

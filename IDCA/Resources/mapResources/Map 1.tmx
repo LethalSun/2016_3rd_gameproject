@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="42">
  <tileset firstgid="1" name="BlackForest_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="BlackForest_A.png" width="256" height="512"/>
  </tileset>
@@ -28,7 +28,7 @@
  </layer>
  <layer name="Tile Layer 2" width="100" height="50">
   <data encoding="base64" compression="zlib">
-   eJztm8tNBDEMhlfphGqgg6EDuMIFrrA0sEAD0AaiA+iJrFYRljWPxHZiO5tPiizt47Dz7zeZODP7sNu9xLF3WD/jmGOKr1+H/7rGZXz/KpzqYxwPyvUtjncH9XjsP1CVAGZ3G8eNcrXwP6d6IM0Uhh+tPCjJZPjR1oMtND2x5EMt0pxdgpYn5+BDznXW2vdg7dUPK+emUmp707MXtajpy/CCh7QvFr2gzL+aSHpi0Qvq/KuJlCeWvPCOhCeWvOgBrifDC3k4ngwv6kD1ZHhRD4on5+DFRTgNDUo96d2LlIV2Jhp+vCrngY87zkIzl1xPevFj7dhbySXHEw/7Fzl4yOPIlidefYBQs9CcT5b6w57ni4S3PCD4/pbhhx0mghdW5gtID1kkPPowR60cDo3Py57X3ZBaTrQ+F5yDF57w6oX3eWIJCS9an2OP9JQHvMee68Uh6K1HesgDP+fA9QJ/vzSTu/j5e+Ix85oH9AH3S6jrCugFZ93+FD/7zDhm3vLYeu6Hcv005wXXEy5estjqt1Oy8NbfskDu83Al5Hih7Yk1vuLv/w75+1FLpGtYWL33gTX4ib/9N/D8oHjgdX3fgpx5Y8kPmEUv++qalD5HDcHnJMn7slpnotEzwJR4gf2o4YWmJ9p7NKVeQD9qeqHtCRdK/4DiRaotvPA8n5T2D6hepNrKC++e5MDxAvevNGpPmXC9WOvvtvYErz29IeGFBT88ewN75pLPO2v74Wl+Wdu36NkPi55Ie7BU/wD8QBM1
+   eJztm+1NwzAQhitv0mlgg7IB/IU/8BfKAgUWgDUQG8BOOKqinqx82Hfn+3D8SNYhaKXWL08cX5Jj2O1e4zg6rF9xTHGIv78Jl7rEVfz7dTjXpzgelet7HB8O6jD3n0nlAGZ3F8etcrXwf471gJtD6H5IeVCSSfdD1oM1ND2x5EMtxjW7BC1PtuBDznnW0vtgbdUPK8emUmp707IXtajpS/eCBrcvFr3ArL+acHpi0Qvs+qsJlyeWvPAOhyeWvGgBqifdC34onnQv6oD1pHtRD4wnW/BiH84D/rwX+pylnrTuBZz/qSFBiSecfrwp55HO81oWUnkM5HrSih85c6+Zx0COJx6uX+TgIY+BNU+8+gDBZqGRx8BSf9jzejHiLQ9Ien9L98MOB4QXVtYLSAtZjHj0YYpaOZyEj8ue992QWk5IHwu24IUnvHrhfZ2Yg8ML6WPsQEt5wHvsqV6cgt5+pIU80uccqF6k7y/N5D6+/gE5Z17zgD6k/RLsvgJ6Qdm3P8fXvhDmzFsea8/9YM6fprygekLFSxZr/XZMFt76WxbIfR6uhBwvtD2xxnf8/j8h/3rUHOM5LKze+8Aa/Mbv/hdofmA88Lq/lyBn3ZjzA2bRynV1TUqfo4akxyTO+7KkM9HoGaSUeJH6UcMLTU+0r9GUegH9qOmFtidUMP0DjBdjlfDC83pS2j/AejFWKS+8e5IDxYu0f6VRW8qE6sVSf1fak3Tv6Q0OLyz44dkb2DPnfN5Z2w9P68vSdYuW/bDoCbcHc/UfjXkUcA==
   </data>
  </layer>
  <layer name="Tile Layer 4" width="100" height="50">
@@ -41,17 +41,76 @@
    eJzt2sWuFVEURdGC+/4Sd3d3d3d3d3d3d6eFN3FoYYM/AJK6r0LWTEb/ZO3uKYqUUkoppZRSSimllFJKKaWUUkrp32tWK4rmtKAlrWhNG9rSjvZ0oCOdao394v+7zvbtQle60Z0e9KQXvelDX/rRP/cotQH2HcggBjOEoQxjOCMYyShGMyb3KLWx9h3HeCYwkUlMZgpTmcZ0ZjAz9yi1WfadzRzmMo/5LGAhi1jMEpayLPcoteX2XcFKVrGaNaxlHevZwEY2sTn3KLUt9t3KNrazg53sYjd72Ms+9nMg9yi1g/Y9xGGOcJRjHOcEJznFac7kFqV3zsbnucBFLnGZK1zlGte5wU1u5Saldtu+d7jLPe7zgIc84jFPeJo71L1nNn/OC17yite8yS0arbe2f8d7PvCRT3zmC19zm7r3zebf+cHP3/s3FEUTmlJraOzXpZRSSimllFJKf17+bVSr/NuoVvm3Ua3yb6Na5d9Gtcq/jWqVfxvV6m//bZzNPUot/zbq2y/J76Zz
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="3" name="Choco_1" x="580" y="770" width="26" height="26">
-   <ellipse/>
-  </object>
-  <object id="4" name="Choco_2" x="583" y="864" width="27" height="28">
-   <ellipse/>
-  </object>
- </objectgroup>
  <layer name="Tile Layer 5" width="100" height="50">
   <data encoding="base64" compression="zlib">
    eJzt0cEJgDAURMF/SONqBZoKTBp1rcIgM7D3hVcFAAAAAAAAAAAAwN9srWrPjvb1E15nOlxZ12MJdzqMbOoBAAAAAAAAACzoATLvBUc=
   </data>
  </layer>
+ <objectgroup name="Atroce">
+  <object id="11" x="928" y="767" width="31" height="31"/>
+  <object id="15" x="1314" y="420" width="30" height="30"/>
+  <object id="16" x="1280" y="1150" width="34" height="38"/>
+  <object id="17" x="1728" y="1440" width="38" height="36"/>
+  <object id="19" x="2188" y="1038" width="30" height="34"/>
+  <object id="20" x="2210" y="712" width="32" height="32"/>
+  <object id="21" x="1760" y="260" width="34" height="34"/>
+  <object id="23" x="2406" y="894" width="40" height="36"/>
+ </objectgroup>
+ <objectgroup name="Choco">
+  <object id="25" x="994" y="676" width="36" height="38">
+   <ellipse/>
+  </object>
+  <object id="26" x="992" y="832" width="48" height="46">
+   <ellipse/>
+  </object>
+  <object id="27" x="1326" y="334" width="38" height="36">
+   <ellipse/>
+  </object>
+  <object id="28" x="1394" y="430" width="34" height="32">
+   <ellipse/>
+  </object>
+  <object id="29" x="1386" y="1210" width="46" height="38">
+   <ellipse/>
+  </object>
+  <object id="30" x="1230" y="1278" width="58" height="42">
+   <ellipse/>
+  </object>
+  <object id="31" x="1712" y="172" width="38" height="36">
+   <ellipse/>
+  </object>
+  <object id="32" x="1866" y="298" width="48" height="40">
+   <ellipse/>
+  </object>
+  <object id="33" x="1712" y="1536" width="38" height="32">
+   <ellipse/>
+  </object>
+  <object id="34" x="1806" y="1358" width="44" height="38">
+   <ellipse/>
+  </object>
+  <object id="35" x="2132" y="1016" width="30" height="36">
+   <ellipse/>
+  </object>
+  <object id="36" x="2240" y="1090" width="24" height="24">
+   <ellipse/>
+  </object>
+  <object id="37" x="2174" y="670" width="34" height="26">
+   <ellipse/>
+  </object>
+  <object id="38" x="2278" y="726" width="34" height="28">
+   <ellipse/>
+  </object>
+  <object id="39" x="2466" y="860" width="32" height="36">
+   <ellipse/>
+  </object>
+  <object id="40" x="2470" y="970" width="36" height="30">
+   <ellipse/>
+  </object>
+  <object id="41" x="2002" y="1418" width="2" height="6">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="firstChoco" visible="0">
+  <object id="9" name="firstChoco1" x="609" y="737" width="31" height="31"/>
+  <object id="10" name="firstChoco" x="608" y="865" width="30" height="31"/>
+ </objectgroup>
 </map>

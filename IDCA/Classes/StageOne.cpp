@@ -3,7 +3,7 @@
 #include "StageOne.h"
 #include "ManageMap.h"
 #include "ManageMove.h"
-#include "TemporaryDefine.h"
+#include "Define.h"
 #include "PlayerCharacterManager.h"
 #include "ManageEnemyMove.h"
 #include "Enemy_Choco.h"
@@ -52,6 +52,9 @@ bool StageOne::init()
 	m_pManageMap = ManageMap::create();
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
 	addChild(m_pMap);
+
+	
+
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 	m_pManageEnemyMove = ManageEnemyMove::create();
@@ -66,21 +69,18 @@ bool StageOne::init()
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
-	// EnemyManager 등록
-	m_pEnemyManager = m_pEnemyManager->getInstance();
-	m_pEnemyManager->setMapPointer(m_pMap);
-	//m_pEnemyManager->MakeEnemy(ENEMY_TYPE::CHOCO, Vec2(500.f, 650.f));
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(700.f, 650.f));
-	m_pEnemyManager->MakeEnemy(ENEMY_TYPE::ATROCE, Vec2(800.f, 650.f));
-	auto vector = m_pEnemyManager->getEnemyVector();
-	vector.at(1)->setMoveSpeed(3.f);
-
-
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();
 	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
 	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
 	addChild(m_pCollideManager);
+
+	// EnemyManager 등록
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	m_pEnemyManager->setInnerCollideManager(m_pCollideManager);
+	//m_pEnemyManager->StageOneSetting();
+	m_pEnemyManager->SummonAncientTree();
 
 	//임시 디버깅용 코드
 
@@ -93,7 +93,6 @@ void StageOne::update(float delta)
 {
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
-
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 	position = m_pPlayerCharacterManager->getPlayerPosition();
@@ -106,9 +105,10 @@ void StageOne::update(float delta)
 		m_pPlayerCharacterManager->setPlayerPosition(position, backgroundposition);
 	}
 
-	char buf[255];
-	sprintf(buf, "[Player] X : %f, Y : %f", position.x, position.y);
-	CCLOG(buf);
+	// EnemyManager
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
-	m_pEnemyManager->DeleteEnemy();
+	m_pEnemyManager->StageOneTriggerCheck();
+	m_pEnemyManager->DieCheck();
+
+	return;
 }
