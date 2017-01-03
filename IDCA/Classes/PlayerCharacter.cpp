@@ -90,6 +90,7 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
 	//addChild(Sprite);
+	return true;
 }
 
 int PlayerCharacter::GetState()
@@ -124,10 +125,18 @@ int PlayerCharacter::GetHP()
 {
 	return m_HP;
 }
+int PlayerCharacter::GetMaxHP()
+{
+	return m_MaxHP;
+}
 
 void PlayerCharacter::SetHP(int hp)
 {
 	m_HP = hp;
+}
+int PlayerCharacter::GetMaxSP()
+{
+	return m_MaxSP;
 }
 
 int PlayerCharacter::GetSP()
@@ -171,7 +180,7 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-	MakeHPBox();
+	//MakeHPBox();
 	SaveBeforeStateAndDirection();
 	CheckStopState();
 }

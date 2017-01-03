@@ -22,7 +22,11 @@ public:
 	//캐릭터의 체력을 확인하고 설정하는 함수
 	int GetHP();
 
+	int GetMaxHP();
+
 	void SetHP(int hp);
+
+	int GetMaxSP();
 
 	//캐릭터의 마나를 확인하고 설정하는 함수
 	int GetSP();
