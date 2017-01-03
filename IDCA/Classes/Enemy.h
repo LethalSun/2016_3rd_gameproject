@@ -62,7 +62,8 @@ public:
 
 	/* Only For Boss */
 	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
-	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
+	CC_SYNTHESIZE(bool, m_IsRaged30, IsRaged30);
+	CC_SYNTHESIZE(bool, m_IsRaged60, IsRaged60);
 	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
 	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);

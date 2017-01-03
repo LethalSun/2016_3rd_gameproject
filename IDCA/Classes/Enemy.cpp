@@ -12,6 +12,7 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
+#include "BossState_Summon.h"
 #include "EffectManager.h"
 #include "Tentacle.h"
 
@@ -640,21 +641,19 @@ void Enemy::CheckBossStatus()
 	// 남은 체력의 비율을 계산한 뒤, 
 	setRemainHpPercent(getHP() / getMaxHP());
 
-	// 체력 비율이 30%미만일 경우 Rage상태로 돌입 (Summon가능)
-	if (getRemainHpPercent() < 0.3f)
-	{
-		setIsRaged(true);
-	}
-
 	// TODO :: 매직넘버
-	// 남은 체력 비율에 반비례하여 AttackFrequency 결정.
-	if (getRemainHpPercent() < 0.3)
+	// 남은 체력 비율에 반비례하여 AttackFrequency 결정, 그리고 Summon.
+	if (!getIsRaged30() && (getRemainHpPercent() < 0.3))
 	{
+		setIsRaged30(true);
 		setAttackFrequency(0.7f);
+		changeState<BossState_Summon>();
 	}
-	else if (getRemainHpPercent() < 0.6)
+	else if (!getIsRaged60() && (getRemainHpPercent() < 0.6))
 	{
+		setIsRaged60(true);
 		setAttackFrequency(1.1f);
+		changeState<BossState_Summon>();
 	}
 
 	return;
