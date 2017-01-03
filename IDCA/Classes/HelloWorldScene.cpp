@@ -22,21 +22,19 @@ const char SelectTextKeyboard[] = "TitleScene/TitleTextKeyboard_agencysmall.png"
 
 const float SelectTextTwinkleTime = 1.0f;
 
+// Cocos2d-x 기본 씬 생성 함수.
 Scene* HelloWorld::createScene()
 {
-	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
-	// 'layer' is an autorelease object
 	auto layer = HelloWorld::create();
 
-	// add layer as a child to scene
 	scene->addChild(layer);
 
-	// return the scene
 	return scene;
 }
 
+// 씬 초기화 함수.
 bool HelloWorld::init()
 {
 	if (!Layer::init())
@@ -62,7 +60,6 @@ bool HelloWorld::init()
 	TextBackground->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight));
 	addChild(TextBackground);
 
-	// TODO :: JoyStick일 경우와 Keyboard일 경우 다르게 해주기.
 	// 텍스트 등록.
 	auto SelectText = Sprite::create(SelectTextKeyboard);
 	SelectText->setPosition(Vec2(visibleSize.width * TextBackgroundWidth, visibleSize.height * TextBackgroundHeight - 7.5f));
@@ -87,9 +84,9 @@ bool HelloWorld::init()
 	return true;
 }
 
+// 키가 눌렸는지 체크해주고 프로그램을 종료하거나 StageOne으로 이동.
 void HelloWorld::update(float dt)
 {
-	// TODO :: Press Q to Start, ESC to exit로 바꿔주기. 
 	auto startChecker = m_pInputLayer->GetInputArray();
 	
 	if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
@@ -100,14 +97,20 @@ void HelloWorld::update(float dt)
 	{
 		ExitGame();
 	}
+
+	return;
 }
 
+// StageOne으로 이동. replaceScene 사용. (다시 돌아올 일이 없으므로)
 void HelloWorld::ChangeToStageOne()
 {
 	Director::getInstance()->replaceScene(StageOne::createScene());
+	return;
 }
 
+// 프로그램 종료.
 void HelloWorld::ExitGame()
 {
 	exit(0);
+	return;
 }

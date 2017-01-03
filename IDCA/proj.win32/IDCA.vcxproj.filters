@@ -38,6 +38,8 @@
     <ClCompile Include="..\Classes\BossState_Strike.cpp" />
     <ClCompile Include="..\Classes\BossState_Rush.cpp" />
     <ClCompile Include="..\Classes\BossState_Summon.cpp" />
+    <ClCompile Include="..\Classes\Tentacle.cpp" />
+    <ClCompile Include="..\Classes\DeadScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
@@ -77,6 +79,8 @@
     <ClInclude Include="..\Classes\BossState_Strike.h" />
     <ClInclude Include="..\Classes\BossState_Rush.h" />
     <ClInclude Include="..\Classes\BossState_Summon.h" />
+    <ClInclude Include="..\Classes\Tentacle.h" />
+    <ClInclude Include="..\Classes\DeadScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />

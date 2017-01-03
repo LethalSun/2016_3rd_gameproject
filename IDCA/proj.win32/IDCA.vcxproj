@@ -155,6 +155,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\BossState_Summon.cpp" />
     <ClCompile Include="..\Classes\CollideManager.cpp" />
     <ClCompile Include="..\Classes\config.cpp" />
+    <ClCompile Include="..\Classes\DeadScene.cpp" />
     <ClCompile Include="..\Classes\Define.cpp" />
     <ClCompile Include="..\Classes\EffectManager.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
@@ -197,6 +198,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\BossState_Summon.h" />
     <ClInclude Include="..\Classes\CollideManager.h" />
     <ClInclude Include="..\Classes\config.h" />
+    <ClInclude Include="..\Classes\DeadScene.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\EffectManager.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
