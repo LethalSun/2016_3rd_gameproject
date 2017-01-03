@@ -15,7 +15,7 @@ const char Atroce_HitedSound[] = "Sound/Atroce_hited.wav";
 const char Atroce_DyingSound[] = "Sound/Atroce_dying.wav";
 
 const char Atroce_Name[] = "Atroce";
-const char Atroce_Extention[] = ".png";
+const char Atroce_Extension[] = ".png";
 
 bool Enemy_Atroce::init(const Vec2 initPosition)
 {
@@ -50,7 +50,7 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	setDyingSound(Atroce_DyingSound);
 
 	// AnimationMaker ¼¼ÆÃ.
-	m_pAnimationMaker = AnimationMaker::create(Atroce_Name, Atroce_Extention);
+	m_pAnimationMaker = AnimationMaker::create(Atroce_Name, Atroce_Extension);
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());

@@ -4,3 +4,7 @@
 Projectile::Projectile()
 {
 }
+
+Projectile::~Projectile()
+{
+}

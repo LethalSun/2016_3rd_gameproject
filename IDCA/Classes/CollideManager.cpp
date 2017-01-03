@@ -5,6 +5,7 @@
 #include "Enemy_Choco.h"
 #include "PlayerCharacter.h"
 #include "EnemyManager.h"
+#include <math.h> 
 
 CollideManager::CollideManager()
 {
@@ -54,6 +55,7 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 {
 	m_pvEnemy = &enemyVector;
 }
+
 
 void CollideManager::update(float dt)
 {
@@ -154,4 +156,18 @@ void CollideManager::CheckMonsterAttack()
 			m_pPlayerCharacter->SetAttackedDamage(damage);
 		}
 	}
+}
+
+void CollideManager::CheckTentacleAttack(const Vec2 tentaclePosition, const float range, const int damage, const TMXTiledMap* mapPointer)
+{
+	auto x = AbsFloat(m_pPlayerCharacter->getPosition().x - mapPointer->getPosition().x, tentaclePosition.x);
+	auto y = AbsFloat(m_pPlayerCharacter->getPosition().y - mapPointer->getPosition().y, tentaclePosition.y);
+
+	auto distance = sqrt(x * x + y * y);
+	if (distance < range)
+	{
+		m_pPlayerCharacter->SetAttackedDamage(damage);
+	}
+
+	return;
 }

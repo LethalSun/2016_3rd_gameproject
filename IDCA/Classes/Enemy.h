@@ -3,10 +3,10 @@
 #include "EnemyState.h"
 
 class AnimationMaker;
-class Config;
 class ManageEnemyMove;
 class EffectManager;
 class EnemyManager;
+class CollideManager;
 
 class Enemy : public Node
 {
@@ -60,6 +60,16 @@ public:
 	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
 	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
 
+	/* Only For Boss */
+	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
+	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
+	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
+	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
+
+	void				 MakeTentacle();
+	void				 Strike();
+
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
 	void				 CalUnitVecToPlayer();
@@ -77,6 +87,7 @@ public:
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
 	int					 MakeHPBox();
+	void				 EnemyAttackSound();
 
 	void				 CreateEffect(int damage);
 
@@ -103,9 +114,9 @@ public:
 	}
 
 	AnimationMaker*	  m_pAnimationMaker;
-	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
-	EffectManager* m_pEffectManager;
+	EffectManager*	  m_pEffectManager;
+	EnemyManager*	  m_pEnemyManager;
 
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };

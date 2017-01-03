@@ -5,11 +5,13 @@
 #include "EnemyManager.h"
 #include "Enemy_Choco.h"
 #include "Enemy_Atroce.h"
+#include "Enemy_AncientTree.h"
 #include "EnemyState_Dead.h"
 
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
 const char ATROCE_PLIST[] = "Atroce.plist";
+const char ANCIENT_TREE_PLIST[] = "AncientTree.plist";
 const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
 
 // EnemyManager 생성자.
@@ -22,6 +24,7 @@ EnemyManager::EnemyManager()
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
+	m_pMakeHandler[ENEMY_TYPE::ANCIENT_TREE] = &EnemyManager::MakeAncientTree;
 }
 
 EnemyManager* EnemyManager::_instance = nullptr;
@@ -117,6 +120,28 @@ Enemy* EnemyManager::MakeAtroce(const Vec2 initPosition)
 	{
 		return nullptr;
 	}
+
+	return newEnemy;
+}
+
+// AncientTree를 만드는 함수.
+Enemy* EnemyManager::MakeAncientTree(const Vec2 initPosition)
+{
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(ANCIENT_TREE_PLIST);
+	Enemy* newEnemy = Enemy_AncientTree::create(initPosition);
+
+	// Boss에게는 CollideManager를 넘겨주어야 한다. (Tentacle 관리)
+	if (!getInnerCollideManager())
+	{
+		return nullptr;
+	}
+
+	if (!newEnemy)
+	{
+		return nullptr;
+	}
+	
+	newEnemy->setInnerCollideManager(getInnerCollideManager());
 
 	return newEnemy;
 }
@@ -232,6 +257,10 @@ void EnemyManager::StageOneTriggerCheck()
 	{
 		StageOneCreateAdditionalEnemies();
 	}
+	if (getStageOneTrigger() && m_pEnemyVector.empty())
+	{
+		SummonAncientTree();
+	}
 
 	return;
 }
@@ -249,7 +278,7 @@ bool EnemyManager::IsStageOneChocoDied()
 }
 
 
-// StageOne의 트리거가 발동되면 나머지 Enemy들을 생성해주는 함수.
+// StageOne의 트리거가 발동되면 나머지 Enemy들을 활성화해주는 함수.
 void EnemyManager::StageOneCreateAdditionalEnemies()
 {
 	auto vecSize = m_pEnemyVector.size();
@@ -263,6 +292,12 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(TRIGGER_SOUND, false);
 
 	return;
+}
+
+// 모든 Enemy들이 죽었을 경우 보스를 소환해주는 함수.
+void EnemyManager::SummonAncientTree()
+{
+	MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(900.f, 900.f));
 }
 
 // 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.
