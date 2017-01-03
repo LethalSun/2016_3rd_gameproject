@@ -16,11 +16,9 @@
 
 */
 
-const float ATTACK_CORRECTION_VALUE = 50.f;
 
 void EnemyState_Attack::startState(Enemy* enemy)
 {
-	CCLOG("Start Attack!");
 }
 
 void EnemyState_Attack::runState(Enemy* enemy, float dt)
@@ -31,7 +29,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	enemy->TranslateUnitVec(enemy->getUnitVecToPlayer());
 	enemy->CalDirection(enemy->getTranslatedUnitVec());
 
-	if (!isPlayerInAttackRange(attackRange + ATTACK_CORRECTION_VALUE, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange + ENEMY_ATTACK_CORRECTION_VALUE, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
@@ -39,17 +37,12 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	{
 		enemy->changeState<EnemyState_Waiting>();
 	}
-	else
-	{
-		CCLOG("Attack!");
-	}
 
 	return;
 }
 
 void EnemyState_Attack::endState(Enemy* enemy)
 {
-	CCLOG("End Attack!");
 }
 
 const int EnemyState_Attack::returnStateNumber()

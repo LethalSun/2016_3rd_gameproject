@@ -11,7 +11,7 @@ bool ManageEnemyMove::init()
 	{
 		return false;
 	}
-	this->setName("Enemy Mover Component");
+	this->setName(ENEMYMOVERNAME);
 	m_EnemyManager = m_EnemyManager->getInstance();
 
 	return true;
@@ -22,7 +22,7 @@ bool ManageEnemyMove::init()
 Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, const float dt,Enemy* enemy)
 {
 	m_pManageMap = ManageMap::create();
-	enemyVector = &m_EnemyManager->getEnemyVector();
+	auto enemyVector = &m_EnemyManager->getEnemyVector();
 
 	for (int i = 0; i < enemyVector->size(); i++)
 	{
@@ -35,8 +35,16 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 	}
 
 	auto movable = false;
+	auto checkCurrent = false;
 
-	movable = m_pManageMap->checkWall(position + (unitVec)*32, map, enemyVector);
+	checkCurrent = m_pManageMap->checkBlocked(position, Vec2(ZEROVEC, ZEROVEC), map, enemyVector);
+	
+	if (checkCurrent == false)
+	{
+		return position + unitVec * enemy->getMoveSpeed();
+	}
+
+	movable = m_pManageMap->checkBlocked(position,unitVec, map, enemyVector);
 
 
 
@@ -45,8 +53,6 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 		position += unitVec * enemy->getMoveSpeed();
 	}
 
-	if (movable == false) CCLOG("ManageEnemyMove::update -> moveable is false!");
-	if (movable == true) CCLOG("ManageEnemyMove::update -> moveable is true.");
 	return position;
 }
 

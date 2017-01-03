@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Enemy.h"
+#include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
+#include "AudioEngine.h"
 #include "math.h"
 #include "ManageEnemyMove.h"
 #include "AnimationMaker.h"
@@ -10,10 +12,11 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
+#include "BossState_Summon.h"
+#include "EffectManager.h"
+#include "Tentacle.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.01f;
-
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -23,10 +26,11 @@ bool Enemy::init(const Vec2 initPosition)
 	}
 
 	m_pManageEnemyMove = ManageEnemyMove::create();
+	m_pEffectManager = EffectManager::create();
+	m_pEnemyManager = EnemyManager::getInstance();
+
+	addChild(m_pEffectManager, ENEMY_EFFECT_MANAGER_ZORDER);
 	addComponent(m_pManageEnemyMove);
-	m_pLabel = Label::create();
-	m_pLabel->setColor(ccc3(255, 0, 0));
-	addChild(m_pLabel, 5);
 
 	setPosition(initPosition);
 	setOrigin(initPosition);
@@ -37,6 +41,11 @@ bool Enemy::init(const Vec2 initPosition)
 	setDirection(DIRECTION::BOTTOM);
 	setIsAttackedOnce(false);
 	setFlagBeAttacked(false);
+	setIsDead(false);
+	setIsSleeping(false);
+	
+	setBeforePosition(Vec2(-1, -1));
+
 
 	return true;
 }
@@ -51,18 +60,13 @@ void Enemy::update(const float deltaTime)
 
 	CalculateBodyAnchorPoint();
 
-	//MakeBox(m_BodyAnchorPointForDebugBox, m_BodyRangeForCollide, m_GreenBoxTag);
-
-	char buf[255];
-	sprintf(buf, "HP: %d", getHP());
-	m_pLabel->setString(buf);
-	//CCLOG(buf);
-
 	DecideWhatIsCurrentAnimation();
-	
+	CheckBossStatus();
+
+	MakeMaxHPBox();
+	MakeHPBox();
 	return;
 }
-
 
 // 플레이어와의 거리를 구하여 m_DistanceFromPlayer에 세팅해준다.
 void Enemy::CalDistanceFromPlayer()
@@ -90,7 +94,55 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::MoveEnemy(const float deltaTime)
 {
+
+	auto beforePosition = getPosition();
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
+
+	//줄서서 기다리지 않아보자.
+	auto unitVec = getTranslatedUnitVec();
+
+	while (beforePosition == position)
+	{
+		if (unitVec.x == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x += 1;
+			}
+			else
+			{
+				unitVec.x += -1;
+			}
+		}
+		else if (unitVec.y == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.y += 1;
+			}
+			else
+			{
+				unitVec.y += -1;
+			}
+		}
+		else
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x = 0;
+			}
+			else
+			{
+				unitVec.y = 0;
+			}
+
+		}
+		position = m_pManageEnemyMove->update(getPosition(), unitVec, getMapPointer(), deltaTime, this);
+	}
+
 
 	this->setPosition(position);
 	return;
@@ -174,12 +226,14 @@ void Enemy::CalDirection(Vec2 InputUnitVec)
 	return;
 }
 
+// float 형태의 유닛벡터를 받아서 int형태의 값으로 바꿔준다.
+// IgnoreMoveRange의 범위 만큼은 무시하여 흔들림을 보정해준다.
 void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 {
 	int x = 0;
 	int y = 0;
 
-	if (abs(InputUnitVec.x) > IgnoreMoveRange)
+	if (abs(InputUnitVec.x) > ENEMY_IGNORE_MOVE_RANGE)
 	{
 		x = (InputUnitVec.x > 0) ? 1 : -1;
 	}
@@ -188,7 +242,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 		x = 0;
 	}
 
-	if (abs(InputUnitVec.y) > IgnoreMoveRange) 
+	if (abs(InputUnitVec.y) > ENEMY_IGNORE_MOVE_RANGE)
 	{
 		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
@@ -201,6 +255,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 	return;
 }
 
+// Before State와 Direction을 저장해주는 함수.
 void Enemy::CatchStateAndDirection()
 {
 	// State Catch
@@ -248,26 +303,6 @@ void Enemy::CalculateBodyAnchorPoint()
 	m_BodyAnchorPoint = getPosition();
 }
 
-void Enemy::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
-{
-	if (getChildByTag(tag) != nullptr)
-	{
-		removeChildByTag(tag);
-	}
-	Vec2 vertex[2] = { Vec2(position.x - boxInfo.x / 2,position.y - boxInfo.y / 2),
-		Vec2(position.x + boxInfo.x / 2,position.y + boxInfo.y / 2) };
-	auto box = DrawNode::create();
-	if (tag == GREEN_BOX_TAG)
-	{
-		box->drawRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
-	}
-	else if (tag == RED_BOX_TAG)
-	{
-		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
-	}
-
-	addChild(box, 0, tag);
-}
 
 bool Enemy::Stop()
 {
@@ -283,7 +318,7 @@ bool Enemy::Stop()
 
 bool Enemy::IsStopContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::STOP
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::STOP
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{
@@ -307,7 +342,7 @@ bool Enemy::Move()
 
 bool Enemy::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::MOVE
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{
@@ -323,57 +358,90 @@ bool Enemy::Attack()
 	{
 		return false;
 	}
-	
+
 	setAttackChecked(false);
 	m_pAnimationMaker->SetAnimationAttack();
 	auto Sprite = m_pAnimationMaker->AddAnimation(getDirection());
-	//int attackSound = CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(this->getAttackSound(), false);
+
+	EnemyAttackSound();
+
 
 	CalculateAttackAnchorPoint();
-	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
 
 	return true;
 }
 
+// Enemy의 공격하는 소리를 재생해주는 함수.
+void Enemy::EnemyAttackSound()
+{
+	// 보스가 아닌 경우 공격 소리 처리.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE) 
+	{
+		// 여러 Enemy가 같이 공격할 경우 소리가 나지 않아서 임시방편으로 대체.
+		char buf[255];
+		auto i = EnemyManager::getInstance()->getSoundPlayNum();
+		sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
+		i = (i + 1) % ENEMY_ATTACK_SOUND_NUMBER;
+
+		EnemyManager::getInstance()->setSoundPlayNum(i);
+
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(buf, false);
+	}
+	// 보스일 경우 그냥 공격 음향 재생.
+	else
+	{
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getAttackSound(), false);
+	}
+
+	return;
+}
+
+// State Attack이 계속되고 있는지 확인해 주는 함수.
 bool Enemy::IsAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
+	// 현재 STATE가 Attack인지, 직전 방향과 현재 방향이 맞는지, 직전 STATE와 현재 STATE가 맞는지 확인.
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::ATTACK
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{
 		return true;
 	}
 
+	// 하나라도 다르다면 STATE가 계속 되고 있지 않는다고 판단.
 	return false;
 }
 
+// ENEMY들의 State에 따라서 지금 어떤 ENEMY가 어떤 행동을 취해야 할지 결정하는 함수.
 void Enemy::DecideWhatIsCurrentAnimation()
 {
-	// TODO :: 함수 포인터로 핸들링하기.
 	auto currentStateType = getState()->returnStateNumber();
+
 	if (currentStateType == ENEMY_STATE_TYPE::APPROACHING
-		|| currentStateType == ENEMY_STATE_TYPE::RETURN)
+		|| currentStateType == ENEMY_STATE_TYPE::RETURN
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_RUSH)
 	{
 		Move();
 	}
-	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING)
+	else if (currentStateType == ENEMY_STATE_TYPE::ATTACKING
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_ATTACK
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_SUMMON)
 	{
 		Attack();
-		//TODO :: Attack로직 들어간 뒤, 고쳐야 할 듯.
 	}
 	else if (currentStateType == ENEMY_STATE_TYPE::SEARCHING
 		|| currentStateType == ENEMY_STATE_TYPE::WAITING
-		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED)
+		|| currentStateType == ENEMY_STATE_TYPE::BE_ATTACKED
+		|| currentStateType == ENEMY_STATE_TYPE::BOSS_STRIKE)
 	{
 		Stop();
 	}
+
 	return;
 }
 
-	//Question :: 함수 포인터 질문하기.
-	//bool(*StateHandler[ENEMY_STATE_TYPE::STATE_NUM])() = { Move, };
-	
 
+// Enemy가 현재 MaxHP인지 확인하는 함수.
+// 현재 HP와 MaxHP가 같다면 true를, 아니라면 false 반환.
 bool Enemy::IsEnemyMaxHp()
 {
 	if (getHP() == getMaxHP())
@@ -395,19 +463,39 @@ void Enemy::CheckEnemyAttacked()
 	return;
 }
 
-
 // Enemy가 Attack받았을 경우 Damage를 받는 함수.
-bool Enemy::setAttackedDamage(const int damage)
+bool Enemy::setAttackedDamage(int damage)
 {
-	CheckEnemyAttacked();
-	setHP(getHP() - damage);
 
-	if (getFlagBeAttacked() == false)
+	//일단 짜잘한 랜덤 damage
+	auto randomDamage = rand() % 2;
+
+	damage += randomDamage;
+	setHP(getHP() - damage);
+	CheckEnemyAttacked();
+
+	//attack 받았을 때 그 damage로 맞는 effect
+	CreateEffect(damage);
+
+	setFlagBeAttacked(true);
+
+	// 보스일 경우, BeAttacked상태에 들어가지 않고 공격을 계속 하게 된다.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
 	{
 		changeState<EnemyState_BeAttacked>();
-		setFlagBeAttacked(true);
 	}
+	else
+	{
+		// TintBy를 사용하여 빨갛게 되는 액션과 다시 돌아오는 Action을 만든다.
+		m_pAnimationMaker->GetSprite()->stopActionByTag(TINT_ACTION_TAG);
+		TintBy* redAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, -255, -255);
+		TintBy* recoveryAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, 255, 255);
 
+		auto seqAction = Sequence::create(redAction, recoveryAction, nullptr);
+		seqAction->setTag(TINT_ACTION_TAG);
+		m_pAnimationMaker->GetSprite()->runAction(seqAction);
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getHitedSound(), false);
+	}
 
 	return true;
 }
@@ -415,4 +503,153 @@ bool Enemy::setAttackedDamage(const int damage)
 ManageEnemyMove * Enemy::getManageEnemyMove()
 {
 	return m_pManageEnemyMove;
+}
+
+void Enemy::CreateEffect(int damage)
+{
+	m_pEffectManager->MakeEffect(damage);
+}
+
+int Enemy::MakeHPBox()
+{
+	if (getChildByTag(GREEN_BOX_SOLID_TAG) != nullptr)
+	{
+		removeChildByTag(GREEN_BOX_SOLID_TAG);
+	}
+
+	auto hpCurrent = Sprite::create("Board/hp.png");
+	auto positionOfSprite = positiionOfHp;
+	hpCurrent->setPosition(Vec2(-positionOfSprite.x / 2, -positionOfSprite.y / 2));
+	hpCurrent->setAnchorPoint(Vec2(0, 0));
+
+	auto hpRatio = ((float)getHP() / (float)getMaxHP());
+
+	hpCurrent->setScaleY(sizeOfHp_y);
+	hpCurrent->setScaleX(hpRatio*sizeOfHp_x);
+
+	addChild(hpCurrent, 0, GREEN_BOX_SOLID_TAG);
+
+	return 0;
+}
+
+int Enemy::MakeMaxHPBox()
+{
+	if (getChildByTag(RED_BOX_SOLID_TAG) == nullptr)
+	{
+		auto hpMax = Sprite::create("Board/hpMax.png");
+		auto positionOfSprite = positiionOfHp;
+		hpMax->setPosition(Vec2(-positionOfSprite.x / 2, -positionOfSprite.y / 2));
+
+		hpMax->setAnchorPoint(Vec2(0, 0));
+		hpMax->setScaleY(sizeOfHp_y);
+		hpMax->setScaleX(sizeOfHp_x);
+		addChild(hpMax, 1, RED_BOX_SOLID_TAG);
+	}
+	else{}
+
+	return 0;
+
+}
+
+// 현재 Player의 Position에 Boss 공격용 텐타클을 만들어주는 함수.
+void Enemy::MakeTentacle()
+{
+	auto tentacle = Tentacle::create(getPlayerPosition(), getAttackFrequency() * 2, getDamage(), getMapPointer(), getInnerCollideManager(), true);
+	getMapPointer()->addChild(tentacle);
+	return;
+}
+
+// Boss의 Strike 구현.
+void Enemy::Strike()
+{
+	// 8방향에 대해서 텐타클 만들어주기.
+
+	auto bossPosition = getPosition();
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x, bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y);
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x, bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y);
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
+	{
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
+		getMapPointer()->addChild(tentacle);
+	}
+	return;
+}
+
+// Boss의 체력 나머지와 Raged 여부를 검사하는 함수. Update에서 호출.
+void Enemy::CheckBossStatus()
+{
+	// 보스가 아니라면, return.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
+	{
+		return;
+	}
+
+	// 남은 체력의 비율을 계산한 뒤, 
+	auto hpRatio = (float)getHP() / (float)getMaxHP();
+	setRemainHpPercent(hpRatio);
+
+	// 남은 체력 비율에 반비례하여 AttackFrequency 결정, 그리고 Summon.
+	if (!getIsRaged30() && (getRemainHpPercent() < ANCIENT_TREE_RAGE30))
+	{
+		setIsRaged30(true);
+		setAttackFrequency(ANCIENT_TREE_RAGE30_RATE);
+		changeState<BossState_Summon>();
+	}
+	else if (!getIsRaged60() && (getRemainHpPercent() < ANCIENT_TREE_RAGE60))
+	{
+		setIsRaged60(true);
+		setAttackFrequency(ANCIENT_TREE_RAGE60_RATE);
+		changeState<BossState_Summon>();
+	}
+
+	return;
 }

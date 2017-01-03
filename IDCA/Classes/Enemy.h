@@ -1,10 +1,19 @@
 #pragma once
 
+/*
+	Enemy
+	작성자 : 이근원
+	모든 Enemy의 부모 클래스. 생성자를 재정의하여 initPosition을 인자로 받아서 생성된다.
+	Enemy가 너무 많은 인자를 가지고 있는 것 같아서 계속 Enemy클래스를 세분화 할까 고민이 된다.
+*/
+
 #include "EnemyState.h"
 
 class AnimationMaker;
-class Config;
 class ManageEnemyMove;
+class EffectManager;
+class EnemyManager;
+class CollideManager;
 
 class Enemy : public Node
 {
@@ -42,6 +51,9 @@ public:
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(Label*, m_pLabel, Label);
 	CC_SYNTHESIZE(const char*, m_pAttackSound, AttackSound);
+	CC_SYNTHESIZE(const char*, m_pAttackSoundExtension, AttackSoundExtension);
+	CC_SYNTHESIZE(const char*, m_HitedSound, HitedSound);
+	CC_SYNTHESIZE(const char*, m_DyingSound, DyingSound);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPoint, AttackAnchorPoint);
 	CC_SYNTHESIZE(Vec2, m_AttackAnchorPointForDebugBox, AttackAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_AttackRangeForCollide, AttackRangeForCollide);
@@ -49,9 +61,29 @@ public:
 	CC_SYNTHESIZE(Vec2, m_BodyAnchorPointForDebugBox, BodyAnchorPointForDebugBox);
 	CC_SYNTHESIZE(Vec2, m_BodyRangeForCollide, BodyRangeForCollide);
 	CC_SYNTHESIZE(int, m_HP, HP);
-	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(int, m_Damage, Damage);
+	CC_SYNTHESIZE(int, m_MaxHP, MaxHP);
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
+	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
+	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
+	CC_SYNTHESIZE(Vec2, m_BeforePosition, BeforePosition);
+
+	/* Only For Boss */
+	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
+	CC_SYNTHESIZE(bool, m_IsRaged30, IsRaged30);
+	CC_SYNTHESIZE(bool, m_IsRaged60, IsRaged60);
+	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
+	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
+	CC_SYNTHESIZE(float, m_RemainHpPercent, RemainHpPercent);
+	CC_SYNTHESIZE(float, m_AttackFrequency, AttackFrequency);
+	CC_SYNTHESIZE(Vec2, positiionOfHp, PositionOfHp);
+	CC_SYNTHESIZE(float, sizeOfHp_x, SizeOfHp_x);
+	CC_SYNTHESIZE(float, sizeOfHp_y, SizeOfHp_y);
+
+	void				 MakeTentacle();
+	void				 Strike();
+	void				 CheckBossStatus();
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);
@@ -60,7 +92,6 @@ public:
 	void				 TranslateUnitVec(Vec2);
 	void				 CalDistanceFromPlayer();
 	void				 CalDistanceFromOrigin();
-	void				 HitedMove(const float deltaTime);
 	void				 CalDirection(Vec2);
 	void				 CatchStateAndDirection();
 	void				 CalculateAttackAnchorPoint();
@@ -70,6 +101,11 @@ public:
 	void				 CheckEnemyAttacked();
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
+	int					 MakeHPBox();
+	int MakeMaxHPBox();
+	void				 EnemyAttackSound();
+
+	void				 CreateEffect(int damage);
 
 	/* Animation Function */
 	bool				 Stop();
@@ -79,7 +115,6 @@ public:
 	bool				 Attack();
 	bool				 IsAttackContinued();
 	void				 DecideWhatIsCurrentAnimation();
-
 
 	/* Create Function Re-define */
 	static Enemy* create(const Vec2 initPosition) {
@@ -95,8 +130,10 @@ public:
 	}
 
 	AnimationMaker*	  m_pAnimationMaker;
-	Config*			  m_pConfig;
 	ManageEnemyMove*  m_pManageEnemyMove;
+	EffectManager*	  m_pEffectManager;
+	EnemyManager*	  m_pEnemyManager;
+
 private:
 	const int m_RedBoxTag{ RED_BOX_TAG };
 	const int m_GreenBoxTag{ GREEN_BOX_TAG };

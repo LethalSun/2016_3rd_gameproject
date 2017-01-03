@@ -8,8 +8,7 @@ public:
 	/* Basic Functions */
 	virtual bool			init();
 	virtual void			update(const float);
-
-	/* Delivery Data Structure & Functions */
+	bool					MemoryClear();
 
 	/* Get input Function */
 	int*					GetInputArray();
@@ -26,14 +25,11 @@ public:
 	void					CheckBoolIsNew(float*, float*);
 	void					CheckBoolIsDown(float*, float*);
 
-	// TODO :: override를 쓸 거면 다 쓰고, 안 쓸거면 다 안쓰던지. 일관성 있게 바꾸기.
 	/* Keyborad Input Setting & Functions */
 	virtual void			onKeyPressed(EventKeyboard::KeyCode, Event*);
 	virtual void			onKeyReleased(EventKeyboard::KeyCode, Event*);
 
 private:
-	// TODO :: Array 두 가지로 나눠보기 (UnitVec, Status);
-	// TODO :: Public 변수로 만들어서 차라리 Get함수를 지원해주자.
 	/* Delivery Data Structure & Functions */
 	int 					m_CurrentInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
 	int 					m_OldInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];

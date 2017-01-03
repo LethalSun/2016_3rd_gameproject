@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "PlayerCharacter.h"
 #include "AnimationMaker.h"
+#include "Skill.h"
+#include "SimpleAudioEngine.h"
 #include <windows.h>
 #include <iostream>
 
@@ -65,7 +67,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_Damage = ATTACK_DAMAGE;
 	//스킬을 초기화
 	m_DefenseSkill = nullptr;
-	m_AttackSkill = nullptr;
+	m_AttackSkill = Skill::create(SKILL_NAME, SKILL_IMAGE, SKILL_IMAGE_GRAY, PROJECTILE_IMAGE);
+	addComponent(m_AttackSkill);
 
 	//상태를 정지로 초기화
 	m_State = STATE::STOP;
@@ -78,7 +81,12 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(m_Direction);
-	//addChild(Sprite);
+	//체력 숫자 표시용 레이블
+	m_pLabel = Label::create();
+	m_pLabel->setColor(ccc3(255, 0, 0));
+	addChild(m_pLabel, 5);
+
+	return true;
 }
 
 int PlayerCharacter::GetState()
@@ -113,10 +121,18 @@ int PlayerCharacter::GetHP()
 {
 	return m_HP;
 }
+int PlayerCharacter::GetMaxHP()
+{
+	return m_MaxHP;
+}
 
 void PlayerCharacter::SetHP(int hp)
 {
 	m_HP = hp;
+}
+int PlayerCharacter::GetMaxSP()
+{
+	return m_MaxSP;
 }
 
 int PlayerCharacter::GetSP()
@@ -139,13 +155,18 @@ void PlayerCharacter::SetDamage(int damage)
 	m_Damage = damage;
 }
 
+bool PlayerCharacter::SetAttackedDamage(int damage)
+{
+	auto newHP = GetHP() - damage;
+	SetHP(newHP);
+	return true;
+}
+
 void PlayerCharacter::update(float dt)
 {
-	//m_pAnimationMaker->GetSprite()->stopAllActions();
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
-		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -159,9 +180,9 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-
 	SaveBeforeStateAndDirection();
 	CheckStopState();
+	m_AttackSkill->IncreaseCooltime(dt);
 }
 
 void PlayerCharacter::Attack()
@@ -193,14 +214,30 @@ void PlayerCharacter::stop()
 
 void PlayerCharacter::skill()
 {
-	return;
+	if (IsSkillAttackContinued())
+	{
+		return;
+	}
+
+	m_pAnimationMaker->SetAnimationSkill();
+	m_AttackSkill->SetStartPosition(m_BodyAnchorPoint);
+	auto direction = Vec2(UNIT_X[m_Direction], UNIT_Y[m_Direction]);
+	m_AttackSkill->SetDirection(direction);
+	m_AttackSkill->SetMaxRange(Vec2(MAX_SKILL_RANGE, MAX_SKILL_RANGE));
+	m_AttackSkill->SetColideRange(Vec2(MAX_SKILL_COLIDE_RANGE, MAX_SKILL_COLIDE_RANGE));
+	m_AttackSkill->MakeProjectiles(true);
+	m_pAnimationMaker->AddAnimation(m_Direction);
 }
 
 void PlayerCharacter::CheckStopState()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == -1)
+	if (m_pAnimationMaker->whichAnimationContinued() == -1)
 	{
 		if (m_State == STATE::ATTACK)
+		{
+			m_State = STATE::STOP;
+		}
+		else if (m_State == STATE::SKILL)
 		{
 			m_State = STATE::STOP;
 		}
@@ -270,7 +307,8 @@ void PlayerCharacter::SetAttackChecked()
 
 bool PlayerCharacter::IsAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
+	auto state = m_pAnimationMaker->whichAnimationContinued();
+	if (state == STATE::ATTACK
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -284,7 +322,21 @@ bool PlayerCharacter::IsAttackContinued()
 
 bool PlayerCharacter::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::MOVE
+		&& m_BeforeDirection == m_Direction
+		&& m_BeforeState == m_State)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool PlayerCharacter::IsSkillAttackContinued()
+{
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::SKILL
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -319,6 +371,28 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 	{
 		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
 	}
+	else if (tag == RED_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
+	}
+	else if (tag == GREEN_BOX_SOLID_TAG)
+	{
+		box->drawSolidRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
+	}
+	else
+	{
+		return;
+	}
 
 	addChild(box, 0, tag);
+}
+
+Skill * PlayerCharacter::GetAttackSkillPointer()
+{
+	return m_AttackSkill;
+}
+
+void PlayerCharacter::GetFunc(pFunc func)
+{
+	m_AttackSkill->GetFunc(func);
 }
