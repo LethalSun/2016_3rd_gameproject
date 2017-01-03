@@ -53,8 +53,6 @@ bool StageOne::init()
 	m_pMap = m_pManageMap->loadMap(TEMP_DEFINE::MAP_NAME1);
 	addChild(m_pMap);
 
-	
-
 	//이동 관리 등록
 	m_pManageMove = ManageMove::create();
 	m_pManageEnemyMove = ManageEnemyMove::create();
@@ -78,6 +76,7 @@ bool StageOne::init()
 	m_pCollideManager = CollideManager::create();
 	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
 	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
+	m_pCollideManager->SetMapPointer(m_pMap);
 	addChild(m_pCollideManager);
 
 	//임시 디버깅용 코드

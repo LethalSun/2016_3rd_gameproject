@@ -161,9 +161,18 @@ void PlayerCharacterManager::CalculatePlayerCharacterState()
 		return;
 	}
 
+	if (m_pCharacter->GetState() == STATE::SKILL)
+	{
+		return;
+	}
+
 	if (IsInputAttackState() == true)
 	{
 		m_State = STATE::ATTACK;
+	}
+	else if (IsInputSkillAttackState() == true)
+	{
+		m_State = STATE::SKILL;
 	}
 	else
 	{
@@ -190,6 +199,11 @@ void PlayerCharacterManager::SetPlayerCharacterState()
 void PlayerCharacterManager::CalculatePlayerCharacterDirection()
 {
 	if (m_pCharacter->GetState() == STATE::ATTACK)
+	{
+		return;
+	}
+
+	if (m_pCharacter->GetState() == STATE::SKILL)
 	{
 		return;
 	}
@@ -235,7 +249,6 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 
 void PlayerCharacterManager::update(float dt)
 {
-
 	//여러가지 값 계산
 	CalculatePlayerCharacterState();
 	SetPlayerCharacterState();
@@ -296,6 +309,19 @@ bool PlayerCharacterManager::IsInputMoveHoldState()
 {
 	if (m_pInput[INPUT_LAYER::ARRAY_INDEX::unitVecXStatus] == INPUT_LAYER::KEY_STATUS::START ||
 		m_pInput[INPUT_LAYER::ARRAY_INDEX::unitVecYStatus] == INPUT_LAYER::KEY_STATUS::START)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool PlayerCharacterManager::IsInputSkillAttackState()
+{
+	if (m_pInput[INPUT_LAYER::ARRAY_INDEX::keySkillAttack] == INPUT_LAYER::KEY_STATUS::START
+		|| m_pInput[INPUT_LAYER::ARRAY_INDEX::keySkillAttack] == INPUT_LAYER::KEY_STATUS::HOLD)
 	{
 		return true;
 	}

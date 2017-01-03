@@ -1,15 +1,9 @@
 #include "pch.h"
 #include "PlayerCharacter.h"
 #include "AnimationMaker.h"
+#include "Skill.h"
 #include <windows.h>
 #include <iostream>
-
-bool PlayerCharacter::SetAttackedDamage(int damage)
-{
-	auto newHP = GetHP() - damage;
-	SetHP(newHP);
-	return true;
-}
 
 PlayerCharacter::PlayerCharacter(const Vec2 AttackRange, const Vec2 BodyRange)
 	:m_RedBoxTag(RED_BOX_TAG),
@@ -72,7 +66,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_Damage = ATTACK_DAMAGE;
 	//스킬을 초기화
 	m_DefenseSkill = nullptr;
-	m_AttackSkill = nullptr;
+	m_AttackSkill = Skill::create(SKILL_NAME, SKILL_IMAGE, SKILL_IMAGE_GRAY, PROJECTILE_IMAGE);
+	addComponent(m_AttackSkill);
 
 	//상태를 정지로 초기화
 	m_State = STATE::STOP;
@@ -90,6 +85,8 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
 	//addChild(Sprite);
+
+	return true;
 }
 
 int PlayerCharacter::GetState()
@@ -150,6 +147,13 @@ void PlayerCharacter::SetDamage(int damage)
 	m_Damage = damage;
 }
 
+bool PlayerCharacter::SetAttackedDamage(int damage)
+{
+	auto newHP = GetHP() - damage;
+	SetHP(newHP);
+	return true;
+}
+
 void PlayerCharacter::update(float dt)
 {
 	//m_pAnimationMaker->GetSprite()->stopAllActions();
@@ -157,7 +161,6 @@ void PlayerCharacter::update(float dt)
 	{
 		Attack();
 		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
-		
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -174,6 +177,7 @@ void PlayerCharacter::update(float dt)
 	MakeHPBox();
 	SaveBeforeStateAndDirection();
 	CheckStopState();
+	m_AttackSkill->IncreaseCooltime(dt);
 }
 
 void PlayerCharacter::Attack()
@@ -205,7 +209,18 @@ void PlayerCharacter::stop()
 
 void PlayerCharacter::skill()
 {
-	return;
+	if (IsSkillAttackContinued())
+	{
+		return;
+	}
+	m_pAnimationMaker->SetAnimationSkill();
+	m_AttackSkill->SetStartPosition(m_BodyAnchorPoint);
+	auto direction = Vec2(UNIT_X[m_Direction], UNIT_Y[m_Direction]);
+	m_AttackSkill->SetDirection(direction);
+	m_AttackSkill->SetMaxRange(Vec2(MAX_SKILL_RANGE, MAX_SKILL_RANGE));
+	m_AttackSkill->SetColideRange(Vec2(MAX_SKILL_COLIDE_RANGE, MAX_SKILL_COLIDE_RANGE));
+	m_AttackSkill->MakeProjectiles(true);
+	m_pAnimationMaker->AddAnimation(m_Direction);
 }
 
 void PlayerCharacter::CheckStopState()
@@ -213,6 +228,10 @@ void PlayerCharacter::CheckStopState()
 	if (m_pAnimationMaker->IsAnimationContinued() == -1)
 	{
 		if (m_State == STATE::ATTACK)
+		{
+			m_State = STATE::STOP;
+		}
+		else if (m_State == STATE::SKILL)
 		{
 			m_State = STATE::STOP;
 		}
@@ -282,7 +301,8 @@ void PlayerCharacter::SetAttackChecked()
 
 bool PlayerCharacter::IsAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
+	auto state = m_pAnimationMaker->IsAnimationContinued();
+	if (state == STATE::ATTACK
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -290,6 +310,7 @@ bool PlayerCharacter::IsAttackContinued()
 	}
 	else
 	{
+		//m_State = STATE::STOP;
 		return false;
 	}
 }
@@ -304,6 +325,22 @@ bool PlayerCharacter::IsMoveContinued()
 	}
 	else
 	{
+		//m_State = STATE::STOP;
+		return false;
+	}
+}
+
+bool PlayerCharacter::IsSkillAttackContinued()
+{
+	if (m_pAnimationMaker->IsAnimationContinued() == STATE::SKILL
+		&& m_BeforeDirection == m_Direction
+		&& m_BeforeState == m_State)
+	{
+		return true;
+	}
+	else
+	{
+		//m_State = STATE::STOP;
 		return false;
 	}
 }
@@ -354,7 +391,7 @@ int PlayerCharacter::MakeHPBox()
 	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);
 
 	char buf[255];
-	sprintf(buf, "HP: %d", GetHP());
+	sprintf(buf, "HP: %d cooltime: %f", GetHP(), m_AttackSkill->GetRemainCooltime());
 	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
 	m_pLabel->setScale(3.f);
 	m_pLabel->setString(buf);
@@ -362,4 +399,9 @@ int PlayerCharacter::MakeHPBox()
 	MakeBox(HPBarStart, HPBarEnd, RED_BOX_SOLID_TAG);
 	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
 	return 0;
+}
+
+void PlayerCharacter::GetFunc(pFunc func)
+{
+	m_AttackSkill->GetFunc(func);
 }

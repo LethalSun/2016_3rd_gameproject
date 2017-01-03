@@ -86,6 +86,7 @@ private:
 	bool IsInputStopState();
 	bool IsInputMoveStartState();
 	bool IsInputMoveHoldState();
+	bool IsInputSkillAttackState();
 
 	//방향 조건 확인 함수
 	bool IsUnitVecTop();
