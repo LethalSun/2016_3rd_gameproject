@@ -87,6 +87,8 @@ public:
 	PlayerCharacter(const Vec2, const Vec2);
 	~PlayerCharacter();
 
+	//스킬의 포인터를 받는 함수.
+	Skill* GetAttackSkillPointer();
 	//스킬이 발동되었을때 호출되는 함수포인터를 받아오는 부분.
 	void GetFunc(pFunc);
 
