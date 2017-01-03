@@ -66,7 +66,7 @@ void Enemy::update(const float deltaTime)
 	DecideWhatIsCurrentAnimation();
 	CheckBossStatus();
 
-	MakeHPBox();
+	//MakeHPBox();
 
 	char buf[255];
 	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
