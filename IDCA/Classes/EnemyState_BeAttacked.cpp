@@ -21,6 +21,7 @@ const int TintActionTag = 2;
 		- RedAction 생성.
 		- 맞는 Sound 생성. ( TODO :: 맞는 Sound의 타이밍 조절하기 )
 */
+
 void EnemyState_BeAttacked::startState(Enemy* enemy)
 {
 	m_Pushable = true;
@@ -32,16 +33,6 @@ void EnemyState_BeAttacked::startState(Enemy* enemy)
 	// Sound 처리.
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(enemy->getHitedSound(), false);
 
-	// TODO :: 보스 버그 픽스
-	/*
-	if (enemy->getEnemyType() == ANCIENT_TREE)
-	{
-		auto escapeChance = rand() % 100;
-		if (escapeChance >= 80)
-		{
-			enemy->changeState<BossState_Rush>();
-		}
-	}*/
 }
 
 void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)

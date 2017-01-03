@@ -468,7 +468,27 @@ bool Enemy::setAttackedDamage(int damage)
 	CreateEffect(damage);
 
 	setFlagBeAttacked(true);
-	changeState<EnemyState_BeAttacked>();
+
+	// 보스일 경우, BeAttacked상태에 들어가지 않고 공격을 계속 하게 된다.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
+	{
+		changeState<EnemyState_BeAttacked>();
+	}
+	else
+	{
+		const int TintActionTag = 2;
+		const float redTime = 0.3f;
+		// TintBy를 사용하여 빨갛게 되는 액션과 다시 돌아오는 Action을 만든다.
+		m_pAnimationMaker->GetSprite()->stopActionByTag(TintActionTag);
+		TintBy* redAction = TintBy::create(redTime, 0, -255, -255);
+		TintBy* recoveryAction = TintBy::create(redTime, 0, 255, 255);
+
+		auto seqAction = Sequence::create(redAction, recoveryAction, nullptr);
+		seqAction->setTag(TintActionTag);
+		m_pAnimationMaker->GetSprite()->runAction(seqAction);
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getHitedSound(), false);
+
+	}
 
 	return true;
 }
@@ -535,7 +555,7 @@ int Enemy::MakeHPBox()
 void Enemy::MakeTentacle()
 {
 	// TODO :: 매직넘버 없애고 보스 체력에 반비례하여 빠르게 만들어지게.
-	auto tentacle = Tentacle::create(getPlayerPosition(), 3.0f, 20.f, getMapPointer(), true);
+	auto tentacle = Tentacle::create(getPlayerPosition(), 3.0f, 20.f, getMapPointer(), getInnerCollideManager(), true);
 	getMapPointer()->addChild(tentacle);
 	return;
 }
@@ -545,61 +565,62 @@ void Enemy::Strike()
 {
 	// 8방향에 대해서 텐타클 만들어주기.
 	const float distance = 45.f;
+	const int tentacleNumber = 4;
 	auto bossPosition = getPosition();
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x, bossPosition.y + distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y + distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y);
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y - distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x, bossPosition.y - distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y - distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y);
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y + distance * (i + 1));
 		auto duration = 0.5f * (i + 1);
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), false);
+		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	return;

@@ -6,6 +6,7 @@ class AnimationMaker;
 class ManageEnemyMove;
 class EffectManager;
 class EnemyManager;
+class CollideManager;
 
 class Enemy : public Node
 {
@@ -64,6 +65,7 @@ public:
 	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
 	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
 
 	void				 MakeTentacle();
 	void				 Strike();

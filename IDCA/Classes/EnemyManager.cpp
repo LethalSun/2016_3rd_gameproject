@@ -130,10 +130,18 @@ Enemy* EnemyManager::MakeAncientTree(const Vec2 initPosition)
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(ANCIENT_TREE_PLIST);
 	Enemy* newEnemy = Enemy_AncientTree::create(initPosition);
 
+	// Boss에게는 CollideManager를 넘겨주어야 한다. (Tentacle 관리)
+	if (!getInnerCollideManager())
+	{
+		return nullptr;
+	}
+
 	if (!newEnemy)
 	{
 		return nullptr;
 	}
+	
+	newEnemy->setInnerCollideManager(getInnerCollideManager());
 
 	return newEnemy;
 }

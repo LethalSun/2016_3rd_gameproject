@@ -2,6 +2,7 @@
 
 
 class Enemy;
+class CollideManager;
 
 class EnemyManager
 {
@@ -16,6 +17,7 @@ public :
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
 	CC_SYNTHESIZE(int, m_DiedEnemyNum, DiedEnemyNum);
 	CC_SYNTHESIZE(int, m_SoundPlayNum, SoundPlayNum);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
 
 	// 포인터는 원칙적으로 NULL 계산이 필요하기 때문에 NULL이 들어오지 않는 경우에 참조자 반환.
 	Vector<Enemy*>&			getEnemyVector();

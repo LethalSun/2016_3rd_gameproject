@@ -69,17 +69,18 @@ bool StageOne::init()
 	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
 	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
 
-	// EnemyManager 등록
-	m_pEnemyManager = m_pEnemyManager->getInstance();
-	m_pEnemyManager->setMapPointer(m_pMap);
-	//m_pEnemyManager->StageOneSetting();
-	m_pEnemyManager->SummonAncientTree();
-
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();
 	m_pCollideManager->SetPlayerCharacterPointer(m_pPlayerCharacterManager->GetCharacter());
 	m_pCollideManager->SetCMEnemyPointer(m_pEnemyManager->getEnemyVector());
 	addChild(m_pCollideManager);
+
+	// EnemyManager 등록
+	m_pEnemyManager = m_pEnemyManager->getInstance();
+	m_pEnemyManager->setMapPointer(m_pMap);
+	m_pEnemyManager->setInnerCollideManager(m_pCollideManager);
+	//m_pEnemyManager->StageOneSetting();
+	m_pEnemyManager->SummonAncientTree();
 
 	//임시 디버깅용 코드
 

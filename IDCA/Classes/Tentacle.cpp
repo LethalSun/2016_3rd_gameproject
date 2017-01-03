@@ -1,8 +1,11 @@
 #include "pch.h"
 #include "Tentacle.h"
 #include "SimpleAudioEngine.h"
+#include "CollideManager.h"
 
-bool Tentacle::init(const Vec2 initPosition, const float duration, const float damage, TMXTiledMap* mapPointer, const bool cautionExist)
+// 촉수 초기화 함수.
+bool Tentacle::init(const Vec2 initPosition, const float duration, const int damage, 
+	TMXTiledMap* mapPointer, CollideManager* collideManager, const bool cautionExist)
 {
 	if (!Node::init())
 	{
@@ -15,6 +18,7 @@ bool Tentacle::init(const Vec2 initPosition, const float duration, const float d
 	setMapPointer(mapPointer);
 	setAcculmulateTime(0);
 	setIsAttackEnd(false);
+	setInnerCollideManager(collideManager);
 	
 	if (cautionExist)
 	{
@@ -26,6 +30,7 @@ bool Tentacle::init(const Vec2 initPosition, const float duration, const float d
 	return true;
 }
 
+// 초기화할 때 받았던 지연시간이 넘어가면 촉수 애니메이션을 소환하고 사운드를 재생한다.
 void Tentacle::update(float deltaTime)
 {
 	m_AcculmulateTime += deltaTime;
@@ -39,6 +44,7 @@ void Tentacle::update(float deltaTime)
 	return;
 }
 
+// 촉수가 나오는 애니메이션을 만들고, 애니메이션 후의 과정을 처리하는 함수.
 void Tentacle::MakeTentacleAnimation()
 {
 	setTentacleSprite(Sprite::createWithSpriteFrameName("AncientTreeE0.png"));
@@ -58,9 +64,11 @@ void Tentacle::MakeTentacleAnimation()
 		getTentacleAnimation()->addSpriteFrame(frame);
 	}
 
+	// 애니메이션 후, 촉수 타격이 들어갔는지 확인하고 자기 자신을 remove한다.
 	setTentacleAnimate(Animate::create(getTentacleAnimation()));
-	auto callfunc = CallFunc::create(CC_CALLBACK_0(Tentacle::MakeTentacleDead, this));
-	auto seqAction = Sequence::create(getTentacleAnimate(), callfunc, nullptr);
+	auto hitfunc = CallFunc::create(CC_CALLBACK_0(Tentacle::CheckTentacleHit, this));
+	auto deadfunc = CallFunc::create(CC_CALLBACK_0(Tentacle::MakeTentacleDead, this));
+	auto seqAction = Sequence::create(getTentacleAnimate(), hitfunc, deadfunc, nullptr);
 	
 	removeChild(getRangeSprite());
 	getTentacleSprite()->runAction(seqAction);
@@ -68,6 +76,7 @@ void Tentacle::MakeTentacleAnimation()
 	return;
 }
 
+// 촉수가 나오기 전 미리 범위를 알려주는 스프라이트를 띄우는 함수.
 void Tentacle::MakeCautionRange()
 {
 	setRangeSprite(Sprite::create("Monster/range.png"));
@@ -82,12 +91,17 @@ void Tentacle::MakeCautionRange()
 	return;
 }
 
+// 촉수가 맵 포인터에서 자기 스스로를 지워주는 함수.
 void Tentacle::MakeTentacleDead()
 {
 	getMapPointer()->removeChild(this);
-	//auto action = RemoveSelf::create(false); 
-	//this->runAction(action);
-	//setIsAttackEnd(true);
-	//this->removeFromParentAndCleanup(false);
+
+	return;
+}
+
+// CollideManager에게 자신이 생성된 위치와 폭발 반경을 넘겨주고 플레이어에게 데미지를 주는 함수.
+void Tentacle::CheckTentacleHit()
+{
+	getInnerCollideManager()->CheckTentacleAttack(getCreatePosition(), 90, 20, getMapPointer());
 	return;
 }
