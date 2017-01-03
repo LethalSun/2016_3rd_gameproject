@@ -12,7 +12,8 @@ const float Choco_StiffTime = 0.6f;
 
 const char Choco_Name[] = "Choco";
 const char Choco_Extention[] = ".png";
-const char Choco_AttackSound[] = "Sound/Choco_swing.aif";
+const char Choco_AttackSound[] = "Sound/Choco_swing";
+const char Choco_AttackSoundExtension[] = ".aif";
 const char Choco_HitedSound[] = "Sound/Choco_hited.mp3";
 const char Choco_DyingSound[] = "Sound/Choco_dying.wav";
 
@@ -43,6 +44,7 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 
 	// Sound ¼¼ÆÃ
 	setAttackSound(Choco_AttackSound);
+	setAttackSoundExtension(Choco_AttackSoundExtension);
 	setHitedSound(Choco_HitedSound);
 	setDyingSound(Choco_DyingSound);
 

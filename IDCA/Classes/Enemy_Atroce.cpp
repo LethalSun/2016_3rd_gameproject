@@ -9,12 +9,13 @@ const float Atroce_AttackRange = 100.f;
 const float Atroce_MoveSpeed = 2.f;
 const float Atroce_StiffTime = 0.6f;
 
-const char Atroce_AttackSound[] = "Sound/Atroce_swing.mp3";
+const char Atroce_AttackSound[] = "Sound/Atroce_swing";
+const char Atroce_AttackSoundExtension[] = ".wav";
 const char Atroce_HitedSound[] = "Sound/Atroce_hited.wav";
 const char Atroce_DyingSound[] = "Sound/Atroce_dying.wav";
 
 const char Atroce_Name[] = "Atroce";
-const char Atroce_Extention[] = ".png";
+const char Atroce_Extension[] = ".png";
 
 bool Enemy_Atroce::init(const Vec2 initPosition)
 {
@@ -44,11 +45,12 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 
 	// Sound 세팅
 	setAttackSound(Atroce_AttackSound);
+	setAttackSoundExtension(Atroce_AttackSoundExtension);
 	setHitedSound(Atroce_HitedSound);
 	setDyingSound(Atroce_DyingSound);
 
 	// AnimationMaker 세팅.
-	m_pAnimationMaker = AnimationMaker::create(Atroce_Name, Atroce_Extention);
+	m_pAnimationMaker = AnimationMaker::create(Atroce_Name, Atroce_Extension);
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());

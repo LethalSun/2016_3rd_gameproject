@@ -7,6 +7,7 @@
 #include "EnemyManager.h"
 #include "Projectile.h"
 #include <functional>
+#include <math.h>
 
 CollideManager::CollideManager()
 {
@@ -67,32 +68,12 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 
 void CollideManager::MakeProjectile(const char *spriteImagePath, Vec2 startPosition, Vec2 direction, Vec2 maxRange, Vec2 colideRange, bool isCharacterOrignated)
 {
-	//바깥의 이프문은 스킬이 한번 클릭에 두번 생성되는 경우를 막기위해서 만든것
-	//
-
 	auto tempProjectile = Projectile::create(spriteImagePath, startPosition, direction, maxRange, colideRange, isCharacterOrignated);
 	if (tempProjectile != nullptr)
 	{
 		m_vProjectile.pushBack(tempProjectile);
 		m_pMap->addChild(tempProjectile);
 	}
-
-	/*
-	if (m_IsProjectileMakedSameAnimation == false)
-	{
-		auto tempProjectile = Projectile::create(spriteImagePath, startPosition, direction, maxRange, colideRange, isCharacterOrignated);
-		if (tempProjectile != nullptr)
-		{
-			m_vProjectile.pushBack(tempProjectile);
-			m_pMap->addChild(tempProjectile);
-		}
-		m_IsProjectileMakedSameAnimation = true;
-	}
-	else
-	{
-		m_IsProjectileMakedSameAnimation = false;
-	}
-	*/
 }
 
 void CollideManager::SetMapPointer(TMXTiledMap * p)
@@ -254,4 +235,18 @@ void CollideManager::EraseProjectile()
 			++iter;
 		}
 	}
+}
+
+void CollideManager::CheckTentacleAttack(const Vec2 tentaclePosition, const float range, const int damage, const TMXTiledMap* mapPointer)
+{
+	auto x = AbsFloat(m_pPlayerCharacter->getPosition().x - mapPointer->getPosition().x, tentaclePosition.x);
+	auto y = AbsFloat(m_pPlayerCharacter->getPosition().y - mapPointer->getPosition().y, tentaclePosition.y);
+
+	auto distance = sqrt(x * x + y * y);
+	if (distance < range)
+	{
+		m_pPlayerCharacter->SetAttackedDamage(damage);
+	}
+
+	return;
 }

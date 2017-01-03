@@ -161,9 +161,7 @@ void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 	}
 	else if (m_State == STATE::STOP)
 	{
-		m_AnimationSpeed = STOP_ANIMATION_SPEED;
 		sprintf(m_FrameNameBuffer, "%sS%d%s", m_FileName, fileNumber, m_FileNameExtention);
-		return;
 	}
 
 	m_AnimationSpeed = ANIMATION_SPEED;

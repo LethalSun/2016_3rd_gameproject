@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="42">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" nextobjectid="66">
  <tileset firstgid="1" name="BlackForest_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="BlackForest_A.png" width="256" height="512"/>
  </tileset>
@@ -109,8 +109,84 @@
    <ellipse/>
   </object>
  </objectgroup>
- <objectgroup name="firstChoco" visible="0">
+ <objectgroup name="firstChoco">
   <object id="9" name="firstChoco1" x="609" y="737" width="31" height="31"/>
   <object id="10" name="firstChoco" x="608" y="865" width="30" height="31"/>
+ </objectgroup>
+ <objectgroup name="BOSS_CHOCO">
+  <object id="50" x="1564" y="290">
+   <ellipse/>
+  </object>
+  <object id="51" x="1500" y="318">
+   <ellipse/>
+  </object>
+  <object id="52" x="1156" y="736">
+   <ellipse/>
+  </object>
+  <object id="53" x="1150" y="822">
+   <ellipse/>
+  </object>
+  <object id="54" x="1206" y="1140">
+   <ellipse/>
+  </object>
+  <object id="55" x="1312" y="1100">
+   <ellipse/>
+  </object>
+  <object id="56" x="1524" y="1266">
+   <ellipse/>
+  </object>
+  <object id="57" x="1592" y="1322">
+   <ellipse/>
+  </object>
+  <object id="58" x="1914" y="1390">
+   <ellipse/>
+  </object>
+  <object id="59" x="2030" y="1424">
+   <ellipse/>
+  </object>
+  <object id="60" x="2384" y="1192">
+   <ellipse/>
+  </object>
+  <object id="61" x="2490" y="1148">
+   <ellipse/>
+  </object>
+  <object id="62" x="2486" y="704" width="2" height="2">
+   <ellipse/>
+  </object>
+  <object id="63" x="2582" y="758">
+   <ellipse/>
+  </object>
+  <object id="64" x="2206" y="492">
+   <ellipse/>
+  </object>
+  <object id="65" x="2272" y="540">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="BOSS_ATROCE">
+  <object id="42" x="1080" y="776">
+   <ellipse/>
+  </object>
+  <object id="43" x="1512" y="276">
+   <ellipse/>
+  </object>
+  <object id="44" x="2282" y="470">
+   <ellipse/>
+  </object>
+  <object id="45" x="2570" y="702">
+   <ellipse/>
+  </object>
+  <object id="46" x="2476" y="1212">
+   <ellipse/>
+  </object>
+  <object id="47" x="1964" y="1456">
+   <ellipse/>
+  </object>
+  <object id="48" x="1498" y="1348">
+   <ellipse/>
+  </object>
+  <object id="49" x="1240" y="1076">
+   <ellipse/>
+  </object>
  </objectgroup>
 </map>

@@ -2,7 +2,7 @@
 
 
 class Enemy;
-class Enemy_Choco;
+class CollideManager;
 
 class EnemyManager
 {
@@ -15,6 +15,10 @@ public :
 	/* Member Variable */
 	CC_SYNTHESIZE(TMXTiledMap*, m_pMap, MapPointer);
 	CC_SYNTHESIZE(bool, m_StageOneTrigger, StageOneTrigger);
+	CC_SYNTHESIZE(int, m_DiedEnemyNum, DiedEnemyNum);
+	CC_SYNTHESIZE(int, m_SoundPlayNum, SoundPlayNum);
+	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
+	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
 
 	// 포인터는 원칙적으로 NULL 계산이 필요하기 때문에 NULL이 들어오지 않는 경우에 참조자 반환.
 	Vector<Enemy*>&			getEnemyVector();
@@ -23,6 +27,7 @@ public :
 	
 	/* Member Function */
 	void					MakeEnemy(const ENEMY_TYPE, const Vec2);
+	void					MakeEnemy(const ENEMY_TYPE, const Vec2, const bool);
 	void					ProvidePlayerPosition(const Vec2);
 	Enemy*					FindEnemyWithIdx(const int);
 	Vector<Enemy*>*			FindEnemyWithType(const ENEMY_TYPE);
@@ -33,9 +38,13 @@ public :
 	bool					IsStageOneChocoDied();
 	void					StageOneCreateAdditionalEnemies();
 	void					DieCheck();
+	void					SummonAncientTree();
+	void					AncientTreeSkillSummon(const float);
+	const float				CalPositionDistance(const Vec2, const Vec2);
 
 	Enemy*					MakeChoco(const Vec2);
 	Enemy*					MakeAtroce(const Vec2);
+	Enemy*					MakeAncientTree(const Vec2);
 
 private :
 	static EnemyManager*	_instance;

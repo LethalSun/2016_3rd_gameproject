@@ -69,8 +69,6 @@ void EnemyState_Dead::runState(Enemy* enemy, const float deltaTime)
 
 void EnemyState_Dead::endState(Enemy* enemy)
 {
-	// TODO :: RemoveChild를 했는데 어째서 Update에 들어가서 죽는걸까?
-
 	// EnemyManager의 deleteVector에 삽입.
 	auto manager = EnemyManager::getInstance();
 	auto deleteVector = &manager->getDeleteEenemyVector();
