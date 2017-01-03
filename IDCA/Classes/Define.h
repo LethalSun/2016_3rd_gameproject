@@ -38,8 +38,8 @@ const int CHOCO_MAX_HP = 10;
 const int CHOCO_ATTACK_DAMAGE = 1;
 
 //보스 체력 공격력
-const int ANCIENT_TREE_MAX_HP = 350;
-const int ANCIENT_TREE_DAMAGE = 10;
+const int ANCIENT_TREE_MAX_HP = 100;
+const int ANCIENT_TREE_DAMAGE = 20;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
@@ -170,3 +170,16 @@ namespace TEMP_DEFINE
 	extern const char*TILELAYER5;
 	extern const char*OBJECTLAYER;
 }
+
+const char SKILL_NAME[] = "storm bolt";
+const float MAX_COOL_TIME = 5.f;
+const int SKILL_DAMAGE = 5;
+const char SKILL_IMAGE[] = "Hammer.png";
+const char SKILL_IMAGE_GRAY[] = "HammerGray.png";
+const char PROJECTILE_IMAGE[] = "hammerProjectile.png";
+const float SKILL_DURATION = 1.f;
+const float MAX_SKILL_RANGE = 400.f; // .=. sqrt(1280^2 + 720^2)
+const float MAX_SKILL_COLIDE_RANGE = 70.f;
+const float SKILL_ROTATE_TIME = 0.1f;
+const float SKILL_ROTATE_DEGREE = 360.f;
+const float SCALE_PROJECTILE = 2.f;

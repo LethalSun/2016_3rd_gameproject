@@ -157,7 +157,7 @@ void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 	}
 	else if (m_State == STATE::SKILL)
 	{
-		sprintf(m_FrameNameBuffer, "%sK%d%s", m_FileName, fileNumber, m_FileNameExtention);
+		sprintf(m_FrameNameBuffer, "%sA%d%s", m_FileName, fileNumber, m_FileNameExtention);
 	}
 	else if (m_State == STATE::STOP)
 	{

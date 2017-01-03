@@ -66,6 +66,7 @@ void Enemy::update(const float deltaTime)
 	CalculateBodyAnchorPoint();
 
 	DecideWhatIsCurrentAnimation();
+	CheckBossStatus();
 
 	MakeHPBox();
 
@@ -606,7 +607,7 @@ int Enemy::MakeHPBox()
 void Enemy::MakeTentacle()
 {
 	// TODO :: 매직넘버 없애고 보스 체력에 반비례하여 빠르게 만들어지게.
-	auto tentacle = Tentacle::create(getPlayerPosition(), 3.0f, 20.f, getMapPointer(), getInnerCollideManager(), true);
+	auto tentacle = Tentacle::create(getPlayerPosition(), getAttackFrequency() * 2, getDamage(), getMapPointer(), getInnerCollideManager(), true);
 	getMapPointer()->addChild(tentacle);
 	return;
 }
@@ -617,62 +618,95 @@ void Enemy::Strike()
 	// 8방향에 대해서 텐타클 만들어주기.
 	const float distance = 45.f;
 	const int tentacleNumber = 4;
+	const float StrikeCorrectionFloat = 0.7f;
 	auto bossPosition = getPosition();
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x, bossPosition.y + distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y + distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y);
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y - distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x, bossPosition.y - distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y - distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y);
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	for (int i = 0; i < tentacleNumber; ++i)
 	{
 		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y + distance * (i + 1));
-		auto duration = 0.5f * (i + 1);
+		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
+	return;
+}
+
+// Boss의 체력 나머지와 Raged 여부를 검사하는 함수. Update에서 호출.
+void Enemy::CheckBossStatus()
+{
+	// 보스가 아니라면, return.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
+	{
+		return;
+	}
+
+	// 남은 체력의 비율을 계산한 뒤, 
+	setRemainHpPercent(getHP() / getMaxHP());
+
+	// 체력 비율이 30%미만일 경우 Rage상태로 돌입 (Summon가능)
+	if (getRemainHpPercent() < 0.3f)
+	{
+		setIsRaged(true);
+	}
+
+	// TODO :: 매직넘버
+	// 남은 체력 비율에 반비례하여 AttackFrequency 결정.
+	if (getRemainHpPercent() < 0.3)
+	{
+		setAttackFrequency(0.7f);
+	}
+	else if (getRemainHpPercent() < 0.6)
+	{
+		setAttackFrequency(1.1f);
+	}
+
 	return;
 }

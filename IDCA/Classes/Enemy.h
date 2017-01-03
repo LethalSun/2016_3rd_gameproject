@@ -67,9 +67,12 @@ public:
 	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
 	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
+	CC_SYNTHESIZE(float, m_RemainHpPercent, RemainHpPercent);
+	CC_SYNTHESIZE(float, m_AttackFrequency, AttackFrequency);
 
 	void				 MakeTentacle();
 	void				 Strike();
+	void				 CheckBossStatus();
 
 	/* Member Function */
 	void				 MoveEnemy(const float deltaTime);

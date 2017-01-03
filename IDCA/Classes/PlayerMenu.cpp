@@ -36,20 +36,27 @@ bool PlayerMenu::init(PlayerCharacter* player)
 	m_pPlayer = player;
 
 
-	m_pLabel = Label::create();
-	addChild(m_pLabel);
 
 	scheduleUpdate();
 	addChild(m_pFace);
 	
 
 	MakeMaxHPBox();
+
+	MakeSkillBox();
+
 	return true;
 }
 
 void PlayerMenu::update(float dt)
 {
 	MakeHPBox();
+
+
+	//////임시
+	auto hammer = m_pFace->getChildByName("hammer");
+	auto position = hammer->getPosition();
+
 }
 
 PlayerMenu::PlayerMenu()
@@ -73,7 +80,7 @@ int PlayerMenu::MakeHPBox()
 		m_pFace->removeChildByTag(GREEN_BOX_SOLID_TAG);
 	}
 	
-	auto HPBarStart = Vec2(m_pFace->getContentSize().width, m_pFace->getContentSize().height/2);
+	auto HPBarStart = Vec2(m_pFace->getContentSize().width +20, m_pFace->getContentSize().height/2);
 
 	auto HPBarEnd = Vec2(HPBarStart.x + 200 , HPBarStart.y + 30);
 
@@ -81,12 +88,7 @@ int PlayerMenu::MakeHPBox()
 
 	auto range = Vec2(HPBarStart.x + 200*hpRatio, HPBarStart.y + 30.f);
 
-	//TODO :체력바를 밑에서 약간떯어뜨려서 배치하기
-	char buf[255];
-	sprintf(buf, "HP: %d", m_pPlayer->GetHP());
-	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
-	m_pLabel->setScale(3.f);
-	m_pLabel->setString(buf);
+
 
 	auto box = DrawNode::create();
 
@@ -99,7 +101,7 @@ int PlayerMenu::MakeHPBox()
 int PlayerMenu::MakeMaxHPBox()
 {
 
-	auto HPBarStart = Vec2(m_pFace->getContentSize().width, m_pFace->getContentSize().height / 2);
+	auto HPBarStart = Vec2(m_pFace->getContentSize().width +20, m_pFace->getContentSize().height / 2);
 	auto HPBarEnd = Vec2(HPBarStart.x + 200, HPBarStart.y + 30);
 
 	auto box = DrawNode::create();
@@ -113,5 +115,18 @@ int PlayerMenu::MakeMaxHPBox()
 
 void PlayerMenu::MakeSkillBox()
 {
+	auto hammerSkill = Sprite::create("Hammer.png");
+	hammerSkill->setScale(0.2);
+
+	auto size = hammerSkill->getContentSize();
+	auto position = size * 0.2 * 2;
+	position.height *= -1;
+
+	hammerSkill->setPosition(hammerSkill->getContentSize().width*0.5, hammerSkill->getPosition().y );
+	
+
+	hammerSkill->setName("hammer");
+	m_pFace->addChild(hammerSkill,5);
+
 
 }

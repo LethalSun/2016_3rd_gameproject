@@ -1,6 +1,9 @@
 #pragma once
 class AnimationMaker;
 class Skill;
+#include <functional>
+
+typedef std::function <void(const char*, Vec2, Vec2, Vec2, Vec2, bool)> pFunc;
 
 class PlayerCharacter :public Node
 {
@@ -82,10 +85,16 @@ public:
 	//애니메이션을 계속해줘야 하는지 확인하는 함수
 	bool IsAttackContinued();
 	bool IsMoveContinued();
+	bool IsSkillAttackContinued();
 	//공격을 받았을때 체력을 감소 시키는 함수
 	bool SetAttackedDamage(int);
 	PlayerCharacter(const Vec2, const Vec2);
 	~PlayerCharacter();
+
+	//스킬의 포인터를 받는 함수.
+	Skill* GetAttackSkillPointer();
+	//스킬이 발동되었을때 호출되는 함수포인터를 받아오는 부분.
+	void GetFunc(pFunc);
 
 private:
 	//체력
@@ -132,7 +141,6 @@ private:
 
 	//체력박스를 만드는 함수.
 	int MakeHPBox();
-	//공격 방향을
 	//캐릭터의 피격범위 피격점,공격범위 공격점을 저장하는 변수
 	Vec2 m_AttackAnchorPoint;
 	Vec2 m_AttackAnchorPointForDebugBox;
@@ -145,6 +153,5 @@ private:
 	//공격판정을 했는지 확인하는 변수(false일때만 충돌 매니져에서 판정을 함)
 	bool m_AttackChecked;
 
-	//방향 변수(int)로부터 유닛벡터 순서쌍을 얻는 배열
 	Label* m_pLabel;
 };

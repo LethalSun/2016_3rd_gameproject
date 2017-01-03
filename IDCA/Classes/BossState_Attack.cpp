@@ -17,7 +17,6 @@
 		- MakeTentacle함수를 통해 우선 뿌리를 소환 ( TODO :: Vector로 관리 )
 */
 
-const float AttackFrequency = 0.9f;
 
 void BossState_Attack::startState(Enemy* enemy)
 {
@@ -35,11 +34,11 @@ void BossState_Attack::runState(Enemy* enemy, float dt)
 		enemy->changeState<BossState_Rush>();
 	}
 	// Player가 3번 공격을 하지 않았다면.
-	else if (attackNumber != 3)
+	else if (attackNumber != 5)
 	{
 		// 공격은 AttackFrequency에 따라서 달라진다.
 		// TODO :: AttackFrequency를 Enemy내부에서 얻어오거나 Define으로 옮기기.
-		if (m_AccumulateTime > AttackFrequency)
+		if (m_AccumulateTime > enemy->getAttackFrequency())
 		{
 			// Tentacle을 만들어준 뒤, attackNumber를 증가. 
 			enemy->MakeTentacle();
@@ -56,6 +55,7 @@ void BossState_Attack::runState(Enemy* enemy, float dt)
 
 	return;
 }
+const float AttackFrequency = 0.9f;
 
 void BossState_Attack::endState(Enemy* enemy)
 {
