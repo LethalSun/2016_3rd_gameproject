@@ -35,13 +35,11 @@ bool AnimationMaker::init(const char * fileName, const char * fileExtention)
 
 	m_pAnimation = nullptr;
 	m_pAnimate = nullptr;
-	m_tagOdd = 3;
-	m_tagEven = 2;
-	m_tag = m_tagOdd;
-	m_firstAdd = true;
 
 	return true;
 }
+
+//애니메이션을 만들고 더해준다 단 그림을 매번 만들지 않고 저장하고 불러온다.
 
 Sprite* AnimationMaker::AddAnimation(int directionNum)
 {
@@ -81,7 +79,6 @@ Sprite* AnimationMaker::AddAnimation(int directionNum)
 
 	auto animationOn = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOn, this));
 	auto animationOff = CallFunc::create(CC_CALLBACK_0(AnimationMaker::AnimationOff, this));
-	auto removeBeforeChild = CallFunc::create(CC_CALLBACK_0(AnimationMaker::RemoveChileByTag, this));
 	auto sequence = Sequence::create(animationOn, m_pAnimate, animationOff, NULL);
 
 	sequence->setTag(ANIMATION_TAG);
@@ -89,15 +86,10 @@ Sprite* AnimationMaker::AddAnimation(int directionNum)
 	m_pSprite->stopActionByTag(ANIMATION_TAG);
 	m_pSprite->runAction(sequence);
 
-	//RemoveChileByTag();
-
-	//sprite->setPosition(Vec2(0, 0));
-
-	//임시
 	return m_pSprite;
 }
 
-int AnimationMaker::IsAnimationContinued()
+int AnimationMaker::whichAnimationContinued()
 {
 	if (m_IsAnimationOn == true)
 	{
@@ -135,6 +127,7 @@ void AnimationMaker::SetAnimationSkill()
 	m_State = STATE::SKILL;
 }
 
+//애니메이션을 시작하고 끝날때 변수를 바꿔주는 함수
 void AnimationMaker::AnimationOn()
 {
 	m_IsAnimationOn = true;
@@ -145,6 +138,7 @@ void AnimationMaker::AnimationOff()
 	m_IsAnimationOn = false;
 }
 
+//애니메이션을 만들기위해 파일이름을 만든다.
 void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 {
 	if (m_State == STATE::ATTACK)
@@ -167,27 +161,7 @@ void AnimationMaker::MakeAnimationFrameName(int fileNumber)
 	m_AnimationSpeed = ANIMATION_SPEED;
 }
 
-void AnimationMaker::RemoveChileByTag()
-{
-	if (m_firstAdd == true)
-	{
-		m_firstAdd = false;
-		m_tag = m_tagEven;
-		return;
-	}
-
-	if (m_tag % 2 == 0)
-	{
-		m_tag = m_tagOdd;
-		removeChildByTag(m_tag);
-	}
-	else
-	{
-		m_tag = m_tagEven;
-		removeChildByTag(m_tag);
-	}
-}
-
+//애니메이션을 캐쉬해놓고 불러올때 쓸 이름을 만드는 함수.
 void AnimationMaker::MakeAnimationName(int directionNumber)
 {
 	if (m_State == STATE::ATTACK)

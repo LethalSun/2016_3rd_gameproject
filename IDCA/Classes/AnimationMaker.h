@@ -5,11 +5,6 @@ Author		: 김현우
 역할			: 각각의 캐릭터, 에너미가 이 클래스의 인스턴스를 갖고 있고 애니메이션을 자신에게
 			  애드해서 애니메이션을 만든다. 그리고 애니메이션이 중인지 확인하는 함수를 갖고있고 이 함수는 애니메이션이
 			  정지면 0, 공격이면 1, 이동이면 2, 스킬이면 3을 반환한다.
-
-최종 수정일자	:
-최종 수정자	:
-최종 수정사유	:
-Comment		:
 */
 /************************************************************************/
 #pragma once
@@ -30,7 +25,7 @@ public:
 	Sprite* AddAnimation(int directionNum);
 
 	//애니메이션 중인지 확인한다.
-	int IsAnimationContinued();
+	int whichAnimationContinued();
 
 	Sprite* GetSprite();
 
@@ -46,7 +41,7 @@ private:
 	void MakeAnimationFrameName(int fileNumber);
 
 	//태그를 이용해 차일드를 지우는 함수
-	void RemoveChileByTag();
+	//void RemoveChileByTag();
 
 	//애니메션중인지 갖고있는 변수
 	bool m_IsAnimationOn;
@@ -78,10 +73,4 @@ private:
 
 	//애니메이션을 불러올 때 사용하는 변수
 	char m_AnimationName[256];
-
-	int m_tagOdd;
-	int m_tagEven;
-	int m_tag;
-
-	bool m_firstAdd;
 };

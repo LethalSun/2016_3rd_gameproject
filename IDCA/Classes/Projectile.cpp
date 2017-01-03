@@ -139,18 +139,24 @@ void Projectile::Erase()
 
 bool Projectile::SetSprite()
 {
+	//스프라이트 설정
 	m_pSprite->setPosition(m_startPosition);
 	m_pSprite->setScale(SCALE_PROJECTILE);
+	//움직이는 애니메이션 설정
 	auto x = m_DirectionVec.x * m_MaxRange.x;
 	auto y = m_DirectionVec.y * m_MaxRange.y;
 	auto endPoint = Vec2(x, y);
 	auto move = MoveBy::create(SKILL_DURATION, endPoint);
+	//자기 스스로를 지우는 함수
 	auto eraseSelf = RemoveSelf::create();
 	auto callFunc = CallFunc::create(CC_CALLBACK_0(Projectile::Erase, this));
+
 	auto seq = Sequence::create(move, callFunc, eraseSelf, nullptr);
+
+	//회전을 만들어 주는 함수
 	auto rotate = RotateBy::create(SKILL_ROTATE_TIME, SKILL_ROTATE_DEGREE);
-	auto rotate5 = Repeat::create(rotate, 10);
-	auto spawn = Spawn::createWithTwoActions(rotate5, seq);
+	auto rotates = Repeat::create(rotate, MAX_ROTATE_NUMBER);
+	auto spawn = Spawn::createWithTwoActions(rotates, seq);
 	m_pSprite->runAction(spawn);
 	addChild(m_pSprite);
 	return true;

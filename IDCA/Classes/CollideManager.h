@@ -1,5 +1,17 @@
 #pragma once
 
+/************************************************************************/
+/*
+CLASS		: CollideManager
+Author		: 김현우
+역할			: 캐릭터와 적 그리고 투사체간의 충돌을 체크 한다.
+
+이것도 각각의 포인터를 들고 있는 것이 아니라
+콜백함수로 구현 하는 것이 더 깔끔 할것같지만
+일단은 포인터를 보관하면서 매번 체크를 해준다.
+*/
+/************************************************************************/
+
 class Projectile;
 class Enemy;
 class PlayerCharacter;
@@ -8,12 +20,12 @@ class CollideManager :public Node
 public:
 	CollideManager();
 	~CollideManager();
+
 	static CollideManager* create();
+
 	virtual bool init();
 
-	//캐릭터의 위치와, 앵커포인터를 받아오는 함수.
-	//void SetCMCharacterPosition(const Vec2 position);
-	//void SetCMCharacterAnchorPoint(const Vec2 position);
+	//캐릭터의 포인터를 받아오는 함수
 	void SetPlayerCharacterPointer(PlayerCharacter* playerCharacter);
 
 	//적의 위치와 앵커포인터를 받아오기 위해서 적의 포인터를 받아오는 함수
@@ -29,27 +41,28 @@ public:
 	void CheckTentacleAttack(const Vec2, const float, const int, const TMXTiledMap*);
 
 	void update(float dt);
+
 private:
-	//Vector<Projectile*> m_pvProjectile;
+	//가지고 있는 포인터들의 변수
 	Vec2 m_BackgroundPosition;
+
 	Vector<Enemy*>* m_pvEnemy;
+
 	PlayerCharacter * m_pPlayerCharacter;
+
 	Vector<Projectile*> m_vProjectile;
 
 	TMXTiledMap* m_pMap;
 
+	//충돌을 체크하는 함수
 	void CheckCollide();
-	float AbsFloat(float, float);
 	void CheckCharacterAttack();
 	void CheckMonsterAttack();
 	void CheckProjectileColide();
-	void EraseProjectile();
 
-	//두번 생성되는걸 방지하기위한 변수, 스테이트 변경상의 오류 같은데
-	//std::bind와 function을
-	//사용해서 콜백함수로 애니메이션끝에
-	//스테이트를 변경해도 오류가 잡히지 않아서
-	//일단은 급하게 두번호출이 되어도 한번만 생성되도록 바꿈
-	// TODO :스테이트 변경을 다른방법으로 바꾸기.
-	bool m_IsProjectileMakedSameAnimation;
+	//절대값을 계산하는 함수
+	float AbsFloat(float, float);
+
+	//투사체를 지워주는 함수
+	void EraseProjectile();
 };

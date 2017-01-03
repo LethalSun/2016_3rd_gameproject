@@ -44,12 +44,12 @@ bool CollideManager::init()
 	m_pvEnemy = nullptr;
 	m_pPlayerCharacter = nullptr;
 	m_BackgroundPosition = Vec2(0, 0);
-	m_IsProjectileMakedSameAnimation = false;
 	scheduleUpdate();
 
 	return true;
 }
 
+//캐릭터 포인터를 받아오고 그것에 함수를 등록해 준다.
 void CollideManager::SetPlayerCharacterPointer(PlayerCharacter * playerCharacter)
 {
 	m_pPlayerCharacter = playerCharacter;
@@ -67,11 +67,13 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 	m_pvEnemy = &enemyVector;
 }
 
+//투사체를 만들어 주는 함수
 void CollideManager::MakeProjectile(const char *spriteImagePath, Vec2 startPosition, Vec2 direction, Vec2 maxRange, Vec2 colideRange, bool isCharacterOrignated)
 {
 	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("Sound/Warrior_skill.wav", false);
 
 	auto tempProjectile = Projectile::create(spriteImagePath, startPosition, direction, maxRange, colideRange, isCharacterOrignated);
+
 	if (tempProjectile != nullptr)
 	{
 		m_vProjectile.pushBack(tempProjectile);
@@ -94,7 +96,9 @@ void CollideManager::CheckCollide()
 {
 	//캐릭터 공격 체크
 	CheckCharacterAttack();
+	//몬스터의 공격체크
 	CheckMonsterAttack();
+	//투사체의 공격 체크
 	CheckProjectileColide();
 }
 
@@ -126,7 +130,6 @@ void CollideManager::CheckCharacterAttack()
 		return;
 	}
 
-	// TODO :: Enemy를 지우면 여기서 자꾸 충돌이 일어나는데 어떻게 해결해야 할지?
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
@@ -150,6 +153,7 @@ void CollideManager::CheckCharacterAttack()
 		}
 	}
 }
+
 //몬스터->캐릭터 공격체크
 void CollideManager::CheckMonsterAttack()
 {

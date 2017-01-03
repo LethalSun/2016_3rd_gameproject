@@ -1,4 +1,13 @@
 #pragma once
+/************************************************************************/
+/*
+CLASS		: PlayerCharacterManager
+Author		: 김현우
+역할			: 캐릭터를 관리 하는 함수 실제로 매니저를 통해서만 캐릭터의 값을 받아오거나 캐릭터에 접근할수있다.
+캐릭터 관련 상태 계산역시 이곳에서 한다.
+
+*/
+/************************************************************************/
 class PlayerCharacter;
 
 class PlayerCharacterManager :public Node
@@ -39,11 +48,6 @@ private:
 
 	//방향값
 	int m_direction;
-	//TODO :: 테이블 방식으로 충돌방향 구현
-	//TODO :: 충돌범위 앵커포인드 수정해서 보기 수정완료 멤버 동의 후 투두삭제하기
-	//TODO :: 한번만 충돌하게 바꾸기 수정완료 멤버 동의 후 투두삭제하기
-	int m_arrUnitVecX[8];
-	int m_arrUnitVecY[8];
 
 	//캐릭터의 상태를 인풋으로부터 계산한다.
 	void CalculatePlayerCharacterState();
@@ -60,6 +64,7 @@ private:
 	//공격과 피격범위의 태그
 	const int m_RedBoxTag;
 	const int m_GreenBoxTag;
+
 	//공격과 피격범위의 값 과 중심값
 	Vec2 m_AttackAnchorPoint;
 	Vec2 m_AttackAnchorPointForDebugBox;
