@@ -42,6 +42,7 @@ public :
 	void					SummonAncientTree();
 	void					AncientTreeSkillSummon(const float);
 	const float				CalPositionDistance(const Vec2, const Vec2);
+	const bool				IsStageCleared();
 
 	Enemy*					MakeChoco(const Vec2);
 	Enemy*					MakeAtroce(const Vec2);

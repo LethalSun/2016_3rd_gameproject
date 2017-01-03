@@ -20,6 +20,8 @@ public:
 	virtual bool init();
 
 	void update(float delta);
+	void SceneChangeCheck(float);
+	float m_AccumulateTime = 0.f;
 
 	StageOne() = default;
 	~StageOne() = default;

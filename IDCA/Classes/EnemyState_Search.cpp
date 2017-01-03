@@ -37,11 +37,11 @@ void EnemyState_Search::runState(Enemy* enemy, float dt)
 			enemy->changeState<EnemyState_Approach>();
 		}
 	}
-	// Boss의 경우, 체력 50% 미만(Rage상태)이 되면 Summon상태로도 돌입한다. 
-	else if (enemy->getEnemyType() == ENEMY_TYPE::ANCIENT_TREE)
+	// Boss의 경우, 체력 30% 미만(Rage상태)이 되면 Summon상태로도 돌입한다. 
+	else if (enemy->getEnemyType() == ENEMY_TYPE::ANCIENT_TREE && enemy->getIsRaged())
 	{
 		m_AccumulateTime += dt;
-		if (enemy->getIsRaged() && enemy->getSummonCoolTime() < m_AccumulateTime)
+		if (enemy->getSummonCoolTime() < m_AccumulateTime)
 		{
 			enemy->changeState<BossState_Summon>();
 		}

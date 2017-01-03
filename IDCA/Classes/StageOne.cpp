@@ -11,6 +11,7 @@
 #include "SimpleAudioEngine.h"
 #include "CollideManager.h"
 #include "DeadScene.h"
+#include "EndingScene.h"
 #include "PlayerCharacter.h"
 
 const char BGM[] = "Sound/Forbidden.mp3";
@@ -111,10 +112,27 @@ void StageOne::update(float delta)
 	m_pEnemyManager->StageOneTriggerCheck();
 	m_pEnemyManager->DieCheck();
 
+	SceneChangeCheck(delta);
+
+	return;
+}
+
+// 씬이 바뀌어야 할지 체크하고 만약 조건에 해당하면 해당 씬으로 바꾸어주는 함수.
+void StageOne::SceneChangeCheck(float dt)
+{
 	// Player Die Check
 	if (m_pPlayerCharacterManager->GetCharacter()->GetHP() <= 0)
 	{
 		Director::getInstance()->replaceScene(DeadScene::createScene());
+	}
+	// Player Clear Check
+	else if (m_pEnemyManager->IsStageCleared())
+	{
+		m_AccumulateTime += dt;
+		if (m_AccumulateTime > 0.3f)
+		{
+			Director::getInstance()->replaceScene(EndingScene::createScene());
+		}
 	}
 
 	return;
