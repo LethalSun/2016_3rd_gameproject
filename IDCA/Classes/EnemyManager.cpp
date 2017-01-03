@@ -22,6 +22,7 @@ EnemyManager::EnemyManager()
 	setStageOneTrigger(false);
 	setDiedEnemyNum(0);
 	setSoundPlayNum(0);
+	setIsBossSummoned(false);
 	m_pEnemyVector.reserve(STAGE_ONE_ENEMY_NUM);
 	m_pMakeHandler[ENEMY_TYPE::CHOCO] = &EnemyManager::MakeChoco;
 	m_pMakeHandler[ENEMY_TYPE::ATROCE] = &EnemyManager::MakeAtroce;
@@ -299,8 +300,13 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 // 모든 Enemy들이 죽었을 경우 보스를 소환해주는 함수.
 void EnemyManager::SummonAncientTree()
 {
-	// TODO :: 소환할 때 돌 굴러떨어지는 소리 나게.
-	MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(2700.f, 900.f));
+	// Boss가 한 번만 소환되도록 flag 설정.
+	if (getIsBossSummoned() == false)
+	{
+		// TODO :: 소환할 때 돌 굴러떨어지는 소리 나게.
+		MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(2700.f, 900.f));
+		setIsBossSummoned(true);
+	}
 }
 
 // 보스가 Summon을 발동시켰을 때, Player근처의 일정 distance안에 지정해놓은 Enemy를 소환.
