@@ -8,6 +8,8 @@ class Enemy_Choco : public Enemy
 public :
 
 	bool init(const Vec2) override;
+	bool isAttacked;
+
 
 	/* Create Function Re-define */
 	static Enemy_Choco* create(const Vec2 initPosition) {

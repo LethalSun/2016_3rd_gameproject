@@ -12,6 +12,10 @@ const float Choco_StiffTime = 0.6f;
 
 const char Choco_Name[] = "Choco";
 const char Choco_Extention[] = ".png";
+const char Choco_AttackSound[] = "Sound/Choco_swing";
+const char Choco_AttackSoundExtension[] = ".aif";
+const char Choco_HitedSound[] = "Sound/Choco_hited.mp3";
+const char Choco_DyingSound[] = "Sound/Choco_dying.wav";
 
 bool Enemy_Choco::init(const Vec2 initPosition)
 {
@@ -32,12 +36,17 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	auto BodyRangeChoco = Vec2(CHOCO_BODY_RANGE_X, CHOCO_BODY_RANGE_Y);
 	setBodyRangeForCollide(BodyRangeChoco);
 	setIsAttackedOnce(false);
-	setIsEnemyPreemptive(false);
+	setIsEnemyPreemptive(true);
 
 	setHP(CHOCO_MAX_HP);
 	setMaxHP(CHOCO_MAX_HP);
 	setDamage(CHOCO_ATTACK_DAMAGE);
 
+	// Sound 세팅
+	setAttackSound(Choco_AttackSound);
+	setAttackSoundExtension(Choco_AttackSoundExtension);
+	setHitedSound(Choco_HitedSound);
+	setDyingSound(Choco_DyingSound);
 
 	// AnimationMaker 세팅.
 	m_pAnimationMaker = AnimationMaker::create(Choco_Name, Choco_Extention);
