@@ -10,6 +10,8 @@
 #include "EnemyManager.h"
 #include "SimpleAudioEngine.h"
 #include "CollideManager.h"
+#include "DeadScene.h"
+#include "PlayerCharacter.h"
 
 const char BGM[] = "Sound/Forbidden.mp3";
 
@@ -108,6 +110,12 @@ void StageOne::update(float delta)
 	m_pEnemyManager->ProvidePlayerPosition(position - m_pMap->getPosition());
 	m_pEnemyManager->StageOneTriggerCheck();
 	m_pEnemyManager->DieCheck();
+
+	// Player Die Check
+	if (m_pPlayerCharacterManager->GetCharacter()->GetHP() <= 0)
+	{
+		Director::getInstance()->replaceScene(DeadScene::createScene());
+	}
 
 	return;
 }
