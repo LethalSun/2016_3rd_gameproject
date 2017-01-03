@@ -349,6 +349,7 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 
 int PlayerCharacter::MakeHPBox()
 {
+	// TODO :: 에너미 처럼 바꾸기. (혹은 Sprite로 대체하기)
 	auto HPBarStart = Vec2(0, m_BodyRange.y / 2);
 	auto HPBarEnd = Vec2(m_BodyRange.x, 10.f);
 	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);

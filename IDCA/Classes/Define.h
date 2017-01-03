@@ -38,8 +38,8 @@ const int CHOCO_MAX_HP = 10;
 const int CHOCO_ATTACK_DAMAGE = 1;
 
 //보스 체력 공격력
-const int ANCIENT_TREE_MAX_HP = 50;
-const int ANCIENT_TREE_DAMAGE = 10;
+const int ANCIENT_TREE_MAX_HP = 100;
+const int ANCIENT_TREE_DAMAGE = 20;
 
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
