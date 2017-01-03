@@ -26,7 +26,7 @@ PlayerCharacterManager * PlayerCharacterManager::create(const char * fileName, c
 		auto bodyRange = Vec2(ARCHBISHOP_BODY_RANGE_X, ARCHBISHOP_BODY_RANGE_Y);
 		pManager = new(std::nothrow)PlayerCharacterManager(attackRange, bodyRange);
 	}
-	else if (filename.compare("Worrior") == 0)
+	else if (filename.compare("Warrior") == 0)
 	{
 		auto attackRange = Vec2(WORRIOR_ATTACK_RANGE, WORRIOR_ATTACK_RANGE);
 		auto bodyRange = Vec2(WORRIOR_BODY_RANGE_X, WORRIOR_BODY_RANGE_Y);
@@ -101,11 +101,11 @@ void PlayerCharacterManager::CalculateAttackAnchorPoint()
 	auto bodyPositionY = position.y;
 
 	auto offsetX = (m_BodyRange.x / 2) + (m_AttackRange.x / 2);
-	auto deltaX = m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecX] * offsetX;
+	auto deltaX = UNIT_X[m_pCharacter->GetDirection()] * offsetX;
 	auto attackPostionX = bodyPositionX + deltaX;
 
 	auto offsetY = (m_BodyRange.y / 2) + (m_AttackRange.y / 2);
-	auto deltaY = m_pUnitVec[INPUT_LAYER::UNIT_VEC_INDEX::unitVecY] * offsetY;
+	auto deltaY = UNIT_Y[m_pCharacter->GetDirection()] * offsetY;
 	auto attackPostionY = bodyPositionY + deltaY;
 
 	m_AttackAnchorPointForDebugBox = Vec2(attackPostionX, attackPostionY);
@@ -235,11 +235,6 @@ void PlayerCharacterManager::SetPlayerCharacterDirection()
 
 void PlayerCharacterManager::update(float dt)
 {
-	char logBuffer1[100];
-	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getAnchorPoint().x, m_pCharacter->getAnchorPoint().y);
-	cocos2d::log(logBuffer1);
-	sprintf(logBuffer1, "anchor x:%f anchor y:%f ", m_pCharacter->getPosition().x, m_pCharacter->getPosition().y);
-	cocos2d::log(logBuffer1);
 
 	//여러가지 값 계산
 	CalculatePlayerCharacterState();

@@ -4,6 +4,8 @@
 #include "Enemy_Atroce.h"
 #include "Enemy_Choco.h"
 #include "PlayerCharacter.h"
+#include "EnemyManager.h"
+#include <math.h> 
 
 CollideManager::CollideManager()
 {
@@ -54,6 +56,7 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 	m_pvEnemy = &enemyVector;
 }
 
+
 void CollideManager::update(float dt)
 {
 	CheckCollide();
@@ -63,6 +66,7 @@ void CollideManager::CheckCollide()
 {
 	//캐릭터 공격 체크
 	CheckCharacterAttack();
+	CheckMonsterAttack();
 }
 
 float CollideManager::AbsFloat(float f1, float f2)
@@ -79,8 +83,10 @@ float CollideManager::AbsFloat(float f1, float f2)
 	return fr;
 }
 
+//캐릭터->몬스터 공격체크
 void CollideManager::CheckCharacterAttack()
 {
+	SetCMEnemyPointer(EnemyManager::getInstance()->getEnemyVector());
 	if (m_pPlayerCharacter->GetState() != STATE::ATTACK)
 	{
 		return;
@@ -91,25 +97,77 @@ void CollideManager::CheckCharacterAttack()
 		return;
 	}
 
+	// TODO :: Enemy를 지우면 여기서 자꾸 충돌이 일어나는데 어떻게 해결해야 할지?
 	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
 	for (; iter != m_pvEnemy->end(); ++iter)
 	{
 		// X collide
 		auto xMin = m_pPlayerCharacter->GetAttackRange().x / 2
-			+ (*iter)->getAttackRangeForCollide().x / 2;
+			+ (*iter)->getBodyRangeForCollide().x / 2;
 
 		auto x = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().x,
 			(*iter)->getBodyAnchorPoint().x);
 		// Y collide
 		auto yMin = m_pPlayerCharacter->GetAttackRange().y / 2
-			+ (*iter)->getAttackRangeForCollide().y / 2;
+			+ (*iter)->getBodyRangeForCollide().y / 2;
 		auto y = AbsFloat(m_pPlayerCharacter->GetAttackAnchorPoint().y,
 			(*iter)->getBodyAnchorPoint().y);
 
 		if ((xMin >= x) && (yMin >= y))
 		{
-			int damage = m_pPlayerCharacter->GetDamage();
+			auto damage = m_pPlayerCharacter->GetDamage();
 			(*iter)->setAttackedDamage(damage);
+			m_pPlayerCharacter->SetAttackChecked();
 		}
 	}
+
+}
+//몬스터->캐릭터 공격체크
+void CollideManager::CheckMonsterAttack()
+{
+	Vector<Enemy*>::iterator iter = m_pvEnemy->begin();
+	for (; iter != m_pvEnemy->end(); ++iter)
+	{
+		if ((*iter)->getState()->returnStateNumber() != ENEMY_STATE_TYPE::ATTACKING)
+		{
+			continue;
+		}
+		if ((*iter)->getAttackChecked() == true)
+		{
+			continue;
+		}
+
+		// X collide
+		auto xMin = m_pPlayerCharacter->GetBodyRange().x / 2
+			+ (*iter)->getAttackRangeForCollide().x / 2;
+
+		auto x = AbsFloat(m_pPlayerCharacter->GetBodyAnchorPoint().x,
+			(*iter)->getAttackAnchorPoint().x);
+
+		// Y collide
+		auto yMin = m_pPlayerCharacter->GetBodyRange().y / 2
+			+ (*iter)->getAttackRangeForCollide().y / 2;
+		auto y = AbsFloat(m_pPlayerCharacter->GetBodyAnchorPoint().y,
+			(*iter)->getAttackAnchorPoint().y);
+		if ((xMin >= x) && (yMin >= y))
+		{
+			auto damage = (*iter)->getDamage();
+			(*iter)->setAttackChecked(true);
+			m_pPlayerCharacter->SetAttackedDamage(damage);
+		}
+	}
+}
+
+void CollideManager::CheckTentacleAttack(const Vec2 tentaclePosition, const float range, const int damage, const TMXTiledMap* mapPointer)
+{
+	auto x = AbsFloat(m_pPlayerCharacter->getPosition().x - mapPointer->getPosition().x, tentaclePosition.x);
+	auto y = AbsFloat(m_pPlayerCharacter->getPosition().y - mapPointer->getPosition().y, tentaclePosition.y);
+
+	auto distance = sqrt(x * x + y * y);
+	if (distance < range)
+	{
+		m_pPlayerCharacter->SetAttackedDamage(damage);
+	}
+
+	return;
 }

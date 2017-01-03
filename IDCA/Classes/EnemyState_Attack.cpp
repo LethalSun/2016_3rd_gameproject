@@ -20,7 +20,6 @@ const float ATTACK_CORRECTION_VALUE = 50.f;
 
 void EnemyState_Attack::startState(Enemy* enemy)
 {
-	CCLOG("Start Attack!");
 }
 
 void EnemyState_Attack::runState(Enemy* enemy, float dt)
@@ -41,7 +40,7 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 	}
 	else
 	{
-		CCLOG("Attack!");
+		//enemy->setAttackChecked(false);
 	}
 
 	return;
@@ -49,7 +48,6 @@ void EnemyState_Attack::runState(Enemy* enemy, float dt)
 
 void EnemyState_Attack::endState(Enemy* enemy)
 {
-	CCLOG("End Attack!");
 }
 
 const int EnemyState_Attack::returnStateNumber()

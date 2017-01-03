@@ -3,7 +3,6 @@
 
 using namespace INPUT_LAYER;
 
-// TODO :: 다른 애들이 볼 필요 없으면 cpp로 가야한다. cpp의 맨 위로 넣자.
 // JoyStick Mapping을 위한 값.
 
 const int JoyStickX = 0;
@@ -19,13 +18,7 @@ bool InputLayer::init()
 	Vec2 WIN_SIZE(1024.f, 768.f);
 
 	// Array 세팅.
-	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
-	(int)memset(m_OldInputArray, NONE, stateIdxNum);
-	(int)memset(m_CurrentInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
-	(int)memset(m_OldInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
-	(int)memset(m_InputArray, NONE, stateIdxNum);
-	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
-	(int)memset(m_ArrowContainer, NONE, ARROW_NUM);
+	MemoryClear();
 
 	m_IsKeyboardPressed = false;
 
@@ -69,6 +62,20 @@ void InputLayer::update(const float deltaTime)
 	{
 		DetectJoyStickInput();
 	}
+}
+
+// InputLayer를 비워주는 함수. (초기화 / 메뉴 호출에 사용)
+bool InputLayer::MemoryClear()
+{
+	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
+	(int)memset(m_OldInputArray, NONE, stateIdxNum);
+	(int)memset(m_CurrentInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
+	(int)memset(m_OldInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
+	(int)memset(m_InputArray, NONE, stateIdxNum);
+	(int)memset(m_InputUnitVec, NONE, vecIdxNum);
+	(int)memset(m_ArrowContainer, NONE, ARROW_NUM);
+
+	return true;
 }
 
 /*

@@ -3,8 +3,11 @@
 
 /*
 	EnemyState_BeAttacked
+	작성자 : 이근원
 	맞으면 실행되는 State.
-	stiffTime 시간 동안 경직된 뒤, Search상태로 돌입한다.
+	
+	Enemy내부의 경직시간(StiffTime)동안 경직되었다가, Search 상태로 돌입한다.
+	State내부에서 빨갛게 되는 Action과 밀리는 Action을 처리한다.
 */
 
 class EnemyState_BeAttacked : public EnemyState
@@ -23,6 +26,9 @@ public:
 	void		runState(Enemy* enemy, const float deltaTime) override;
 	void		endState(Enemy* enemy) override;
 	const int   returnStateNumber() override;
+
 	EaseElasticInOut* m_pEasePushedAction;
 	bool        m_Pushable;
+	void		MakePushAction(Enemy*);
+	void		MakeRedAction(Enemy*);
 };
