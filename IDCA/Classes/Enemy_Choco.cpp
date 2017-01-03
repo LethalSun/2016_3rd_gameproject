@@ -4,18 +4,7 @@
 #include "Config.h"
 #include "AnimationMaker.h"
 
-const float Choco_SearchingRange = 400.f;
-const float Choco_ChasingRange = 500.f;
-const float Choco_AttackRange = 50.f;
-const float Choco_MoveSpeed = 3.5f;
-const float Choco_StiffTime = 0.6f;
 
-const char Choco_Name[] = "Choco";
-const char Choco_Extention[] = ".png";
-const char Choco_AttackSound[] = "Sound/Choco_swing";
-const char Choco_AttackSoundExtension[] = ".aif";
-const char Choco_HitedSound[] = "Sound/Choco_hited.mp3";
-const char Choco_DyingSound[] = "Sound/Choco_dying.wav";
 
 bool Enemy_Choco::init(const Vec2 initPosition)
 {
@@ -24,12 +13,12 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 		return false;
 	}
 
-	setSearchingRange(Choco_SearchingRange);
-	setChasingRange(Choco_ChasingRange);
-	setAttackRange(Choco_AttackRange);
-	setMoveSpeed(Choco_MoveSpeed);
-	setIsAttackedOnce	(false);
-	setStiffTime(Choco_StiffTime);
+	setSearchingRange(CHOCO_SEARCHING_RANGE);
+	setChasingRange(CHOCO_CHASING_RANGE);
+	setAttackRange(CHOCO_ATTACKING_RANGE);
+	setMoveSpeed(CHOCO_MOVE_SPEED);
+	setIsAttackedOnce(false);
+	setStiffTime(CHOCO_STIFF_TIME);
 
 	auto AttackRangeChoco = Vec2(CHOCO_ATTACK_RANGE, CHOCO_ATTACK_RANGE);
 	setAttackRangeForCollide(AttackRangeChoco);
@@ -43,13 +32,13 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 	setDamage(CHOCO_ATTACK_DAMAGE);
 
 	// Sound 세팅
-	setAttackSound(Choco_AttackSound);
-	setAttackSoundExtension(Choco_AttackSoundExtension);
-	setHitedSound(Choco_HitedSound);
-	setDyingSound(Choco_DyingSound);
+	setAttackSound(CHOCO_ATTACK_SOUND);
+	setAttackSoundExtension(CHOCO_ATTACK_SOUND_EXTENSION);
+	setHitedSound(CHOCO_HITED_SOUND);
+	setDyingSound(CHOCO_DYING_SOUND);
 
 	// AnimationMaker 세팅.
-	m_pAnimationMaker = AnimationMaker::create(Choco_Name, Choco_Extention);
+	m_pAnimationMaker = AnimationMaker::create(CHOCO_NAME, CHOCO_EXTENSION);
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());

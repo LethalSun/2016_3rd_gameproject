@@ -4,18 +4,7 @@
 #include "SimpleAudioEngine.h"
 #include "InputLayer.h"
 
-const char HooraySound[] = "EndingScene/Hooray.wav";
-const char EndingBGM[] = "EndingScene/EndingBGM.wav";
-const char YeahSound[] = "EndingScene/Yeah.wav";
 
-const float RaiseTime = 1.5f; 
-const float RestTime = 0.3f;
-const float FadeInTime = 1.f;
-
-const char VictoryTitle[] = "EndingScene/Victory.png";
-
-const char TextImg[] = "EndingScene/Restart.png";
-const float RestartTextTwinkleTime = 2.0f;
 
 // Cocos2d-x 기본 씬 생성 함수.
 Scene* EndingScene::createScene()
@@ -45,23 +34,19 @@ bool EndingScene::init()
 	setIsVictoryAppeared(false);
 
 	// Victory Sound 등록.
-	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(HooraySound, false);
-	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(EndingBGM, false);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(ENDING_SCENE_HOORAY_SOUND, false);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(ENDING_SCENE_BGM, false);
 
 	// Victory Title 등록.
-	auto title = Sprite::create(VictoryTitle);
-	title->setPosition(Vec2(visibleSize.width * 0.5f, -title->getContentSize().height));
+	auto title = Sprite::create(ENDING_SCENE_VICTIORY_TITLE);
+	title->setPosition(Vec2(visibleSize.width * ENDING_SCENE_TITLE_WIDTH, -title->getContentSize().height));
 	addChild(title);
 
 	// Title 액션 등록.
-	// TODO :: 매직 넘버.
-	auto raiseAction = MoveTo::create(RaiseTime, Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.6f));
-	auto easeRaiseAction = EaseOut::create(raiseAction, 3.0);
+	auto raiseAction = MoveTo::create(ENDING_SCENE_RASIE_TIME, Vec2(visibleSize.width * ENDING_SCENE_TITLE_WIDTH, visibleSize.height * ENDING_SCENE_TITLE_HEIGHT));
+	auto easeRaiseAction = EaseOut::create(raiseAction, ENDING_SCENE_EASE_RATE);
 	title->runAction(easeRaiseAction);
 
-	// InputLayer 등록
-	m_pInputLayer = InputLayer::create();
-	addChild(m_pInputLayer);
 
 	scheduleUpdate();
 
@@ -72,24 +57,31 @@ void EndingScene::update(float dt)
 {
 	m_AcculmulateTime += dt;
 
-	if (!getIsVictoryAppeared() && (RaiseTime + RestTime < m_AcculmulateTime))
+	if (!getIsVictoryAppeared() && (ENDING_SCENE_RASIE_TIME + ENDING_SCENE_REST_TIME < m_AcculmulateTime))
 	{
 		auto visibleSize = Director::getInstance()->getVisibleSize();
 
 		// Victory Sound 등록.
-		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(YeahSound, false);
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(ENDING_SCENE_YEAH_SOUND, false);
 
 		TextTwinkle();
 
+		// InputLayer 등록
+		m_pInputLayer = InputLayer::create();
+		addChild(m_pInputLayer);
 
 		setIsVictoryAppeared(true);
 	}
 
-	auto startChecker = m_pInputLayer->GetInputArray();
-
-	if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
+	// 리스타트 텍스트가 빛난 이후에서야 입력을 받을 수 있도록 처리.
+	if (getIsVictoryAppeared())
 	{
-		ChangeToHelloWorldScene();
+		auto startChecker = m_pInputLayer->GetInputArray();
+
+		if (startChecker[INPUT_LAYER::ARRAY_INDEX::keyAttack] == INPUT_LAYER::KEY_STATUS::END)
+		{
+			ChangeToHelloWorldScene();
+		}
 	}
 
 	return;
@@ -107,13 +99,13 @@ void EndingScene::TextTwinkle()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
 	// 텍스트 등록.
-	auto RestartText = Sprite::create(TextImg);
-	RestartText->setPosition(Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.2f));
+	auto RestartText = Sprite::create(ENDING_SCENE_RESTART_TEXT);
+	RestartText->setPosition(Vec2(visibleSize.width * ENDING_SCENE_TEXT_WIDTH, visibleSize.height * ENDING_SCENE_TEXT_HEIGHT));
 	addChild(RestartText);
 
 	// 텍스트 액션 등록.
-	auto actionFadeOut = FadeOut::create(RestartTextTwinkleTime);
-	auto actionFadeIn = FadeIn::create(RestartTextTwinkleTime);
+	auto actionFadeOut = FadeOut::create(ENDING_SCENE_RESTART_TWINKLE_TIME);
+	auto actionFadeIn = FadeIn::create(ENDING_SCENE_RESTART_TWINKLE_TIME);
 	auto textSequence = Sequence::createWithTwoActions(actionFadeOut, actionFadeIn);
 	auto repeatTextAction = RepeatForever::create(textSequence);
 	RestartText->runAction(repeatTextAction);

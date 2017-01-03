@@ -30,8 +30,6 @@ public:
 	virtual void			onKeyReleased(EventKeyboard::KeyCode, Event*);
 
 private:
-	// TODO :: Array 두 가지로 나눠보기 (UnitVec, Status);
-	// TODO :: Public 변수로 만들어서 차라리 Get함수를 지원해주자.
 	/* Delivery Data Structure & Functions */
 	int 					m_CurrentInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];
 	int 					m_OldInputArray[INPUT_LAYER::ARRAY_INDEX::stateIdxNum];

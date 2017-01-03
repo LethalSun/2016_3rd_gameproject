@@ -1,5 +1,12 @@
 #pragma once
 
+/*
+	DeadScene
+	작성자 : 이근원
+	플레이어가 죽었을 때 진입하는 씬.
+	q를 누르면 다시 타이틀 씬으로 진입한다.
+*/
+
 class InputLayer;
 
 class DeadScene : public cocos2d::Layer

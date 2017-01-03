@@ -15,7 +15,6 @@ Waiting
 
 */
 
-const float correctionValue = 50.f;
 
 void EnemyState_Waiting::startState(Enemy* enemy)
 {
@@ -26,7 +25,7 @@ void EnemyState_Waiting::runState(Enemy* enemy, float dt)
 	float attackRange = enemy->getAttackRange();
 	float distanceFromPlayer = enemy->getDistanceFromPlayer();
 
-	if (!isPlayerInAttackRange(attackRange + correctionValue, distanceFromPlayer))
+	if (!isPlayerInAttackRange(attackRange + WAITING_SCENE_CORRECTION_VALUE, distanceFromPlayer))
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}

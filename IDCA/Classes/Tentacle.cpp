@@ -52,9 +52,9 @@ void Tentacle::MakeTentacleAnimation()
 	addChild(getTentacleSprite());
 
 	setTentacleAnimation(Animation::create());
-	getTentacleAnimation()->setDelayPerUnit(0.05f);
+	getTentacleAnimation()->setDelayPerUnit(TENTACLE_ANIMAION_DELAY);
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < TENTACLE_MAX_FRAME_NUM; ++i)
 	{
 		auto frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(StringUtils::format("AncientTreeE%d.png", i));
 		if (!frame)
@@ -85,7 +85,7 @@ void Tentacle::MakeCautionRange()
 	this->reorderChild(getRangeSprite(), 0);
 	addChild(getRangeSprite());
 
-	auto action = FadeIn::create(getDuration() * 1.2f);
+	auto action = FadeIn::create(getDuration() * TENTACLE_FADE_IN_CORRECTION_VALUE);
 	getRangeSprite()->runAction(action);
 
 	return;
@@ -102,6 +102,6 @@ void Tentacle::MakeTentacleDead()
 // CollideManager에게 자신이 생성된 위치와 폭발 반경을 넘겨주고 플레이어에게 데미지를 주는 함수.
 void Tentacle::CheckTentacleHit()
 {
-	getInnerCollideManager()->CheckTentacleAttack(getCreatePosition(), 90, 20, getMapPointer());
+	getInnerCollideManager()->CheckTentacleAttack(getCreatePosition(), TENTACLE_ATTACK_RANGE, getDamage(), getMapPointer());
 	return;
 }

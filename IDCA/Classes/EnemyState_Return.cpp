@@ -5,17 +5,10 @@
 #include "EnemyState_Search.h"
 
 /*
-Returning
-
-현재 상태에서 Origin을 향한 UnitVec를 받고, 그 방향으로 move하는 상태.
-
-1.       플레이어와의 거리가 ChasingRange - 300이하인 경우, Approaching 상태로 돌입.
-2.       Origin과의 거리가 50인경우, Searching 상태로 돌입.
-
+	Returning
+	현재 상태에서 Origin을 향한 UnitVec를 받고, 그 방향으로 move하는 상태.
 */
 
-// TODO :: 원점에서 어느 정도 이상 벌어지면 돌아가도록.
-const float returnEndRange = 50.f;
 
 void EnemyState_Return::startState(Enemy* enemy)
 {
@@ -38,7 +31,7 @@ void EnemyState_Return::runState(Enemy* enemy, float dt)
 	{
 		enemy->changeState<EnemyState_Approach>();
 	}
-	else if (distanceFromOrigin < returnEndRange)
+	else if (distanceFromOrigin < STATE_RETURN_END_RANGE)
 	{
 		enemy->changeState<EnemyState_Search>();
 	}

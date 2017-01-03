@@ -1,7 +1,11 @@
 #pragma once
 
-#include "Enemy.h"
+/*
+	Enemy_Choco
+	작성자 : 이근원
+*/
 
+#include "Enemy.h"
 
 class Enemy_Choco : public Enemy
 {
