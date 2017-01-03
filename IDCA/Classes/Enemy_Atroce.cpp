@@ -9,6 +9,7 @@ const float Atroce_AttackRange = 100.f;
 const float Atroce_MoveSpeed = 2.f;
 const float Atroce_StiffTime = 0.6f;
 
+
 const char Atroce_AttackSound[] = "Sound/Atroce_swing";
 const char Atroce_AttackSoundExtension[] = ".wav";
 const char Atroce_HitedSound[] = "Sound/Atroce_hited.wav";
@@ -57,6 +58,9 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 
 	changeState<EnemyState_Search>();
 	setBeforeState(getState());
+	positiionOfHp = Vec2(80, 170);
+	sizeOfHp_x = 0.3;
+	sizeOfHp_y = 0.2;
 
 	return true;
 }

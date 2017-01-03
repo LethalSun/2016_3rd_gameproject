@@ -12,6 +12,7 @@
 #include "EnemyState_Search.h"
 #include "EnemyState_Waiting.h"
 #include "EnemyState_BeAttacked.h"
+#include "BossState_Summon.h"
 #include "EffectManager.h"
 #include "Tentacle.h"
 
@@ -48,6 +49,8 @@ bool Enemy::init(const Vec2 initPosition)
 	setIsDead(false);
 	setIsSleeping(false);
 	
+	setBeforePosition(Vec2(-1, -1));
+
 
 	return true;
 }
@@ -65,12 +68,15 @@ void Enemy::update(const float deltaTime)
 	DecideWhatIsCurrentAnimation();
 	CheckBossStatus();
 
-	MakeHPBox();
+	//MakeHPBox();
 
 	char buf[255];
 	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
 	CCLOG(buf);
 
+
+	MakeMaxHPBox();
+	MakeHPBox();
 	return;
 }
 
@@ -100,7 +106,55 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::MoveEnemy(const float deltaTime)
 {
+
+	auto beforePosition = getPosition();
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
+
+	//줄서서 기다리지 않아보자.
+	auto unitVec = getTranslatedUnitVec();
+
+	while (beforePosition == position)
+	{
+		if (unitVec.x == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x += 1;
+			}
+			else
+			{
+				unitVec.x += -1;
+			}
+		}
+		else if (unitVec.y == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.y += 1;
+			}
+			else
+			{
+				unitVec.y += -1;
+			}
+		}
+		else
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x = 0;
+			}
+			else
+			{
+				unitVec.y = 0;
+			}
+
+		}
+		position = m_pManageEnemyMove->update(getPosition(), unitVec, getMapPointer(), deltaTime, this);
+	}
+
 
 	this->setPosition(position);
 	return;
@@ -512,45 +566,39 @@ int Enemy::MakeHPBox()
 		removeChildByTag(GREEN_BOX_SOLID_TAG);
 	}
 
-	auto anchorPoint = getAnchorPoint();
+	auto hpCurrent = Sprite::create("Board/hp.png");
+	auto positionOfSprite = positiionOfHp;
+	hpCurrent->setPosition(Vec2(-positionOfSprite.x / 2, -positionOfSprite.y / 2));
+	hpCurrent->setAnchorPoint(Vec2(0, 0));
 
-	auto HPBarStart = Vec2(-m_BodyRangeForCollide.x / 2, m_BodyRangeForCollide.y / 2);
+	auto hpRatio = ((float)getHP() / (float)getMaxHP());
 
-	auto HPBarEnd = Vec2(HPBarStart.x + m_BodyRangeForCollide.x, HPBarStart.y + 10.f);
+	hpCurrent->setScaleY(sizeOfHp_y);
+	hpCurrent->setScaleX(hpRatio*sizeOfHp_x);
 
-	auto hpRatio = ((float)m_HP / (float)m_MaxHP);
+	addChild(hpCurrent, 0, GREEN_BOX_SOLID_TAG);
 
-	auto range = Vec2(HPBarStart.x + m_BodyRangeForCollide.x*hpRatio, HPBarStart.y + 10.f);
-
-	//TODO :체력바를 밑에서 약간떯어뜨려서 배치하기
-	char buf[255];
-	sprintf(buf, "HP: %d", getHP());
-	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
-	m_pLabel->setScale(3.f);
-	m_pLabel->setString(buf);
-
-	auto box = DrawNode::create();
-
-	if (getChildByTag(RED_BOX_SOLID_TAG) == nullptr)
-	{
-		box->drawSolidRect(HPBarStart, HPBarEnd, Color4F(1.0f, 0.0f, 0.0f, 1.0f));
-	}
-
-	box->drawSolidRect(HPBarStart, range, Color4F(0.0f, 1.0f, 0.0f, 1.0f));
-	addChild(box, 0, GREEN_BOX_SOLID_TAG);
-
-	//CCLOG(buf);
-	//if (range.x >= m_BodyRangeForCollide.x / 2)
-	//{
-	//	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
-	//}
-	//else
-	//{
-	//	MakeBox(HPBarStart, range, RED_BOX_SOLID_TAG);
-	//}
 	return 0;
 }
 
+int Enemy::MakeMaxHPBox()
+{
+	if (getChildByTag(RED_BOX_SOLID_TAG) == nullptr)
+	{
+		auto hpMax = Sprite::create("Board/hpMax.png");
+		auto positionOfSprite = positiionOfHp;
+		hpMax->setPosition(Vec2(-positionOfSprite.x / 2, -positionOfSprite.y / 2));
+
+		hpMax->setAnchorPoint(Vec2(0, 0));
+		hpMax->setScaleY(sizeOfHp_y);
+		hpMax->setScaleX(sizeOfHp_x);
+		addChild(hpMax, 1, RED_BOX_SOLID_TAG);
+	}
+	else{}
+
+	return 0;
+
+}
 
 // 현재 Player의 Position에 Boss 공격용 텐타클을 만들어주는 함수.
 void Enemy::MakeTentacle()
@@ -640,21 +688,19 @@ void Enemy::CheckBossStatus()
 	// 남은 체력의 비율을 계산한 뒤, 
 	setRemainHpPercent(getHP() / getMaxHP());
 
-	// 체력 비율이 30%미만일 경우 Rage상태로 돌입 (Summon가능)
-	if (getRemainHpPercent() < 0.3f)
-	{
-		setIsRaged(true);
-	}
-
 	// TODO :: 매직넘버
-	// 남은 체력 비율에 반비례하여 AttackFrequency 결정.
-	if (getRemainHpPercent() < 0.3)
+	// 남은 체력 비율에 반비례하여 AttackFrequency 결정, 그리고 Summon.
+	if (!getIsRaged30() && (getRemainHpPercent() < 0.3))
 	{
+		setIsRaged30(true);
 		setAttackFrequency(0.7f);
+		changeState<BossState_Summon>();
 	}
-	else if (getRemainHpPercent() < 0.6)
+	else if (!getIsRaged60() && (getRemainHpPercent() < 0.6))
 	{
+		setIsRaged60(true);
 		setAttackFrequency(1.1f);
+		changeState<BossState_Summon>();
 	}
 
 	return;

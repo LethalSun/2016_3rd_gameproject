@@ -38,6 +38,12 @@
     <ClCompile Include="..\Classes\BossState_Strike.cpp" />
     <ClCompile Include="..\Classes\BossState_Rush.cpp" />
     <ClCompile Include="..\Classes\BossState_Summon.cpp" />
+    <ClCompile Include="..\Classes\Tentacle.cpp" />
+    <ClCompile Include="..\Classes\DeadScene.cpp" />
+    <ClCompile Include="..\Classes\Board.cpp" />
+    <ClCompile Include="..\Classes\EscMenu.cpp" />
+    <ClCompile Include="..\Classes\PlayerMenu.cpp" />
+    <ClCompile Include="..\Classes\EndingScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
@@ -77,6 +83,12 @@
     <ClInclude Include="..\Classes\BossState_Strike.h" />
     <ClInclude Include="..\Classes\BossState_Rush.h" />
     <ClInclude Include="..\Classes\BossState_Summon.h" />
+    <ClInclude Include="..\Classes\Tentacle.h" />
+    <ClInclude Include="..\Classes\DeadScene.h" />
+    <ClInclude Include="..\Classes\Board.h" />
+    <ClInclude Include="..\Classes\EscMenu.h" />
+    <ClInclude Include="..\Classes\PlayerMenu.h" />
+    <ClInclude Include="..\Classes\EndingScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />

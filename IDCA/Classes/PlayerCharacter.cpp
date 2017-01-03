@@ -2,6 +2,7 @@
 #include "PlayerCharacter.h"
 #include "AnimationMaker.h"
 #include "Skill.h"
+#include "SimpleAudioEngine.h"
 #include <windows.h>
 #include <iostream>
 
@@ -120,10 +121,18 @@ int PlayerCharacter::GetHP()
 {
 	return m_HP;
 }
+int PlayerCharacter::GetMaxHP()
+{
+	return m_MaxHP;
+}
 
 void PlayerCharacter::SetHP(int hp)
 {
 	m_HP = hp;
+}
+int PlayerCharacter::GetMaxSP()
+{
+	return m_MaxSP;
 }
 
 int PlayerCharacter::GetSP()
@@ -209,6 +218,7 @@ void PlayerCharacter::skill()
 	{
 		return;
 	}
+
 	m_pAnimationMaker->SetAnimationSkill();
 	m_AttackSkill->SetStartPosition(m_BodyAnchorPoint);
 	auto direction = Vec2(UNIT_X[m_Direction], UNIT_Y[m_Direction]);

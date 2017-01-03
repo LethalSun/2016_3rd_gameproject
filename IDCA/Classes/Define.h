@@ -25,7 +25,7 @@ const int UNIT_X[8] = { 0,1,1,1,0,-1,-1,-1 };
 const int UNIT_Y[8] = { 1,1,0,-1,-1,-1,0,1 };
 
 //캐릭터 체력 공격력
-const int MAX_HP = 1000;
+const int MAX_HP = 100;
 const int MAX_SP = 10;
 const int ATTACK_DAMAGE = 3;
 

@@ -19,6 +19,7 @@ public :
 	CC_SYNTHESIZE(int, m_SoundPlayNum, SoundPlayNum);
 	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
 	CC_SYNTHESIZE(Vec2, m_PlayerPosition, PlayerPosition);
+	CC_SYNTHESIZE(bool, m_IsBossSummoned, IsBossSummoned);
 
 	// 포인터는 원칙적으로 NULL 계산이 필요하기 때문에 NULL이 들어오지 않는 경우에 참조자 반환.
 	Vector<Enemy*>&			getEnemyVector();
@@ -41,6 +42,9 @@ public :
 	void					SummonAncientTree();
 	void					AncientTreeSkillSummon(const float);
 	const float				CalPositionDistance(const Vec2, const Vec2);
+	const bool				IsStageCleared();
+	void					VectorClear();
+	void					StageInit();
 
 	Enemy*					MakeChoco(const Vec2);
 	Enemy*					MakeAtroce(const Vec2);

@@ -11,6 +11,7 @@ class ManageEnemyMove;
 class EnemyManager;
 class Enemy_Choco;
 class Enemy;
+class Board;
 
 class StageOne : public Layer
 {
@@ -20,6 +21,8 @@ public:
 	virtual bool init();
 
 	void update(float delta);
+	void SceneChangeCheck(float);
+	float m_AccumulateTime = 0.f;
 
 	StageOne() = default;
 	~StageOne() = default;
@@ -45,4 +48,5 @@ private:
 	// Enemy Test
 	EnemyManager* m_pEnemyManager;
 	Enemy_Choco* m_pEnemy;
+	Board* m_pBoard;
 };

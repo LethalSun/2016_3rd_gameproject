@@ -59,15 +59,20 @@ public:
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
 	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
+	CC_SYNTHESIZE(Vec2, m_BeforePosition, BeforePosition);
 
 	/* Only For Boss */
 	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);
-	CC_SYNTHESIZE(bool, m_IsRaged, IsRaged);
+	CC_SYNTHESIZE(bool, m_IsRaged30, IsRaged30);
+	CC_SYNTHESIZE(bool, m_IsRaged60, IsRaged60);
 	CC_SYNTHESIZE(float, m_SummonCoolTime, SummonCoolTime);
 	CC_SYNTHESIZE(Vec2, m_capturedUnitVecToPlayer, capturedUnitVecToPlayer);
 	CC_SYNTHESIZE(CollideManager*, m_pInnerCollideManager, InnerCollideManager);
 	CC_SYNTHESIZE(float, m_RemainHpPercent, RemainHpPercent);
 	CC_SYNTHESIZE(float, m_AttackFrequency, AttackFrequency);
+	CC_SYNTHESIZE(Vec2, positiionOfHp, PositionOfHp);
+	CC_SYNTHESIZE(float, sizeOfHp_x, SizeOfHp_x);
+	CC_SYNTHESIZE(float, sizeOfHp_y, SizeOfHp_y);
 
 	void				 MakeTentacle();
 	void				 Strike();
@@ -90,6 +95,7 @@ public:
 	bool				 setAttackedDamage(const int);
 	ManageEnemyMove*     getManageEnemyMove();
 	int					 MakeHPBox();
+	int MakeMaxHPBox();
 	void				 EnemyAttackSound();
 
 	void				 CreateEffect(int damage);
