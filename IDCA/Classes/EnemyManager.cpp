@@ -7,6 +7,7 @@
 #include "Enemy_Atroce.h"
 #include "Enemy_AncientTree.h"
 #include "EnemyState_Dead.h"
+#include <math.h>
 
 const int STAGE_ONE_ENEMY_NUM = 20;
 const char CHOCO_PLIST[] = "Choco.plist";
@@ -150,10 +151,11 @@ Enemy* EnemyManager::MakeAncientTree(const Vec2 initPosition)
 // Vector안의 모든 Enemy에게 Player Position을 넘겨주는 함수.
 void EnemyManager::ProvidePlayerPosition(const Vec2 inputPlayerPosition)
 {
+	setPlayerPosition(inputPlayerPosition);
 	auto iter = m_pEnemyVector.begin();
 	for (; iter != m_pEnemyVector.end(); ++iter)
 	{
-		(*iter)->setPlayerPosition(inputPlayerPosition);
+		(*iter)->setPlayerPosition(getPlayerPosition());
 	}
 
 	return;
@@ -297,7 +299,54 @@ void EnemyManager::StageOneCreateAdditionalEnemies()
 // 모든 Enemy들이 죽었을 경우 보스를 소환해주는 함수.
 void EnemyManager::SummonAncientTree()
 {
-	MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(900.f, 900.f));
+	// TODO :: 소환할 때 돌 굴러떨어지는 소리 나게.
+	MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(2700.f, 900.f));
+}
+
+// 보스가 Summon을 발동시켰을 때, Player근처의 일정 distance안에 지정해놓은 Enemy를 소환.
+void EnemyManager::AncientTreeSkillSummon(const float summonRange)
+{
+	auto objectGroup = m_pMap->objectGroupNamed("BOSS_CHOCO");
+	auto objects = objectGroup->getObjects();
+
+	for (int i = 0; i < objects.size(); i++)
+	{
+		auto object = objects.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+		auto distance = CalPositionDistance(position, getPlayerPosition());
+		
+		if (distance < summonRange)
+		{
+			MakeEnemy(ENEMY_TYPE::CHOCO, position);
+		}
+	}
+
+	objectGroup = m_pMap->objectGroupNamed("BOSS_ATROCE");
+	objects = objectGroup->getObjects();
+
+	for (int i = 0; i < objects.size(); i++)
+	{
+		auto object = objects.at(i);
+		auto position = Vec2(object.asValueMap()["x"].asFloat(), object.asValueMap()["y"].asFloat());
+		auto distance = CalPositionDistance(position, getPlayerPosition());
+
+		if (distance < summonRange)
+		{
+			MakeEnemy(ENEMY_TYPE::ATROCE, position);
+		}
+	}
+
+	return;
+}
+
+// 포지션 두 개를 받아 포지션 사이의 거리를 반환하는 함수.
+const float EnemyManager::CalPositionDistance(const Vec2 pos1, const Vec2 pos2)
+{
+	auto x = pos1.x - pos2.x;
+	auto y = pos2.y - pos2.y;
+	auto distance = abs(sqrt(x * x + y * y));
+
+	return distance;
 }
 
 // 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.
@@ -324,3 +373,4 @@ void EnemyManager::DieCheck()
 
 	return;
 }
+

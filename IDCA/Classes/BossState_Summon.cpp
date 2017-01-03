@@ -2,10 +2,20 @@
 #include "Enemy.h"
 #include "BossState_Summon.h"
 #include "EnemyState_Search.h"
+#include "EnemyManager.h"
 
+const float summon_range = 200.f;
 
 void BossState_Summon::startState(Enemy* enemy)
 {
+	// TODO :: 효과 넣기
+	auto vector = enemy->m_pEnemyManager->getEnemyVector();
+	auto size = vector.size();
+	if (size == 1)
+	{
+		enemy->m_pEnemyManager->AncientTreeSkillSummon(summon_range);
+	}
+
 	return;
 }
 

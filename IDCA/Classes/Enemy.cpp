@@ -63,6 +63,7 @@ void Enemy::update(const float deltaTime)
 	CalculateBodyAnchorPoint();
 
 	DecideWhatIsCurrentAnimation();
+	CheckBossStatus();
 
 	MakeHPBox();
 
@@ -623,5 +624,26 @@ void Enemy::Strike()
 		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
+	return;
+}
+
+// Boss의 체력 나머지와 Raged 여부를 검사하는 함수. Update에서 호출.
+void Enemy::CheckBossStatus()
+{
+	// 보스가 아니라면, return.
+	if (getEnemyType() != ENEMY_TYPE::ANCIENT_TREE)
+	{
+		return;
+	}
+
+	// 남은 체력의 비율을 계산한 뒤, 
+	setRemainHpPercent(getHP() / getMaxHP());
+
+	// 체력 비율이 30%미만일 경우 Rage상태로 돌입 (Summon가능)
+	if (getRemainHpPercent() < 0.3f)
+	{
+		setIsRaged(true);
+	}
+
 	return;
 }

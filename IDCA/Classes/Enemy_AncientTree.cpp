@@ -8,6 +8,7 @@ const float AncientTree_ChansingRange = 400.f;
 const float AncientTree_AttackRange = 500.f;
 const float AncientTree_MoveSpeed = 4.f;
 const float AncientTree_StiffTime = 0.0f;
+const float AncientTree_SummonCoolTime = 7.f;
 
 const char AncientTree_Name[] = "AncientTree";
 const char AncientTree_Extension[] = ".png";
@@ -30,6 +31,7 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	setDamage(ANCIENT_TREE_DAMAGE);
 	setMoveSpeed(AncientTree_MoveSpeed);
 	setStiffTime(AncientTree_StiffTime);
+	setSummonCoolTime(AncientTree_SummonCoolTime);
 
 	auto BodyRange = Vec2(ANCIENT_TREE_BODY_RANGE_X, ANCIENT_TREE_BODY_RANGE_Y);
 	setBodyRangeForCollide(BodyRange);
