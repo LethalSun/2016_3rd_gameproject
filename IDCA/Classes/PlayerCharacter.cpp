@@ -402,6 +402,11 @@ int PlayerCharacter::MakeHPBox()
 	return 0;
 }
 
+Skill * PlayerCharacter::GetAttackSkillPointer()
+{
+	return m_AttackSkill;
+}
+
 void PlayerCharacter::GetFunc(pFunc func)
 {
 	m_AttackSkill->GetFunc(func);
