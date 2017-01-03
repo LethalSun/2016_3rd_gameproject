@@ -3,20 +3,6 @@
 #include "EnemyState_Search.h"
 #include "AnimationMaker.h"
 
-const float Atroce_SearchingRange = 400.f;
-const float Atroce_ChasingRange = 500.f;
-const float Atroce_AttackRange = 100.f;
-const float Atroce_MoveSpeed = 2.f;
-const float Atroce_StiffTime = 0.6f;
-
-
-const char Atroce_AttackSound[] = "Sound/Atroce_swing";
-const char Atroce_AttackSoundExtension[] = ".wav";
-const char Atroce_HitedSound[] = "Sound/Atroce_hited.wav";
-const char Atroce_DyingSound[] = "Sound/Atroce_dying.wav";
-
-const char Atroce_Name[] = "Atroce";
-const char Atroce_Extension[] = ".png";
 
 bool Enemy_Atroce::init(const Vec2 initPosition)
 {
@@ -25,12 +11,12 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 		return false;
 	}
 
-	setSearchingRange(Atroce_SearchingRange);
-	setChasingRange(Atroce_ChasingRange);
-	setAttackRange(Atroce_AttackRange);
-	setMoveSpeed(Atroce_MoveSpeed);
+	setSearchingRange(ATROCE_SEARCHING_RANGE);
+	setChasingRange(ATROCE_CHASING_RANGE);
+	setAttackRange(ATROCE_ATTACKING_RANGE);
+	setMoveSpeed(ATROCE_MOVE_SPEED);
 	setMaxHP(ATROCE_MAX_HP);
-	setStiffTime(Atroce_StiffTime);
+	setStiffTime(ATROCE_STIFF_TIME);
 
 	auto AttackRangeAtroce = Vec2(ATROCE_ATTACK_RANGE, ATROCE_ATTACK_RANGE);
 	setAttackRangeForCollide(AttackRangeAtroce);
@@ -45,13 +31,13 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 	setIsEnemyPreemptive(true);
 
 	// Sound 세팅
-	setAttackSound(Atroce_AttackSound);
-	setAttackSoundExtension(Atroce_AttackSoundExtension);
-	setHitedSound(Atroce_HitedSound);
-	setDyingSound(Atroce_DyingSound);
+	setAttackSound(ATROCE_ATTACK_SOUND);
+	setAttackSoundExtension(ATROCE_ATTACK_SOUND_EXTENSION);
+	setHitedSound(ATROCE_HITED_SOUND);
+	setDyingSound(ATROCE_DYING_SOUND);
 
 	// AnimationMaker 세팅.
-	m_pAnimationMaker = AnimationMaker::create(Atroce_Name, Atroce_Extension);
+	m_pAnimationMaker = AnimationMaker::create(ATROCE_NAME, ATROCE_EXTENSION);
 	addChild(m_pAnimationMaker);
 	m_pAnimationMaker->SetAnimationStop();
 	m_pAnimationMaker->AddAnimation(getDirection());

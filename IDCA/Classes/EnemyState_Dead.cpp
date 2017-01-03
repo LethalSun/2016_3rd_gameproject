@@ -21,25 +21,21 @@
 		- MapPointer에 addChild 되어 있었던 enemy를 removeChild해 줌.
 */
 
-const float FADEOUT_TIME = 1.5f;
-const float RESTING_TIME = 0.1f;
 
 // TODO :: pushedDistance를 enemy안의 멤버 변수로 등록하여 enemy마다 밀려나는 거 다르게 하기.
-const int PushedActionTag = 1;
-const float pushedDistance = 75.f;
 
 void EnemyState_Dead::startState(Enemy* enemy)
 {
 	m_AccumulateTime = 0.f;
 
 	// 마지막에 죽을 때는 두 배로 밀려나도록.
-	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
-	auto m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
-	m_pEasePushedAction->setTag(PushedActionTag);
+	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * ENEMY_PUSHED_DISTANCE);
+	auto m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - ENEMY_PUSHED_CORRECTION_FLOAT);
+	m_pEasePushedAction->setTag(ENEMY_PUSHED_ACTION_TAG);
 	enemy->runAction(m_pEasePushedAction);
 
 	// Fade out Action
-	auto action = FadeOut::create(FADEOUT_TIME);
+	auto action = FadeOut::create(DEAD_STATE_FADEOUT_TIME);
 	enemy->m_pAnimationMaker->GetSprite()->runAction(action);
 
 	// Enemy 메모리 해제 작업.
@@ -60,7 +56,7 @@ void EnemyState_Dead::runState(Enemy* enemy, const float deltaTime)
 {
 	m_AccumulateTime += deltaTime;
 
-	if (m_AccumulateTime > FADEOUT_TIME + RESTING_TIME)
+	if (m_AccumulateTime > DEAD_STATE_FADEOUT_TIME + DEAD_STATE_RESTING_TIME)
 	{
 		endState(enemy);
 		return;

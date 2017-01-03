@@ -1,5 +1,12 @@
 #pragma once
 
+/*
+	Enemy
+	작성자 : 이근원
+	모든 Enemy의 부모 클래스. 생성자를 재정의하여 initPosition을 인자로 받아서 생성된다.
+	Enemy가 너무 많은 인자를 가지고 있는 것 같아서 계속 Enemy클래스를 세분화 할까 고민이 된다.
+*/
+
 #include "EnemyState.h"
 
 class AnimationMaker;

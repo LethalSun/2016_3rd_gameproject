@@ -1,5 +1,11 @@
 #pragma once
 
+/*
+	Enemy_AncientTree
+	작성자 : 이근원
+	보스에 해당하는 Enemy.
+*/
+
 #include "Enemy.h"
 
 class Enemy_AncientTree : public Enemy

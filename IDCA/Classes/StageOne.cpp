@@ -15,7 +15,6 @@
 #include "PlayerCharacter.h"
 #include "Board.h"
 
-const char BGM[] = "Sound/Forbidden.mp3";
 
 Scene * StageOne::createScene()
 {
@@ -50,7 +49,7 @@ bool StageOne::init()
 	}
 
 	// 배경음 등록.
-	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM, true);
+	CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(STAGE_ONE_BGM, true);
 
 	//맵 정보 등록
 	m_pManageMap = ManageMap::create();

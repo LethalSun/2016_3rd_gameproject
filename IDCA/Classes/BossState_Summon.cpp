@@ -4,16 +4,17 @@
 #include "EnemyState_Search.h"
 #include "EnemyManager.h"
 
-const float summon_range = 200.f;
 
 void BossState_Summon::startState(Enemy* enemy)
 {
-	// TODO :: 효과 넣기
 	auto vector = enemy->m_pEnemyManager->getEnemyVector();
 	auto size = vector.size();
+
+	// 남은 Enemy가 보스 밖에 안남았을 경우, 소환 시작.
 	if (size == 1)
 	{
-		enemy->m_pEnemyManager->AncientTreeSkillSummon(summon_range);
+		// 인자로 소환 반경을 넘겨줌.
+		enemy->m_pEnemyManager->AncientTreeSkillSummon(ANCIENT_TREE_SUMMON_RANGE);
 	}
 
 	return;
@@ -21,7 +22,7 @@ void BossState_Summon::startState(Enemy* enemy)
 
 void BossState_Summon::runState(Enemy* enemy, float dt)
 {
-	// TODO :: Player위치를 받고 그에 가장 가까운 Data Set 위치에 Enemy 생성.
+	// 소환이 끝나면 Search상태로 돌입.
 	enemy->changeState<EnemyState_Search>();
 	return;
 }

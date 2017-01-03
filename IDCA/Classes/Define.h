@@ -25,9 +25,9 @@ const int UNIT_X[8] = { 0,1,1,1,0,-1,-1,-1 };
 const int UNIT_Y[8] = { 1,1,0,-1,-1,-1,0,1 };
 
 //캐릭터 체력 공격력
-const int MAX_HP = 100;
+const int MAX_HP = 300;
 const int MAX_SP = 10;
-const int ATTACK_DAMAGE = 3;
+const int ATTACK_DAMAGE = 30;
 
 //아트로스 체력 공격력
 const int ATROCE_MAX_HP = 20;
@@ -41,17 +41,156 @@ const int CHOCO_ATTACK_DAMAGE = 1;
 const int ANCIENT_TREE_MAX_HP = 100;
 const int ANCIENT_TREE_DAMAGE = 20;
 
+// AncientTree State 상수들.
+const float ANCIENT_TREE_RUSH_TIME = 2.f;
+const int ANCIENT_TREE_ATTACK_NUMBER = 5;
+
+const float ANCIENT_TREE_STRIKE_RELEASE_TIME = 3.f;
+const float ANCIENT_TREE_STRIKE_SHRINK_TIME = 0.01f;
+const float ANCIENT_TREE_STRIKE_RESTING_TIME = 0.1f;
+const float ANCIENT_TREE_STRIKE_BIGGER_SCALE = 1.6;
+const float ANCIENT_TREE_STRIKE_NORMAL_SCALE = 1.0;
+const float STRIKE_DISTANCE = 45.f;
+const int STRIKE_TENTACLE_NUMBER = 4;
+const float STRIKE_CORRECTION_FLOAT = 0.7f;
+const char ANCIENT_TREE_GROWL[] = "Sound/AncientTree_growl.wav";
+
+const float ANCIENT_TREE_SUMMON_RANGE = 200.f;
+
+const char DEAD_SCENE_LOST_SOUND[] = "EndingScene/LostGame.wav";
+const char DEAD_SCENE_GAME_OVER_SOUND[] = "EndingScene/GameOverSound.wav";
+
+const float DEAD_SCENE_BOUNCE_TIME = 3.0f;
+const float DEAD_SCENE_REST_TIME = 0.3f;
+const float DEAD_SCENE_FADE_IN_TIME = 1.f;
+
+const char DEAD_SCENE_GAME_OVER_TITLE[] = "EndingScene/GameOver.png";
+const char DEAD_SCENE_CHARACTER_WITH_LIGHT[] = "EndingScene/CharacterWithLight.png";
+const char DEAD_SCENE_RESTART_TITLE[] = "EndingScene/Restart.png";
+const float DEAD_SCENE_RESTART_TWINKLE_TIME = 2.0f;
+
+const float DEAD_SCENE_TITLE_WIDTH = 0.5f;
+const float DEAD_SCENE_TITLE_HEIGHT = 0.6f;
+const float DEAD_SCENE_TITLE_JUMP_HEIGHT = 150.f;
+const int DEAD_SCENE_TITLE_JUMP_NUMBER = 7;
+const float DEAD_SCENE_TITLE_EASE_SPEED = 3.f;
+
+const float DEAD_SCENE_CHARACTER_WIDTH = 0.5f;
+const float DEAD_SCENE_CHARACTER_HEIGHT = 0.4f;
+
+const float DEAD_SCENE_TEXT_WIDTH = 0.5f;
+const float DEAD_SCENE_TEXT_HEIGHT = 0.2f;
+
+const float ENDING_SCENE_TITLE_WIDTH = 0.5f;
+const float ENDING_SCENE_TITLE_HEIGHT = 0.6f;
+const float ENDING_SCENE_EASE_RATE = 3.0f;
+
+const float ENDING_SCENE_TEXT_WIDTH = 0.5f;
+const float ENDING_SCENE_TEXT_HEIGHT = 0.2f;
+
+const char ENDING_SCENE_HOORAY_SOUND[] = "EndingScene/Hooray.wav";
+const char ENDING_SCENE_BGM[] = "EndingScene/EndingBGM.wav";
+const char ENDING_SCENE_YEAH_SOUND[] = "EndingScene/Yeah.wav";
+
+const float ENDING_SCENE_RASIE_TIME = 1.5f;
+const float ENDING_SCENE_REST_TIME = 0.3f;
+
+const char ENDING_SCENE_VICTIORY_TITLE[] = "EndingScene/Victory.png";
+
+const char ENDING_SCENE_RESTART_TEXT[] = "EndingScene/Restart.png";
+const float ENDING_SCENE_RESTART_TWINKLE_TIME = 2.0f;
+
+// Enemy
+const float ENEMY_IGNORE_MOVE_RANGE = 0.05f;
+const int ENEMY_EFFECT_MANAGER_ZORDER = 5;
+const int ENEMY_ATTACK_SOUND_NUMBER = 5;
+
+const int TINT_ACTION_TAG = 2;
+const float ENEMY_RED_ACTION_TIME = 0.3f;
+
+const float ANCIENT_TREE_RAGE30 = 0.3f;
+const float ANCIENT_TREE_RAGE30_RATE = 0.7f;
+const float ANCIENT_TREE_RAGE60 = 0.6f;
+const float ANCIENT_TREE_RAGE60_RATE = 1.1f;
+
+const float ANCIENT_TREE_SEARCHING_RANGE = 400.f;
+const float ANCIENT_TREE_CHASING_RANGE = 400.f;
+const float ANCIENT_TREE_ATTACKING_RANGE = 500.f;
+const float ANCIENT_TREE_MOVE_SPEED = 5.f;
+const float ANCIENT_TREE_STIFF_TIME = 0.0f;
+const float ANCIENT_TREE_SUMMON_COOL_TIME = 5.f;
+const float ANCIENT_TREE_ATTACK_FREQUENCY_INIT = 1.4f;
+
+const char ANCIENT_TREE_NAME[] = "AncientTree";
+const char ANCIENT_TREE_FILE_EXTENSION[] = ".png";
+const char ANCIENT_TREE_ATTACK_SOUND[] = "Sound/AncientTree_hitGround.wav";
+const char ANCIENT_TREE_HITED_SOUND[] = "Sound/AncientTree_hited.aiff";
+const char ANCIENT_TREE_DYING_SOUND[] = "Sound/AncientTree_dying.wav";
+
+const float CHOCO_SEARCHING_RANGE = 400.f;
+const float CHOCO_CHASING_RANGE = 500.f;
+const float CHOCO_ATTACKING_RANGE = 50.f;
+const float CHOCO_MOVE_SPEED = 3.5f;
+const float CHOCO_STIFF_TIME = 0.6f;
+
+const char CHOCO_NAME[] = "Choco";
+const char CHOCO_EXTENSION[] = ".png";
+const char CHOCO_ATTACK_SOUND[] = "Sound/Choco_swing";
+const char CHOCO_ATTACK_SOUND_EXTENSION[] = ".aif";
+const char CHOCO_HITED_SOUND[] = "Sound/Choco_hited.mp3";
+const char CHOCO_DYING_SOUND[] = "Sound/Choco_dying.wav";
+
+const float ATROCE_SEARCHING_RANGE = 400.f;
+const float ATROCE_CHASING_RANGE = 500.f;
+const float ATROCE_ATTACKING_RANGE = 100.f;
+const float ATROCE_MOVE_SPEED = 2.f;
+const float ATROCE_STIFF_TIME = 0.6f;
+
+const char ATROCE_ATTACK_SOUND[] = "Sound/Atroce_swing";
+const char ATROCE_ATTACK_SOUND_EXTENSION[] = ".wav";
+const char ATROCE_HITED_SOUND[] = "Sound/Atroce_hited.wav";
+const char ATROCE_DYING_SOUND[] = "Sound/Atroce_dying.wav";
+
+const char ATROCE_NAME[] = "Atroce";
+const char ATROCE_EXTENSION[] = ".png";
+
+// EnemyManager
+const int STAGE_ONE_ENEMY_NUM = 20;
+const char CHOCO_PLIST[] = "Choco.plist";
+const char ATROCE_PLIST[] = "Atroce.plist";
+const char ANCIENT_TREE_PLIST[] = "AncientTree.plist";
+const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
+
+const float ENEMY_ATTACK_CORRECTION_VALUE = 50.f;
+
+// Enemy State
+const float ENEMY_PUSHED_DISTANCE = 75.f;
+const int ENEMY_PUSHED_ACTION_TAG = 1;
+const float ENEMY_PUSHED_CORRECTION_FLOAT = 0.3f;
+
 const char PLAYER_FILE_NAME[] = "archbishop";
 const char PLAYER_FILE_EXTENTION[] = ".png";
-
-// Json 파일로 변환전까지 임시로 쓰는 Define.h
 
 const int MAX_FRAME_NUM = 10;
 const float ANIMATION_SPEED = 0.1f;
 const float STOP_ANIMATION_SPEED = 0.005f;
 const float ENEMY_ANIMATION_SPEED = 0.5f;
+const float DEAD_STATE_FADEOUT_TIME = 1.5f;
+const float DEAD_STATE_RESTING_TIME = 0.1f;
+
+const float STATE_RETURN_END_RANGE = 50.f;
+const float WAITING_SCENE_CORRECTION_VALUE = 50.f;
 
 const int ANIMATION_TAG = 3;
+
+// Scene
+const char STAGE_ONE_BGM[] = "Sound/Forbidden.mp3";
+
+// Tentacle
+const float TENTACLE_ANIMAION_DELAY = 0.05f;
+const int TENTACLE_MAX_FRAME_NUM = 10;
+const float TENTACLE_FADE_IN_CORRECTION_VALUE = 1.2f;
+const float TENTACLE_ATTACK_RANGE = 90.f;
 
 //KW
 namespace INPUT_LAYER

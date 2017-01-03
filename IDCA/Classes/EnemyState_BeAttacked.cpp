@@ -9,17 +9,12 @@
 #include "ManageMap.h"
 #include "EffectManager.h"
 
-const float redTime = 0.3f;
-const float pushedDistance = 75.f;
-const int PushedActionTag = 1;
-const int TintActionTag = 2;
-
 /*
 	State시작에서 처리하는 것들
 		- Pushable 초기화.
 		- PushAction 생성.
 		- RedAction 생성.
-		- 맞는 Sound 생성. ( TODO :: 맞는 Sound의 타이밍 조절하기 )
+		- 맞는 Sound 생성. 
 */
 
 void EnemyState_BeAttacked::startState(Enemy* enemy)
@@ -43,7 +38,7 @@ void EnemyState_BeAttacked::runState(Enemy* enemy, const float deltaTime)
 
 	if (!m_Pushable)
 	{
-		enemy->stopActionByTag(PushedActionTag);
+		enemy->stopActionByTag(ENEMY_PUSHED_ACTION_TAG);
 	}
 
 	if (m_AccumulateTime > enemy->getStiffTime())
@@ -75,11 +70,11 @@ void EnemyState_BeAttacked::MakePushAction(Enemy* enemy)
 	}
 
 	// 보스가 아닌 경우, Player와의 UnitVec 반대방향으로 밀려난다.
-	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * pushedDistance);
-	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - 0.3f);
+	auto pushedAction = MoveBy::create(enemy->getStiffTime(), -(enemy->getUnitVecToPlayer()) * ENEMY_PUSHED_DISTANCE);
+	m_pEasePushedAction = EaseElasticInOut::create(pushedAction, enemy->getStiffTime() - ENEMY_PUSHED_CORRECTION_FLOAT);
 
 	// 만약 장애물에 걸릴 경우 Action을 멈추기 위해 Tag를 붙여 관리한다.
-	m_pEasePushedAction->setTag(PushedActionTag);
+	m_pEasePushedAction->setTag(ENEMY_PUSHED_ACTION_TAG);
 	enemy->runAction(m_pEasePushedAction);
 
 	return;
@@ -89,12 +84,12 @@ void EnemyState_BeAttacked::MakePushAction(Enemy* enemy)
 void EnemyState_BeAttacked::MakeRedAction(Enemy* enemy)
 {
 	// TintBy를 사용하여 빨갛게 되는 액션과 다시 돌아오는 Action을 만든다.
-	enemy->m_pAnimationMaker->GetSprite()->stopActionByTag(TintActionTag);
-	TintBy* redAction = TintBy::create(redTime, 0, -255, -255);
-	TintBy* recoveryAction = TintBy::create(redTime, 0, 255, 255);
+	enemy->m_pAnimationMaker->GetSprite()->stopActionByTag(TINT_ACTION_TAG);
+	TintBy* redAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, -255, -255);
+	TintBy* recoveryAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, 255, 255);
 
 	auto seqAction = Sequence::create(redAction, recoveryAction, nullptr);
-	seqAction->setTag(TintActionTag);
+	seqAction->setTag(TINT_ACTION_TAG);
 	enemy->m_pAnimationMaker->GetSprite()->runAction(seqAction);
 
 	return;

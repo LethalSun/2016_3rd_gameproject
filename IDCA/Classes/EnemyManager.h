@@ -1,5 +1,11 @@
 #pragma once
 
+/*
+	EnemyManger
+	작성자 : 이근원
+	싱글톤으로 작성되어 Enemy들을 관리해주는 함수.
+	Vector의 형태로 Enemy를 관리하며, Stage와 Player의 정보를 Enemy들에게 제공한다.
+*/
 
 class Enemy;
 class CollideManager;

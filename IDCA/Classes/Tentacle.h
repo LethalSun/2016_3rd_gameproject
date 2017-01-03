@@ -9,8 +9,6 @@
 	Strike의 경우에는 범위를 보여주지 않는다 (false)
 */
 
-// TODO :: Tentacle들에게 player와의 거리를 잴 수 있도록 (데미지)
-
 class CollideManager;
 
 class Tentacle : public Node

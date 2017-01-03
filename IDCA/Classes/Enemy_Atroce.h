@@ -1,5 +1,10 @@
 #pragma once
 
+/*
+	Enemy_Atroce
+	작성자 : 이근원
+*/
+
 #include "Enemy.h"
 
 class Enemy_Atroce : public Enemy

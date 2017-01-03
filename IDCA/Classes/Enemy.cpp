@@ -17,7 +17,6 @@
 #include "Tentacle.h"
 
 const Vec2 ZERO = Vec2(0.f, 0.f);
-const float IgnoreMoveRange = 0.05f;
 
 bool Enemy::init(const Vec2 initPosition)
 {
@@ -30,12 +29,8 @@ bool Enemy::init(const Vec2 initPosition)
 	m_pEffectManager = EffectManager::create();
 	m_pEnemyManager = EnemyManager::getInstance();
 
-	addChild(m_pEffectManager, 5);
+	addChild(m_pEffectManager, ENEMY_EFFECT_MANAGER_ZORDER);
 	addComponent(m_pManageEnemyMove);
-
-	m_pLabel = Label::create();
-	m_pLabel->setColor(ccc3(255, 0, 0));
-	addChild(m_pLabel, 5);
 
 	setPosition(initPosition);
 	setOrigin(initPosition);
@@ -67,13 +62,6 @@ void Enemy::update(const float deltaTime)
 
 	DecideWhatIsCurrentAnimation();
 	CheckBossStatus();
-
-	//MakeHPBox();
-
-	char buf[255];
-	sprintf(buf, "state : %d, distance : %f, \n player X : %f, player Y : %f \n unitVec X : %f, unitVec Y : %f", getState()->returnStateNumber(), getDistanceFromPlayer(), getPlayerPosition().x, getPlayerPosition().y, getUnitVecToPlayer().x, getUnitVecToPlayer().y);
-	CCLOG(buf);
-
 
 	MakeMaxHPBox();
 	MakeHPBox();
@@ -245,7 +233,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 	int x = 0;
 	int y = 0;
 
-	if (abs(InputUnitVec.x) > IgnoreMoveRange)
+	if (abs(InputUnitVec.x) > ENEMY_IGNORE_MOVE_RANGE)
 	{
 		x = (InputUnitVec.x > 0) ? 1 : -1;
 	}
@@ -254,7 +242,7 @@ void Enemy::TranslateUnitVec(Vec2 InputUnitVec)
 		x = 0;
 	}
 
-	if (abs(InputUnitVec.y) > IgnoreMoveRange)
+	if (abs(InputUnitVec.y) > ENEMY_IGNORE_MOVE_RANGE)
 	{
 		y = (InputUnitVec.y > 0) ? 1 : -1;
 	}
@@ -315,38 +303,6 @@ void Enemy::CalculateBodyAnchorPoint()
 	m_BodyAnchorPoint = getPosition();
 }
 
-void Enemy::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
-{
-	if (getChildByTag(tag) != nullptr)
-	{
-		removeChildByTag(tag);
-	}
-	Vec2 vertex[2] = { Vec2(position.x - boxInfo.x / 2,position.y - boxInfo.y / 2),
-		Vec2(position.x + boxInfo.x / 2,position.y + boxInfo.y / 2) };
-	auto box = DrawNode::create();
-	if (tag == GREEN_BOX_TAG)
-	{
-		box->drawRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
-	}
-	else if (tag == RED_BOX_TAG)
-	{
-		box->drawRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
-	}
-	else if (tag == RED_BOX_SOLID_TAG)
-	{
-		box->drawSolidRect(vertex[0], vertex[1], Color4F(1.0f, 0.0f, 0.0f, 1.0f));
-	}
-	else if (tag == GREEN_BOX_SOLID_TAG)
-	{
-		box->drawSolidRect(vertex[0], vertex[1], Color4F(0.0f, 1.0f, 0.0f, 1.0f));
-	}
-	else
-	{
-		return;
-	}
-
-	addChild(box, 0, tag);
-}
 
 bool Enemy::Stop()
 {
@@ -411,7 +367,6 @@ bool Enemy::Attack()
 
 
 	CalculateAttackAnchorPoint();
-	//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRangeForCollide, m_RedBoxTag);
 
 	return true;
 }
@@ -426,7 +381,7 @@ void Enemy::EnemyAttackSound()
 		char buf[255];
 		auto i = EnemyManager::getInstance()->getSoundPlayNum();
 		sprintf(buf, "%s%d%s", getAttackSound(), i, getAttackSoundExtension());
-		i = (i + 1) % 5;
+		i = (i + 1) % ENEMY_ATTACK_SOUND_NUMBER;
 
 		EnemyManager::getInstance()->setSoundPlayNum(i);
 
@@ -531,18 +486,15 @@ bool Enemy::setAttackedDamage(int damage)
 	}
 	else
 	{
-		const int TintActionTag = 2;
-		const float redTime = 0.3f;
 		// TintBy를 사용하여 빨갛게 되는 액션과 다시 돌아오는 Action을 만든다.
-		m_pAnimationMaker->GetSprite()->stopActionByTag(TintActionTag);
-		TintBy* redAction = TintBy::create(redTime, 0, -255, -255);
-		TintBy* recoveryAction = TintBy::create(redTime, 0, 255, 255);
+		m_pAnimationMaker->GetSprite()->stopActionByTag(TINT_ACTION_TAG);
+		TintBy* redAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, -255, -255);
+		TintBy* recoveryAction = TintBy::create(ENEMY_RED_ACTION_TIME, 0, 255, 255);
 
 		auto seqAction = Sequence::create(redAction, recoveryAction, nullptr);
-		seqAction->setTag(TintActionTag);
+		seqAction->setTag(TINT_ACTION_TAG);
 		m_pAnimationMaker->GetSprite()->runAction(seqAction);
 		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(getHitedSound(), false);
-
 	}
 
 	return true;
@@ -557,7 +509,6 @@ void Enemy::CreateEffect(int damage)
 {
 	m_pEffectManager->MakeEffect(damage);
 }
-
 
 int Enemy::MakeHPBox()
 {
@@ -603,7 +554,6 @@ int Enemy::MakeMaxHPBox()
 // 현재 Player의 Position에 Boss 공격용 텐타클을 만들어주는 함수.
 void Enemy::MakeTentacle()
 {
-	// TODO :: 매직넘버 없애고 보스 체력에 반비례하여 빠르게 만들어지게.
 	auto tentacle = Tentacle::create(getPlayerPosition(), getAttackFrequency() * 2, getDamage(), getMapPointer(), getInnerCollideManager(), true);
 	getMapPointer()->addChild(tentacle);
 	return;
@@ -613,64 +563,62 @@ void Enemy::MakeTentacle()
 void Enemy::Strike()
 {
 	// 8방향에 대해서 텐타클 만들어주기.
-	const float distance = 45.f;
-	const int tentacleNumber = 4;
-	const float StrikeCorrectionFloat = 0.7f;
+
 	auto bossPosition = getPosition();
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x, bossPosition.y + distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x, bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y + distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y);
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y);
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x + distance * (i + 1), bossPosition.y - distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x + STRIKE_DISTANCE * (i + 1), bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x, bossPosition.y - distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x, bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y - distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y - STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y);
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y);
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
-	for (int i = 0; i < tentacleNumber; ++i)
+	for (int i = 0; i < STRIKE_TENTACLE_NUMBER; ++i)
 	{
-		auto createPosition = Vec2(bossPosition.x - distance * (i + 1), bossPosition.y + distance * (i + 1));
-		auto duration = getAttackFrequency() * (i + 1) * StrikeCorrectionFloat;
-		auto tentacle = Tentacle::create(createPosition, duration, 20.f, getMapPointer(), getInnerCollideManager(), false);
+		auto createPosition = Vec2(bossPosition.x - STRIKE_DISTANCE * (i + 1), bossPosition.y + STRIKE_DISTANCE * (i + 1));
+		auto duration = getAttackFrequency() * (i + 1) * STRIKE_CORRECTION_FLOAT;
+		auto tentacle = Tentacle::create(createPosition, duration, getDamage(), getMapPointer(), getInnerCollideManager(), false);
 		getMapPointer()->addChild(tentacle);
 	}
 	return;
@@ -686,20 +634,20 @@ void Enemy::CheckBossStatus()
 	}
 
 	// 남은 체력의 비율을 계산한 뒤, 
-	setRemainHpPercent(getHP() / getMaxHP());
+	auto hpRatio = (float)getHP() / (float)getMaxHP();
+	setRemainHpPercent(hpRatio);
 
-	// TODO :: 매직넘버
 	// 남은 체력 비율에 반비례하여 AttackFrequency 결정, 그리고 Summon.
-	if (!getIsRaged30() && (getRemainHpPercent() < 0.3))
+	if (!getIsRaged30() && (getRemainHpPercent() < ANCIENT_TREE_RAGE30))
 	{
 		setIsRaged30(true);
-		setAttackFrequency(0.7f);
+		setAttackFrequency(ANCIENT_TREE_RAGE30_RATE);
 		changeState<BossState_Summon>();
 	}
-	else if (!getIsRaged60() && (getRemainHpPercent() < 0.6))
+	else if (!getIsRaged60() && (getRemainHpPercent() < ANCIENT_TREE_RAGE60))
 	{
 		setIsRaged60(true);
-		setAttackFrequency(1.1f);
+		setAttackFrequency(ANCIENT_TREE_RAGE60_RATE);
 		changeState<BossState_Summon>();
 	}
 

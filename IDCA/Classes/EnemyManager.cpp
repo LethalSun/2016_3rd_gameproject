@@ -9,11 +9,7 @@
 #include "EnemyState_Dead.h"
 #include <math.h>
 
-const int STAGE_ONE_ENEMY_NUM = 20;
-const char CHOCO_PLIST[] = "Choco.plist";
-const char ATROCE_PLIST[] = "Atroce.plist";
-const char ANCIENT_TREE_PLIST[] = "AncientTree.plist";
-const char TRIGGER_SOUND[] = "Sound/StageOne_triggerOn.wav";
+
 
 // EnemyManager 생성자.
 // EnemyVector에 Stage 1에 나올 Enemy의 개수만큼 예약해 놓고, 생성 함수 포인터를 핸들러에 담아준다. 
