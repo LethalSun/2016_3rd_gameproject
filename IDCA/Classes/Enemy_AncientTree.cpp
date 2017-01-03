@@ -56,9 +56,9 @@ bool Enemy_AncientTree::init(const Vec2 initPosition)
 	changeState<EnemyState_Search>();
 	setBeforeState(getState());
 
-	positiionOfHp = Vec2(131, 150);
-	sizeOfHp_x = 0.5;
-	sizeOfHp_y = 0.5;
+	positiionOfHp = Vec2(POSITIONOFHP_ANCIENTTREE_X, POSITIONOFHP_ANCIENTTREE_Y);
+	sizeOfHp_x = SIZEOFHP_X_ANCIENTTREE;
+	sizeOfHp_y = SIZEOFHP_Y_ANCIENTTREE;
 
 	scheduleUpdate();
 	return true;

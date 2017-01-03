@@ -31,13 +31,13 @@ bool EscMenu::init()
 
 	/// 메뉴를 넣어보자
 
-	auto returnToMain = MenuItemFont::create("Return to Main", CC_CALLBACK_1(EscMenu::returnToMain, this));
+	auto returnToMain = MenuItemFont::create(RETURNTOMAIN, CC_CALLBACK_1(EscMenu::returnToMain, this));
 
-	auto returnToGame = MenuItemFont::create("Return to Game", CC_CALLBACK_1(EscMenu::returnToGame, this));
+	auto returnToGame = MenuItemFont::create(RETURNTOGAME, CC_CALLBACK_1(EscMenu::returnToGame, this));
 
 	auto escMenu = Menu::create(returnToMain, returnToGame, NULL);
 
-	escMenu->alignItemsVerticallyWithPadding(300.f);
+	escMenu->alignItemsVerticallyWithPadding(MenuPadding);
 	addChild(escMenu);
 
 	scheduleUpdate();

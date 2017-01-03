@@ -11,7 +11,7 @@ bool ManageEnemyMove::init()
 	{
 		return false;
 	}
-	this->setName("Enemy Mover Component");
+	this->setName(ENEMYMOVERNAME);
 	m_EnemyManager = m_EnemyManager->getInstance();
 
 	return true;
@@ -37,7 +37,7 @@ Vec2 ManageEnemyMove::update(Vec2 position, Vec2 unitVec, TMXTiledMap* map, cons
 	auto movable = false;
 	auto checkCurrent = false;
 
-	checkCurrent = m_pManageMap->checkBlocked(position, Vec2(0, 0), map, enemyVector);
+	checkCurrent = m_pManageMap->checkBlocked(position, Vec2(ZEROVEC, ZEROVEC), map, enemyVector);
 	
 	if (checkCurrent == false)
 	{

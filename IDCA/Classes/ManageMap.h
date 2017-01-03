@@ -22,8 +22,6 @@ public:
 	
 	bool checkChangeMap(const Vec2 position,const TMXTiledMap * map);
 
-	Vec2 getStartPosition();
-	Vec2 startPosition;
 
 	
 };

@@ -109,7 +109,7 @@ void StageOne::update(float delta)
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 	position = m_pPlayerCharacterManager->getPlayerPosition();
 
-	if (state == 0 || state == 2)
+	if (state == STATE::STOP || state == STATE::MOVE)
 	{
 		Vec2 backgroundposition = m_pMap->getPosition();
 		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0], m_InputLayer->GetInputUnitVec()[1]);

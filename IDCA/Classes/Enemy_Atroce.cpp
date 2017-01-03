@@ -58,9 +58,11 @@ bool Enemy_Atroce::init(const Vec2 initPosition)
 
 	changeState<EnemyState_Search>();
 	setBeforeState(getState());
-	positiionOfHp = Vec2(80, 170);
-	sizeOfHp_x = 0.3;
-	sizeOfHp_y = 0.2;
+
+
+	positiionOfHp = Vec2(POSITIONOFHP_ATROCE_X, POSITIONOFHP_ATROCE_Y);
+	sizeOfHp_x = SIZEOFHP_X_ATROCE;
+	sizeOfHp_y = SIZEOFHP_Y_ATROCE;
 
 	return true;
 }

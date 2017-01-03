@@ -58,9 +58,11 @@ bool Enemy_Choco::init(const Vec2 initPosition)
 
 	changeState<EnemyState_Search>();
 	setBeforeState(getState());
-	positiionOfHp = Vec2(29, 36);
-	sizeOfHp_x = 0.1;
-	sizeOfHp_y = 0.2;
+
+
+	positiionOfHp = Vec2(POSITIONOFHP_CHOCO_X, POSITIONOFHP_CHOCO_Y);
+	sizeOfHp_x = SIZEOFHP_X_CHOCO;
+	sizeOfHp_y = SIZEOFHP_Y_CHOCO;
 
 	scheduleUpdate();
 	return true;

@@ -177,9 +177,74 @@ const int SKILL_DAMAGE = 5;
 const char SKILL_IMAGE[] = "Hammer.png";
 const char SKILL_IMAGE_GRAY[] = "HammerGray.png";
 const char PROJECTILE_IMAGE[] = "hammerProjectile.png";
+const char DAMAGE_FONT[] = "Effect/damageFont.fnt";
+const char EFFECT_IMAGE[] = "Effect/effect.png";
 const float SKILL_DURATION = 1.f;
 const float MAX_SKILL_RANGE = 400.f; // .=. sqrt(1280^2 + 720^2)
 const float MAX_SKILL_COLIDE_RANGE = 70.f;
 const float SKILL_ROTATE_TIME = 0.1f;
 const float SKILL_ROTATE_DEGREE = 360.f;
 const float SCALE_PROJECTILE = 2.f;
+
+
+
+const char RETURNTOMAIN[] = "Return to Main";
+const char RETURNTOGAME[] = "Return to Game";
+const char ENEMYMOVERNAME[] = "Enemy Mover Component";
+const char THUMBNAIL[] = "Board/archbishop.PNG";
+const char MAXHPBAR[] = "Board/hpMax.png";
+const char HPBAR[] = "Board/hp.png";
+const char HAMMER[] = "Hammer.png";
+const char HAMMERGRAY[] = "HammerGray.png";
+
+const char HAMMERNAME[] = "Hammer";
+const char HAMMERGRAYNAME[] = "Hammer Gray";
+
+
+const float MenuPadding = 300.f;
+
+
+
+
+const float EFFECT_POSITION_X = 0;
+const float EFFECT_POSITION_Y = 50;
+
+
+const float EFFECT_SCALE = 1.5f;
+
+const float LABEL_POSITION_X = 30.f;
+const float LABEL_POSITION_Y = 0.f;
+
+const float LABEL_SCALE = 2.0f;
+const float EFFECT_MOVE_TIME = 0.8f;
+const float EFFECT_ELASTIC_TIME = 0.5f;
+
+const float POSITIONOFHP_CHOCO_X =29.f;
+const float POSITIONOFHP_CHOCO_Y = 36.f;
+
+const float POSITIONOFHP_ATROCE_X = 80.f;
+const float POSITIONOFHP_ATROCE_Y = 170.f;
+
+const float POSITIONOFHP_ANCIENTTREE_X = 131.f;
+const float POSITIONOFHP_ANCIENTTREE_Y = 150.f;
+
+const float SIZEOFHP_X_CHOCO = 0.1f;
+const float SIZEOFHP_Y_CHOCO = 0.1f;
+
+const float SIZEOFHP_X_ATROCE = 0.3f;
+const float SIZEOFHP_Y_ATROCE = 0.2f;
+
+const float SIZEOFHP_X_ANCIENTTREE = 0.5f;
+const float SIZEOFHP_Y_ANCIENTTREE = 0.5f;
+
+const float ZEROVEC = 0;
+const int SIZEOFTILE = 32;
+const int ENDOFTILE = 0;
+
+const int TILEGID_1_FALSE = 0;
+const int TILEGID_2_TRUE = 0;
+
+const int THUMBNAIL_SCALE = 2;
+
+const float THUMNAIL_POSITION_X = 10.f;
+const float THUMNAIL_POSITION_Y = 750.f;

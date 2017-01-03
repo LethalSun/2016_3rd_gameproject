@@ -29,10 +29,10 @@ bool PlayerMenu::init(PlayerCharacter* player)
 		return false;
 	}
 
-	m_pFace = Sprite::create("Board/archbishop.PNG");
-	m_pFace->setScale(2);
+	m_pFace = Sprite::create(THUMBNAIL);
+	m_pFace->setScale(THUMBNAIL_SCALE);
 	m_pFace->setAnchorPoint(Vec2(0, 1));
-	m_pFace->setPosition(10, 750);
+	m_pFace->setPosition(Vec2(THUMNAIL_POSITION_X, THUMNAIL_POSITION_Y));
 
 	m_pPlayer = player;
 	m_pSkill1 = player->GetAttackSkillPointer();
@@ -87,7 +87,7 @@ int PlayerMenu::MakeHPBox()
 
 
 
-	auto hpCurrent = Sprite::create("Board/hp.png");
+	auto hpCurrent = Sprite::create(HPBAR);
 	hpCurrent->setPosition(Vec2(m_pFace->getContentSize().width + 20, m_pFace->getContentSize().height / 2));
 	hpCurrent->setAnchorPoint(Vec2(0,0));
 	
@@ -104,7 +104,7 @@ int PlayerMenu::MakeMaxHPBox()
 {
 
 
-	auto hpMax = Sprite::create("Board/hpMax.png");
+	auto hpMax = Sprite::create(MAXHPBAR);
 	hpMax->setPosition(Vec2(m_pFace->getContentSize().width + 20, m_pFace->getContentSize().height / 2));
 
 	hpMax->setAnchorPoint(Vec2(0, 0));
@@ -118,7 +118,7 @@ int PlayerMenu::MakeMaxHPBox()
 
 void PlayerMenu::MakeSkillBox()
 {
-	auto hammerSkill = Sprite::create("Hammer.png");
+	auto hammerSkill = Sprite::create(HAMMER);
 	hammerSkill->setScale(0.2);
 
 	auto size = hammerSkill->getContentSize();
@@ -128,13 +128,13 @@ void PlayerMenu::MakeSkillBox()
 	hammerSkill->setPosition(hammerSkill->getContentSize().width*0.5, hammerSkill->getPosition().y );
 	
 
-	hammerSkill->setName("hammer");
+	hammerSkill->setName(HAMMERNAME);
 	m_pFace->addChild(hammerSkill);
 
-	auto hammerGray = Sprite::create("HammerGray.png");
+	auto hammerGray = Sprite::create(HAMMERGRAY);
 	hammerGray->setScale(0.2);
 	hammerGray->setPosition(hammerSkill->getPosition());
-	hammerGray->setName("hammerGray");
+	hammerGray->setName(HAMMERGRAYNAME);
 	m_pFace->addChild(hammerGray);
 
 
@@ -146,7 +146,7 @@ void PlayerMenu::CheckCoolTime(Skill* skill)
 
 	if (remainCoolTime == 0)
 	{
-		auto hammerGray = m_pFace->getChildByName("hammerGray");
+		auto hammerGray = m_pFace->getChildByName(HAMMERGRAYNAME);
 		hammerGray->setVisible(false);
 
 		auto biggerAction = ScaleTo::create(0.3f, 1.25f *0.2);
@@ -154,13 +154,13 @@ void PlayerMenu::CheckCoolTime(Skill* skill)
 
 		auto seqAction = Sequence::create(biggerAction, smallerAction, nullptr);
 
-		auto hammer = m_pFace->getChildByName("hammer");
+		auto hammer = m_pFace->getChildByName(HAMMERNAME);
 		hammer->runAction(seqAction);
 
 	}
 	else
 	{
-		auto hammerGray = m_pFace->getChildByName("hammerGray");
+		auto hammerGray = m_pFace->getChildByName(HAMMERGRAYNAME);
 		hammerGray->setVisible(true);
 
 	}

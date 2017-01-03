@@ -71,12 +71,12 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 		}
 		else
 		{
-			if (backgroundPosition.x > 0)
+			if (backgroundPosition.x > ENDOFTILE)
 			{
-				backgroundPosition.x = 0;
+				backgroundPosition.x = ENDOFTILE;
 			}
 			unitVec.x *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
-			if (position.x - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
+			if (position.x - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < (SIZEOFTILE/2))
 			{
 				unitVec.x = 0;
 			}
@@ -84,16 +84,16 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 	}
 	else if (unitVec.x > 0)
 	{
-		if (backgroundPosition.x > -(map->getMapSize().width * 32 - winSize.width) && position.x >= winSize.width / 2)
+		if (backgroundPosition.x > -(map->getMapSize().width * SIZEOFTILE - winSize.width) && position.x >= winSize.width / 2)
 		{
 			backgroundPosition.x -= TEMP_DEFINE::MAP_MOVE_SPEED;
 			backgroundXMovable = true;
 		}
 		else
 		{
-			if (backgroundPosition.x <= -(map->getMapSize().width * 32 - winSize.width))
+			if (backgroundPosition.x <= -(map->getMapSize().width * SIZEOFTILE - winSize.width))
 			{
-				backgroundPosition.x = -(map->getMapSize().width * 32 - winSize.width);
+				backgroundPosition.x = -(map->getMapSize().width * SIZEOFTILE - winSize.width);
 			}
 			unitVec.x *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.x + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.width)
@@ -112,12 +112,12 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 		}
 		else
 		{
-			if (backgroundPosition.y >= 0)
+			if (backgroundPosition.y >= ENDOFTILE)
 			{
-				backgroundPosition.y = 0;
+				backgroundPosition.y = ENDOFTILE;
 			}
 			unitVec.y *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
-			if (position.y - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < 16)
+			if (position.y - TEMP_DEFINE::CHACRACTER_MOVE_SPEED < (SIZEOFTILE/2))
 			{
 				unitVec.y = 0;
 			}
@@ -125,16 +125,16 @@ Vec2 ManageMove::checkBackgroundMovable(const Vec2 position, Vec2 unitVec, const
 	}
 	else if (unitVec.y > 0)
 	{
-		if (backgroundPosition.y > -(map->getMapSize().height * 32 - winSize.height) && position.y >= winSize.height / 2)
+		if (backgroundPosition.y > -(map->getMapSize().height * SIZEOFTILE - winSize.height) && position.y >= winSize.height / 2)
 		{
 			backgroundPosition.y -= TEMP_DEFINE::MAP_MOVE_SPEED;
 			backgroundYMovable = true;
 		}
 		else
 		{
-			if (backgroundPosition.y <= -(map->getMapSize().height * 32 - winSize.height))
+			if (backgroundPosition.y <= -(map->getMapSize().height * SIZEOFTILE - winSize.height))
 			{
-				backgroundPosition.y = -(map->getMapSize().height * 32 - winSize.height);
+				backgroundPosition.y = -(map->getMapSize().height * SIZEOFTILE - winSize.height);
 			}
 			unitVec.y *= TEMP_DEFINE::CHACRACTER_MOVE_SPEED;
 			if (position.y + TEMP_DEFINE::CHACRACTER_MOVE_SPEED >= winSize.height)

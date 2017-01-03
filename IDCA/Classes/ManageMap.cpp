@@ -6,10 +6,7 @@
 TMXTiledMap* ManageMap::loadMap(const char* mapName)
 {
 	m_pMap = TMXTiledMap::create(mapName);
-	/*
-		auto objectGroup = m_pMap->getObjectGroup("Object layer 1");
-		auto startObject = objectGroup->getObject("Start");
-		*/
+
 	return m_pMap;
 }
 
@@ -33,7 +30,7 @@ Vec2 ManageMap::tileCoordForPosition(const Vec2 position, const TMXTiledMap* map
 
 bool ManageMap::checkBlocked(const Vec2 position, const Vec2 unitVec, const TMXTiledMap* map)
 {
-	auto nextPosition = position + unitVec * 16;
+	auto nextPosition = position + unitVec * SIZEOFTILE/2;
 	auto tileCoord = tileCoordForPosition(nextPosition, map);
 
 	if ((tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width) ||
@@ -58,10 +55,10 @@ bool ManageMap::checkBlocked(Vec2 position, const Vec2 unitVec, const TMXTiledMa
 	auto checkWithMap = true;
 	auto checkWithEnemy = true;
 
-	auto tileCoord = tileCoordForPosition(position + unitVec * 16, map);
+	auto tileCoord = tileCoordForPosition(position + unitVec * (SIZEOFTILE/2), map);
 
-	if ((tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width) ||
-		(tileCoord.y < 0 || tileCoord.y >= map->getMapSize().height))
+	if ((tileCoord.x < ENDOFTILE || tileCoord.x >= map->getMapSize().width) ||
+		(tileCoord.y < ENDOFTILE || tileCoord.y >= map->getMapSize().height))
 	{
 		checkWithMap = false;
 	}
@@ -69,7 +66,7 @@ bool ManageMap::checkBlocked(Vec2 position, const Vec2 unitVec, const TMXTiledMa
 	auto tileGid1 = map->layerNamed(TEMP_DEFINE::TILELAYER1)->tileGIDAt(tileCoord);
 	auto tileGid2 = map->layerNamed(TEMP_DEFINE::TILELAYER2)->tileGIDAt(tileCoord);
 
-	if (tileGid1 == 0 || tileGid2 != 0)
+	if (tileGid1 == TILEGID_1_FALSE || tileGid2 != TILEGID_2_TRUE)
 	{
 		checkWithMap = false;
 	}
@@ -111,8 +108,8 @@ bool ManageMap::checkChangeMap(const Vec2 position, const TMXTiledMap* map)
 {
 	auto tileCoord = tileCoordForPosition(position, map);
 
-	if (tileCoord.x < 0 || tileCoord.x >= map->getMapSize().width ||
-		tileCoord.y < 0 || tileCoord.y >= map->getMapSize().height)
+	if (tileCoord.x < ENDOFTILE || tileCoord.x >= map->getMapSize().width ||
+		tileCoord.y < ENDOFTILE || tileCoord.y >= map->getMapSize().height)
 	{
 		return false;
 	}
