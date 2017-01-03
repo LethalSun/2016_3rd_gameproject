@@ -149,6 +149,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClCompile Include="..\Classes\AnimationMaker.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\Board.cpp" />
     <ClCompile Include="..\Classes\BossState_Attack.cpp" />
     <ClCompile Include="..\Classes\BossState_Rush.cpp" />
     <ClCompile Include="..\Classes\BossState_Strike.cpp" />
@@ -171,6 +172,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\Enemy_AncientTree.cpp" />
     <ClCompile Include="..\Classes\Enemy_Atroce.cpp" />
     <ClCompile Include="..\Classes\Enemy_Choco.cpp" />
+    <ClCompile Include="..\Classes\EscMenu.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\IniReader.cpp" />
     <ClCompile Include="..\Classes\InputLayer.cpp" />
@@ -182,6 +184,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     </ClCompile>
     <ClCompile Include="..\Classes\PlayerCharacter.cpp" />
     <ClCompile Include="..\Classes\PlayerCharacterManager.cpp" />
+    <ClCompile Include="..\Classes\PlayerMenu.cpp" />
     <ClCompile Include="..\Classes\Projectile.cpp" />
     <ClCompile Include="..\Classes\ProjectileListener.cpp" />
     <ClCompile Include="..\Classes\Skill.cpp" />
@@ -192,6 +195,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClInclude Include="..\Classes\AnimationMaker.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\Board.h" />
     <ClInclude Include="..\Classes\BossState_Attack.h" />
     <ClInclude Include="..\Classes\BossState_Rush.h" />
     <ClInclude Include="..\Classes\BossState_Strike.h" />
@@ -214,6 +218,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\Enemy_AncientTree.h" />
     <ClInclude Include="..\Classes\Enemy_Atroce.h" />
     <ClInclude Include="..\Classes\Enemy_Choco.h" />
+    <ClInclude Include="..\Classes\EscMenu.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\IniReader.h" />
     <ClInclude Include="..\Classes\InputLayer.h" />
@@ -223,6 +228,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\pch.h" />
     <ClInclude Include="..\Classes\PlayerCharacter.h" />
     <ClInclude Include="..\Classes\PlayerCharacterManager.h" />
+    <ClInclude Include="..\Classes\PlayerMenu.h" />
     <ClInclude Include="..\Classes\Projectile.h" />
     <ClInclude Include="..\Classes\ProjectileListener.h" />
     <ClInclude Include="..\Classes\Skill.h" />

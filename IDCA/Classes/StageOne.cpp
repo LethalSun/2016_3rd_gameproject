@@ -12,6 +12,7 @@
 #include "CollideManager.h"
 #include "DeadScene.h"
 #include "PlayerCharacter.h"
+#include "Board.h"
 
 const char BGM[] = "Sound/Forbidden.mp3";
 
@@ -82,6 +83,15 @@ bool StageOne::init()
 	m_pEnemyManager->setInnerCollideManager(m_pCollideManager);
 	//m_pEnemyManager->StageOneSetting();
 	m_pEnemyManager->SummonAncientTree();
+
+
+
+
+	//메뉴
+	m_pBoard = Board::create(m_pPlayerCharacterManager->GetCharacter());
+	addChild(m_pBoard);
+
+
 
 	//임시 디버깅용 코드
 

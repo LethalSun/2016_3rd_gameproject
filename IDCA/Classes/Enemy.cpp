@@ -49,6 +49,9 @@ bool Enemy::init(const Vec2 initPosition)
 	setIsSleeping(false);
 	
 
+	setBeforePosition(Vec2(-1, -1));
+
+
 	return true;
 }
 
@@ -100,7 +103,55 @@ void Enemy::CalDistanceFromOrigin()
 // Delta 값을 받아 스프라이트를 움직이는 함수.
 void Enemy::MoveEnemy(const float deltaTime)
 {
+
+	auto beforePosition = getPosition();
 	auto position = m_pManageEnemyMove->update(this->getPosition(), getTranslatedUnitVec(), getMapPointer(), deltaTime, this);
+
+	//줄서서 기다리지 않아보자.
+	auto unitVec = getTranslatedUnitVec();
+
+	while (beforePosition == position)
+	{
+		if (unitVec.x == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x += 1;
+			}
+			else
+			{
+				unitVec.x += -1;
+			}
+		}
+		else if (unitVec.y == 0)
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.y += 1;
+			}
+			else
+			{
+				unitVec.y += -1;
+			}
+		}
+		else
+		{
+			auto randomValue = rand() % 2;
+			if (randomValue == 0)
+			{
+				unitVec.x = 0;
+			}
+			else
+			{
+				unitVec.y = 0;
+			}
+
+		}
+		position = m_pManageEnemyMove->update(getPosition(), unitVec, getMapPointer(), deltaTime, this);
+	}
+
 
 	this->setPosition(position);
 	return;

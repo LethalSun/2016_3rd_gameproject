@@ -11,6 +11,7 @@ class ManageEnemyMove;
 class EnemyManager;
 class Enemy_Choco;
 class Enemy;
+class Board;
 
 class StageOne : public Layer
 {
@@ -45,4 +46,5 @@ private:
 	// Enemy Test
 	EnemyManager* m_pEnemyManager;
 	Enemy_Choco* m_pEnemy;
+	Board* m_pBoard;
 };

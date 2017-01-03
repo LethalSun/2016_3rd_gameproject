@@ -59,6 +59,7 @@ public:
 	CC_SYNTHESIZE(bool, m_FlagBeAttacked, FlagBeAttacked);
 	CC_SYNTHESIZE(bool, m_IsDead, IsDead);
 	CC_SYNTHESIZE(bool, m_IsSleeping, IsSleeping);
+	CC_SYNTHESIZE(Vec2, m_BeforePosition, BeforePosition);
 
 	/* Only For Boss */
 	CC_SYNTHESIZE(int, m_AttackNumber, AttackNumber);

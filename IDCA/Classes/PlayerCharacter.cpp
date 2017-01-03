@@ -121,10 +121,18 @@ int PlayerCharacter::GetHP()
 {
 	return m_HP;
 }
+int PlayerCharacter::GetMaxHP()
+{
+	return m_MaxHP;
+}
 
 void PlayerCharacter::SetHP(int hp)
 {
 	m_HP = hp;
+}
+int PlayerCharacter::GetMaxSP()
+{
+	return m_MaxSP;
 }
 
 int PlayerCharacter::GetSP()
@@ -174,7 +182,7 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-	MakeHPBox();
+	//MakeHPBox();
 	SaveBeforeStateAndDirection();
 	CheckStopState();
 	m_AttackSkill->IncreaseCooltime(dt);
