@@ -308,7 +308,7 @@ bool Enemy::Stop()
 
 bool Enemy::IsStopContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::STOP
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::STOP
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{
@@ -332,7 +332,7 @@ bool Enemy::Move()
 
 bool Enemy::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::MOVE
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{
@@ -391,7 +391,7 @@ void Enemy::EnemyAttackSound()
 bool Enemy::IsAttackContinued()
 {
 	// 현재 STATE가 Attack인지, 직전 방향과 현재 방향이 맞는지, 직전 STATE와 현재 STATE가 맞는지 확인.
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::ATTACK
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::ATTACK
 		&& (getBeforeDirection() == getDirection())
 		&& (getBeforeState() == getState()))
 	{

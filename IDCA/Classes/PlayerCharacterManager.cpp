@@ -19,6 +19,7 @@ PlayerCharacterManager * PlayerCharacterManager::create(const char * fileName, c
 {
 	//각각의 직업마다 별도의 공격과피격범위를 지정해 주기 위한 부분
 	PlayerCharacterManager* pManager;
+
 	String filename = fileName;
 	if (filename.compare("archbishop") == 0)
 	{

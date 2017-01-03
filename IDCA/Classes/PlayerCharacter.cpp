@@ -84,7 +84,6 @@ bool PlayerCharacter::init(const char * fileName, const char * fileExtention)
 	m_pLabel = Label::create();
 	m_pLabel->setColor(ccc3(255, 0, 0));
 	addChild(m_pLabel, 5);
-	//addChild(Sprite);
 
 	return true;
 }
@@ -156,11 +155,9 @@ bool PlayerCharacter::SetAttackedDamage(int damage)
 
 void PlayerCharacter::update(float dt)
 {
-	//m_pAnimationMaker->GetSprite()->stopAllActions();
 	if (m_State == STATE::ATTACK)
 	{
 		Attack();
-		//MakeBox(m_AttackAnchorPointForDebugBox, m_AttackRange, RED_BOX_TAG);
 	}
 	else if (m_State == STATE::MOVE)
 	{
@@ -174,7 +171,6 @@ void PlayerCharacter::update(float dt)
 	{
 		skill();
 	}
-	MakeHPBox();
 	SaveBeforeStateAndDirection();
 	CheckStopState();
 	m_AttackSkill->IncreaseCooltime(dt);
@@ -225,7 +221,7 @@ void PlayerCharacter::skill()
 
 void PlayerCharacter::CheckStopState()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == -1)
+	if (m_pAnimationMaker->whichAnimationContinued() == -1)
 	{
 		if (m_State == STATE::ATTACK)
 		{
@@ -301,7 +297,7 @@ void PlayerCharacter::SetAttackChecked()
 
 bool PlayerCharacter::IsAttackContinued()
 {
-	auto state = m_pAnimationMaker->IsAnimationContinued();
+	auto state = m_pAnimationMaker->whichAnimationContinued();
 	if (state == STATE::ATTACK
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
@@ -310,14 +306,13 @@ bool PlayerCharacter::IsAttackContinued()
 	}
 	else
 	{
-		//m_State = STATE::STOP;
 		return false;
 	}
 }
 
 bool PlayerCharacter::IsMoveContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::MOVE
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::MOVE
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -325,14 +320,13 @@ bool PlayerCharacter::IsMoveContinued()
 	}
 	else
 	{
-		//m_State = STATE::STOP;
 		return false;
 	}
 }
 
 bool PlayerCharacter::IsSkillAttackContinued()
 {
-	if (m_pAnimationMaker->IsAnimationContinued() == STATE::SKILL
+	if (m_pAnimationMaker->whichAnimationContinued() == STATE::SKILL
 		&& m_BeforeDirection == m_Direction
 		&& m_BeforeState == m_State)
 	{
@@ -340,7 +334,6 @@ bool PlayerCharacter::IsSkillAttackContinued()
 	}
 	else
 	{
-		//m_State = STATE::STOP;
 		return false;
 	}
 }
@@ -382,24 +375,6 @@ void PlayerCharacter::MakeBox(Vec2 position, Vec2 boxInfo, const int tag)
 	}
 
 	addChild(box, 0, tag);
-}
-
-int PlayerCharacter::MakeHPBox()
-{
-	// TODO :: 에너미 처럼 바꾸기. (혹은 Sprite로 대체하기)
-	auto HPBarStart = Vec2(0, m_BodyRange.y / 2);
-	auto HPBarEnd = Vec2(m_BodyRange.x, 10.f);
-	auto range = Vec2((m_BodyRange.x*(float)m_HP) / (float)m_MaxHP, 10.f);
-
-	char buf[255];
-	sprintf(buf, "HP: %d cooltime: %f", GetHP(), m_AttackSkill->GetRemainCooltime());
-	m_pLabel->setPosition(HPBarStart + Vec2(0, 20));
-	m_pLabel->setScale(3.f);
-	m_pLabel->setString(buf);
-
-	MakeBox(HPBarStart, HPBarEnd, RED_BOX_SOLID_TAG);
-	MakeBox(HPBarStart, range, GREEN_BOX_SOLID_TAG);
-	return 0;
 }
 
 Skill * PlayerCharacter::GetAttackSkillPointer()

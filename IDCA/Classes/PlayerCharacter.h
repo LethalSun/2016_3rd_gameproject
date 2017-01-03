@@ -1,4 +1,14 @@
 #pragma once
+
+/************************************************************************/
+/*
+CLASS		: PlayerCharacter
+Author		: 김현우
+역할			: 캐릭터의 정보를 가지고 다른 클래스와 상호작용해서 데이터를 던저주고 받아서 저장하는 함수
+
+*/
+/************************************************************************/
+
 class AnimationMaker;
 class Skill;
 #include <functional>
@@ -15,11 +25,13 @@ public:
 	//캐릭터의 상태를 확인하고 설정하는 함수
 	int GetState();
 
+	//캐릭터의 상태를 설정하는 함수
 	void SetState(int state);
 
 	//캐릭터의 방향을 확인하고 설정하는 함수
 	int GetDirection();
 
+	//캐릭터의 방향을 설정하는 함수
 	void SetDirection(int direction);
 
 	//캐릭터의 체력을 확인하고 설정하는 함수
@@ -31,8 +43,10 @@ public:
 	int GetSP();
 
 	void SetSP(int sp);
+
 	//데미지를 확인하고 설정하는 함수
 	int GetDamage();
+
 	void SetDamage(int);
 
 	//업데이트 함수
@@ -55,10 +69,12 @@ public:
 
 	//공격 앵커포인트를 확인,설정하는 함수
 	Vec2 GetAttackAnchorPoint();
+
 	void SetAttackAnchorPoint(Vec2);
 
 	//피격의 앵커포인트를 확인,설정하는 함수
 	Vec2 GetBodyAnchorPoint();
+
 	void SetBodyAnchorPoint(Vec2);
 
 	//공격의 범위를 확인,설정하는 함수
@@ -80,21 +96,27 @@ public:
 
 	//애니메이션을 계속해줘야 하는지 확인하는 함수
 	bool IsAttackContinued();
+
 	bool IsMoveContinued();
+
 	bool IsSkillAttackContinued();
+
 	//공격을 받았을때 체력을 감소 시키는 함수
 	bool SetAttackedDamage(int);
+
 	PlayerCharacter(const Vec2, const Vec2);
+
 	~PlayerCharacter();
 
 	//스킬의 포인터를 받는 함수.
 	Skill* GetAttackSkillPointer();
+
 	//스킬이 발동되었을때 호출되는 함수포인터를 받아오는 부분.
 	void GetFunc(pFunc);
 
 private:
+
 	//체력
-	//TODO :체력레이블 표시하기.
 	int m_MaxHP;
 	int m_HP;
 	Label* m_pHPLabel;
@@ -135,8 +157,6 @@ private:
 	//피격범위와 공격범위를 디버깅시 표시하는 함수
 	void MakeBox(Vec2 position, Vec2 boxInfo, const int);
 
-	//체력박스를 만드는 함수.
-	int MakeHPBox();
 	//캐릭터의 피격범위 피격점,공격범위 공격점을 저장하는 변수
 	Vec2 m_AttackAnchorPoint;
 	Vec2 m_AttackAnchorPointForDebugBox;
