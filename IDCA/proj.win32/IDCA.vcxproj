@@ -158,6 +158,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\DeadScene.cpp" />
     <ClCompile Include="..\Classes\Define.cpp" />
     <ClCompile Include="..\Classes\EffectManager.cpp" />
+    <ClCompile Include="..\Classes\EndingScene.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyManager.cpp" />
     <ClCompile Include="..\Classes\EnemyState.cpp" />
@@ -201,6 +202,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\DeadScene.h" />
     <ClInclude Include="..\Classes\Define.h" />
     <ClInclude Include="..\Classes\EffectManager.h" />
+    <ClInclude Include="..\Classes\EndingScene.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyManager.h" />
     <ClInclude Include="..\Classes\EnemyState.h" />

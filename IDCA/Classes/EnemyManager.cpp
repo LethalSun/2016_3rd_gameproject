@@ -355,6 +355,17 @@ const float EnemyManager::CalPositionDistance(const Vec2 pos1, const Vec2 pos2)
 	return distance;
 }
 
+// State One의 Update에서 호출. State가 끝났는지 확인.
+const bool EnemyManager::IsStageCleared()
+{
+	if (getIsBossSummoned() && m_pEnemyVector.empty())
+	{
+		return true;
+	}
+
+	return false;
+}
+
 // 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.
 // 그리고 deleteVector에 있는 Enemy객체를 release해준다.
 void EnemyManager::DieCheck()
