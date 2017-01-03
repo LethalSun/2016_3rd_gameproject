@@ -235,6 +235,8 @@ void EnemyManager::StageOneSetting()
 		MakeEnemy(ENEMY_TYPE::ATROCE, position, true);
 
 	}
+
+	
 	auto ChocoGroup = m_pMap->getObjectGroup("Choco");
 
 	auto Chocos = ChocoGroup->getObjects();
@@ -353,6 +355,35 @@ const float EnemyManager::CalPositionDistance(const Vec2 pos1, const Vec2 pos2)
 	auto distance = abs(sqrt(x * x + y * y));
 
 	return distance;
+}
+
+// State One의 Update에서 호출. State가 끝났는지 확인.
+const bool EnemyManager::IsStageCleared()
+{
+	if (getIsBossSummoned() && m_pEnemyVector.empty())
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void EnemyManager::VectorClear()
+{
+	m_pEnemyVector.clear();
+	return;
+}
+
+// Stage 새로 들어갈 때마다 호출. 변수와 Flag를 초기화 해준다.
+void EnemyManager::StageInit()
+{
+	setStageOneTrigger(false);
+	setDiedEnemyNum(0);
+	setSoundPlayNum(0);
+	setIsBossSummoned(false);
+	VectorClear();
+	setIsBossSummoned(false);
+	return;
 }
 
 // 매 Update마다 Enemy가 죽었는지 확인을 하고 DeadState로 진입하도록 만들어준다.

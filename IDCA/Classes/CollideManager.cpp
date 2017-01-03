@@ -6,6 +6,7 @@
 #include "PlayerCharacter.h"
 #include "EnemyManager.h"
 #include "Projectile.h"
+#include "SimpleAudioEngine.h"
 #include <functional>
 #include <math.h>
 
@@ -68,6 +69,8 @@ void CollideManager::SetCMEnemyPointer(Vector<Enemy*>& enemyVector)
 
 void CollideManager::MakeProjectile(const char *spriteImagePath, Vec2 startPosition, Vec2 direction, Vec2 maxRange, Vec2 colideRange, bool isCharacterOrignated)
 {
+	CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("Sound/Warrior_skill.wav", false);
+
 	auto tempProjectile = Projectile::create(spriteImagePath, startPosition, direction, maxRange, colideRange, isCharacterOrignated);
 	if (tempProjectile != nullptr)
 	{
@@ -237,6 +240,7 @@ void CollideManager::EraseProjectile()
 	}
 }
 
+// 텐타클 생성 범위, 공격 범위, 데미지와 맵 포인터를 인자로 받아 캐릭터와의 충돌 처리를 담당해주는 함수. (작성자 : 이근원)
 void CollideManager::CheckTentacleAttack(const Vec2 tentaclePosition, const float range, const int damage, const TMXTiledMap* mapPointer)
 {
 	auto x = AbsFloat(m_pPlayerCharacter->getPosition().x - mapPointer->getPosition().x, tentaclePosition.x);

@@ -2,6 +2,7 @@
 #include "PlayerCharacter.h"
 #include "AnimationMaker.h"
 #include "Skill.h"
+#include "SimpleAudioEngine.h"
 #include <windows.h>
 #include <iostream>
 
@@ -221,6 +222,8 @@ void PlayerCharacter::skill()
 	{
 		return;
 	}
+
+	
 	m_pAnimationMaker->SetAnimationSkill();
 	m_AttackSkill->SetStartPosition(m_BodyAnchorPoint);
 	auto direction = Vec2(UNIT_X[m_Direction], UNIT_Y[m_Direction]);
