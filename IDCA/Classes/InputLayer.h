@@ -24,7 +24,6 @@ public:
 	void					ConvertJoyStickToUnitVec(const float, const float);
 	void					CheckBoolIsNew(float*, float*);
 	void					CheckBoolIsDown(float*, float*);
-	void					MapRelease();
 
 	/* Keyborad Input Setting & Functions */
 	virtual void			onKeyPressed(EventKeyboard::KeyCode, Event*);

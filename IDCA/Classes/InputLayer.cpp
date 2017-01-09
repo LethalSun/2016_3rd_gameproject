@@ -414,17 +414,6 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 	return;
 }
 
-/*
-	InputLayer가 생성되면서 할당해주었던 멤버변수 m_pMap을 Release해주는 함수.
-	InputLayer는 각 씬마다 존재하므로, 씬 변환이 일어날 때 호출해준다.
-	근데 이럴바에는 차라리 InputLayer가 싱글톤이었으면 어떨까 하는 생각이 든다. (어차피 모든 씬에서 사용하기 때문에)
-*/
-
-void InputLayer::MapRelease()
-{
-	delete m_pMap;
-	return;
-}
 
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.

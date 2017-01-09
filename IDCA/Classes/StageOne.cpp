@@ -132,7 +132,6 @@ void StageOne::SceneChangeCheck(float dt)
 	// Player Die Check
 	if (m_pPlayerCharacterManager->GetCharacter()->GetHP() <= 0)
 	{
-		m_pInputLayer->MapRelease();
 		Director::getInstance()->replaceScene(DeadScene::createScene());
 	}
 	// Player Clear Check
@@ -141,7 +140,6 @@ void StageOne::SceneChangeCheck(float dt)
 		m_AccumulateTime += dt;
 		if (m_AccumulateTime > 0.3f)
 		{
-			m_pInputLayer->MapRelease();
 			Director::getInstance()->replaceScene(EndingScene::createScene());
 		}
 	}

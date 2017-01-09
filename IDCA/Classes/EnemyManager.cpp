@@ -301,7 +301,7 @@ void EnemyManager::SummonAncientTree()
 	// Boss가 한 번만 소환되도록 flag 설정.
 	if (getIsBossSummoned() == false)
 	{
-		// TODO :: 소환할 때 돌 굴러떨어지는 소리 나게.
+		CocosDenshion::SimpleAudioEngine::getInstance()->playEffect(ANCINET_TREE_SUMMON_SOUND, false);
 		MakeEnemy(ENEMY_TYPE::ANCIENT_TREE, Vec2(2700.f, 900.f));
 		setIsBossSummoned(true);
 	}

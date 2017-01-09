@@ -54,6 +54,7 @@ const float STRIKE_DISTANCE = 45.f;
 const int STRIKE_TENTACLE_NUMBER = 4;
 const float STRIKE_CORRECTION_FLOAT = 0.7f;
 const char ANCIENT_TREE_GROWL[] = "Sound/AncientTree_growl.wav";
+const char ANCINET_TREE_SUMMON_SOUND[] = "Sound/AncientTree_summon.mp3";
 
 const float ANCIENT_TREE_SUMMON_RANGE = 200.f;
 
