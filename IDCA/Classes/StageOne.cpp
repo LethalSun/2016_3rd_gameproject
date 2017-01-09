@@ -61,14 +61,14 @@ bool StageOne::init()
 	m_pManageEnemyMove = ManageEnemyMove::create();
 
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile(TEMP_DEFINE::PLIST_NAME_2);
-	m_InputLayer = InputLayer::create();
-	addChild(m_InputLayer);
+	m_pInputLayer = InputLayer::create();
+	addChild(m_pInputLayer);
 
 	m_pPlayerCharacterManager = PlayerCharacterManager::create(PLAYER_FILE_NAME, PLAYER_FILE_EXTENTION);
 	addChild(m_pPlayerCharacterManager);
 
-	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
-	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+	m_pPlayerCharacterManager->GetInput(m_pInputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_pInputLayer->GetInputUnitVec());
 
 	//충돌매니져 등록
 	m_pCollideManager = CollideManager::create();
@@ -102,8 +102,8 @@ bool StageOne::init()
 
 void StageOne::update(float delta)
 {
-	m_pPlayerCharacterManager->GetInput(m_InputLayer->GetInputArray());
-	m_pPlayerCharacterManager->GetUnitVac(m_InputLayer->GetInputUnitVec());
+	m_pPlayerCharacterManager->GetInput(m_pInputLayer->GetInputArray());
+	m_pPlayerCharacterManager->GetUnitVac(m_pInputLayer->GetInputUnitVec());
 	int state = m_pPlayerCharacterManager->getState();
 	Vec2 position = m_pPlayerCharacterManager->getPlayerPosition();
 	position = m_pPlayerCharacterManager->getPlayerPosition();
@@ -111,7 +111,7 @@ void StageOne::update(float delta)
 	if (state == STATE::STOP || state == STATE::MOVE)
 	{
 		Vec2 backgroundposition = m_pMap->getPosition();
-		Vec2 unitVec = Vec2(m_InputLayer->GetInputUnitVec()[0], m_InputLayer->GetInputUnitVec()[1]);
+		Vec2 unitVec = Vec2(m_pInputLayer->GetInputUnitVec()[0], m_pInputLayer->GetInputUnitVec()[1]);
 		position = m_pManageMove->update(position, backgroundposition, unitVec, m_pMap);
 		m_pPlayerCharacterManager->setPlayerPosition(position, backgroundposition);
 	}
@@ -132,6 +132,7 @@ void StageOne::SceneChangeCheck(float dt)
 	// Player Die Check
 	if (m_pPlayerCharacterManager->GetCharacter()->GetHP() <= 0)
 	{
+		m_pInputLayer->MapRelease();
 		Director::getInstance()->replaceScene(DeadScene::createScene());
 	}
 	// Player Clear Check
@@ -140,9 +141,10 @@ void StageOne::SceneChangeCheck(float dt)
 		m_AccumulateTime += dt;
 		if (m_AccumulateTime > 0.3f)
 		{
+			m_pInputLayer->MapRelease();
 			Director::getInstance()->replaceScene(EndingScene::createScene());
 		}
 	}
 
 	return;
-}
+} 

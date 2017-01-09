@@ -23,7 +23,6 @@ bool InputLayer::init()
 	m_IsKeyboardPressed = false;
 
 	// JoyStick 세팅
-	// TODO :: Map 할당 해제해주기.
 	m_pMap = new gainput::InputMap(m_Manager);
 
 	m_Manager.SetDisplaySize(WIN_SIZE.x, WIN_SIZE.y);
@@ -67,6 +66,7 @@ void InputLayer::update(const float deltaTime)
 // InputLayer를 비워주는 함수. (초기화 / 메뉴 호출에 사용)
 bool InputLayer::MemoryClear()
 {
+	// TODO :: int 캐스팅 빼기.
 	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
 	(int)memset(m_OldInputArray, NONE, stateIdxNum);
 	(int)memset(m_CurrentInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
@@ -414,56 +414,57 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 	return;
 }
 
-// JoyStick이 연결되어 있는지를 확인하여 bool값을 반환하여주는 함수.
 /*
-bool InputLayer::IsJoyStickConnected()
-{
-
-}
+	InputLayer가 생성되면서 할당해주었던 멤버변수 m_pMap을 Release해주는 함수.
+	InputLayer는 각 씬마다 존재하므로, 씬 변환이 일어날 때 호출해준다.
+	근데 이럴바에는 차라리 InputLayer가 싱글톤이었으면 어떨까 하는 생각이 든다. (어차피 모든 씬에서 사용하기 때문에)
 */
+
+void InputLayer::MapRelease()
+{
+	delete m_pMap;
+	return;
+}
+
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.
 	기본적으로는 CheckBoolIsNew, CheckBoolIsDown과 같은 일을 한다.
 */
 
+// TODO :: 한번 들어가면 return하도록. (상수 비교라 한 번 들어가면 다른 거에 들어갈 일 없음)
 void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 {
 	m_IsKeyboardPressed = true;
+
 	// 방향키 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
+	switch (keyCode)
 	{
+	case EventKeyboard::KeyCode::KEY_UP_ARROW :
 		m_ArrowContainer[ARROW::UP] = 1;
-	}
-	else if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_DOWN_ARROW :
 		m_ArrowContainer[ARROW::DOWN] = 1;
-	}
-
-	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_RIGHT_ARROW :
 		m_ArrowContainer[ARROW::RIGHT] = 1;
-	}
-	else if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_LEFT_ARROW :
 		m_ArrowContainer[ARROW::LEFT] = 1;
-	}
-
-	// 버튼 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_Q :
 		m_CurrentInputArray[keyAttack] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_W)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_W :
 		m_CurrentInputArray[keySkillAttack] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_E)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_E :
 		m_CurrentInputArray[keySkillDefence] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_ESCAPE :
 		m_CurrentInputArray[keyESC] = START;
+		break;
+	default:
+		break;
 	}
 
 	return;
@@ -471,40 +472,36 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 
 void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 {
-	// 방향키 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
-	{
-		m_ArrowContainer[ARROW::UP] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
-	{
-		m_ArrowContainer[ARROW::DOWN] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
-	{
-		m_ArrowContainer[ARROW::RIGHT] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
-	{
-		m_ArrowContainer[ARROW::LEFT] = 0;
-	}
 
-	// 버튼 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
+	// 방향키 관련 처리.
+	switch (keyCode)
 	{
+	case EventKeyboard::KeyCode::KEY_UP_ARROW :
+		m_ArrowContainer[ARROW::UP] = 0;
+		break;
+	case EventKeyboard::KeyCode::KEY_DOWN_ARROW :
+		m_ArrowContainer[ARROW::DOWN] = 0;
+		break;
+	case EventKeyboard::KeyCode::KEY_RIGHT_ARROW :
+		m_ArrowContainer[ARROW::RIGHT] = 0;
+		break;
+	case EventKeyboard::KeyCode::KEY_LEFT_ARROW :
+		m_ArrowContainer[ARROW::LEFT] = 0;
+		break;
+	case EventKeyboard::KeyCode::KEY_Q :
 		m_CurrentInputArray[keyAttack] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_W)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_W :
 		m_CurrentInputArray[keySkillAttack] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_E)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_E :
 		m_CurrentInputArray[keySkillDefence] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_ESCAPE :
 		m_CurrentInputArray[keyESC] = END;
+		break;
+	default :
+		break;
 	}
 
 	m_IsKeyboardPressed = false;

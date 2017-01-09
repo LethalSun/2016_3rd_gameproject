@@ -104,6 +104,7 @@ void HelloWorld::update(float dt)
 // StageOne으로 이동. replaceScene 사용. (다시 돌아올 일이 없으므로)
 void HelloWorld::ChangeToStageOne()
 {
+	m_pInputLayer->MapRelease();
 	Director::getInstance()->replaceScene(StageOne::createScene());
 	return;
 }
@@ -111,6 +112,7 @@ void HelloWorld::ChangeToStageOne()
 // 프로그램 종료.
 void HelloWorld::ExitGame()
 {
+	m_pInputLayer->MapRelease();
 	exit(0);
 	return;
 }

@@ -97,6 +97,8 @@ void DeadScene::update(float dt)
 
 void DeadScene::ChangeToHelloWorldScene()
 {
+	// TODO :: 왜 다른 씬은 다 괜찮은데 여기만 MapRelease를 해주면 죽을까?
+	// 그냥 일반 몹 상태에서는 괜찮은데, 보스가 나온뒤에 여기서 MapRelease를 해주면 다음 HelloWorld씬으로 넘어갈 때 죽는다.
 	Director::getInstance()->replaceScene(HelloWorld::createScene());
 	return;
 }
