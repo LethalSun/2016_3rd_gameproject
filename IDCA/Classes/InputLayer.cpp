@@ -463,39 +463,34 @@ void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 {
 
 	// 规氢虐 包访 贸府.
-	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
+	switch (keyCode)
 	{
+	case EventKeyboard::KeyCode::KEY_UP_ARROW :
 		m_ArrowContainer[ARROW::UP] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_DOWN_ARROW :
 		m_ArrowContainer[ARROW::DOWN] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_RIGHT_ARROW :
 		m_ArrowContainer[ARROW::RIGHT] = 0;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_LEFT_ARROW :
 		m_ArrowContainer[ARROW::LEFT] = 0;
-	}
-
-	// 滚瓢 包访 贸府.
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_Q :
 		m_CurrentInputArray[keyAttack] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_W)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_W :
 		m_CurrentInputArray[keySkillAttack] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_E)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_E :
 		m_CurrentInputArray[keySkillDefence] = END;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_ESCAPE :
 		m_CurrentInputArray[keyESC] = END;
+		break;
+	default :
+		break;
 	}
 
 	m_IsKeyboardPressed = false;
