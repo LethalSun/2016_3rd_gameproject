@@ -29,7 +29,7 @@ public:
 
 private:
 
-	InputLayer* m_InputLayer;
+	InputLayer* m_pInputLayer;
 	TMXTiledMap* m_pMap;
 
 	//충돌 매니져

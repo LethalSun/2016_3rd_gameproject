@@ -90,6 +90,7 @@ void EndingScene::update(float dt)
 
 void EndingScene::ChangeToHelloWorldScene()
 {
+	m_pInputLayer->MapRelease();
 	Director::getInstance()->replaceScene(HelloWorld::createScene());
 	return;
 }

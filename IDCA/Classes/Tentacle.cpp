@@ -82,7 +82,7 @@ void Tentacle::MakeCautionRange()
 	setRangeSprite(Sprite::create("Monster/range.png"));
 	getRangeSprite()->setPosition(getCreatePosition());
 	getRangeSprite()->setOpacity(0);
-	this->reorderChild(getRangeSprite(), 0);
+	reorderChild(getRangeSprite(), 0);
 	addChild(getRangeSprite());
 
 	auto action = FadeIn::create(getDuration() * TENTACLE_FADE_IN_CORRECTION_VALUE);
