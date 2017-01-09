@@ -67,6 +67,7 @@ void InputLayer::update(const float deltaTime)
 // InputLayer를 비워주는 함수. (초기화 / 메뉴 호출에 사용)
 bool InputLayer::MemoryClear()
 {
+	// TODO :: int 캐스팅 빼기.
 	(int)memset(m_CurrentInputArray, NONE, stateIdxNum);
 	(int)memset(m_OldInputArray, NONE, stateIdxNum);
 	(int)memset(m_CurrentInputUnitVec, NONE, UNIT_VEC_INDEX::vecIdxNum);
@@ -414,56 +415,45 @@ void InputLayer::CheckBoolIsDown(float* inputX, float* inputY)
 	return;
 }
 
-// JoyStick이 연결되어 있는지를 확인하여 bool값을 반환하여주는 함수.
-/*
-bool InputLayer::IsJoyStickConnected()
-{
-
-}
-*/
 /*
 	Keyboard 입력을 받아 버튼이 떼고 눌러지는 것을 감지하는 두 개의 콜백 함수.
 	기본적으로는 CheckBoolIsNew, CheckBoolIsDown과 같은 일을 한다.
 */
 
+// TODO :: 한번 들어가면 return하도록. (상수 비교라 한 번 들어가면 다른 거에 들어갈 일 없음)
 void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 {
 	m_IsKeyboardPressed = true;
+
 	// 방향키 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
+	switch (keyCode)
 	{
+	case EventKeyboard::KeyCode::KEY_UP_ARROW :
 		m_ArrowContainer[ARROW::UP] = 1;
-	}
-	else if (keyCode == EventKeyboard::KeyCode::KEY_DOWN_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_DOWN_ARROW :
 		m_ArrowContainer[ARROW::DOWN] = 1;
-	}
-
-	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_RIGHT_ARROW :
 		m_ArrowContainer[ARROW::RIGHT] = 1;
-	}
-	else if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_LEFT_ARROW :
 		m_ArrowContainer[ARROW::LEFT] = 1;
-	}
-
-	// 버튼 관련 처리.
-	if (keyCode == EventKeyboard::KeyCode::KEY_Q)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_Q :
 		m_CurrentInputArray[keyAttack] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_W)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_W :
 		m_CurrentInputArray[keySkillAttack] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_E)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_E :
 		m_CurrentInputArray[keySkillDefence] = START;
-	}
-	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
-	{
+		break;
+	case EventKeyboard::KeyCode::KEY_ESCAPE :
 		m_CurrentInputArray[keyESC] = START;
+		break;
+	default:
+		break;
 	}
 
 	return;
@@ -471,6 +461,7 @@ void InputLayer::onKeyPressed(EventKeyboard::KeyCode keyCode, Event *event)
 
 void InputLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, Event *event)
 {
+
 	// 방향키 관련 처리.
 	if (keyCode == EventKeyboard::KeyCode::KEY_UP_ARROW)
 	{
