@@ -1,0 +1,16 @@
+{
+
+  "STATIC": {
+    "WIN_SIZE_WIDTH": 1024,
+    "WIN_SIZE_HEIGHT": 768
+  },
+
+  "PLAYER": {
+    "INIT_POSITION_WIDTH": 0.2,
+    "INIT_POSITION_HEIGHT": 0.2,
+    "PLAYER_PLIST": "Warrior.plist",
+    "INIT_PLAYER_SPRITE": "WalkingFront01.png",
+    "MOVE_SPEED": 400
+  }
+
+}

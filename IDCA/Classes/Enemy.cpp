@@ -471,7 +471,15 @@ bool Enemy::setAttackedDamage(int damage)
 	auto randomDamage = rand() % 2;
 
 	damage += randomDamage;
-	setHP(getHP() - damage);
+	auto currentHP = getHP() - damage;
+	if (currentHP < 0)
+	{
+		setHP(0);
+	}
+	else
+	{
+		setHP(currentHP);
+	}
 	CheckEnemyAttacked();
 
 	//attack 받았을 때 그 damage로 맞는 effect

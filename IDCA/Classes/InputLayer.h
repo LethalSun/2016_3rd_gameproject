@@ -16,6 +16,7 @@ public:
 
 
 	/* JoyStick Input Setting & Functions */
+
 	gainput::InputManager	m_Manager;
 	gainput::InputMap	   *m_pMap;
 

@@ -2,7 +2,7 @@
 #pragma warning(disable : 4100 4245 4819)
 
 // Gainput Library
-#include "gainput/gainput.h"
+#include "Gainput\lib\include\gainput\gainput.h"
 #pragma comment(lib, "gainputstatic.lib")
 #pragma comment(lib, "xinput.lib")
 

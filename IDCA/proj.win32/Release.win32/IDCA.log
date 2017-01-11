@@ -1,0 +1,207 @@
+﻿  AnimationMaker.cpp
+  AppDelegate.cpp
+  Board.cpp
+  BossState_Attack.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\AnimationMaker.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\BossState_Attack.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Board.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\Board.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Board.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\AppDelegate.cpp)
+  BossState_Rush.cpp
+  BossState_Strike.cpp
+  BossState_Summon.cpp
+  CollideManager.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\BossState_Strike.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\BossState_Summon.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\BossState_Rush.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\CollideManager.cpp)
+  DeadScene.cpp
+  Define.cpp
+  EffectManager.cpp
+  EndingScene.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\DeadScene.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Define.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\DeadScene.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\DeadScene.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EffectManager.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EffectManager.h(21): warning C4996: 'cocos2d::LabelBMFont': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\EffectManager.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCLabelBMFont.h(83): note: 'cocos2d::LabelBMFont' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EffectManager.cpp)
+..\Classes\EffectManager.cpp(15): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdlib.h(1316): note: 'itoa' 선언을 참조하십시오.
+..\Classes\EffectManager.cpp(16): warning C4996: 'cocos2d::LabelBMFont::create': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCLabelBMFont.h(97): note: 'cocos2d::LabelBMFont::create' 선언을 참조하십시오.
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EndingScene.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EndingScene.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EndingScene.cpp)
+  Enemy.cpp
+  EnemyManager.cpp
+  EnemyState.cpp
+  EnemyState_Approach.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Attack.h(15): warning C4373: 'EnemyState_Attack::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_BeAttacked.h(26): warning C4373: 'EnemyState_BeAttacked::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EffectManager.h(21): warning C4996: 'cocos2d::LabelBMFont': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCLabelBMFont.h(83): note: 'cocos2d::LabelBMFont' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Enemy.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyManager.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Dead.h(15): warning C4373: 'EnemyState_Dead::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyManager.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyManager.cpp)
+..\Classes\EnemyManager.cpp(212): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+..\Classes\EnemyManager.cpp(226): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+..\Classes\EnemyManager.cpp(240): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+..\Classes\EnemyManager.cpp(209): warning C4996: 'cocos2d::TMXTiledMap::objectGroupNamed': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXTiledMap.h(154): note: 'cocos2d::TMXTiledMap::objectGroupNamed' 선언을 참조하십시오.
+..\Classes\EnemyManager.cpp(316): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+..\Classes\EnemyManager.cpp(331): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+..\Classes\EnemyManager.cpp(313): warning C4996: 'cocos2d::TMXTiledMap::objectGroupNamed': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXTiledMap.h(154): note: 'cocos2d::TMXTiledMap::objectGroupNamed' 선언을 참조하십시오.
+..\Classes\EnemyManager.cpp(328): warning C4996: 'cocos2d::TMXTiledMap::objectGroupNamed': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXTiledMap.h(154): note: 'cocos2d::TMXTiledMap::objectGroupNamed' 선언을 참조하십시오.
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Approach.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Approach.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Approach.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Attack.h(15): warning C4373: 'EnemyState_Attack::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Approach.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Approach.cpp)
+  EnemyState_Attack.cpp
+  EnemyState_BeAttacked.cpp
+  EnemyState_Dead.cpp
+  EnemyState_Return.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_BeAttacked.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_BeAttacked.h(26): warning C4373: 'EnemyState_BeAttacked::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_BeAttacked.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_BeAttacked.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EffectManager.h(21): warning C4996: 'cocos2d::LabelBMFont': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_BeAttacked.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCLabelBMFont.h(83): note: 'cocos2d::LabelBMFont' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_BeAttacked.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Attack.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Attack.h(15): warning C4373: 'EnemyState_Attack::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Attack.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Attack.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Attack.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Attack.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Return.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Return.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Return.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Dead.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Dead.h(15): warning C4373: 'EnemyState_Dead::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Dead.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Dead.cpp)
+  EnemyState_Search.cpp
+  EnemyState_Waiting.cpp
+  Enemy_AncientTree.cpp
+  Enemy_Atroce.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Search.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Search.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Search.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Waiting.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Attack.h(15): warning C4373: 'EnemyState_Attack::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Waiting.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Waiting.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState_Approach.h(15): warning C4373: 'EnemyState_Approach::runState': 가상 함수는 'EnemyState::runState'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EnemyState_Waiting.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\EnemyState.h(13): note: 'EnemyState::runState' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EnemyState_Waiting.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Enemy_AncientTree.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Enemy_Atroce.cpp)
+  Enemy_Choco.cpp
+  EscMenu.cpp
+  HelloWorldScene.cpp
+  IniReader.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Enemy_Choco.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\HelloWorldScene.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\HelloWorldScene.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\HelloWorldScene.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\EscMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\EscMenu.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\EscMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\IniReader.cpp)
+  InputLayer.cpp
+  ManageEnemyMove.cpp
+  ManageMap.cpp
+  ManageMove.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\InputLayer.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\InputLayer.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\InputLayer.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\ManageEnemyMove.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\ManageMove.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\ManageMap.cpp)
+..\Classes\ManageMap.cpp(42): warning C4996: 'cocos2d::TMXLayer::tileGIDAt': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXLayer.h(128): note: 'cocos2d::TMXLayer::tileGIDAt' 선언을 참조하십시오.
+..\Classes\ManageMap.cpp(43): warning C4996: 'cocos2d::TMXLayer::tileGIDAt': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXLayer.h(128): note: 'cocos2d::TMXLayer::tileGIDAt' 선언을 참조하십시오.
+..\Classes\ManageMap.cpp(66): warning C4996: 'cocos2d::TMXLayer::tileGIDAt': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXLayer.h(128): note: 'cocos2d::TMXLayer::tileGIDAt' 선언을 참조하십시오.
+..\Classes\ManageMap.cpp(67): warning C4996: 'cocos2d::TMXLayer::tileGIDAt': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXLayer.h(128): note: 'cocos2d::TMXLayer::tileGIDAt' 선언을 참조하십시오.
+..\Classes\ManageMap.cpp(117): warning C4996: 'cocos2d::TMXLayer::tileGIDAt': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCTMXLayer.h(128): note: 'cocos2d::TMXLayer::tileGIDAt' 선언을 참조하십시오.
+  PlayerCharacter.cpp
+  PlayerCharacterManager.cpp
+  PlayerMenu.cpp
+  Projectile.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(55): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(63): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(64): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(65): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerCharacter.cpp)
+..\Classes\PlayerCharacter.cpp(24): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오.
+..\Classes\PlayerCharacter.cpp(86): warning C4996: 'cocos2d::ccc3': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(475): note: 'cocos2d::ccc3' 선언을 참조하십시오.
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(55): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(63): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(64): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(65): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerMenu.cpp)
+..\Classes\PlayerMenu.cpp(96): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(111): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(112): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(122): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(125): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(135): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+..\Classes\PlayerMenu.cpp(153): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacterManager.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\PlayerCharacterManager.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\PlayerCharacterManager.cpp)
+..\Classes\PlayerCharacterManager.cpp(23): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다.
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오.
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Projectile.cpp)
+  ProjectileListener.cpp
+  Skill.cpp
+  StageOne.cpp
+  Tentacle.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\ProjectileListener.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(55): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(63): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(64): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Skill.h(65): warning C4996: 'cocos2d::String': deprecated로 선언되었습니다. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\deprecated/CCDeprecated.h(1109): note: 'cocos2d::String' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\Skill.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\StageOne.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\InputLayer.h(10): warning C4373: 'InputLayer::update': 가상 함수는 'cocos2d::Node::update'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다. (소스 파일 컴파일 중 ..\Classes\StageOne.cpp)
+  c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\cocos2d\cocos\2d/CCNode.h(1488): note: 'cocos2d::Node::update' 선언을 참조하십시오. (소스 파일 컴파일 중 ..\Classes\StageOne.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\Tentacle.cpp)
+  config.cpp
+  pch.cpp
+  main.cpp
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\config.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 ..\Classes\pch.cpp)
+c:\users\kwen won lee\desktop\project\2016_3rd_gameproject\idca\classes\Define.h(51): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다. (소스 파일 컴파일 중 main.cpp)
+     C:\Users\kwen won Lee\Desktop\Project\2016_3rd_gameproject\IDCA\proj.win32\Release.win32\IDCA.lib 라이브러리 및 C:\Users\kwen won Lee\Desktop\Project\2016_3rd_gameproject\IDCA\proj.win32\Release.win32\IDCA.exp 개체를 생성하고 있습니다.
+  코드를 생성하고 있습니다.
+  183 of 2390 functions ( 7.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    102 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  IDCA.vcxproj -> C:\Users\kwen won Lee\Desktop\Project\2016_3rd_gameproject\IDCA\proj.win32\Release.win32\IDCA.exe
+  IDCA.vcxproj -> C:\Users\kwen won Lee\Desktop\Project\2016_3rd_gameproject\IDCA\proj.win32\Release.win32\IDCA.pdb (Full PDB)
+  0개 파일이 복사되었습니다.

@@ -151,26 +151,22 @@ void DevSetHttp(bool enable);
 #define GAINPUT_VER_GET_MAJOR(ver)	(ver >> GAINPUT_VER_MAJOR_SHIFT)
 #define GAINPUT_VER_GET_MINOR(ver)	(ver & (uint32_t(-1) >> GAINPUT_VER_MAJOR_SHIFT))
 
-
-#include <gainput/GainputAllocator.h>
-#include <gainput/GainputContainers.h>
-#include <gainput/GainputInputState.h>
-#include <gainput/GainputInputDevice.h>
-#include <gainput/GainputInputListener.h>
-#include <gainput/GainputInputManager.h>
-#include <gainput/GainputInputMap.h>
-
-#include <gainput/GainputInputDeviceMouse.h>
-#include <gainput/GainputInputDeviceKeyboard.h>
-#include <gainput/GainputInputDevicePad.h>
-#include <gainput/GainputInputDeviceTouch.h>
-#include <gainput/GainputInputDeviceBuiltIn.h>
-
-#include <gainput/gestures/GainputGestures.h>
-
-#include <gainput/recorder/GainputInputRecording.h>
-#include <gainput/recorder/GainputInputPlayer.h>
-#include <gainput/recorder/GainputInputRecorder.h>
+#include "Gainput\lib\include\gainput/GainputAllocator.h"
+#include "Gainput\lib\include\gainput/GainputContainers.h"
+#include "Gainput\lib\include\gainput/GainputInputState.h"
+#include "Gainput\lib\include\gainput/GainputInputDevice.h"
+#include "Gainput\lib\include\gainput/GainputInputListener.h"
+#include "Gainput\lib\include\gainput/GainputInputManager.h"
+#include "Gainput\lib\include\gainput/GainputInputMap.h"
+#include "Gainput\lib\include\gainput/GainputInputDeviceMouse.h"
+#include "Gainput\lib\include\gainput/GainputInputDeviceKeyboard.h"
+#include "Gainput\lib\include\gainput/GainputInputDevicePad.h"
+#include "Gainput\lib\include\gainput/GainputInputDeviceTouch.h"
+#include "Gainput\lib\include\gainput/GainputInputDeviceBuiltIn.h"
+#include "Gainput\lib\include\gainput/gestures/GainputGestures.h"
+#include "Gainput\lib\include\gainput/recorder/GainputInputRecording.h"
+#include "Gainput\lib\include\gainput/recorder/GainputInputPlayer.h"
+#include "Gainput\lib\include\gainput/recorder/GainputInputRecorder.h"
 
 #endif
 
